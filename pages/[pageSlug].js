@@ -3,7 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { marked } from 'marked';
 
-const Page = ({ meta, pageSlug, content }) => {
+const Page = ({ meta, content }) => {
   return (
     <>
       <h2>{meta.title}</h2>
@@ -16,8 +16,8 @@ const Page = ({ meta, pageSlug, content }) => {
 export default Page;
 
 export const getStaticPaths = async () => {
-  const fetchedFiles = fs.readdirSync(path.join('src/content/pages'));
-  const paths = fetchedFiles.map((file) => {
+  const fetchedDir = fs.readdirSync(path.join('markdown/pages'));
+  const paths = fetchedDir.map((file) => {
     return {
       params: {
         pageSlug: file.replace('.mdx', ''),
@@ -31,11 +31,11 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params: { pageSlug } }) => {
-  const fileContent = fs.readFileSync(
-    path.join('src/content/pages', `${pageSlug}.mdx`),
+  const fetchedFile = fs.readFileSync(
+    path.join('markdown/pages', `${pageSlug}.mdx`),
     'utf-8'
   );
-  const { data: meta, content } = matter(fileContent);
+  const { data: meta, content } = matter(fetchedFile);
   return {
     props: {
       meta,

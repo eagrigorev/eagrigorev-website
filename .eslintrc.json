@@ -5,10 +5,10 @@
     "es6": true
   },
   "extends": [
-    "next/core-web-vitals",
     "eslint:recommended",
     "plugin:prettier/recommended",
-    "airbnb"
+    "airbnb",
+    "next/core-web-vitals"
   ],
   "plugins": ["prettier"],
   "overrides": [],
@@ -18,5 +18,16 @@
   },
   "rules": {
     "prettier/prettier": ["error"]
-  }
+  },
+  "options": {
+    "extensions": [".js", ".jsx", ".md", ".mdx", ".ts", ".tsx"]
+  },
+  "validate": [
+    "markdown",
+    "mdx",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ]
 }
