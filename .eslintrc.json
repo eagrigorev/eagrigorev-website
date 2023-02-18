@@ -8,7 +8,8 @@
     "eslint:recommended",
     "plugin:prettier/recommended",
     "airbnb",
-    "next/core-web-vitals"
+    "next/core-web-vitals",
+    "plugin:mdx/recommended"
   ],
   "plugins": ["prettier"],
   "overrides": [],
@@ -21,6 +22,9 @@
   },
   "options": {
     "extensions": [".js", ".jsx", ".md", ".mdx", ".ts", ".tsx"]
+  },
+  "settings": {
+    "mdx/code-blocks": true
   },
   "validate": [
     "markdown",
