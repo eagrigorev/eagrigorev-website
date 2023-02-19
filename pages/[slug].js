@@ -2,9 +2,14 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import Page from '@/templates/page';
+import Post from '@/templates/post';
 
 const Content = ({ meta, content }) => {
-  return <Page props={{ meta, content }} />;
+  if (meta.contentType === 'page') {
+    return <Page props={{ meta, content }} />;
+  } else if (meta.contentType === 'post') {
+    return <Post props={{ meta, content }} />;
+  }
 };
 
 export default Content;
