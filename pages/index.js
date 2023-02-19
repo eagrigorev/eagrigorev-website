@@ -1,18 +1,10 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import PostCard from '@/templates/parts/postCard';
+import ContentLoop from '@/templates/parts/contentLoop';
 
 const Home = ({ posts }) => {
-  return (
-    <>
-      <div>
-        {posts.map((post, index) => {
-          return <PostCard key={index} post={post} />;
-        })}
-      </div>
-    </>
-  );
+  return <ContentLoop posts={posts} />;
 };
 
 export default Home;
