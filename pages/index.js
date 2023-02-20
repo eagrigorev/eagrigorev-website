@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import ContentLoop from '@/templates/parts/contentLoop';
+import { sortByDate } from '@/templates/scripts/sortByDate';
 
 const Home = ({ posts }) => {
   return <ContentLoop posts={posts} />;
@@ -19,7 +20,7 @@ export const getStaticProps = async () => {
   });
   return {
     props: {
-      posts,
+      posts: posts.sort(sortByDate),
     },
   };
 };
