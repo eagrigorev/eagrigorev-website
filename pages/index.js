@@ -1,11 +1,17 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import Intro from '@/templates/parts/intro';
 import ContentLoop from '@/templates/parts/contentLoop';
-import { sortByDate } from '@/templates/scripts/sortByDate';
+import { sortByDate } from '@/scripts/sortByDate';
 
 const Home = ({ posts }) => {
-  return <ContentLoop posts={posts} />;
+  return (
+    <>
+      <Intro />
+      <ContentLoop posts={posts} />
+    </>
+  );
 };
 
 export default Home;
