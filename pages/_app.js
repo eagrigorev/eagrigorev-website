@@ -6,7 +6,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Header />
-      <main>
+      <main className="u-container u-grid">
         <Component {...pageProps} />
       </main>
       <Analytics />
