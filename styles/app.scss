@@ -1,21 +1,2 @@
 @import 'styleReset';
-@import 'fluidStyles';
 @import 'fonts';
-
-.site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  &__right {
-    display: flex;
-  }
-}
-
-.site-nav {
-  display: flex;
-  list-style: none;
-}
-
-.grid-4 {
-  grid-template-columns: repeat(4, 1fr);
-}
