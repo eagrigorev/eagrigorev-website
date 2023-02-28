@@ -1,8 +1,9 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const ContentLoop = ({ posts }) => {
   return (
-    <section>
+    <section className="u-grid grid-4">
       {posts.map((post, index) => {
         if (post.meta.contentType === 'post') {
           return <PostCard key={index} post={post} />;
@@ -19,6 +20,7 @@ export default ContentLoop;
 const PostCard = ({ post }) => {
   return (
     <article>
+      <Image src="/../public/test-cover-image.jpg" width={220} height={195} />
       <h2>{post.meta.title}</h2>
       <p>{post.meta.dateEdited}</p>
       <p>{post.meta.excerpt}</p>
