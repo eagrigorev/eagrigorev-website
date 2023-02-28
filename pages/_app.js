@@ -4,12 +4,12 @@ import '@/styles/app.css';
 
 export default function App({ Component, pageProps }) {
   return (
-    <>
+    <div className="app-container u-container">
       <Header />
-      <main className="u-container u-grid">
+      <main>
         <Component {...pageProps} />
       </main>
       <Analytics />
-    </>
+    </div>
   );
 }
