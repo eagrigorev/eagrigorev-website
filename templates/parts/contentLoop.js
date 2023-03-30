@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const ContentLoop = ({ posts }) => {
   return (
-    <section className="u-grid grid-4">
+    <section>
       {posts.map((post, index) => {
         if (post.meta.contentType === 'post') {
           return <PostCard key={index} post={post} />;
