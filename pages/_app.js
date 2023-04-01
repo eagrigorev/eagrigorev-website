@@ -4,7 +4,7 @@ import '@/styles/app.css';
 
 export default function App({ Component, pageProps }) {
   return (
-    <div className="app-container u-container">
+    <div>
       <Header />
       <main>
         <Component {...pageProps} />
