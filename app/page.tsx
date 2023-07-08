@@ -1,23 +1,15 @@
-import fs from 'fs';
 import Link from 'next/link';
+import { getPostMeta } from '../utils/getPostContent';
 
 const Home = () => {
-  const postMetadata = getPostMetadata();
-  const postPreviews = postMetadata.map((slug) => (
-    <div>
-      <Link href={`/${slug}`}>
-        {slug}
-      </Link>
+  const postMeta = getPostMeta('blog');
+  const postPreviews = postMeta.map((post) => (
+    <div key={post.slug}>
+      <Link href={`/${post.slug}`}>{post.title}</Link>
+      Posted {post.date} in {post.category}
     </div>
-  ))
-  return <div>{postPreviews}</div>
-}
+  ));
+  return <div>{postPreviews}</div>;
+};
 
 export default Home;
-
-const getPostMetadata = () => {
-  const path = 'markdown/posts';
-  const files = fs.readdirSync(path);
-  const slugs = files.map((file) => file.replace('.mdx', ''));
-  return slugs;
-}
