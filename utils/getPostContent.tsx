@@ -1,6 +1,6 @@
 import fs from 'fs';
 import matter, { GrayMatterFile } from 'gray-matter';
-import { PostMeta, PostType } from '../interfaces/post';
+import { PostMeta, PostType } from './interfaces';
 import { relativeDate } from './relativeDate';
 
 export const getPostMeta = (folder: PostType): PostMeta[] => {
