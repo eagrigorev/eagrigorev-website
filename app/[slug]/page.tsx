@@ -1,13 +1,16 @@
+import { getPostContent } from '../../utils/getPostContent';
 import Markdown from 'markdown-to-jsx';
-import { getPostMeta, getPostContent } from '../../utils/getPostContent';
 
 const Post = (props) => {
   const slug = props.params.slug;
-  const post = getPostContent('blog', slug);
+  const postContent = getPostContent('blog').filter(
+    (post) => post.meta.slug === slug
+  );
   return (
     <>
-      This is a post! {slug}
-      <Markdown>{post.content}</Markdown>
+      {postContent.map((post) => (
+        <Markdown key={post.meta.slug}>{post.content}</Markdown>
+      ))}
     </>
   );
 };
@@ -15,6 +18,6 @@ const Post = (props) => {
 export default Post;
 
 export const generateStaticParams = async () => {
-  const posts = getPostMeta('blog');
-  return posts.map((post) => ({ slug: post.slug }));
+  const postContent = getPostContent('blog');
+  return postContent.map((post) => ({ slug: post.meta.slug }));
 };

@@ -1,18 +1,10 @@
-import Link from 'next/link';
-import { getPostMeta } from '../utils/getPostContent';
+import { getPostContent } from '../utils/getPostContent';
+import BlogPostCard from './components/blogPostCard';
 
 const Home = () => {
-  const postMeta = getPostMeta('blog');
-  const postPreviews = postMeta.map((post) => (
-    <article key={post.slug}>
-      <Link href={post.slug}>
-        <h2>{post.title}</h2>
-      </Link>
-      <p>{post.excerpt}</p>
-      <p>
-        Posted {post.date} in {post.category}
-      </p>
-    </article>
+  const postContent = getPostContent('blog');
+  const postPreviews = postContent.map((post) => (
+    <BlogPostCard post={post} key={post.meta.slug} />
   ));
   return <div>{postPreviews}</div>;
 };

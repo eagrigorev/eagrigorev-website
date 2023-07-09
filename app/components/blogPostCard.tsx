@@ -1,15 +1,15 @@
 import Link from 'next/link';
-import { PostMeta } from '../../utils/interfaces';
+import { Post } from '../../utils/interfaces';
 
-const BlogPostCard = (meta: PostMeta) => {
+const BlogPostCard = (props: { post: Post }) => {
   return (
-    <article key={meta.slug}>
-      <Link href={meta.slug}>
-        <h2>{meta.title}</h2>
+    <article>
+      <Link href={props.post.meta.slug}>
+        <h2>{props.post.meta.title}</h2>
       </Link>
-      <p>{meta.excerpt}</p>
+      <p>{props.post.meta.excerpt}</p>
       <p>
-        Posted {meta.date} in {meta.category}
+        Posted {props.post.meta.date} in {props.post.meta.category}
       </p>
     </article>
   );

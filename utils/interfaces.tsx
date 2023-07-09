@@ -1,3 +1,8 @@
+export interface Post {
+  meta: PostMeta;
+  content: string;
+}
+
 export interface PostMeta {
   title: string;
   slug: string;
