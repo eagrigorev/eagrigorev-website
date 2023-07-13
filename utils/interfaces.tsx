@@ -12,4 +12,7 @@ export interface PostMeta {
   category?: string;
 }
 
-export type PostType = 'blog' | 'page' | 'art' | 'tabs';
+export enum PostType {
+  blog = 'blog',
+  page = 'page',
+}

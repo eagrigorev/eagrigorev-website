@@ -3,7 +3,7 @@ import Markdown from 'markdown-to-jsx';
 
 const Post = (props) => {
   const slug = props.params.slug;
-  const postContent = getPostContent('blog').filter(
+  const postContent = getPostContent().filter(
     (post) => post.meta.slug === slug
   );
   return (
@@ -18,6 +18,6 @@ const Post = (props) => {
 export default Post;
 
 export const generateStaticParams = async () => {
-  const postContent = getPostContent('blog');
+  const postContent = getPostContent();
   return postContent.map((post) => ({ slug: post.meta.slug }));
 };

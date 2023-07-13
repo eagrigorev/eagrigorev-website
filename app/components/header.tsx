@@ -1,9 +1,10 @@
+import { PostType } from '../../utils/interfaces';
 import { getPostContent } from '../../utils/getPostContent';
 import Link from 'next/link';
 import LinkElement from './linkElement';
 
 const Header = () => {
-  const postContent = getPostContent('page');
+  const postContent = getPostContent();
   return (
     <>
       <header>
@@ -12,9 +13,11 @@ const Header = () => {
         </Link>
         <nav>
           <ul>
-            {postContent.map((post) => (
-              <LinkElement post={post} key={post.meta.slug} />
-            ))}
+            {postContent
+              .filter((post) => post.meta.type === PostType.page)
+              .map((post) => (
+                <LinkElement post={post} key={post.meta.slug} />
+              ))}
           </ul>
         </nav>
       </header>

@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import { Post } from '../../utils/interfaces';
+import Link from 'next/link';
 
 const LinkElement = (props: { post: Post }) => {
   return (
