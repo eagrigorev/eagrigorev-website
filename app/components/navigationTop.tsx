@@ -5,7 +5,7 @@ const NavigationTop = () => {
     <nav>
       <ul>
         <li>
-          <Link href={'/'}>Home</Link>
+          <Link href={'/work'}>Work</Link>
         </li>
         <li>
           <Link href={'/about'}>About</Link>

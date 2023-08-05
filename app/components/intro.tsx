@@ -1,11 +1,12 @@
 const Intro = () => {
   return (
-    <div>
+    <section>
       <h2>
-        Hello, my name is Evgenii. I compose music, draw, and write code. This
-        is the temporary introduction.
+        Instead of tightening our grip by loading up on breakpoints, we can let
+        go, embracing the ebb and flow with a more fluid and systematic
+        approach.
       </h2>
-    </div>
+    </section>
   );
 };
 

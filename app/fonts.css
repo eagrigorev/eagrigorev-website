@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Jost';
+  src: url(../public/fonts/jost-regular.ttf);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@font-face {
+  font-family: 'Spectral';
+  src: url(../public/fonts/spectral-regular.ttf);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
