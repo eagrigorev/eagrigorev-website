@@ -1,14 +1,14 @@
 import { PostType } from '../utils/interfaces';
 import { getPostContent } from '../utils/getPostContent';
 import { sortPostsDesc } from '../utils/sortPosts';
-import Intro from './components/intro';
+import Featured from './components/featured';
 import BlogPostCard from './components/blogPostCard';
 
 const Home = () => {
   const postContent = sortPostsDesc(getPostContent());
   return (
     <>
-      <Intro />
+      <Featured />
       <div>
         {postContent
           .filter((post) => post.meta.type === PostType.blog)
