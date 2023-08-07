@@ -1,17 +1,14 @@
-'use client';
-
 import './fonts.css';
-import Theme from './components/theme';
-import Footer from './components/footer';
+import './global.css';
 import Header from './components/header';
+import Footer from './components/footer';
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
       <body className="u-container">
-        <Theme />
         <Header />
-        {children}
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

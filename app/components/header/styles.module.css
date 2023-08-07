@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--space-l-xl);
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-m);
+  list-style: none;
+  font-family: 'Jost';
+  font-size: var(--step-0);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+  padding: 0;
+}
