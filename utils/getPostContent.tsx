@@ -14,6 +14,7 @@ export const getPostContent = (): Post[] => {
         type: meta.type,
         excerpt: meta.excerpt,
         category: meta.category,
+        featuredImage: meta.featuredImage,
       },
       content,
     };

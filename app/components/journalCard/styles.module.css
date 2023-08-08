@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+  max-width: 560px;
+}
+
+.meta {
+  font-family: 'Spectral';
+  font-size: var(--step--1);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.title {
+  font-family: 'Jost';
+  font-size: var(--step-0);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

@@ -10,6 +10,7 @@ export interface PostMeta {
   type: PostType;
   excerpt?: string;
   category?: string;
+  featuredImage?: string;
 }
 
 export enum PostType {
