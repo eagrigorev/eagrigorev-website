@@ -1,9 +1,9 @@
 import styles from './styles.module.css';
-import { Post } from '../../../utils/interfaces';
+import { Markdown } from '../../../utils/interfaces';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const JournalCard = (props: { post: Post }) => {
+const JournalCard = (props: { post: Markdown }) => {
   return (
     <article className={styles.container}>
       <Image
