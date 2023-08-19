@@ -7,24 +7,23 @@ const Header = () => {
   return (
     <nav className={styles.container}>
       <Link href={'/'}>
-        <Image
-          src={WebsiteLogo}
-          alt="Website logo"
-          style={{
-            width: 'var(--space-l-4xl)',
-            height: 'var(--space-l-4xl)',
-          }}
-        />
+        <Image className={styles.logo} src={WebsiteLogo} alt="Website logo" />
       </Link>
       <ul className={styles.links}>
         <li>
-          <Link href={'/work'}>Work</Link>
+          <p>
+            <Link href={'/'}>Work</Link>
+          </p>
         </li>
         <li>
-          <Link href={'/about'}>About</Link>
+          <p>
+            <Link href={'/'}>About</Link>
+          </p>
         </li>
         <li>
-          <Link href={'/contact'}>Contact</Link>
+          <p>
+            <Link href={'/'}>Contact</Link>
+          </p>
         </li>
       </ul>
     </nav>

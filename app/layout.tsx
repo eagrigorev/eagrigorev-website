@@ -1,14 +1,13 @@
-import './fonts.css';
-import './global.css';
+import './style/global.css';
 import Header from './components/header';
 import Footer from './components/footer';
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
-      <body className="u-container">
+      <body className="container">
         <Header />
-        <main>{children}</main>
+        <main className="content">{children}</main>
         <Footer />
       </body>
     </html>

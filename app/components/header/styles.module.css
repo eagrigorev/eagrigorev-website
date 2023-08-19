@@ -6,16 +6,16 @@
   margin-top: var(--space-l-xl);
 }
 
+.logo {
+  width: var(--space-xl-5xl);
+  height: var(--space-xl-5xl);
+}
+
 .links {
   display: flex;
   flex-direction: row;
   gap: var(--space-m);
   list-style: none;
-  font-family: 'Jost';
-  font-size: var(--step-0);
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
   margin: 0;
   padding: 0;
 }

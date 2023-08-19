@@ -16,6 +16,7 @@ export enum Path {
   // illustrations = 'markdown/posts/illustrations',
   // programming = 'markdown/posts/programming',
   // tabs = 'markdown/posts/tabs',
-  writings = 'markdown/posts/writings',
+  // music = 'markdown/posts/music',
+  //writings = 'markdown/posts/writings',
   pages = 'markdown/pages',
 }

@@ -1,67 +1,26 @@
 import styles from './styles.module.css';
 import Image from 'next/image';
-import FeaturedImage1 from '../../../public/images/featured/grid-item-1.jpg';
-import FeaturedImage2 from '../../../public/images/featured/grid-item-2.jpg';
-import FeaturedImage3 from '../../../public/images/featured/grid-item-3.jpg';
-import FeaturedImage4 from '../../../public/images/featured/grid-item-4.jpg';
-import FeaturedImage5 from '../../../public/images/featured/grid-item-5.jpg';
-import FeaturedImage6 from '../../../public/images/featured/grid-item-6.jpg';
+import FeaturedImage1 from '../../../public/images/featured/featured-image-1.jpg';
+import FeaturedImage2 from '../../../public/images/featured/featured-image-2.jpg';
+import FeaturedImage3 from '../../../public/images/featured/featured-image-3.jpg';
+import FeaturedImage4 from '../../../public/images/featured/featured-image-4.jpg';
+import FeaturedImage5 from '../../../public/images/featured/featured-image-5.jpg';
+import FeaturedImage6 from '../../../public/images/featured/featured-image-6.jpg';
+import FeaturedImage7 from '../../../public/images/featured/featured-image-7.jpg';
+import FeaturedImage8 from '../../../public/images/featured/featured-image-8.jpg';
 
 const FeaturedImages = () => {
   return (
-    <section className={styles.container}>
-      <header>
-        <h1 className={styles.intro}>
-          Instead of tightening our grip by loading up on breakpoints, we can
-          let go, embracing the ebb and flow with a more fluid and systematic
-          approach.
-        </h1>
-      </header>
-      <div className={styles.images}>
-        <Image
-          src={FeaturedImage1}
-          alt=""
-          width={360}
-          height={360}
-          key="image1"
-        />
-        <Image
-          src={FeaturedImage2}
-          alt=""
-          width={360}
-          height={360}
-          key="image2"
-        />
-        <Image
-          src={FeaturedImage3}
-          alt=""
-          width={360}
-          height={360}
-          key="image3"
-        />
-        <Image
-          src={FeaturedImage4}
-          alt=""
-          width={360}
-          height={360}
-          key="image4"
-        />
-        <Image
-          src={FeaturedImage5}
-          alt=""
-          width={360}
-          height={360}
-          key="image5"
-        />
-        <Image
-          src={FeaturedImage6}
-          alt=""
-          width={360}
-          height={360}
-          key="image6"
-        />
-      </div>
-    </section>
+    <div className={styles.container}>
+      <Image className={styles.image} src={FeaturedImage1} alt="image1" />
+      <Image className={styles.image} src={FeaturedImage2} alt="image2" />
+      <Image className={styles.image} src={FeaturedImage3} alt="image3" />
+      <Image className={styles.image} src={FeaturedImage4} alt="image4" />
+      <Image className={styles.image} src={FeaturedImage5} alt="image5" />
+      <Image className={styles.image} src={FeaturedImage6} alt="image6" />
+      <Image className={styles.image} src={FeaturedImage7} alt="image7" />
+      <Image className={styles.image} src={FeaturedImage8} alt="image8" />
+    </div>
   );
 };
 

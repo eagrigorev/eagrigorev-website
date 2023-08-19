@@ -1,0 +1,105 @@
+/* Font Faces */
+@font-face {
+  font-family: 'Open Sans';
+  src: url(../../public/fonts/open-sans-variable.ttf);
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  src: url(../../public/fonts/pt-sans-regular.ttf);
+}
+
+@font-face {
+  font-family: 'PT Serif';
+  src: url(../../public/fonts/pt-serif-italic.ttf);
+}
+
+/* Font Sizes */
+:root {
+  /* Step -1: 16.00px → 16.00px */
+  --caption: clamp(1rem, calc(1rem + 0vw), 1rem);
+
+  /* Step 0: 18.00px → 20.00px */
+  --h6-body: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+
+  /* Step 1: 20.25px → 25.00px */
+  --h5: clamp(1.27rem, calc(1.16rem + 0.52vw), 1.56rem);
+
+  /* Step 2: 22.78px → 31.25px */
+  --h4: clamp(1.42rem, calc(1.24rem + 0.92vw), 1.95rem);
+
+  /* Step 3: 25.63px → 39.06px */
+  --h3-sub: clamp(1.6rem, calc(1.31rem + 1.46vw), 2.44rem);
+
+  /* Step 4: 28.83px → 48.83px */
+  --h2: clamp(1.8rem, calc(1.37rem + 2.17vw), 3.05rem);
+
+  /* Step 5: 32.44px → 61.04px */
+  --h1: clamp(2.03rem, calc(1.41rem + 3.11vw), 3.82rem);
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #111;
+  font-family: 'Open Sans';
+  line-height: 1.1;
+  font-weight: 800;
+  font-style: normal;
+}
+
+h1 {
+  font-size: var(--h1);
+}
+
+h2 {
+  font-size: var(--h2);
+}
+
+h3,
+.subheading {
+  font-size: var(--h3-sub);
+}
+
+h4 {
+  font-size: var(--h4);
+}
+
+h5 {
+  font-size: var(--h5);
+}
+
+h6,
+p {
+  font-size: var(--h6-body);
+}
+
+.subheading {
+  color: #222;
+  font-family: 'PT Serif';
+  line-height: 1.2;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Paragraphs */
+p,
+.caption {
+  font-family: 'PT Sans';
+  line-height: 1.6;
+  font-style: normal;
+  font-weight: 400;
+}
+
+p {
+  color: #444;
+}
+
+.caption {
+  color: #eee;
+  font-size: var(--caption);
+}
