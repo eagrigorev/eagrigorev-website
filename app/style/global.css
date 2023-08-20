@@ -85,6 +85,14 @@ iframe {
   max-width: 100%;
 }
 
+:root {
+  /* Font Colors */
+  --heading-text: #111;
+  --subheading-text: #222;
+  --body-text: #444;
+  --caption-text: #eee;
+}
+
 /* Font Faces */
 @font-face {
   font-family: "Open Sans";
@@ -123,7 +131,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #111;
+  color: var(--heading-text);
   font-family: "Open Sans";
   line-height: 1.1;
   font-weight: 800;
@@ -158,7 +166,7 @@ p {
 }
 
 .subheading {
-  color: #222;
+  color: var(--subheading-text);
   font-family: "PT Serif";
   line-height: 1.2;
   font-style: italic;
@@ -176,14 +184,20 @@ p,
 }
 
 p {
-  color: #444;
+  color: var(--body-text);
 }
 
 .caption {
-  color: #eee;
+  color: var(--caption-text);
   font-size: var(--caption);
 }
 
+@media only screen and (max-width: 768px) {
+  h1,
+  .subheading {
+    max-width: 100%;
+  }
+}
 /* Regular Spaces */
 :root {
   /* Space XS: 14px → 15px */
