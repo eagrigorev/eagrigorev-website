@@ -15,9 +15,6 @@
   /* Space L-XL: 36px → 60px */
   --space-l-xl: clamp(2.25rem, calc(1.73rem + 2.61vw), 3.75rem);
 
-  /* Space 6XL-7XL: 133px → 260px */
-  --space-6xl-7xl: clamp(8.31rem, calc(5.55rem + 13.8vw), 16.25rem);
-
   /* Space 8XL-9XL: 284px → 560px */
   --space-8xl-9xl: clamp(17.75rem, calc(11.75rem + 30vw), 35rem);
 }
