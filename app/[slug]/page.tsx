@@ -1,10 +1,13 @@
 import { redirect } from 'next/navigation';
-import { getAllMarkdowns, getAllMarkdownSlugs } from '../../utils/getMarkdown';
+import {
+  getMarkdownAllPaths,
+  getMarkdownSlugsAllPaths,
+} from '../../utils/markdown';
 import Markdown from 'markdown-to-jsx';
 
 const Post = (props) => {
   const slug = props.params.slug;
-  const markdown = getAllMarkdowns().find(
+  const markdown = getMarkdownAllPaths().find(
     (markdown) => markdown.meta.slug === slug
   );
   if (markdown) {
@@ -22,5 +25,5 @@ const Post = (props) => {
 export default Post;
 
 export const generateStaticParams = async () => {
-  return getAllMarkdownSlugs();
+  return getMarkdownSlugsAllPaths();
 };
