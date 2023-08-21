@@ -5,15 +5,15 @@ import { Markdown, Path } from './interfaces';
 export const getMarkdownSinglePath = (path: Path): Markdown[] => {
   return fs.readdirSync(path).map((file) => {
     const markdownSinglePath = fs.readFileSync(`${path}/${file}`, 'utf-8');
-    const { data: meta, content } = matter(markdownSinglePath);
+    const { data, content } = matter(markdownSinglePath);
     return {
       meta: {
-        title: meta.title,
-        slug: file.replace('.mdx', ''),
-        date: meta.date,
-        excerpt: meta.excerpt,
-        category: meta.category,
-        featuredImage: meta.featuredImage,
+        title: data.title,
+        slug: data.slug,
+        date: data.date,
+        excerpt: data.excerpt,
+        category: data.category,
+        featuredImage: data.featuredImage,
       },
       content,
     };

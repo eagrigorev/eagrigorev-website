@@ -1,17 +1,8 @@
-.intro {
-  font-family: 'Spectral';
-  font-size: var(--step-2);
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
 .container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   margin-top: var(--space-l-3xl);
   gap: var(--grid-gutter);
-  flex-wrap: wrap;
 }
 
 .image {
