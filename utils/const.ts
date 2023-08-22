@@ -9,22 +9,4 @@ export const STATIC_HEADLINES = {
     subtitle:
       'Boreal Heights is my dark doom/folk project. Available on Bandcamp, Spotify and Apple Music.',
   },
-  tabs: {
-    title: '',
-    subtitle: '',
-  },
-  illustrations: {
-    title: '',
-    subtitle: '',
-  },
-  programming: {
-    title: '',
-    subtitle: '',
-  },
-  writings: {
-    title: '',
-    subtitle: '',
-  },
 };
-
-export const PORTFOLIO_IMAGES = '/../../../public/images';

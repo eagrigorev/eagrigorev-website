@@ -41,7 +41,7 @@ export const sortMarkdownDesc = (
   markdownSinglePath: Markdown[]
 ): Markdown[] => {
   return markdownSinglePath.sort((prev, next) => {
-    if (prev.meta.date < next.meta.date) {
+    if (new Date(prev.meta.date) < new Date(next.meta.date)) {
       return 1;
     } else {
       return -1;

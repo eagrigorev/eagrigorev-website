@@ -3,7 +3,6 @@ import {
   getMarkdownSinglePath,
   sortMarkdownDesc,
 } from '../../../utils/markdown';
-import { PORTFOLIO_IMAGES } from '../../../utils/const';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -36,13 +35,13 @@ const PortfolioCard = ({ markdown, slug }) => {
       <Link href={`/${markdown.meta.slug}`}>
         <Image
           className={styles.image}
-          src={`${PORTFOLIO_IMAGES}/${slug}/${markdown.meta.featuredImage}`}
+          src={`/images/${slug}/${markdown.meta.featuredImage}`}
           alt={markdown.meta.title}
           width={560}
           height={560}
         />
       </Link>
-      <Link href={`/${markdown.meta.slug}`}>
+      <Link href={`/${markdown.meta.slug}`} className={styles.title}>
         <p>{markdown.meta.title}</p>
       </Link>
     </article>

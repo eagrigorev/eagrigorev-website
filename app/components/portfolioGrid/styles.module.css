@@ -23,8 +23,11 @@
   grid-column-start: span 3;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   gap: var(--space-xs);
+}
+
+.title {
+  text-align: right;
 }
 
 .image {
