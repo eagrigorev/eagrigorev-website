@@ -1,0 +1,24 @@
+.container {
+  margin-top: var(--space-l-3xl);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--grid-gutter);
+}
+
+.left,
+.right {
+  grid-column-start: span 6;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .left,
+  .right {
+    grid-column-start: span 12;
+  }
+}

@@ -8,7 +8,7 @@
 
 .logo {
   width: var(--space-xl-5xl);
-  height: var(--space-xl-5xl);
+  height: auto;
 }
 
 .links {
