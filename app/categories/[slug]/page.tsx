@@ -1,4 +1,4 @@
-import { Path, ParentType } from '../../../utils/interfaces';
+import { Path } from '../../../utils/interfaces';
 import { getMarkdownAllPaths } from '../../../utils/markdown';
 import Headline from '../../components/headline';
 import PortfolioGrid from '../../components/portfolioGrid';
@@ -24,6 +24,10 @@ const Page = (props) => {
 export default Page;
 
 export const generateStaticParams = async () => {
-  const slugs: ParentType[] = ['music'];
+  const markdownAllPaths = getMarkdownAllPaths();
+  const slugs: { slug: string }[] = markdownAllPaths.map((markdown) => {
+    if (markdown.meta.category != undefined)
+      return { slug: markdown.meta.category.toLowerCase().replace(' ', '-') };
+  });
   return slugs;
 };
