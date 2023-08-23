@@ -6,13 +6,18 @@ import {
 import Link from 'next/link';
 import Image from 'next/image';
 
-const PortfolioGrid = ({ category, slug }) => {
-  const markdownSinglePath = sortMarkdownDesc(getMarkdownSinglePath(category));
+const PortfolioGrid = ({ category, slug, filter = null }) => {
+  let markdownSinglePath = sortMarkdownDesc(getMarkdownSinglePath(category));
   let categories: string[] = [];
   markdownSinglePath.map((markdown) => categories.push(markdown.meta.category));
   categories = categories.filter(
     (category, index) => categories.indexOf(category) === index
   );
+  if (filter) {
+    markdownSinglePath = markdownSinglePath.filter(
+      (markdown) => markdown.meta.category === filter
+    );
+  }
   return (
     <div className={styles.container}>
       <Filters categories={categories} slug={slug} />

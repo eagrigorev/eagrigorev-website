@@ -7,10 +7,13 @@ export interface Meta {
   title: string;
   slug: string;
   date: string;
+  type?: ParentType;
   excerpt?: string;
   category?: string;
   featuredImage?: string;
 }
+
+export type ParentType = 'music';
 
 export enum Path {
   // illustrations = 'markdown/posts/illustrations',

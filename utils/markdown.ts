@@ -11,6 +11,7 @@ export const getMarkdownSinglePath = (path: Path): Markdown[] => {
         title: data.title,
         slug: data.slug,
         date: data.date,
+        type: data.type,
         excerpt: data.excerpt,
         category: data.category,
         featuredImage: data.featuredImage,

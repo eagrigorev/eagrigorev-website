@@ -5,7 +5,7 @@ import {
 } from '../../utils/markdown';
 import Markdown from 'markdown-to-jsx';
 
-const Post = (props) => {
+const Page = (props) => {
   const slug = props.params.slug;
   const markdown = getMarkdownAllPaths().find(
     (markdown) => markdown.meta.slug === slug
@@ -22,7 +22,7 @@ const Post = (props) => {
   }
 };
 
-export default Post;
+export default Page;
 
 export const generateStaticParams = async () => {
   return getMarkdownSlugsAllPaths();

@@ -1,6 +1,6 @@
 import styles from './styles.module.css';
 
-const Headline = ({ title, subtitle }) => {
+const Headline = ({ title, subtitle = null }) => {
   return (
     <header className={styles.container}>
       <h1>{title}</h1>

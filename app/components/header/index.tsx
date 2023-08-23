@@ -12,17 +12,12 @@ const Header = () => {
       <ul className={styles.links}>
         <li>
           <p>
-            <Link href={'/'}>Work</Link>
+            <Link href={'/'}>Home</Link>
           </p>
         </li>
         <li>
           <p>
-            <Link href={'/'}>About</Link>
-          </p>
-        </li>
-        <li>
-          <p>
-            <Link href={'/'}>Contact</Link>
+            <Link href={'/music'}>Music</Link>
           </p>
         </li>
       </ul>
