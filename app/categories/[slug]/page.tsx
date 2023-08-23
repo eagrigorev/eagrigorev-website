@@ -1,4 +1,4 @@
-import { Path } from '../../../utils/interfaces';
+import { Path, ParentType } from '../../../utils/interfaces';
 import { getMarkdownAllPaths } from '../../../utils/markdown';
 import Headline from '../../components/headline';
 import PortfolioGrid from '../../components/portfolioGrid';
@@ -22,3 +22,8 @@ const Page = (props) => {
 };
 
 export default Page;
+
+export const generateStaticParams = async () => {
+  const slugs: ParentType[] = ['music'];
+  return slugs;
+};
