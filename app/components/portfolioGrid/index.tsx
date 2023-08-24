@@ -42,8 +42,8 @@ const PortfolioCard = ({ markdown, slug }) => {
           className={styles.image}
           src={`/images/${slug}/${markdown.meta.featuredImage}`}
           alt={markdown.meta.title}
-          width={560}
-          height={560}
+          width={768}
+          height={768}
         />
       </Link>
       <Link href={`/${markdown.meta.slug}`} className={styles.title}>

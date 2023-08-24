@@ -13,8 +13,8 @@ const PageSplit = ({ markdown }) => {
             className={styles.image}
             src={`/images/${markdown.meta.type}/${markdown.meta.featuredImage}`}
             alt={`${markdown.meta.title}}`}
-            width={560}
-            height={560}
+            width={768}
+            height={768}
           />
         </div>
         <div className={styles.right}>
