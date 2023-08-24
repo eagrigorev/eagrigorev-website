@@ -1,4 +1,5 @@
 import styles from './styles.module.css';
+import Markdown from 'markdown-to-jsx';
 import Image from 'next/image';
 import Headline from '../headline';
 
@@ -17,7 +18,7 @@ const PageSplit = ({ markdown }) => {
           />
         </div>
         <div className={styles.right}>
-          <p>{markdown.content}</p>
+          <Markdown>{markdown.content}</Markdown>
         </div>
       </div>
     </section>
