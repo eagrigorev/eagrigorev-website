@@ -11,7 +11,7 @@ const ImageWithCaption = ({ image, type, title }) => {
         width={768}
         height={768}
       />
-      <p className="caption">Temporary caption</p>
+      <p className="caption">{image.caption}</p>
     </>
   );
 };
