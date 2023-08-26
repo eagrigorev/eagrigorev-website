@@ -1,7 +1,7 @@
-.spacerM {
-  height: var(--space-m);
+.spacerParagraph {
+  height: var(--space-l);
 }
 
-.spacerL {
-  height: var(--space-l);
+.spacerHeading {
+  height: var(--space-xl);
 }

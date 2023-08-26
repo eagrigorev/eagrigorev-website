@@ -17,8 +17,16 @@
 
 @media only screen and (max-width: 768px) {
 
+  .container {
+    gap: 0px;
+  }
+
   .left,
   .right {
     grid-column-start: span 12;
+  }
+
+  .right {
+    margin-top: var(--space-l);
   }
 }

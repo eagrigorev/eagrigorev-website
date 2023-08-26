@@ -2,8 +2,7 @@ import styles from './styles.module.css';
 import Markdown from 'markdown-to-jsx';
 import Image from 'next/image';
 import Headline from '../headline';
-
-import { SpacerM, SpacerL } from '../mdx';
+import { SpacerParagraph, SpacerHeading } from '../mdx';
 
 const PageSplit = ({ markdown }) => {
   return (
@@ -23,8 +22,8 @@ const PageSplit = ({ markdown }) => {
           <Markdown
             options={{
               overrides: {
-                SpacerM: { component: SpacerM },
-                SpacerL: { component: SpacerL },
+                SpacerParagraph: { component: SpacerParagraph },
+                SpacerHeading: { component: SpacerHeading },
               },
             }}
           >
