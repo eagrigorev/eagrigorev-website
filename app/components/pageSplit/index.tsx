@@ -3,6 +3,8 @@ import Markdown from 'markdown-to-jsx';
 import Image from 'next/image';
 import Headline from '../headline';
 
+import { SpacerM, SpacerL } from '../mdx';
+
 const PageSplit = ({ markdown }) => {
   return (
     <section>
@@ -18,7 +20,16 @@ const PageSplit = ({ markdown }) => {
           />
         </div>
         <div className={styles.right}>
-          <Markdown>{markdown.content}</Markdown>
+          <Markdown
+            options={{
+              overrides: {
+                SpacerM: { component: SpacerM },
+                SpacerL: { component: SpacerL },
+              },
+            }}
+          >
+            {markdown.content}
+          </Markdown>
         </div>
       </div>
     </section>
