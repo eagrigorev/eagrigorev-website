@@ -35,12 +35,15 @@ const PortfolioGrid = ({ category, slug, filter = null }) => {
 };
 
 const PortfolioCard = ({ markdown, slug }) => {
+  const featuredImage = markdown.meta.images.find(
+    (image) => image.featured == true
+  ).src;
   return (
     <article className={styles.item}>
       <Link href={`/${markdown.meta.slug}`}>
         <Image
           className={styles.image}
-          src={`/images/${slug}/${markdown.meta.featuredImage}`}
+          src={`/images/${slug}/${featuredImage}`}
           alt={markdown.meta.title}
           width={768}
           height={768}

@@ -10,9 +10,8 @@
   grid-column-start: span 6;
 }
 
-.image {
-  width: 100%;
-  height: auto;
+.image:not(:last-child) {
+  margin-bottom: var(--grid-gutter);
 }
 
 @media only screen and (max-width: 768px) {

@@ -1,8 +1,8 @@
 import fs from 'fs';
 import matter from 'gray-matter';
-import { Markdown, Path } from './interfaces';
+import { Markdown, MdxPath } from './interfaces';
 
-export const getMarkdownSinglePath = (path: Path): Markdown[] => {
+export const getMarkdownSinglePath = (path: MdxPath): Markdown[] => {
   return fs.readdirSync(path).map((file) => {
     const markdownSinglePath = fs.readFileSync(`${path}/${file}`, 'utf-8');
     const { data, content } = matter(markdownSinglePath);
@@ -14,7 +14,7 @@ export const getMarkdownSinglePath = (path: Path): Markdown[] => {
         type: data.type,
         excerpt: data.excerpt,
         category: data.category,
-        featuredImage: data.featuredImage,
+        images: data.images,
       },
       content,
     };
@@ -22,9 +22,9 @@ export const getMarkdownSinglePath = (path: Path): Markdown[] => {
 };
 
 export const getMarkdownAllPaths = (): Markdown[] => {
-  const paths = Object.values(Path);
+  const paths = Object.values(MdxPath);
   let markdownAllPaths: Markdown[] = [];
-  paths.map((path: Path) => {
+  paths.map((path: MdxPath) => {
     markdownAllPaths = [...markdownAllPaths, ...getMarkdownSinglePath(path)];
   });
   return markdownAllPaths;

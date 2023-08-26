@@ -10,12 +10,18 @@ export interface Meta {
   type?: ParentType;
   excerpt?: string;
   category?: string;
-  featuredImage?: string;
+  images?: Image[];
 }
 
 export type ParentType = 'music';
 
-export enum Path {
+export interface Image {
+  src: string;
+  caption: string;
+  featured: boolean;
+}
+
+export enum MdxPath {
   // illustrations = 'markdown/posts/illustrations',
   // programming = 'markdown/posts/programming',
   // tabs = 'markdown/posts/tabs',

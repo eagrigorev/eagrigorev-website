@@ -1,4 +1,4 @@
-import { Path } from '../../utils/interfaces';
+import { MdxPath } from '../../utils/interfaces';
 import { STATIC_HEADLINES } from '../../utils/const';
 import Headline from '../components/headline';
 import PortfolioGrid from '../components/portfolioGrid';
@@ -10,7 +10,7 @@ const Music = () => {
         title={STATIC_HEADLINES.music.title}
         subtitle={STATIC_HEADLINES.music.subtitle}
       />
-      <PortfolioGrid category={Path.music} slug="music" />
+      <PortfolioGrid category={MdxPath.music} slug="music" />
     </section>
   );
 };

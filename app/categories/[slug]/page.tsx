@@ -1,4 +1,4 @@
-import { Path } from '../../../utils/interfaces';
+import { MdxPath } from '../../../utils/interfaces';
 import { getMarkdownAllPaths } from '../../../utils/markdown';
 import Headline from '../../components/headline';
 import PortfolioGrid from '../../components/portfolioGrid';
@@ -13,7 +13,7 @@ const Page = (props) => {
     <section>
       <Headline title={`Category: ${category}`} />
       <PortfolioGrid
-        category={Path.music}
+        category={MdxPath.music}
         slug={parentSlug}
         filter={category}
       />
