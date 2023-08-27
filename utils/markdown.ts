@@ -38,6 +38,17 @@ export const getMarkdownSlugsAllPaths = (): { slug: string }[] => {
   return slugs;
 };
 
+export const getMarkdownSlugsFromCategoriesAllPaths = (): {
+  slug: string;
+}[] => {
+  const markdownAllPaths = getMarkdownAllPaths();
+  const slugs: { slug: string }[] = markdownAllPaths.map((markdown) => {
+    if (markdown.meta.category != undefined)
+      return { slug: markdown.meta.category.toLowerCase().replace(' ', '-') };
+  });
+  return slugs;
+};
+
 export const sortMarkdownDesc = (
   markdownSinglePath: Markdown[]
 ): Markdown[] => {

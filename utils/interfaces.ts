@@ -13,16 +13,17 @@ export interface Meta {
   images?: Image[];
 }
 
-export type ParentType = 'music';
+export type ParentType = 'music' | 'illustrations';
 
 export interface Image {
   src: string;
   caption: string;
   featured: boolean;
+  isHidden: boolean;
 }
 
 export enum MdxPath {
-  // illustrations = 'markdown/posts/illustrations',
+  illustrations = 'markdown/posts/illustrations',
   // programming = 'markdown/posts/programming',
   // tabs = 'markdown/posts/tabs',
   music = 'markdown/posts/music',

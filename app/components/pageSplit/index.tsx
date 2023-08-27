@@ -10,15 +10,17 @@ const PageSplit = ({ markdown }) => {
       <Headline title={markdown.meta.title} subtitle={markdown.meta.excerpt} />
       <div className={styles.container}>
         <div className={styles.left}>
-          {markdown.meta.images.map((image) => (
-            <div className={styles.image} key={markdown.meta.slug}>
-              <ImageWithCaption
-                image={image}
-                type={markdown.meta.type}
-                title={markdown.meta.title}
-              />
-            </div>
-          ))}
+          {markdown.meta.images
+            .filter((image) => image.isHidden == false)
+            .map((image) => (
+              <div className={styles.image} key={image.src}>
+                <ImageWithCaption
+                  image={image}
+                  type={markdown.meta.type}
+                  title={markdown.meta.title}
+                />
+              </div>
+            ))}
         </div>
         <div className={styles.right}>
           <Markdown

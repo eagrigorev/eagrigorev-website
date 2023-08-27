@@ -10,7 +10,10 @@ const Page = (props) => {
   const markdown = getMarkdownAllPaths().find(
     (markdown) => markdown.meta.slug === slug
   );
-  if (markdown && markdown.meta.type === 'music') {
+  if (
+    markdown &&
+    (markdown.meta.type === 'music' || markdown.meta.type === 'illustrations')
+  ) {
     return <PageSplit markdown={markdown} />;
   } else {
     redirect('/');

@@ -20,6 +20,11 @@ const Header = () => {
             <Link href={'/music'}>Music</Link>
           </p>
         </li>
+        <li>
+          <p>
+            <Link href={'/illustrations'}>Illustrations</Link>
+          </p>
+        </li>
       </ul>
     </nav>
   );
