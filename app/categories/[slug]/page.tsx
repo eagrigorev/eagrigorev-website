@@ -14,7 +14,6 @@ const Page = (props) => {
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .toString()
     .replace(',', ' ');
-  console.log(category);
   const parentSlug = getMarkdownAllPaths().find(
     (markdown) => markdown.meta.category === category
   ).meta.type;
