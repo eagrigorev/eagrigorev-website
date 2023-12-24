@@ -1,7 +1,7 @@
 import { Analytics } from '@vercel/analytics/react';
-import './style/global.css';
-import Header from './components/header';
-import Footer from './components/footer';
+import './global.css';
+
+import Header from './components/Header/Header';
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -9,7 +9,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <body className="container">
         <Header />
         <main className="content">{children}</main>
-        <Footer />
+        {/* <Footer /> */}
         <Analytics />
       </body>
     </html>
