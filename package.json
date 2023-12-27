@@ -1,4 +1,7 @@
 {
+  "name": "eagrigorev-website",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -6,25 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@vercel/analytics": "^1.0.2",
-    "date-fns": "^3.0.6",
-    "gray-matter": "^4.0.3",
-    "markdown-to-jsx": "^7.2.1",
-    "next": "^14.0.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "sharp": "^0.33.1"
+    "react": "^18",
+    "react-dom": "^18",
+    "next": "14.0.4"
   },
   "devDependencies": {
-    "@types/node": "^20.10.5",
-    "@types/react": "^18.2.45",
-    "@typescript-eslint/eslint-plugin": "^6.15.0",
-    "@typescript-eslint/parser": "^6.15.0",
-    "eslint": "^8.44.0",
-    "eslint-config-next": "^14.0.4",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.0.0-alpha.1",
-    "prettier": "^3.0.0",
-    "typescript": "^5.3.3"
+    "eslint": "^8",
+    "eslint-config-next": "14.0.4"
   }
 }
