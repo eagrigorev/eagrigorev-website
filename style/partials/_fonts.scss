@@ -7,3 +7,26 @@
   font-family: 'Roboto Slab';
   src: url('../../public/fonts/roboto-slab.ttf');
 }
+
+:root {
+  /* Step -2: 11.06px → 11.52px */
+  --font-xs: clamp(0.6913rem, 0.6813rem + 0.05vw, 0.72rem);
+
+  /* Step -1: 12.44px → 14.40px */
+  --font-s: clamp(0.7775rem, 0.7349rem + 0.213vw, 0.9rem);
+
+  /* Step 0: 14.00px → 18.00px */
+  --font-m: clamp(0.875rem, 0.788rem + 0.4348vw, 1.125rem);
+
+  /* Step 1: 15.75px → 22.50px */
+  --font-l: clamp(0.9844rem, 0.8376rem + 0.7337vw, 1.4063rem);
+
+  /* Step 2: 17.72px → 28.13px */
+  --font-xl: clamp(1.1075rem, 0.8812rem + 1.1315vw, 1.7581rem);
+
+  /* Step 3: 19.93px → 35.16px */
+  --font-xxl: clamp(1.2456rem, 0.9145rem + 1.6554vw, 2.1975rem);
+
+  /* Step 4: 22.43px → 43.95px */
+  --font-xxxl: clamp(1.4019rem, 0.934rem + 2.3391vw, 2.7469rem);
+}

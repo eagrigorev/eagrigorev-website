@@ -2,3 +2,20 @@
 @import './partials/fonts';
 @import './partials/colors';
 @import './partials/spaces';
+
+:root {
+  --grid-max-width: 83.25rem;
+  --grid-gutter: var(--space-m-l, clamp(1.25rem, 0.9338rem + 1.581vw, 2.25rem));
+  --grid-columns: 12;
+}
+
+.container {
+  max-width: var(--grid-max-width);
+  padding-inline: var(--grid-gutter);
+  margin-inline: auto;
+}
+
+.grid {
+  display: grid;
+  gap: var(--grid-gutter);
+}
