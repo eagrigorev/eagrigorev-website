@@ -9,11 +9,10 @@
   --space-l: clamp(1.75rem, 1.5761rem + 0.8696vw, 2.25rem);
 
   /* One-up pairs */
+
   /* Space s-m: 14px → 25px */
   --space-s-m: clamp(0.875rem, 0.6359rem + 1.1957vw, 1.5625rem);
 
   /* Space m-l: 20px → 36px */
   --space-m-l: clamp(1.25rem, 0.9022rem + 1.7391vw, 2.25rem);
-
-  /* Custom pairs */
 }
