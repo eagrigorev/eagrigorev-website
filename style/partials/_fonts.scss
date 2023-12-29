@@ -1,6 +1,7 @@
 @font-face {
   font-family: 'Cormorant';
   src: url('../../public/fonts/cormorant.ttf');
+  font-style: normal;
 }
 
 @font-face {
@@ -29,4 +30,28 @@
 
   /* Step 4: 22.43px → 43.95px */
   --font-xxxl: clamp(1.4019rem, 0.934rem + 2.3391vw, 2.7469rem);
+}
+
+h1 {
+  font-size: var(--font-xxxl);
+}
+
+h2 {
+  font-size: var(--font-xxl);
+}
+
+h3 {
+  font-size: var(--font-xl);
+}
+
+h4 {
+  font-size: var(--font-l);
+}
+
+h5 {
+  font-size: var(--font-m);
+}
+
+h6 {
+  font-size: var(--font-s);
 }

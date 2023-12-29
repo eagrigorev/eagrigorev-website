@@ -2,10 +2,23 @@
   border-bottom: 1px solid var(--slate);
 }
 
-.header {
+.navigation {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: var(--space-m-l);
+}
+
+.title {
+  font-family: 'Cormorant';
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
 }

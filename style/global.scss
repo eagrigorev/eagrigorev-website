@@ -19,3 +19,8 @@
   display: grid;
   gap: var(--grid-gutter);
 }
+
+body {
+  color: var(--black);
+  background-color: var(--cloud);
+}
