@@ -13,10 +13,8 @@
   max-width: var(--grid-max-width);
   padding-inline: var(--grid-gutter);
   margin-inline: auto;
-}
-
-.grid {
   display: grid;
+  grid-template-columns: repeat(6, 1fr);
   gap: var(--grid-gutter);
 }
 

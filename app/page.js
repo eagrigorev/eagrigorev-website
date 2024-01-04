@@ -1,3 +1,5 @@
+import Intro from '@/components/intro';
+
 export default function Home() {
-  return <p>Home testing</p>;
+  return <Intro />;
 }
