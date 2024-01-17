@@ -84,3 +84,31 @@ body,
 iframe {
   max-width: 100%;
 }
+
+/* Font sizes */
+
+:root {
+  /* Step -1: 12.44px → 14.40px */
+  --step--xs: clamp(0.7775rem, 0.7349rem + 0.213vw, 0.9rem);
+
+  /* Step 0: 14.00px → 18.00px */
+  --step-s: clamp(0.875rem, 0.788rem + 0.4348vw, 1.125rem);
+
+  /* Step 1: 15.75px → 22.50px */
+  --step-m: clamp(0.9844rem, 0.8376rem + 0.7337vw, 1.4063rem);
+
+  /* Step 2: 17.72px → 28.13px */
+  --step-l: clamp(1.1075rem, 0.8812rem + 1.1315vw, 1.7581rem);
+
+  /* Step 3: 19.93px → 35.16px */
+  --step-xl: clamp(1.2456rem, 0.9145rem + 1.6554vw, 2.1975rem);
+
+  /* Step 4: 22.43px → 43.95px */
+  --step-2xl: clamp(1.4019rem, 0.934rem + 2.3391vw, 2.7469rem);
+
+  /* Step 5: 25.23px → 54.93px */
+  --step-3xl: clamp(1.5769rem, 0.9312rem + 3.2283vw, 3.4331rem);
+
+  /* Step 6: 28.38px → 68.66px */
+  --step-4xl: clamp(1.7738rem, 0.8981rem + 4.3783vw, 4.2913rem);
+}
