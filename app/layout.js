@@ -1,5 +1,7 @@
 import '@/global.css'
 
+import Header from '@/components/header'
+
 export const metadata = {
   title: 'Evgenii Grigorev',
   description: 'Artist & Software Developer',
@@ -8,7 +10,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Header />
+        <main>{children}</main>
+      </body>
     </html>
   )
 }
