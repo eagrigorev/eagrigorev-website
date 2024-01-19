@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 36px 72px;
+}
+
+.navigation-left {
+  display: flex;
+  gap: 36px;
+}
+
+.title {
+  font-size: var(--size-l);
+}
+
+.navigation-right {
+  list-style: none;
+  display: flex;
+  gap: 36px;
+  font-size: var(--size-s);
+}

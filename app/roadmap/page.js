@@ -2,7 +2,7 @@ import RoadmapItem from '@/components/roadmapItem';
 
 const DevelopmentRoadmap = () => {
   return (
-    <>
+    <main>
       <header>
         <h1>Development Roadmap</h1>
         <p>
@@ -18,7 +18,7 @@ const DevelopmentRoadmap = () => {
           massa vitae nulla.
         </p>
       </article>
-    </>
+    </main>
   );
 };
 
