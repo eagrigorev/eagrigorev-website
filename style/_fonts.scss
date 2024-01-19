@@ -2,7 +2,7 @@
 
 :root {
   /* Step -1: 12.44px → 14.40px */
-  --step--xs: clamp(0.7775rem, 0.7349rem + 0.213vw, 0.9rem);
+  --step-xs: clamp(0.7775rem, 0.7349rem + 0.213vw, 0.9rem);
 
   /* Step 0: 14.00px → 18.00px */
   --step-s: clamp(0.875rem, 0.788rem + 0.4348vw, 1.125rem);

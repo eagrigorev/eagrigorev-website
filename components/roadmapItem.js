@@ -1,5 +1,5 @@
 const RoadmapItem = () => {
-  return <></>
-}
+  return <></>;
+};
 
 export default RoadmapItem;

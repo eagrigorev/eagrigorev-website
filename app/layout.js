@@ -1,11 +1,11 @@
-import '@/global.scss'
+import '@/global.scss';
 
-import Header from '@/components/header'
+import Header from '@/components/header';
 
 export const metadata = {
   title: 'Evgenii Grigorev',
   description: 'Artist & Software Developer',
-}
+};
 
 export default function RootLayout({ children }) {
   return (
@@ -15,5 +15,5 @@ export default function RootLayout({ children }) {
         <main>{children}</main>
       </body>
     </html>
-  )
+  );
 }

@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "prettier --check . && stylelint --allow-empty-input \"**/*.{css,scss}\" && next build",
+    "build:local": "prettier --write . && stylelint --allow-empty-input \"**/*.{css,scss}\" && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "prettier --check . && stylelint --allow-empty-input \"**/*.{css,scss}\" && next lint",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "next": "14.0.4",
@@ -14,8 +16,13 @@
     "react-dom": "^18"
   },
   "devDependencies": {
-    "eslint": "^8",
+    "eslint": "^8.56.0",
     "eslint-config-next": "14.0.4",
-    "sass": "^1.70.0"
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.2.4",
+    "sass": "^1.70.0",
+    "stylelint": "^16.2.0",
+    "stylelint-config-prettier-scss": "^1.0.0",
+    "stylelint-config-standard-scss": "^13.0.0"
   }
 }
