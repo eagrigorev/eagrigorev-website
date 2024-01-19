@@ -10,13 +10,18 @@
   --grid-columns: 12;
 }
 
-.u-container {
+body {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.container {
   max-width: var(--grid-max-width);
   padding-inline: var(--grid-gutter);
   margin-inline: auto;
 }
 
-.u-grid {
+.grid {
   display: grid;
   gap: var(--grid-gutter);
 }
