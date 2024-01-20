@@ -1,14 +1,15 @@
+import styles from './intro.module.scss';
+
 const Intro = () => {
   return (
-    <header>
-      <h1>
+    <header className={styles['wrapper']}>
+      <h1 className={styles['title']}>
         Evgenii makes pixel art illustrations, writes music, arrangements, and
         code.
       </h1>
-      <p>
-        Junior software developer based in Thessaloniki, Greece
-        <br />
-        Currently coding at T-Digital by Deutsche Telekom
+      <p className={styles['subtitle']}>
+        Junior software developer based in Thessaloniki, Greece. Currently
+        coding at T-Digital by Deutsche Telekom.
       </p>
     </header>
   );

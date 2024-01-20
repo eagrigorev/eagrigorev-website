@@ -1,6 +1,7 @@
 @import '@/style/normalize.scss';
 @import '@/style/colors.scss';
 @import '@/style/fonts.scss';
+@import '@/style/spaces.scss';
 
 /* Grid dimensions */
 
@@ -22,9 +23,4 @@ body {
   max-width: var(--grid-max-width);
   padding-inline: var(--grid-gutter);
   margin-inline: auto;
-}
-
-.grid {
-  display: grid;
-  gap: var(--grid-gutter);
 }

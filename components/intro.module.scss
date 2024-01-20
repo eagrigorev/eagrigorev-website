@@ -1,0 +1,16 @@
+.wrapper {
+  padding-top: 72px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--grid-gutter);
+}
+
+.title {
+  grid-column-start: span 9;
+  font-size: var(--size-4xl);
+}
+
+.subtitle {
+  grid-column-start: span 7;
+  font-size: var(--size-l);
+}
