@@ -12,6 +12,8 @@
 
 .title {
   font-size: var(--size-l);
+  font-family: var(--font-cormorant);
+  font-weight: 600;
 }
 
 .navigation-right {
@@ -19,4 +21,6 @@
   display: flex;
   gap: 36px;
   font-size: var(--size-s);
+  font-family: var(--font-roboto-slab);
+  font-weight: 300;
 }

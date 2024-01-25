@@ -8,9 +8,13 @@
 .title {
   grid-column-start: span 9;
   font-size: var(--size-4xl);
+  font-family: var(--font-cormorant);
+  font-weight: 600;
 }
 
 .subtitle {
   grid-column-start: span 7;
   font-size: var(--size-l);
+  font-family: var(--font-roboto-slab);
+  font-weight: 200;
 }
