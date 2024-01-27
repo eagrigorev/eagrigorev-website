@@ -2,7 +2,7 @@ import styles from './intro.module.scss';
 
 const Intro = () => {
   return (
-    <header className={styles['wrapper']}>
+    <header className={`${styles['wrapper']} grid`}>
       <h1 className={styles['title']}>
         Evgenii makes pixel art illustrations, writes music, arrangements, and
         code.

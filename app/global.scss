@@ -19,10 +19,17 @@ body {
   color: var(--black);
   font-family: var(--font-roboto-slab);
   font-weight: 300;
+  font-style: normal;
 }
 
 .container {
   max-width: var(--grid-max-width);
   padding-inline: var(--grid-gutter);
   margin-inline: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--grid-gutter);
 }

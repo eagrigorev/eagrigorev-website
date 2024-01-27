@@ -1,0 +1,11 @@
+.wrapper {
+  padding-top: 72px;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+
+.articles {
+  grid-column-start: 4;
+  grid-column-end: 10;
+}

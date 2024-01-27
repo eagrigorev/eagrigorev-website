@@ -1,23 +1,26 @@
+import styles from './roadmap.module.scss';
+
+import PageTitle from '@/components/pageTitle';
 import RoadmapItem from '@/components/roadmapItem';
 
 const DevelopmentRoadmap = () => {
   return (
-    <main>
-      <header>
-        <h1>Development Roadmap</h1>
-        <p>
-          This website is the work in progress. I build it slowly and add notes
-          about new features here.
-        </p>
-      </header>
-      <article>
-        <h2>January 18, 2024 — Minor update — v2.0.0</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur. Ac arcu morbi a a volutpat
-          amet urna amet sit. Imperdiet ornare sed sit elementum. Euismod amet a
-          massa vitae nulla.
-        </p>
-      </article>
+    <main className={`${styles['wrapper']} container`}>
+      <PageTitle />
+      <div className="grid">
+        <RoadmapItem
+          date="January 27, 2024"
+          importance="Major release"
+          version="v2.0.0"
+          content="Full redesign started. Added starting home and roadmap pages."
+        />
+        <RoadmapItem
+          date="August 28, 2023"
+          importance="Major release"
+          version="v1.1.0"
+          content="Illustrations portfolio is launched."
+        />
+      </div>
     </main>
   );
 };

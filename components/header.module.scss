@@ -14,6 +14,7 @@
   font-size: var(--size-l);
   font-family: var(--font-cormorant);
   font-weight: 600;
+  line-height: 100%;
 }
 
 .navigation-right {
@@ -21,4 +22,5 @@
   display: flex;
   gap: 36px;
   font-size: var(--size-s);
+  line-height: 100%;
 }
