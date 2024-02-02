@@ -7,10 +7,10 @@ const Intro = () => {
         Evgenii makes pixel art illustrations, writes music, arrangements, and
         code.
       </h1>
-      <p className={styles['subtitle']}>
+      <h2 className={styles['subtitle']}>
         Junior software developer based in Thessaloniki, Greece. Currently
         coding at T-Digital by Deutsche Telekom.
-      </p>
+      </h2>
     </header>
   );
 };
