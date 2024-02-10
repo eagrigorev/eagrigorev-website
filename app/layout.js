@@ -1,5 +1,6 @@
 import './global.scss';
 import { roboto, roboto_condensed } from '@/style/fonts';
+import Navigation from '@/components/navigation';
 
 export const metadata = {
   title: 'Evgenii Grigorev',
@@ -12,7 +13,10 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${roboto.variable} ${roboto_condensed.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <Navigation />
+        {children}
+      </body>
     </html>
   );
 }

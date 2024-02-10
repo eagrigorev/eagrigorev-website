@@ -1,0 +1,14 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-m-l) var(--space-m-4xl);
+}
+
+.left {
+  display: flex;
+}
+
+.right {
+  list-style: none;
+  display: flex;
+}
