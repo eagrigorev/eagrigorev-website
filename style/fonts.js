@@ -1,17 +1,17 @@
-import { Cormorant, Roboto_Slab } from 'next/font/google';
+import { Roboto, Roboto_Condensed } from 'next/font/google';
 
-export const cormorant = Cormorant({
-  weight: ['600'], // SemiBold
+export const roboto = Roboto({
+  weight: ['300', '400', '500', '700'], // Light, Regular, Medium, Bold
   style: ['normal'],
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-cormorant',
+  variable: '--font-roboto',
 });
 
-export const roboto_slab = Roboto_Slab({
-  weight: ['200', '300'], // ExtraLight, Light
+export const roboto_condensed = Roboto_Condensed({
+  weight: ['300', '400', '500', '700'], // Light, Regular, Medium, Bold
   style: ['normal'],
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-roboto-slab',
+  variable: '--font-roboto-condensed',
 });

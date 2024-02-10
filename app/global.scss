@@ -1,6 +1,5 @@
 @import '@/style/normalize.scss';
 @import '@/style/colors.scss';
-@import '@/style/fonts.scss';
 @import '@/style/spaces.scss';
 
 /* Grid dimensions */
@@ -15,11 +14,6 @@
 }
 
 body {
-  background-color: var(--white);
-  color: var(--black);
-  font-family: var(--font-roboto-slab);
-  font-weight: 300;
-  font-style: normal;
 }
 
 .container {
