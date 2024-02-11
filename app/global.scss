@@ -33,3 +33,9 @@ body {
   grid-template-columns: repeat(12, 1fr);
   gap: var(--grid-gutter);
 }
+
+@media only screen and (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
