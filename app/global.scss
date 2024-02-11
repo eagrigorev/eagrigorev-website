@@ -2,7 +2,7 @@
 @import '@/style/colors.scss';
 @import '@/style/spaces.scss';
 
-/* Grid dimensions */
+// Grid dimensions
 
 :root {
   --grid-max-width: 90rem;
@@ -12,6 +12,8 @@
   );
   --grid-columns: 12;
 }
+
+// Global classes
 
 body {
   background-color: var(--color-white);
@@ -32,6 +34,15 @@ body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: var(--grid-gutter);
+}
+
+.link-underline {
+  text-decoration: none;
+  color: var(--color-black);
+  &:hover {
+    border-bottom: 2px solid var(--color-black);
+    padding-bottom: 2px;
+  }
 }
 
 @media only screen and (max-width: 768px) {

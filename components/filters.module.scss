@@ -1,0 +1,29 @@
+.wrapper {
+  display: flex;
+  gap: var(--space-xs-s);
+  align-items: center;
+  font-family: var(--font-roboto-condensed);
+  font-size: var(--font-m);
+  line-height: 100%;
+}
+
+.filters {
+  list-style: none;
+  display: flex;
+  gap: var(--space-xs-s);
+}
+
+.filters-mobile {
+  display: none;
+  list-style: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .filters {
+    display: none;
+  }
+
+  .filters-mobile {
+    display: block;
+  }
+}

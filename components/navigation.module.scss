@@ -32,15 +32,6 @@
   line-height: 100%;
 }
 
-.link {
-  text-decoration: none;
-  color: var(--color-black);
-  &:hover {
-    border-bottom: 2px solid var(--color-black);
-    padding-bottom: 2px;
-  }
-}
-
 .right-mobile {
   list-style: none;
   display: none;

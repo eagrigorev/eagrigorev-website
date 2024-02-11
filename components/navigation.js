@@ -11,24 +11,24 @@ const Navigation = () => {
       </Link>
       <ul className={styles['right-desktop']}>
         <li>
-          <Link className={styles['link']} href={'/'}>
+          <Link className="link-underline" href={'/'}>
             Work
           </Link>
         </li>
         <li>
-          <Link className={styles['link']} href={'/'}>
+          <Link className="link-underline" href={'/'}>
             About
           </Link>
         </li>
         <li>
-          <Link className={styles['link']} href={'/'}>
+          <Link className="link-underline" href={'/'}>
             Now
           </Link>
         </li>
       </ul>
       <ul className={styles['right-mobile']}>
         <li>
-          <Link className={styles['link']} href={'/'}>
+          <Link className="link-underline" href={'/'}>
             Menu
           </Link>
         </li>

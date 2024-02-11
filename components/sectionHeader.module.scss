@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xs-2xs);
+}
+
+.title-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  font-family: var(--font-roboto-condensed);
+  font-size: var(--font-xl);
+  font-weight: 500;
+  line-height: 100%;
+}
+
+.subtitle {
+  font-size: var(--font-m);
+  font-weight: 300;
+}
