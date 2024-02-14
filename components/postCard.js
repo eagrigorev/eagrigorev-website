@@ -5,10 +5,14 @@ import Link from 'next/link';
 const PostCard = () => {
   return (
     <article>
-      <Image alt="Post Image" />
+      <Link href={'/'}>
+        <Image alt="Post Image" />
+      </Link>
       <div>
-        <h3></h3>
-        <p></p>
+        <p className={styles['meta']}>Travel — February 14, 2024</p>
+        <Link href={'/'}>
+          <h3 className={styles['title']}>Exploring the Pacific Northwest</h3>
+        </Link>
       </div>
     </article>
   );

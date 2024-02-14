@@ -1,5 +1,18 @@
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-xs-s);
+  // grid span
+
+  // 20 - 10, 5 - 3
+}
+
+.meta {
+  font-size: var(--font-s);
+  font-weight: 300;
+  line-height: 100%;
+  padding-top: var(--space-xs-s);
+}
+
+.title {
+  font-family: var(--font-roboto-condensed);
+  font-size: var(--font-l);
+  padding-top: var(--space-4xs);
 }
