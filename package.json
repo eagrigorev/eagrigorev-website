@@ -11,6 +11,8 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "gray-matter": "^4.0.3",
+    "markdown-to-jsx": "^7.4.1",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18"
