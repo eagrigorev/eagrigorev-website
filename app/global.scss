@@ -1,6 +1,6 @@
-@import '@/style/normalize.scss';
-@import '@/style/colors.scss';
-@import '@/style/spaces.scss';
+@import '@/style/normalize';
+@import '@/style/colors';
+@import '@/style/spaces';
 
 // Grid dimensions
 
@@ -39,6 +39,7 @@ body {
 .link-underline {
   text-decoration: none;
   color: var(--color-black);
+
   &:hover {
     border-bottom: 2px solid var(--color-black);
     padding-bottom: 2px;

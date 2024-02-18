@@ -1,7 +1,11 @@
 .wrapper {
-  // grid span
+  grid-column-start: span 4;
+}
 
-  // 20 - 10, 5 - 3
+.image {
+  width: 100%;
+  background-color: #eabf7f;
+  aspect-ratio: 4 / 3;
 }
 
 .meta {
@@ -15,4 +19,16 @@
   font-family: var(--font-roboto-condensed);
   font-size: var(--font-l);
   padding-top: var(--space-4xs);
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    grid-column-start: span 3;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .wrapper {
+    grid-column-start: span 6;
+  }
 }

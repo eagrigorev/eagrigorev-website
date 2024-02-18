@@ -4,9 +4,9 @@ import Link from 'next/link';
 
 const PostCard = () => {
   return (
-    <article>
+    <article className={styles['wrapper']}>
       <Link href={'/'}>
-        <Image alt="Post Image" />
+        <Image className={styles['image']} alt="Post Image" />
       </Link>
       <div>
         <p className={styles['meta']}>Travel — February 14, 2024</p>
