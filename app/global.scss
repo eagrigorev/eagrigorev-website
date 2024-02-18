@@ -46,6 +46,15 @@ body {
   }
 }
 
+.link-color {
+  text-decoration: none;
+  color: var(--color-black);
+
+  &:hover {
+    color: var(--color-accent-red);
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .grid {
     grid-template-columns: repeat(6, 1fr);

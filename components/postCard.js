@@ -10,7 +10,7 @@ const PostCard = () => {
       </Link>
       <div>
         <p className={styles['meta']}>Travel — February 14, 2024</p>
-        <Link href={'/'}>
+        <Link className="link-color" href={'/'}>
           <h3 className={styles['title']}>Exploring the Pacific Northwest</h3>
         </Link>
       </div>
