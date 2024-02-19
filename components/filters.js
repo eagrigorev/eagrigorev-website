@@ -1,47 +1,20 @@
 import styles from './filters.module.scss';
 import Link from 'next/link';
+import { LinkUnderline } from './link';
 
 const Filters = () => {
   return (
     <div className={styles['wrapper']}>
       <ul className={styles['filters']}>
-        <li>
-          <Link className="link-underline" href={'/'}>
-            See all
-          </Link>
-        </li>
-        <li>
-          <Link className="link-underline" href={'/'}>
-            Illustrations
-          </Link>
-        </li>
-        <li>
-          <Link className="link-underline" href={'/'}>
-            Music
-          </Link>
-        </li>
-        <li>
-          <Link className="link-underline" href={'/'}>
-            Arrangements
-          </Link>
-        </li>
-        <li>
-          <Link className="link-underline" href={'/'}>
-            Projects
-          </Link>
-        </li>
-        <li>
-          <Link className="link-underline" href={'/'}>
-            Journal
-          </Link>
-        </li>
+        <LinkUnderline link="/" title="See all" />
+        <LinkUnderline link="/" title="Illustrations" />
+        <LinkUnderline link="/" title="Music" />
+        <LinkUnderline link="/" title="Arrangements" />
+        <LinkUnderline link="/" title="Projects" />
+        <LinkUnderline link="/" title="Journal" />
       </ul>
       <ul className={styles['filters-mobile']}>
-        <li>
-          <Link className="link-underline" href={'/'}>
-            Filters
-          </Link>
-        </li>
+        <LinkUnderline link="/" title="Filters" />
       </ul>
     </div>
   );

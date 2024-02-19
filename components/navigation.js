@@ -1,6 +1,7 @@
 import styles from './navigation.module.scss';
 import Link from 'next/link';
 import Image from 'next/image';
+import { LinkUnderline } from './link';
 
 const Navigation = () => {
   return (
@@ -10,28 +11,12 @@ const Navigation = () => {
         <p className={styles['title']}>Evgenii Grigorev</p>
       </Link>
       <ul className={styles['right-desktop']}>
-        <li>
-          <Link className="link-underline" href={'/'}>
-            Work
-          </Link>
-        </li>
-        <li>
-          <Link className="link-underline" href={'/'}>
-            About
-          </Link>
-        </li>
-        <li>
-          <Link className="link-underline" href={'/'}>
-            Now
-          </Link>
-        </li>
+        <LinkUnderline link="/" title="Work" />
+        <LinkUnderline link="/" title="About" />
+        <LinkUnderline link="/" title="Now" />
       </ul>
       <ul className={styles['right-mobile']}>
-        <li>
-          <Link className="link-underline" href={'/'}>
-            Menu
-          </Link>
-        </li>
+        <LinkUnderline link="/" title="Menu" />
       </ul>
     </nav>
   );

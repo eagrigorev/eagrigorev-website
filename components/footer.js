@@ -1,5 +1,5 @@
 import styles from './footer.module.scss';
-import Link from 'next/link';
+import { LinkColor, LinkUnderline } from './link';
 
 const Footer = () => {
   return (
@@ -10,89 +10,29 @@ const Footer = () => {
             Thank you for visiting! Want to stay updated?
           </h3>
           <ul className={styles['socials']}>
-            <li className={styles['social-link']}>
-              <Link className="link-color" href={'/'}>
-                Tw.
-              </Link>
-            </li>
-            <li className={styles['social-link']}>
-              <Link className="link-color" href={'/'}>
-                Yt.
-              </Link>
-            </li>
-            <li className={styles['social-link']}>
-              <Link className="link-color" href={'/'}>
-                Ig.
-              </Link>
-            </li>
-            <li className={styles['social-link']}>
-              <Link className="link-color" href={'/'}>
-                Bc.
-              </Link>
-            </li>
-            <li className={styles['social-link']}>
-              <Link className="link-color" href={'/'}>
-                Gh.
-              </Link>
-            </li>
+            <LinkColor link="/" title="Tw." />
+            <LinkColor link="/" title="Yt." />
+            <LinkColor link="/" title="Ig." />
+            <LinkColor link="/" title="Bc." />
+            <LinkColor link="/" title="Gh." />
           </ul>
         </div>
         <div className={styles['widgets--right']}>
           <h4 className={styles['title--right']}>Links</h4>
           <div className={styles['links-wrapper']}>
             <ul className={styles['links']}>
-              <li className={styles['navigation-link']}>
-                <Link className="link-underline" href={'/'}>
-                  Illustrations
-                </Link>
-              </li>
-              <li className={styles['social-link']}>
-                <Link className="link-underline" href={'/'}>
-                  Music
-                </Link>
-              </li>
-              <li className={styles['social-link']}>
-                <Link className="link-underline" href={'/'}>
-                  Arrangements
-                </Link>
-              </li>
-              <li className={styles['social-link']}>
-                <Link className="link-underline" href={'/'}>
-                  Projects
-                </Link>
-              </li>
-              <li className={styles['social-link']}>
-                <Link className="link-underline" href={'/'}>
-                  Journal
-                </Link>
-              </li>
+              <LinkUnderline link="/" title="Illustrations" />
+              <LinkUnderline link="/" title="Music" />
+              <LinkUnderline link="/" title="Arrangements" />
+              <LinkUnderline link="/" title="Projects" />
+              <LinkUnderline link="/" title="Journal" />
             </ul>
             <ul className={styles['links']}>
-              <li className={styles['social-link']}>
-                <Link className="link-underline" href={'/'}>
-                  About
-                </Link>
-              </li>
-              <li className={styles['social-link']}>
-                <Link className="link-underline" href={'/'}>
-                  Now
-                </Link>
-              </li>
-              <li className={styles['social-link']}>
-                <Link className="link-underline" href={'/'}>
-                  Shop
-                </Link>
-              </li>
-              <li className={styles['social-link']}>
-                <Link className="link-underline" href={'/'}>
-                  Colophon
-                </Link>
-              </li>
-              <li className={styles['social-link']}>
-                <Link className="link-underline" href={'/'}>
-                  Library
-                </Link>
-              </li>
+              <LinkUnderline link="/" title="About" />
+              <LinkUnderline link="/" title="Now" />
+              <LinkUnderline link="/" title="Shop" />
+              <LinkUnderline link="/" title="Colophon" />
+              <LinkUnderline link="/" title="Library" />
             </ul>
           </div>
         </div>
