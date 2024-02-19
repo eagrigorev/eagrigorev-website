@@ -1,6 +1,7 @@
 import './global.scss';
 import { roboto, roboto_condensed } from '@/style/fonts';
 import Navigation from '@/components/navigation';
+import Footer from '@/components/footer';
 
 export const metadata = {
   title: 'Evgenii Grigorev',
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
       <body>
         <Navigation />
         {children}
+        <Footer />
       </body>
     </html>
   );
