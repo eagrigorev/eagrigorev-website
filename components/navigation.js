@@ -11,9 +11,8 @@ const Navigation = () => {
         <p className={styles['title']}>Evgenii Grigorev</p>
       </Link>
       <ul className={styles['right-desktop']}>
-        <LinkUnderline link="/" title="Work" />
+        <LinkUnderline link="/" title="Home" />
         <LinkUnderline link="/" title="About" />
-        <LinkUnderline link="/" title="Now" />
       </ul>
       <ul className={styles['right-mobile']}>
         <LinkUnderline link="/" title="Menu" />

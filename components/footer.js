@@ -23,16 +23,9 @@ const Footer = () => {
             <ul className={styles['links']}>
               <LinkUnderline link="/" title="Illustrations" />
               <LinkUnderline link="/" title="Music" />
-              <LinkUnderline link="/" title="Arrangements" />
-              <LinkUnderline link="/" title="Projects" />
-              <LinkUnderline link="/" title="Journal" />
             </ul>
             <ul className={styles['links']}>
               <LinkUnderline link="/" title="About" />
-              <LinkUnderline link="/" title="Now" />
-              <LinkUnderline link="/" title="Shop" />
-              <LinkUnderline link="/" title="Colophon" />
-              <LinkUnderline link="/" title="Library" />
             </ul>
           </div>
         </div>
