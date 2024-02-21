@@ -1,9 +1,14 @@
-import { getPosts } from '@/utils/getPosts';
+import { getPosts, getPostsFromSingleCategory } from '@/utils/getPosts';
 import { sortPostsDesc } from '@/utils/sort';
 import PostCard from './postCard';
 
-const PostsGrid = () => {
-  let allPosts = sortPostsDesc(getPosts()).slice(0, 6);
+const PostsGrid = ({ category }) => {
+  let allPosts = [];
+  if (category === 'all') {
+    allPosts = sortPostsDesc(getPosts()).slice(0, 6);
+  } else {
+    allPosts = sortPostsDesc(getPostsFromSingleCategory(category));
+  }
   return (
     <div className="grid">
       {allPosts.map((post) => (

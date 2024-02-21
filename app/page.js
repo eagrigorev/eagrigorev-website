@@ -13,7 +13,7 @@ export default function Home() {
       />
       <section className={styles['wrapper']}>
         <SectionHeader />
-        <PostsGrid />
+        <PostsGrid category="all" />
       </section>
     </main>
   );
