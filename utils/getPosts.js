@@ -18,9 +18,8 @@ export const getPostsFromSingleCategory = (category) => {
 };
 
 export const getPosts = () => {
-  const illustrations = getPostsFromSingleCategory('illustrations');
   const music = getPostsFromSingleCategory('music');
-  const allPosts = [...illustrations, ...music];
+  const allPosts = [...music];
   return allPosts;
 };
 
