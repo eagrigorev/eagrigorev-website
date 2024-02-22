@@ -3,20 +3,12 @@
   padding-bottom: var(--space-2xl-7xl);
 }
 
-.images {
-  grid-column-start: 2;
-  grid-column-end: 7;
-  width: 100%;
-  background-color: #eabf7f;
-}
-
 .description {
   grid-column-start: 7;
   grid-column-end: 12;
 }
 
 @media only screen and (width <= 768px) {
-  .images,
   .description {
     grid-column-start: span 6;
     grid-column-end: auto;

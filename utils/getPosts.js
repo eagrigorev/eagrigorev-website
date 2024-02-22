@@ -11,6 +11,8 @@ export const getPostsFromSingleCategory = (category) => {
         slug: data.slug,
         date: data.date,
         category: data.category,
+        featuredImage: data.featuredImage,
+        images: data.images,
       },
       content,
     };
