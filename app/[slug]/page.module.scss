@@ -4,13 +4,11 @@
 }
 
 .description {
-  grid-column-start: 7;
-  grid-column-end: 12;
+  grid-column: 7 / 12;
 }
 
 @media only screen and (width <= 768px) {
   .description {
-    grid-column-start: span 6;
-    grid-column-end: auto;
+    grid-column: span 6 / auto;
   }
 }

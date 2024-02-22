@@ -1,13 +1,11 @@
 .images {
-  grid-column-start: 2;
-  grid-column-end: 7;
+  grid-column: 2 / 7;
   width: 100%;
   background-color: #eabf7f;
 }
 
 @media only screen and (width <= 768px) {
   .images {
-    grid-column-start: span 6;
-    grid-column-end: auto;
+    grid-column: span 6 / auto;
   }
 }
