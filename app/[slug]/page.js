@@ -20,7 +20,7 @@ const Page = (props) => {
             className={styles['images']}
             images={post.meta.images}
           />
-          <div className={styles['description']}>{post.meta.images[1].src}</div>
+          <div className={styles['description']}>text</div>
         </section>
       </main>
     );
