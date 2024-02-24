@@ -17,6 +17,7 @@ const PostsGrid = ({ category }) => {
           slug={post.meta.slug}
           date={post.meta.date}
           category={post.meta.category}
+          image={post.meta.featuredImage}
           key={post.meta.slug}
         />
       ))}

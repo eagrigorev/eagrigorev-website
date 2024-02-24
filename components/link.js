@@ -4,10 +4,7 @@ import Link from 'next/link';
 const LinkUnderline = ({ link, title }) => {
   return (
     <li>
-      <Link
-        className={`${styles['link']} ${styles['underline']}`}
-        href={`/${link}`}
-      >
+      <Link className={`${styles['link']} ${styles['underline']}`} href={link}>
         {title}
       </Link>
     </li>
@@ -17,10 +14,7 @@ const LinkUnderline = ({ link, title }) => {
 const LinkColor = ({ link, title }) => {
   return (
     <li>
-      <Link
-        className={`${styles['link']} ${styles['color']}`}
-        href={`/${link}`}
-      >
+      <Link className={`${styles['link']} ${styles['color']}`} href={link}>
         {title}
       </Link>
     </li>

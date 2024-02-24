@@ -1,9 +1,9 @@
 export default imageMapper = [
   {
-    id: '',
+    id: 'beyond-the-sea-of-ghosts',
     images: [
       {
-        src: '',
+        src: 'boreal-heights-beyond-the-sea-of-ghosts.png',
         description: '',
       },
     ],

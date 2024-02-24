@@ -12,7 +12,6 @@ const Navigation = () => {
       </Link>
       <ul className={styles['right-desktop']}>
         <LinkUnderline link="/" title="Home" />
-        <LinkUnderline link="/" title="About" />
       </ul>
       <ul className={styles['right-mobile']}>
         <LinkUnderline link="/" title="Menu" />
