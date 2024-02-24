@@ -1,7 +1,9 @@
 .images {
   grid-column: 2 / 7;
-  width: 100%;
-  background-color: #eabf7f;
+}
+
+.image {
+  height: 100%;
 }
 
 @media only screen and (width <= 768px) {

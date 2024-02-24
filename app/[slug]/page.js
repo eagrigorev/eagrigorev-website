@@ -1,6 +1,7 @@
 import styles from './page.module.scss';
 import { getPosts, getPostsSlugs } from '@/utils/getPosts';
-import Image from 'next/image';
+import React from 'react';
+import Markdown from 'markdown-to-jsx';
 import PostTitle from '@/components/postTitle';
 import ImageGallery from '@/components/imageGallery';
 
@@ -20,7 +21,15 @@ const Page = (props) => {
             className={styles['images']}
             images={post.meta.images}
           />
-          <div className={styles['description']}>text</div>
+          <div className={styles['description']}>
+            <Markdown
+              options={{
+                wrapper: React.Fragment,
+              }}
+            >
+              {post.content}
+            </Markdown>
+          </div>
         </section>
       </main>
     );
