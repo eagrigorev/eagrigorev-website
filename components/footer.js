@@ -10,8 +10,6 @@ const Footer = () => {
             Thank you for visiting! Want to stay updated?
           </h3>
           <ul className={styles['socials']}>
-            <LinkColor link="/" title="Tw." />
-            <LinkColor link="/" title="Yt." />
             <LinkColor link="/" title="Ig." />
             <LinkColor link="/" title="Bc." />
             <LinkColor link="/" title="Gh." />
@@ -21,8 +19,7 @@ const Footer = () => {
           <h4 className={styles['title--right']}>Links</h4>
           <div className={styles['links-wrapper']}>
             <ul className={styles['links']}>
-              <LinkUnderline link="/" title="Illustrations" />
-              <LinkUnderline link="/" title="Music" />
+              <LinkUnderline link="/music" title="Music" />
             </ul>
             <ul className={styles['links']}>
               <LinkUnderline link="/" title="About" />
