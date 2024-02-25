@@ -3,19 +3,29 @@ import Image from 'next/image';
 
 const ImageGallery = ({ images }) => {
   return (
-    <div className={styles['images']}>
+    <div className={styles['wrapper']}>
       {images.map((image) => (
-        <div key={image.src}>
-          <Image
-            className={styles['image']}
-            src={`/images/${image.src}`}
-            alt={image.description}
-            width={716}
-            height={716}
-          />
-          <p>{image.description}</p>
-        </div>
+        <ImageWithCaption
+          key={image.src}
+          src={image.src}
+          description={image.description}
+        />
       ))}
+    </div>
+  );
+};
+
+const ImageWithCaption = ({ src, description }) => {
+  return (
+    <div>
+      <Image
+        className={styles['image']}
+        src={`/images/${src}`}
+        width={716}
+        height={716}
+        alt={description}
+      />
+      <p className={styles['description']}>{description}</p>
     </div>
   );
 };

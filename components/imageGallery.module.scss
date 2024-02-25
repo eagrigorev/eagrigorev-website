@@ -1,13 +1,20 @@
-.images {
+.wrapper {
   grid-column: 2 / 7;
 }
 
 .image {
+  width: 100%;
   height: 100%;
 }
 
+.description {
+  padding-top: var(--space-4xs);
+  font-size: var(--font-xs);
+  font-weight: 300;
+}
+
 @media only screen and (width <= 768px) {
-  .images {
+  .wrapper {
     grid-column: span 6 / auto;
   }
 }

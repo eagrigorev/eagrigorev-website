@@ -31,8 +31,6 @@
 
   // Spaces
 
-  // @link https://utopia.fyi/space/calculator?c=320,14,1.125,1440,20,1.25,4,2,&s=0.7|0.5|0.39|0.24,1.4|1.8|2.15|2.6|3|3.6|4.03|5|6,m-4xl|xl-3xl|2xl-4xl|2xl-6xl|2xl-7xl|5xl-4xl|5xl-7xl&g=m,l,xl,12
-
   // Space 4xs: 3px → 5px
 
   --space-4xs: clamp(0.1875rem, 0.1518rem + 0.1786vi, 0.3125rem);
@@ -172,4 +170,13 @@
   // Space 5xl-7xl: 56px → 120px
 
   --space-5xl-7xl: clamp(3.5rem, 2.3571rem + 5.7143vi, 7.5rem);
+
+  // Grid dimensions
+
+  --grid-max-width: 90rem;
+  --grid-gutter: var(
+    --space-m-l,
+    clamp(1.25rem, 0.9643rem + 1.4286vw, 2.25rem)
+  );
+  --grid-columns: 12;
 }

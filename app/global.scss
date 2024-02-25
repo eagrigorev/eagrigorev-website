@@ -2,17 +2,6 @@
 @import '@/style/colors';
 @import '@/style/spaces';
 
-// Grid dimensions
-
-:root {
-  --grid-max-width: 90rem;
-  --grid-gutter: var(
-    --space-m-l,
-    clamp(1.25rem, 0.9643rem + 1.4286vw, 2.25rem)
-  );
-  --grid-columns: 12;
-}
-
 // Global classes
 
 body {
