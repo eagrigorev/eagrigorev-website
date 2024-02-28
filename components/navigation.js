@@ -7,7 +7,13 @@ const Navigation = () => {
   return (
     <nav className={styles['wrapper']}>
       <Link className={styles['left']} href={'/'}>
-        <Image className={styles['logo']} alt="Website Logo" />
+        <Image
+          className={styles['logo']}
+          src={'/images/logo.png'}
+          width={60}
+          height={60}
+          alt="Website Logo"
+        />
         <p className={styles['title']}>Evgenii Grigorev</p>
       </Link>
       <ul className={styles['right-desktop']}>
