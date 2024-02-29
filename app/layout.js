@@ -1,4 +1,4 @@
-import './global.scss';
+import './style.scss';
 import { roboto, roboto_condensed } from '@/style/fonts';
 import Navigation from '@/components/navigation';
 import Footer from '@/components/footer';
