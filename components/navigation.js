@@ -1,7 +1,8 @@
+'use client';
+
 import styles from './navigation.module.scss';
 import Link from 'next/link';
 import Image from 'next/image';
-import { LinkUnderline } from './link';
 
 const Navigation = () => {
   return (
@@ -17,10 +18,19 @@ const Navigation = () => {
         <p className={styles['title']}>Evgenii Grigorev</p>
       </Link>
       <ul className={styles['right-desktop']}>
-        <LinkUnderline link="/" title="Home" />
+        <li>
+          <Link className="link-underline" href={'/'}>
+            Home
+          </Link>
+        </li>
+        <li className="link-dropdown" onClick={() => console.log('CLICK')}>
+          <span className="link-underline">Categories</span>
+        </li>
       </ul>
       <ul className={styles['right-mobile']}>
-        <LinkUnderline link="/" title="Menu" />
+        <li className="link-dropdown" onClick={() => console.log('CLICK')}>
+          <span className="link-underline">Menu</span>
+        </li>
       </ul>
     </nav>
   );

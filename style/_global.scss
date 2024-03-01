@@ -40,6 +40,12 @@ body {
   }
 }
 
+.link-dropdown {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 @media only screen and (width <= 768px) {
   .grid {
     grid-template-columns: repeat(6, 1fr);
