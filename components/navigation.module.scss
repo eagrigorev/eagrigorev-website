@@ -30,6 +30,7 @@
   gap: var(--space-m-l);
   font-family: var(--font-roboto-condensed);
   line-height: 100%;
+  position: relative;
 }
 
 .right-mobile {
@@ -39,6 +40,17 @@
   line-height: 100%;
 }
 
+.dropdown {
+  position: absolute;
+  z-index: 100;
+  top: var(--space-5xl-6xl);
+  right: var(--space-m-l);
+}
+
+.dropdown-mobile {
+  display: none;
+}
+
 @media only screen and (width <= 480px) {
   .right-desktop {
     display: none;
@@ -46,5 +58,16 @@
 
   .right-mobile {
     display: block;
+  }
+
+  .dropdown {
+    display: none;
+  }
+
+  .dropdown-mobile {
+    position: absolute;
+    z-index: 100;
+    top: var(--space-5xl-6xl);
+    right: var(--space-m-l);
   }
 }
