@@ -20,16 +20,6 @@
   }
 }
 
-.test {
-  position: absolute;
-  z-index: 100;
-  top: var(--space-5xl-6xl);
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-xs-s);
-}
-
 @media only screen and (width <= 480px) {
   .wrapper {
     &__desktop {

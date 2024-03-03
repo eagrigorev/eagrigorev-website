@@ -17,18 +17,15 @@ const DesktopNavigation = () => {
           Home
         </Link>
       </li>
-      <ul
-        className={`${styles['test']} "link-dropdown"`}
-        onClick={handleDropdown}
-      >
-        <li className="link-underline">Categories</li>
+      <li className="link-dropdown" onClick={handleDropdown}>
+        <span className="link-underline">Categories</span>
         {categoriesDropdown ? (
           <Dropdown
             className={styles['dropdown__desktop']}
             items={['Music', 'Illustrations', 'Very Long Item Goes Here']}
           />
         ) : null}
-      </ul>
+      </li>
     </ul>
   );
 };
