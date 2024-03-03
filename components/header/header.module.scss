@@ -1,0 +1,25 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-m-l);
+  align-items: center;
+}
+
+.identity {
+  display: flex;
+  gap: var(--space-m-l);
+  align-items: center;
+  color: var(--color-black);
+  text-decoration: none;
+}
+
+.logo {
+  width: var(--space-xl-3xl);
+  height: var(--space-xl-3xl);
+  aspect-ratio: 1 / 1;
+}
+
+.title {
+  font-weight: 500;
+  line-height: var(--font-line-height-m);
+}

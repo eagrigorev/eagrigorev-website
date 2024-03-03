@@ -1,6 +1,6 @@
 import './style.scss';
 import { roboto, roboto_condensed } from '@/utils/getFonts';
-import Navigation from '@/components/navigation';
+import Header from '@/components/header/header';
 import Footer from '@/components/footer';
 
 export const metadata = {
@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
       className={`${roboto.variable} ${roboto_condensed.variable}`}
     >
       <body>
-        <Navigation />
+        <Header />
         {children}
         <Footer />
       </body>
