@@ -1,12 +1,10 @@
-// Global classes
-
 body {
   background-color: var(--color-white);
   color: var(--color-black);
   font-family: var(--font-roboto);
   font-weight: 400;
   font-size: var(--font-m);
-  line-height: 125%;
+  line-height: var(--font-line-height-l);
 }
 
 .container {
@@ -43,6 +41,18 @@ body {
 .link-dropdown {
   &:hover {
     cursor: pointer;
+  }
+}
+
+.link-post {
+  text-decoration: none;
+  color: var(--color-black);
+  border-bottom: 1px solid var(--color-black);
+  padding-bottom: 1px;
+
+  &:hover {
+    color: var(--color-accent-red);
+    border-bottom: 1px solid var(--color-accent-red);
   }
 }
 

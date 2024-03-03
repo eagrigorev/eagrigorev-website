@@ -8,14 +8,14 @@
   font-family: var(--font-roboto-condensed);
   font-size: var(--font-3xl);
   font-weight: 700;
-  line-height: 125%;
+  line-height: var(--font-line-height-l);
 }
 
 .subtitle {
   grid-column-start: span 6;
   font-size: var(--font-l);
   font-weight: 300;
-  line-height: 125%;
+  line-height: var(--font-line-height-l);
 }
 
 @media only screen and (width <= 768px) {

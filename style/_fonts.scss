@@ -1,0 +1,36 @@
+:root {
+  // Font sizes
+
+  // Step -2: 11.06px → 12.80px
+
+  --font-xs: clamp(0.6914rem, 0.6536rem + 0.1889vi, 0.8rem);
+
+  // Step -1: 12.44px → 16px
+
+  --font-s: clamp(0.7778rem, 0.7005rem + 0.3865vi, 1rem);
+
+  // Step 0: 14px → 20px */
+
+  --font-m: clamp(0.875rem, 0.7446rem + 0.6522vi, 1.25rem);
+
+  // Step 1: 15.75px → 25px
+
+  --font-l: clamp(0.9844rem, 0.7833rem + 1.0054vi, 1.5625rem);
+
+  // Step 2: 17.72px → 31.25px
+
+  --font-xl: clamp(1.1074rem, 0.8133rem + 1.4708vi, 1.9531rem);
+
+  // Step 3: 19.93px → 39.06px
+
+  --font-2xl: clamp(1.2458rem, 0.83rem + 2.0792vi, 2.4414rem);
+
+  // Step 4: 22.43px → 48.83px
+
+  --font-3xl: clamp(1.4016rem, 0.8276rem + 2.8699vi, 3.0518rem);
+
+  // Line heights
+
+  --font-line-height-m: 100%;
+  --font-line-height-l: 150%;
+}

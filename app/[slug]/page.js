@@ -25,6 +25,13 @@ const Page = (props) => {
             <Markdown
               options={{
                 wrapper: React.Fragment,
+                overrides: {
+                  a: {
+                    props: {
+                      className: 'link-post',
+                    },
+                  },
+                },
               }}
             >
               {post.content}

@@ -1,5 +1,5 @@
 import './style.scss';
-import { roboto, roboto_condensed } from '@/style/fonts';
+import { roboto, roboto_condensed } from '@/utils/getFonts';
 import Navigation from '@/components/navigation';
 import Footer from '@/components/footer';
 

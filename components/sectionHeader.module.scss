@@ -13,7 +13,7 @@
   font-family: var(--font-roboto-condensed);
   font-size: var(--font-xl);
   font-weight: 500;
-  line-height: 100%;
+  line-height: var(--font-line-height-m);
 }
 
 .subtitle {
