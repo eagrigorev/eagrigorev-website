@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import styles from './navigation.module.scss';
 import { topLevelNavigation, mobileNavigation } from '@/utils/navigationItems';
 import MenuItem from '../menuItem/menuItem';
@@ -10,8 +10,29 @@ const DesktopNavigation = () => {
   const handleDropdown = () => {
     setCategoriesDropdown(!categoriesDropdown);
   };
+  let ref = useRef();
+  useEffect(() => {
+    const clickOutsideHandler = (event) => {
+      if (
+        categoriesDropdown &&
+        ref.current &&
+        !ref.current.contains(event.target)
+      ) {
+        setCategoriesDropdown(false);
+      }
+    };
+    document.addEventListener('mousedown', clickOutsideHandler);
+    document.addEventListener('touchstart', clickOutsideHandler);
+    return () => {
+      document.removeEventListener('mousedown', clickOutsideHandler);
+      document.removeEventListener('touchstart', clickOutsideHandler);
+    };
+  }, [categoriesDropdown]);
   return (
-    <ul className={`${styles['wrapper']} ${styles['wrapper__desktop']}`}>
+    <ul
+      className={`${styles['wrapper']} ${styles['wrapper__desktop']}`}
+      ref={ref}
+    >
       {topLevelNavigation.map((item, index) => (
         <MenuItem
           item={item}
@@ -29,8 +50,25 @@ const MobileNavigation = () => {
   const handleDropdownMobile = () => {
     setMenuDropdown(!menuDropdown);
   };
+  let ref = useRef();
+  useEffect(() => {
+    const clickOutsideHandler = (event) => {
+      if (menuDropdown && ref.current && !ref.current.contains(event.target)) {
+        setMenuDropdown(false);
+      }
+    };
+    document.addEventListener('mousedown', clickOutsideHandler);
+    document.addEventListener('touchstart', clickOutsideHandler);
+    return () => {
+      document.removeEventListener('mousedown', clickOutsideHandler);
+      document.removeEventListener('touchstart', clickOutsideHandler);
+    };
+  }, [menuDropdown]);
   return (
-    <ul className={`${styles['wrapper']} ${styles['wrapper__mobile']}`}>
+    <ul
+      className={`${styles['wrapper']} ${styles['wrapper__mobile']}`}
+      ref={ref}
+    >
       {mobileNavigation.map((item, index) => (
         <MenuItem
           item={item}
