@@ -1,4 +1,4 @@
-export const topLevelNavigation = [
+export const desktopNavigation = [
   {
     title: 'Home',
     url: '/',

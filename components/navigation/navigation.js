@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import styles from './navigation.module.scss';
-import { topLevelNavigation, mobileNavigation } from '@/utils/navigationItems';
+import { desktopNavigation, mobileNavigation } from '@/utils/navigationItems';
 import MenuItem from '../menuItem/menuItem';
 
 const DesktopNavigation = () => {
@@ -33,7 +33,7 @@ const DesktopNavigation = () => {
       className={`${styles['wrapper']} ${styles['wrapper__desktop']}`}
       ref={ref}
     >
-      {topLevelNavigation.map((item, index) => (
+      {desktopNavigation.map((item, index) => (
         <MenuItem
           item={item}
           isVisible={categoriesDropdown}
