@@ -1,4 +1,3 @@
-import styles from './page.module.scss';
 import PageTitle from '@/components/pageTitle';
 import SectionHeader from '@/components/sectionHeader';
 import PostsGrid from '@/components/postsGrid';
@@ -11,7 +10,7 @@ export default function Home() {
         subtitle="Welcome to my online journal where I share my illustrations, designs,
         projects and other things I'm interested in."
       />
-      <section className={styles['wrapper']}>
+      <section className="content-wrapper content-flex">
         <SectionHeader />
         <PostsGrid category="all" />
       </section>

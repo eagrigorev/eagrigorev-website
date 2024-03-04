@@ -16,7 +16,7 @@ const Page = (props) => {
           category={post.meta.category}
           date={post.meta.date}
         />
-        <section className={`${styles['wrapper']} grid`}>
+        <section className="content-wrapper grid">
           <ImageGallery
             className={styles['images']}
             images={post.meta.images}
