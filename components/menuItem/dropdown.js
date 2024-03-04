@@ -4,13 +4,10 @@ import Link from 'next/link';
 const Dropdown = ({ items }) => {
   return (
     <ul className={styles['wrapper']}>
-      {items.map((item) => (
-        <li key={item}>
-          <Link
-            className="link-color"
-            href={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
-          >
-            {item}
+      {items.map((item, index) => (
+        <li key={index}>
+          <Link className="link-color" href={item.url}>
+            {item.title}
           </Link>
         </li>
       ))}

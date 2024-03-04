@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 import styles from './navigation.module.scss';
-import Link from 'next/link';
-import Dropdown from '../dropdown/dropdown';
+import { topLevelNavigation, mobileNavigation } from '@/utils/navigationItems';
+import MenuItem from '../menuItem/menuItem';
 
 const DesktopNavigation = () => {
   const [categoriesDropdown, setCategoriesDropdown] = useState(false);
@@ -12,20 +12,14 @@ const DesktopNavigation = () => {
   };
   return (
     <ul className={`${styles['wrapper']} ${styles['wrapper__desktop']}`}>
-      <li>
-        <Link className="link-underline" href={'/'}>
-          Home
-        </Link>
-      </li>
-      <li className="link-dropdown" onClick={handleDropdown}>
-        <span className="link-underline">Categories</span>
-        {categoriesDropdown ? (
-          <Dropdown
-            className={styles['dropdown__desktop']}
-            items={['Music', 'Illustrations', 'Very Long Item Goes Here']}
-          />
-        ) : null}
-      </li>
+      {topLevelNavigation.map((item, index) => (
+        <MenuItem
+          item={item}
+          isVisible={categoriesDropdown}
+          visibilityHandler={handleDropdown}
+          key={index}
+        />
+      ))}
     </ul>
   );
 };
@@ -37,17 +31,14 @@ const MobileNavigation = () => {
   };
   return (
     <ul className={`${styles['wrapper']} ${styles['wrapper__mobile']}`}>
-      <li className="link-dropdown" onClick={handleDropdownMobile}>
-        <span className="link-underline">
-          {menuDropdown ? 'Close' : 'Menu'}
-        </span>
-        {menuDropdown ? (
-          <Dropdown
-            className={styles['dropdown__mobile']}
-            items={['Home', 'Music', 'Something very long goes here']}
-          />
-        ) : null}
-      </li>
+      {mobileNavigation.map((item, index) => (
+        <MenuItem
+          item={item}
+          isVisible={menuDropdown}
+          visibilityHandler={handleDropdownMobile}
+          key={index}
+        />
+      ))}
     </ul>
   );
 };
