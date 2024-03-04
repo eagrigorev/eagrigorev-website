@@ -1,4 +1,3 @@
-import Filters from '@/components/filters';
 import PageTitle from '@/components/pageTitle';
 import PostsGrid from '@/components/postsGrid';
 

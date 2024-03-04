@@ -1,3 +1,10 @@
+export const categories = [
+  {
+    title: 'Music',
+    url: '/music',
+  },
+];
+
 export const desktopNavigation = [
   {
     title: 'Home',
@@ -6,16 +13,7 @@ export const desktopNavigation = [
   {
     title: 'Categories',
     url: '#',
-    submenu: [
-      {
-        title: 'Music',
-        url: '/music',
-      },
-      {
-        title: 'Other Very Long Category',
-        url: '#',
-      },
-    ],
+    submenu: categories,
   },
   {
     title: 'Something Else',
@@ -29,13 +27,10 @@ export const mobileNavigation = [
     url: '#',
     submenu: [
       {
-        title: 'Music',
-        url: '/music',
+        title: 'Home',
+        url: '/',
       },
-      {
-        title: 'Other Very Long Category',
-        url: '#',
-      },
+      ...categories,
     ],
   },
 ];
