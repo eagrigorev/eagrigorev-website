@@ -34,3 +34,13 @@ export const mobileNavigation = [
     ],
   },
 ];
+
+export const desktopCategories = [...categories];
+
+export const mobileCategories = [
+  {
+    title: 'Categories',
+    url: '#',
+    submenu: [...categories],
+  },
+];

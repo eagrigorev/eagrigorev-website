@@ -1,7 +1,8 @@
 import styles from './header.module.scss';
 import Link from 'next/link';
 import Image from 'next/image';
-import { DesktopNavigation, MobileNavigation } from '../navigation/navigation';
+import { desktopNavigation, mobileNavigation } from '@/utils/navigationItems';
+import Navigation from '../navigation/navigation';
 
 const Header = () => {
   return (
@@ -16,8 +17,8 @@ const Header = () => {
         />
         <p className={styles['title']}>Evgenii Grigorev</p>
       </Link>
-      <DesktopNavigation />
-      <MobileNavigation />
+      <Navigation links={desktopNavigation} isDesktop={true} />
+      <Navigation links={mobileNavigation} isDesktop={false} />
     </nav>
   );
 };
