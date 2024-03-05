@@ -1,6 +1,6 @@
-import PageTitle from '@/components/pageTitle';
-import SectionHeader from '@/components/sectionHeader';
-import PostsGrid from '@/components/postsGrid';
+import { PageTitle } from '@/components/title/title';
+import SectionHeader from '@/components/sectionHeader/sectionHeader';
+import PostsGrid from '@/components/postsGrid/postsGrid';
 
 export default function Home() {
   return (

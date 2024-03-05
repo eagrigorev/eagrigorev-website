@@ -2,7 +2,7 @@ import styles from './page.module.scss';
 import { getPosts, getPostsSlugs } from '@/utils/getPosts';
 import React from 'react';
 import Markdown from 'markdown-to-jsx';
-import PostTitle from '@/components/postTitle';
+import { PostTitle } from '@/components/title/title';
 import ImageGallery from '@/components/imageGallery';
 
 const Page = (props) => {

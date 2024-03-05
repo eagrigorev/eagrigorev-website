@@ -1,6 +1,6 @@
 import styles from './sectionHeader.module.scss';
 import { desktopCategories, mobileCategories } from '@/utils/navigationItems';
-import Navigation from './navigation/navigation';
+import Navigation from '../navigation/navigation';
 const SectionHeader = () => {
   return (
     <header className={styles['wrapper']}>

@@ -1,26 +1,38 @@
 .wrapper {
   padding-top: var(--space-5xl-7xl);
   row-gap: var(--space-xs-s);
+  &__post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .title {
-  grid-column-start: span 7;
   font-family: var(--font-roboto-condensed);
   font-size: var(--font-3xl);
   font-weight: 700;
   line-height: var(--font-line-height-l);
+  &__page {
+    grid-column-start: span 7;
+  }
 }
 
 .subtitle {
-  grid-column-start: span 6;
-  font-size: var(--font-l);
   font-weight: 300;
   line-height: var(--font-line-height-l);
+  &__page {
+    grid-column-start: span 6;
+    font-size: var(--font-l);
+  }
+  &__post {
+    font-size: var(--font-m);
+  }
 }
 
 @media only screen and (width <= 768px) {
-  .title,
-  .subtitle {
+  .title__page,
+  .subtitle__page {
     grid-column-start: span 6;
   }
 }

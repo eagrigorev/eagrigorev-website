@@ -1,5 +1,5 @@
-import PageTitle from '@/components/pageTitle';
-import PostsGrid from '@/components/postsGrid';
+import { PageTitle } from '@/components/title/title';
+import PostsGrid from '@/components/postsGrid/postsGrid';
 
 export default function Music() {
   return (
