@@ -15,10 +15,6 @@ export const desktopNavigation = [
     url: '#',
     submenu: categories,
   },
-  {
-    title: 'Something Else',
-    url: '#',
-  },
 ];
 
 export const mobileNavigation = [

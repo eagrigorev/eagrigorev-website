@@ -3,7 +3,7 @@ import { getPosts, getPostsSlugs } from '@/utils/getPosts';
 import React from 'react';
 import Markdown from 'markdown-to-jsx';
 import { PostTitle } from '@/components/title/title';
-import ImageGallery from '@/components/imageGallery';
+import ImageGallery from '@/components/imageGallery/imageGallery';
 
 const Page = (props) => {
   const slug = props.params.slug;

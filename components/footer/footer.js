@@ -1,5 +1,5 @@
 import styles from './footer.module.scss';
-import { LinkColor, LinkUnderline } from './link';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -10,19 +10,39 @@ const Footer = () => {
             Thank you for visiting! Want to stay updated?
           </h3>
           <ul className={styles['socials']}>
-            <LinkColor link="/" title="Ig." />
-            <LinkColor link="/" title="Bc." />
-            <LinkColor link="/" title="Gh." />
+            <li>
+              <Link className="link-color" href={'/'}>
+                Ig.
+              </Link>
+            </li>
+            <li>
+              <Link className="link-color" href={'/'}>
+                Bc.
+              </Link>
+            </li>
+            <li>
+              <Link className="link-color" href={'/'}>
+                Gh.
+              </Link>
+            </li>
           </ul>
         </div>
         <div className={styles['widgets--right']}>
           <h4 className={styles['title--right']}>Links</h4>
           <div className={styles['links-wrapper']}>
             <ul className={styles['links']}>
-              <LinkUnderline link="/music" title="Music" />
+              <li>
+                <Link className="link-underline" href={'/music'}>
+                  Music
+                </Link>
+              </li>
             </ul>
             <ul className={styles['links']}>
-              <LinkUnderline link="/" title="About" />
+              <li>
+                <Link className="link-underline" href={'/'}>
+                  Home
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

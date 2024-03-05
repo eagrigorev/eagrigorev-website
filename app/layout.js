@@ -1,7 +1,7 @@
 import './style.scss';
 import { roboto, roboto_condensed } from '@/utils/getFonts';
 import Header from '@/components/header/header';
-import Footer from '@/components/footer';
+import Footer from '@/components/footer/footer';
 
 export const metadata = {
   title: 'Evgenii Grigorev',
