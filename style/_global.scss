@@ -50,6 +50,7 @@ body {
 }
 
 .link-dropdown {
+  position: relative;
   &:hover {
     cursor: pointer;
   }

@@ -1,15 +1,12 @@
+import styles from './menuItem.module.scss';
 import Link from 'next/link';
-import Dropdown from './dropdown';
 
 const MenuItem = ({ item, isVisible, visibilityHandler }) => {
   return (
-    <li>
+    <li className="link-dropdown">
       {item.submenu ? (
         <>
-          <span
-            className="link-dropdown link-underline"
-            onClick={visibilityHandler}
-          >
+          <span className="link-underline" onClick={visibilityHandler}>
             {item.title}
           </span>
           {isVisible ? <Dropdown items={item.submenu} /> : null}
@@ -20,6 +17,20 @@ const MenuItem = ({ item, isVisible, visibilityHandler }) => {
         </Link>
       )}
     </li>
+  );
+};
+
+const Dropdown = ({ items }) => {
+  return (
+    <ul className={styles['wrapper']}>
+      {items.map((item, index) => (
+        <li key={index}>
+          <Link className="link-color" href={item.url}>
+            {item.title}
+          </Link>
+        </li>
+      ))}
+    </ul>
   );
 };
 

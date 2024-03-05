@@ -59,44 +59,4 @@ const Navigation = ({ links, isDesktop }) => {
   }
 };
 
-const CategoriesNavigation = () => {
-  const [categoriesDropdown, setCategoriesDropdown] = useState(false);
-  const handleDropdown = () => {
-    setCategoriesDropdown(!categoriesDropdown);
-  };
-  let ref = useRef();
-  useEffect(() => {
-    const clickOutsideHandler = (event) => {
-      if (
-        categoriesDropdown &&
-        ref.current &&
-        !ref.current.contains(event.target)
-      ) {
-        setCategoriesDropdown(false);
-      }
-    };
-    document.addEventListener('mousedown', clickOutsideHandler);
-    document.addEventListener('touchstart', clickOutsideHandler);
-    return () => {
-      document.removeEventListener('mousedown', clickOutsideHandler);
-      document.removeEventListener('touchstart', clickOutsideHandler);
-    };
-  }, [categoriesDropdown]);
-  return (
-    <ul
-      className={`${styles['wrapper']} ${styles['wrapper__desktop']}`}
-      ref={ref}
-    >
-      {categories.map((item, index) => (
-        <MenuItem
-          item={item}
-          isVisible={categoriesDropdown}
-          visibilityHandler={handleDropdown}
-          key={index}
-        />
-      ))}
-    </ul>
-  );
-};
-
 export default Navigation;
