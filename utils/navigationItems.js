@@ -1,7 +1,19 @@
 export const categories = [
   {
-    title: 'Music',
-    url: '/music',
+    title: 'Illustrations',
+    url: '/',
+  },
+  {
+    title: 'Music & Tabs',
+    url: '/music-and-tabs',
+  },
+  {
+    title: 'Projects',
+    url: '/',
+  },
+  {
+    title: 'Journal',
+    url: '/',
   },
 ];
 
@@ -15,11 +27,19 @@ export const desktopNavigation = [
     url: '#',
     submenu: categories,
   },
+  {
+    title: 'About',
+    url: '/',
+  },
+  {
+    title: 'Now',
+    url: '/',
+  },
 ];
 
 export const mobileNavigation = [
   {
-    title: 'Menu',
+    title: 'Navigation',
     url: '#',
     submenu: [
       {
@@ -27,6 +47,14 @@ export const mobileNavigation = [
         url: '/',
       },
       ...categories,
+      {
+        title: 'About',
+        url: '/',
+      },
+      {
+        title: 'Now',
+        url: '/',
+      },
     ],
   },
 ];
@@ -35,7 +63,7 @@ export const desktopCategories = [...categories];
 
 export const mobileCategories = [
   {
-    title: 'Categories',
+    title: 'Select Category',
     url: '#',
     submenu: [...categories],
   },
