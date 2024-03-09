@@ -1,41 +1,22 @@
 .wrapper {
+  gap: var(--space-m-l);
   list-style: none;
   font-family: var(--font-roboto-condensed);
-  line-height: var(--font-line-height-m);
-  &__desktop {
-    display: flex;
-    gap: var(--space-m-l);
-  }
-  &__mobile {
-    display: none;
-  }
 }
 
-.dropdown {
-  &__desktop {
-    display: block;
-  }
-  &__mobile {
-    display: none;
-  }
+.desktop {
+  display: flex;
+}
+
+.mobile {
+  display: none;
 }
 
 @media only screen and (width <= 480px) {
-  .wrapper {
-    &__desktop {
-      display: none;
-    }
-    &__mobile {
-      display: block;
-    }
+  .desktop {
+    display: none;
   }
-
-  .dropdown {
-    &__desktop {
-      display: none;
-    }
-    &__mobile {
-      display: block;
-    }
+  .mobile {
+    display: flex;
   }
 }

@@ -2,7 +2,6 @@
 
 import { useState, useRef, useEffect } from 'react';
 import styles from './navigation.module.scss';
-import { categories } from '@/utils/navigationItems';
 import MenuItem from '../menuItem/menuItem';
 
 const Navigation = ({ links, isDesktop }) => {
@@ -26,10 +25,7 @@ const Navigation = ({ links, isDesktop }) => {
   }, [showDropdown]);
   if (isDesktop) {
     return (
-      <ul
-        className={`${styles['wrapper']} ${styles['wrapper__desktop']}`}
-        ref={ref}
-      >
+      <ul className={`${styles['wrapper']} ${styles['desktop']}`} ref={ref}>
         {links.map((item, index) => (
           <MenuItem
             item={item}
@@ -42,10 +38,7 @@ const Navigation = ({ links, isDesktop }) => {
     );
   } else {
     return (
-      <ul
-        className={`${styles['wrapper']} ${styles['wrapper__mobile']}`}
-        ref={ref}
-      >
+      <ul className={`${styles['wrapper']} ${styles['mobile']}`} ref={ref}>
         {links.map((item, index) => (
           <MenuItem
             item={item}
