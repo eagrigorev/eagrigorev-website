@@ -1,22 +1,6 @@
 .wrapper {
+  display: flex;
   gap: var(--space-m-l);
   list-style: none;
   font-family: var(--font-roboto-condensed);
-}
-
-.desktop {
-  display: flex;
-}
-
-.mobile {
-  display: none;
-}
-
-@media only screen and (width <= 480px) {
-  .desktop {
-    display: none;
-  }
-  .mobile {
-    display: flex;
-  }
 }

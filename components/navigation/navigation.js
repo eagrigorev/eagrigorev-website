@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 import styles from './navigation.module.scss';
 import MenuItem from '../menuItem/menuItem';
 
-const Navigation = ({ links, isDesktop }) => {
+const Navigation = ({ links }) => {
   const [showDropdown, setShowDropdown] = useState(false);
   const handleDropdown = () => {
     setShowDropdown(!showDropdown);
@@ -23,33 +23,18 @@ const Navigation = ({ links, isDesktop }) => {
       document.removeEventListener('touchstart', clickOutsideHandler);
     };
   }, [showDropdown]);
-  if (isDesktop) {
-    return (
-      <ul className={`${styles['wrapper']} ${styles['desktop']}`} ref={ref}>
-        {links.map((item, index) => (
-          <MenuItem
-            item={item}
-            isVisible={showDropdown}
-            visibilityHandler={handleDropdown}
-            key={index}
-          />
-        ))}
-      </ul>
-    );
-  } else {
-    return (
-      <ul className={`${styles['wrapper']} ${styles['mobile']}`} ref={ref}>
-        {links.map((item, index) => (
-          <MenuItem
-            item={item}
-            isVisible={showDropdown}
-            visibilityHandler={handleDropdown}
-            key={index}
-          />
-        ))}
-      </ul>
-    );
-  }
+  return (
+    <ul className={styles['wrapper']} ref={ref}>
+      {links.map((item, index) => (
+        <MenuItem
+          item={item}
+          isVisible={showDropdown}
+          visibilityHandler={handleDropdown}
+          key={index}
+        />
+      ))}
+    </ul>
+  );
 };
 
 export default Navigation;

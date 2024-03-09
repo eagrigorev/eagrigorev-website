@@ -1,4 +1,4 @@
-export const categories = [
+const categories = [
   {
     title: 'Illustrations',
     url: '/',
@@ -17,30 +17,11 @@ export const categories = [
   },
 ];
 
-export const desktopNavigation = [
-  {
-    title: 'Home',
-    url: '/',
-  },
-  {
-    title: 'Categories',
-    url: '#',
-    submenu: categories,
-  },
-  {
-    title: 'About',
-    url: '/',
-  },
-  {
-    title: 'Now',
-    url: '/',
-  },
-];
-
-export const mobileNavigation = [
+export const topNavigation = [
   {
     title: 'Navigation',
     url: '#',
+    isDesktop: false,
     submenu: [
       {
         title: 'Home',
@@ -57,14 +38,35 @@ export const mobileNavigation = [
       },
     ],
   },
+  {
+    title: 'Home',
+    url: '/',
+    isDesktop: true,
+  },
+  {
+    title: 'Categories',
+    url: '#',
+    isDesktop: true,
+    submenu: categories,
+  },
+  {
+    title: 'About',
+    url: '/',
+    isDesktop: true,
+  },
+  {
+    title: 'Now',
+    url: '/',
+    isDesktop: true,
+  },
 ];
 
-export const desktopCategories = [...categories];
-
-export const mobileCategories = [
+export const categoriesNavigation = [
   {
     title: 'Select Category',
     url: '#',
+    isDesktop: false,
     submenu: [...categories],
   },
+  ...categories.map((item) => ({ ...item, isDesktop: true })),
 ];

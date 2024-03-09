@@ -3,7 +3,9 @@ import Link from 'next/link';
 
 const MenuItem = ({ item, isVisible, visibilityHandler }) => {
   return (
-    <li className="link-dropdown">
+    <li
+      className={`link-dropdown ${item.isDesktop ? styles['desktop'] : styles['mobile']}`}
+    >
       {item.submenu ? (
         <>
           <span className="link-underline" onClick={visibilityHandler}>
