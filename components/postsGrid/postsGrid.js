@@ -1,10 +1,11 @@
 import styles from './postsGrid.module.scss';
 import { getPosts, getPostsFromSingleCategory } from '@/utils/getPosts';
 import { sortPostsDesc } from '@/utils/sort';
-import Link from 'next/link';
-import Image from 'next/image';
+import { categoriesNavigation } from '@/utils/getNavigationItems';
+import Navigation from '../navigation/navigation';
+import PostCard from '../postCard/postCard';
 
-const PostsGrid = ({ category }) => {
+const PostsGrid = ({ showHeader, category }) => {
   let allPosts = [];
   if (category === 'all') {
     allPosts = sortPostsDesc(getPosts()).slice(0, 6);
@@ -12,42 +13,31 @@ const PostsGrid = ({ category }) => {
     allPosts = sortPostsDesc(getPostsFromSingleCategory(category));
   }
   return (
-    <div className="grid">
-      {allPosts.map((post) => (
-        <PostCard
-          title={post.meta.title}
-          slug={post.meta.slug}
-          date={post.meta.date}
-          category={post.meta.category}
-          image={post.meta.featuredImage}
-          key={post.meta.slug}
-        />
-      ))}
-    </div>
-  );
-};
-
-const PostCard = ({ title, slug, date, category, image }) => {
-  return (
-    <article className={styles['wrapper']}>
-      <Link href={`/${slug}`}>
-        <Image
-          className={styles['image']}
-          alt="Post Image"
-          src={`/images/featured/${image}`}
-          width={436}
-          height={327}
-        />
-      </Link>
-      <div>
-        <p className={styles['meta']}>
-          {category} — {date}
-        </p>
-        <Link className="link-color" href={`/${slug}`}>
-          <h3 className={styles['title']}>{title}</h3>
-        </Link>
+    <section className={`${styles['wrapper']} ${styles['wrapper--section']}`}>
+      {showHeader ? (
+        <header className={`${styles['wrapper']} ${styles['wrapper--header']}`}>
+          <div className={`${styles['wrapper']} ${styles['wrapper--title']}`}>
+            <h3 className={`${styles['title']} heading`}>Updates</h3>
+            <Navigation links={categoriesNavigation} />
+          </div>
+          <h4 className={styles['subtitle']}>
+            Recent posts from all the categories
+          </h4>
+        </header>
+      ) : null}
+      <div className="grid">
+        {allPosts.map((post) => (
+          <PostCard
+            title={post.meta.title}
+            slug={post.meta.slug}
+            dateEdited={post.meta.dateEdited}
+            category={post.meta.category}
+            image={post.meta.featuredImage}
+            key={post.meta.slug}
+          />
+        ))}
       </div>
-    </article>
+    </section>
   );
 };
 
