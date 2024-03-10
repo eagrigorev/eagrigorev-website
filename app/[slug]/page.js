@@ -2,7 +2,7 @@ import styles from './page.module.scss';
 import { getPosts, getPostsSlugs } from '@/utils/getPosts';
 import React from 'react';
 import Markdown from 'markdown-to-jsx';
-import { PostTitle } from '@/components/title/title';
+import Title from '@/components/title/title';
 import ImageGallery from '@/components/imageGallery/imageGallery';
 
 const Page = (props) => {
@@ -11,10 +11,13 @@ const Page = (props) => {
   if (post && post.meta.category === 'Music') {
     return (
       <main className="container">
-        <PostTitle
+        <Title
+          isPage={false}
           title={post.meta.title}
+          subtitle={post.meta.subtitle}
           category={post.meta.category}
-          date={post.meta.date}
+          datePosted={post.meta.datePosted}
+          dateEdited={post.meta.dateEdited}
         />
         <section className="content-wrapper grid">
           <ImageGallery

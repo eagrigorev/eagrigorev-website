@@ -2,9 +2,9 @@ body {
   background-color: var(--color-white);
   color: var(--color-black);
   font-family: var(--font-roboto);
-  font-weight: 400;
+  font-weight: 300;
   font-size: var(--font-m);
-  line-height: var(--font-line-height-xl);
+  line-height: var(--font-line-height-m);
 }
 
 .container {
@@ -19,6 +19,10 @@ body {
   gap: var(--grid-gutter);
 }
 
+.heading {
+  font-family: var(--font-roboto-condensed);
+}
+
 .content-wrapper {
   padding-top: var(--space-2xl-6xl);
   padding-bottom: var(--space-2xl-7xl);
@@ -30,41 +34,30 @@ body {
   gap: var(--space-m-l);
 }
 
-.link-underline {
+.link {
   text-decoration: none;
   color: var(--color-black);
-
-  &:hover {
+  &--underline:hover,
+  &--dropdown:hover {
     border-bottom: 3px solid var(--color-accent-red);
     padding-bottom: 3px;
   }
-}
-
-.link-color {
-  text-decoration: none;
-  color: var(--color-black);
-
-  &:hover {
+  &--color:hover {
     color: var(--color-accent-red);
   }
-}
-
-.link-dropdown {
-  position: relative;
-  &:hover {
-    cursor: pointer;
+  &--dropdown {
+    position: relative;
+    &:hover {
+      cursor: pointer;
+    }
   }
-}
-
-.link-post {
-  text-decoration: none;
-  color: var(--color-black);
-  border-bottom: 1px solid var(--color-black);
-  padding-bottom: 1px;
-
-  &:hover {
-    color: var(--color-accent-red);
-    border-bottom: 1px solid var(--color-accent-red);
+  &--post {
+    border-bottom: 1px solid var(--color-black);
+    padding-bottom: 1px;
+    &:hover {
+      color: var(--color-accent-red);
+      border-bottom: 1px solid var(--color-accent-red);
+    }
   }
 }
 

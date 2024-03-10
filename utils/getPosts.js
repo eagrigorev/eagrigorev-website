@@ -8,8 +8,10 @@ export const getPostsFromSingleCategory = (category) => {
     return {
       meta: {
         title: data.title,
+        subtitle: data.subtitle,
         slug: data.slug,
-        date: data.date,
+        datePosted: data.datePosted,
+        dateEdited: data.dateEdited,
         category: data.category,
         featuredImage: data.featuredImage,
         images: data.images,

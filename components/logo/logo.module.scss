@@ -1,0 +1,14 @@
+.wrapper {
+  align-items: center;
+  display: flex;
+  gap: var(--space-m-l);
+}
+
+.image {
+  width: var(--space-xl-3xl);
+  height: var(--space-xl-3xl);
+}
+
+.title {
+  font-weight: 500;
+}
