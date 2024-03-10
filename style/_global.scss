@@ -37,23 +37,29 @@ body {
 .link {
   text-decoration: none;
   color: var(--color-black);
+
+  &--dropdown {
+    position: relative;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
   &--underline:hover,
   &--dropdown:hover {
     border-bottom: 3px solid var(--color-accent-red);
     padding-bottom: 3px;
   }
+
   &--color:hover {
     color: var(--color-accent-red);
   }
-  &--dropdown {
-    position: relative;
-    &:hover {
-      cursor: pointer;
-    }
-  }
+
   &--post {
     border-bottom: 1px solid var(--color-black);
     padding-bottom: 1px;
+
     &:hover {
       color: var(--color-accent-red);
       border-bottom: 1px solid var(--color-accent-red);
