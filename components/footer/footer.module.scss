@@ -5,54 +5,6 @@
   font-weight: 400;
 }
 
-.widget-container {
-  grid-column: span 6;
-}
-
-.social-section {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-m-l);
-
-  &__title {
-    font-size: var(--font-2xl);
-    line-height: var(--font-line-height-l);
-    font-weight: 500;
-  }
-
-  &__icons {
-    list-style: none;
-    display: flex;
-    gap: var(--space-xs-s);
-  }
-
-  &__privacy {
-    font-size: var(--font-s);
-  }
-}
-
-.links-section {
-  &__title {
-    font-size: var(--font-xl);
-    line-height: var(--font-line-height-l);
-    font-weight: 500;
-  }
-
-  &__wrapper {
-    padding-top: var(--space-m-l);
-    display: flex;
-    flex-direction: row;
-    gap: var(--space-5xl-7xl);
-  }
-
-  &__links {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-xs-s);
-  }
-}
-
 .copyright {
   display: flex;
   justify-content: center;
