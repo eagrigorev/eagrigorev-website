@@ -1,4 +1,4 @@
-const categories = [
+export const categories = [
   {
     title: 'Illustrations',
     url: '/',
@@ -14,6 +14,51 @@ const categories = [
   {
     title: 'Journal',
     url: '/',
+  },
+];
+
+export const pages = [
+  {
+    title: 'Home',
+    url: '/',
+  },
+  {
+    title: 'About',
+    url: '/',
+  },
+  {
+    title: 'Now',
+    url: '/',
+  },
+  {
+    title: 'Shop',
+    url: '/',
+  },
+  {
+    title: 'Colophon',
+    url: '/',
+  },
+  {
+    title: 'Library',
+    url: '/',
+  },
+];
+
+export const socialIcons = [
+  {
+    title: 'Ig.',
+    url: 'https://www.instagram.com/eagrigorev',
+    icon: '',
+  },
+  {
+    title: 'Bc.',
+    url: 'https://borealheights.bandcamp.com',
+    icon: '',
+  },
+  {
+    title: 'Gh.',
+    url: 'https://github.com/eagrigorev',
+    icon: '',
   },
 ];
 
