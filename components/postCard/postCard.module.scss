@@ -1,0 +1,37 @@
+.wrapper {
+  grid-column: span 4;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+}
+
+.description {
+  padding-top: var(--space-xs-s);
+}
+
+.meta {
+  font-size: var(--font-s);
+  line-height: var(--font-line-height-m);
+}
+
+.title {
+  font-size: var(--font-l);
+  font-weight: 400;
+  line-height: var(--font-line-height-l);
+  padding-top: var(--space-4xs);
+}
+
+@media only screen and (width <= 768px) {
+  .wrapper {
+    grid-column: span 3;
+  }
+}
+
+@media only screen and (width <= 480px) {
+  .wrapper {
+    grid-column: span 6;
+  }
+}

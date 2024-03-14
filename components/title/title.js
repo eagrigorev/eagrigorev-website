@@ -1,25 +1,32 @@
 import styles from './title.module.scss';
 
-const PageTitle = ({ title, subtitle }) => {
+const Title = ({
+  isPage,
+  title,
+  subtitle,
+  category,
+  datePosted,
+  dateEdited,
+}) => {
   return (
     <header className={`${styles['wrapper']} grid`}>
-      <h1 className={`${styles['title']} ${styles['title__page']}`}>{title}</h1>
-      <h2 className={`${styles['subtitle']} ${styles['subtitle__page']}`}>
+      <h1
+        className={`heading ${styles['title']} ${isPage ? styles['title--page'] : styles['title--post']}`}
+      >
+        {title}
+      </h1>
+      <h2
+        className={`${styles['subtitle']} ${isPage ? styles['subtitle--page'] : styles['subtitle--post']}`}
+      >
         {subtitle}
       </h2>
+      {!isPage ? (
+        <p className={styles['meta']}>
+          Posted in {category} on {datePosted}. Last edited on {dateEdited}.
+        </p>
+      ) : null}
     </header>
   );
 };
 
-const PostTitle = ({ title, category, date }) => {
-  return (
-    <header className={`${styles['wrapper']} ${styles['wrapper__post']}`}>
-      <h1 className={styles['title']}>{title}</h1>
-      <h2 className={`${styles['subtitle']} ${styles['subtitle__post']}`}>
-        {category} — {date}
-      </h2>
-    </header>
-  );
-};
-
-export { PageTitle, PostTitle };
+export default Title;

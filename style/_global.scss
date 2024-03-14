@@ -2,9 +2,9 @@ body {
   background-color: var(--color-white);
   color: var(--color-black);
   font-family: var(--font-roboto);
-  font-weight: 400;
+  font-weight: 300;
   font-size: var(--font-m);
-  line-height: var(--font-line-height-xl);
+  line-height: var(--font-line-height-m);
 }
 
 .container {
@@ -19,57 +19,60 @@ body {
   gap: var(--grid-gutter);
 }
 
-.content-wrapper {
-  padding-top: var(--space-2xl-6xl);
-  padding-bottom: var(--space-2xl-7xl);
+.heading {
+  font-family: var(--font-roboto-condensed);
 }
 
-.content-flex {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-m-l);
+.content-narrow {
+  grid-column: 4 / 10;
+  line-height: var(--font-line-height-xl);
 }
 
-.link-underline {
+.link {
   text-decoration: none;
   color: var(--color-black);
 
-  &:hover {
+  &--dropdown {
+    position: relative;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &--underline:hover,
+  &--dropdown:hover {
     border-bottom: 3px solid var(--color-accent-red);
     padding-bottom: 3px;
   }
-}
 
-.link-color {
-  text-decoration: none;
-  color: var(--color-black);
-
-  &:hover {
+  &--color:hover {
     color: var(--color-accent-red);
   }
-}
 
-.link-dropdown {
-  position: relative;
-  &:hover {
-    cursor: pointer;
-  }
-}
+  &--post {
+    border-bottom: 1px solid var(--color-black);
+    padding-bottom: 1px;
 
-.link-post {
-  text-decoration: none;
-  color: var(--color-black);
-  border-bottom: 1px solid var(--color-black);
-  padding-bottom: 1px;
-
-  &:hover {
-    color: var(--color-accent-red);
-    border-bottom: 1px solid var(--color-accent-red);
+    &:hover {
+      color: var(--color-accent-red);
+      border-bottom: 1px solid var(--color-accent-red);
+    }
   }
 }
 
 @media only screen and (width <= 768px) {
   .grid {
     grid-template-columns: repeat(6, 1fr);
+  }
+
+  .content-narrow {
+    grid-column: 2 / 6;
+  }
+}
+
+@media only screen and (width <= 480px) {
+  .content-narrow {
+    grid-column: span 6;
   }
 }

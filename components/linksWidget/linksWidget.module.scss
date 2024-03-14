@@ -1,0 +1,23 @@
+.wrapper {
+  grid-column: span 6;
+}
+
+.title {
+  font-size: var(--font-xl);
+  line-height: var(--font-line-height-l);
+  font-weight: 500;
+}
+
+.links-wrapper {
+  padding-top: var(--space-m-l);
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-5xl-7xl);
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs-s);
+}

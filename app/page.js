@@ -1,19 +1,16 @@
-import { PageTitle } from '@/components/title/title';
-import SectionHeader from '@/components/sectionHeader/sectionHeader';
+import Title from '@/components/title/title';
 import PostsGrid from '@/components/postsGrid/postsGrid';
 
 export default function Home() {
   return (
     <main className="container">
-      <PageTitle
+      <Title
+        isPage={true}
         title="Evgenii makes illustrations, writes music, and code."
         subtitle="Welcome to my online journal where I share my illustrations, designs,
         projects and other things I'm interested in."
       />
-      <section className="content-wrapper content-flex">
-        <SectionHeader />
-        <PostsGrid category="all" />
-      </section>
+      <PostsGrid showHeader={true} category="all" />
     </main>
   );
 }
