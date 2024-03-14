@@ -23,6 +23,11 @@ body {
   font-family: var(--font-roboto-condensed);
 }
 
+.content-narrow {
+  grid-column: 4 / 10;
+  line-height: var(--font-line-height-xl);
+}
+
 .link {
   text-decoration: none;
   color: var(--color-black);
@@ -59,5 +64,15 @@ body {
 @media only screen and (width <= 768px) {
   .grid {
     grid-template-columns: repeat(6, 1fr);
+  }
+
+  .content-narrow {
+    grid-column: 2 / 6;
+  }
+}
+
+@media only screen and (width <= 480px) {
+  .content-narrow {
+    grid-column: span 6;
   }
 }
