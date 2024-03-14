@@ -22,7 +22,7 @@ const ContentDefault = ({ content }) => {
             },
             h2: {
               props: {
-                className: 'content-narrow heading',
+                className: `content-narrow heading ${styles['content-heading']}`,
               },
             },
             h3: {
