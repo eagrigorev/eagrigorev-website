@@ -7,13 +7,19 @@ const MenuItem = ({ item, isVisible, visibilityHandler }) => {
     <li className={item.isDesktop ? styles['desktop'] : styles['mobile']}>
       {item.submenu ? (
         <>
-          <span className="link link--dropdown" onClick={visibilityHandler}>
+          <span
+            className="link link--dropdown heading heading--regular-m-100"
+            onClick={visibilityHandler}
+          >
             {item.title}
           </span>
           {isVisible ? <Dropdown items={item.submenu} /> : null}
         </>
       ) : (
-        <Link className="link link--underline" href={item.url}>
+        <Link
+          className="link link--underline heading heading--regular-m-100"
+          href={item.url}
+        >
           {item.title}
         </Link>
       )}

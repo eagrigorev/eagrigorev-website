@@ -15,11 +15,13 @@ const PostCard = ({ title, slug, dateEdited, category, image }) => {
         />
       </Link>
       <div className={styles['description']}>
-        <p className={styles['meta']}>
+        <p className="paragraph paragraph--light-s-100">
           {category} — {dateEdited}
         </p>
         <Link className="link link--color" href={`/${slug}`}>
-          <h3 className={`${styles['title']} heading`}>{title}</h3>
+          <h3 className={`${styles['title']} heading heading--regular-l-125`}>
+            {title}
+          </h3>
         </Link>
       </div>
     </article>

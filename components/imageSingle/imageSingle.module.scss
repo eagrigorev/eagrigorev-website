@@ -25,11 +25,6 @@
   height: auto;
 }
 
-.description {
-  font-size: var(--font-xs);
-  line-height: var(--font-line-height-l);
-}
-
 @media only screen and (width <= 768px) {
   .image-container {
     &--wide {

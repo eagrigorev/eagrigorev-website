@@ -12,7 +12,7 @@ const Logo = () => {
         height={60}
         alt="Evgenii Grigorev Website Logo"
       />
-      <p className={styles['title']}>Evgenii Grigorev</p>
+      <p className="paragraph paragraph--medium-m-100">Evgenii Grigorev</p>
     </Link>
   );
 };

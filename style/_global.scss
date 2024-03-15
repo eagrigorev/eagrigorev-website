@@ -1,10 +1,6 @@
 body {
   background-color: var(--color-white);
   color: var(--color-black);
-  font-family: var(--font-roboto);
-  font-weight: 300;
-  font-size: var(--font-m);
-  line-height: var(--font-line-height-m);
 }
 
 .container {
@@ -19,46 +15,8 @@ body {
   gap: var(--grid-gutter);
 }
 
-.heading {
-  font-family: var(--font-roboto-condensed);
-}
-
 .content-narrow {
   grid-column: 4 / 10;
-  line-height: var(--font-line-height-xl);
-}
-
-.link {
-  text-decoration: none;
-  color: var(--color-black);
-
-  &--dropdown {
-    position: relative;
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
-
-  &--underline:hover,
-  &--dropdown:hover {
-    border-bottom: 3px solid var(--color-accent-red);
-    padding-bottom: 3px;
-  }
-
-  &--color:hover {
-    color: var(--color-accent-red);
-  }
-
-  &--post {
-    border-bottom: 1px solid var(--color-black);
-    padding-bottom: 1px;
-
-    &:hover {
-      color: var(--color-accent-red);
-      border-bottom: 1px solid var(--color-accent-red);
-    }
-  }
 }
 
 @media only screen and (width <= 768px) {

@@ -11,17 +11,17 @@ const Title = ({
   return (
     <header className={`${styles['wrapper']} grid`}>
       <h1
-        className={`heading ${styles['title']} ${isPage ? styles['title--page'] : styles['title--post']}`}
+        className={`heading heading--bold-3xl-125 ${styles['title']} ${isPage ? styles['title--page'] : styles['title--post']}`}
       >
         {title}
       </h1>
       <h2
-        className={`${styles['subtitle']} ${isPage ? styles['subtitle--page'] : styles['subtitle--post']}`}
+        className={`paragraph paragraph--light-l-125 ${styles['subtitle']} ${isPage ? styles['subtitle--page'] : styles['subtitle--post']}`}
       >
         {subtitle}
       </h2>
       {!isPage ? (
-        <p className={styles['meta']}>
+        <p className={`paragraph paragraph--light-s-125 ${styles['meta']}`}>
           Posted in {category} on {datePosted}. Last edited on {dateEdited}.
         </p>
       ) : null}

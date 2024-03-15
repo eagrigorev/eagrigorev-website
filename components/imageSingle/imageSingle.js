@@ -21,7 +21,7 @@ const ImageSingle = ({ src, alt, description, type }) => {
           height={900}
           alt={alt}
         />
-        <p className={styles['description']}>{description}</p>
+        <p className="paragraph paragraph--light-xs-125">{description}</p>
       </div>
     </div>
   );

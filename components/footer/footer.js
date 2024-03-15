@@ -9,7 +9,7 @@ const Footer = () => {
         <SocialWidget />
         <LinksWidget />
       </div>
-      <div className={`${styles['copyright']} heading`}>
+      <div className={`${styles['copyright']} heading heading--regular-m-100`}>
         <p>© 2024 Evgenii Grigorev</p>
       </div>
     </footer>

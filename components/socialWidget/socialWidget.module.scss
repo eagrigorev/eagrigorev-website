@@ -5,18 +5,8 @@
   gap: var(--space-m-l);
 }
 
-.title {
-  font-size: var(--font-2xl);
-  line-height: var(--font-line-height-l);
-  font-weight: 500;
-}
-
 .icons {
   list-style: none;
   display: flex;
   gap: var(--space-xs-s);
-}
-
-.privacy {
-  font-size: var(--font-s);
 }

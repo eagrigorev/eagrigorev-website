@@ -17,32 +17,32 @@ const ContentDefault = ({ content }) => {
             },
             p: {
               props: {
-                className: 'content-narrow',
+                className: 'content-narrow paragraph paragraph--light-m-150',
               },
             },
             h2: {
               props: {
-                className: `content-narrow heading ${styles['content-heading']}`,
+                className: 'content-narrow heading heading--medium-2xl-125',
               },
             },
             h3: {
               props: {
-                className: 'content-narrow heading',
+                className: 'content-narrow heading heading--medium-xl-125',
               },
             },
             h4: {
               props: {
-                className: 'content-narrow heading',
+                className: 'content-narrow heading heading--medium-l-125',
               },
             },
             h5: {
               props: {
-                className: 'content-narrow heading',
+                className: 'content-narrow heading heading--medium-m-125',
               },
             },
             h6: {
               props: {
-                className: 'content-narrow heading',
+                className: 'content-narrow heading heading--medium-s-125',
               },
             },
             ImageSingle: {

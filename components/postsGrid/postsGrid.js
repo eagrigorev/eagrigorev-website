@@ -17,10 +17,10 @@ const PostsGrid = ({ showHeader, category }) => {
       {showHeader ? (
         <header className={`${styles['wrapper']} ${styles['wrapper--header']}`}>
           <div className={`${styles['wrapper']} ${styles['wrapper--title']}`}>
-            <h3 className={`${styles['title']} heading`}>Updates</h3>
+            <h3 className="heading heading--medium-xl-100">Updates</h3>
             <Navigation links={categoriesNavigation} />
           </div>
-          <h4 className={styles['subtitle']}>
+          <h4 className="paragraph paragraph--light-m-125">
             Recent posts from all the categories
           </h4>
         </header>

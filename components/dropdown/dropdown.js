@@ -6,7 +6,10 @@ const Dropdown = ({ items }) => {
     <ul className={styles['wrapper']}>
       {items.map((item, index) => (
         <li key={index}>
-          <Link className="link link--color" href={item.url}>
+          <Link
+            className="link link--color heading heading--regular-s-100"
+            href={item.url}
+          >
             {item.title}
           </Link>
         </li>

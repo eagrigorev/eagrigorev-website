@@ -24,7 +24,7 @@ const Navigation = ({ links }) => {
     };
   }, [showDropdown]);
   return (
-    <ul className={`${styles['wrapper']} heading`} ref={ref}>
+    <ul className={styles['wrapper']} ref={ref}>
       {links.map((item, index) => (
         <MenuItem
           item={item}

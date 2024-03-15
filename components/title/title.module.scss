@@ -4,10 +4,6 @@
 }
 
 .title {
-  font-size: var(--font-3xl);
-  font-weight: 700;
-  line-height: var(--font-line-height-l);
-
   &--page {
     grid-column: span 7;
   }
@@ -18,10 +14,6 @@
 }
 
 .subtitle {
-  font-weight: 300;
-  line-height: var(--font-line-height-l);
-  font-size: var(--font-l);
-
   &--page {
     grid-column: span 6;
   }
@@ -32,7 +24,6 @@
 }
 
 .meta {
-  font-size: var(--font-s);
   grid-column: 4 / 10;
 }
 
