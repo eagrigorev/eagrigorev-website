@@ -1,20 +1,20 @@
 export const categories = [
-  {
-    title: 'Illustrations',
-    url: '/',
-  },
+  // {
+  //   title: 'Illustrations',
+  //   url: '/',
+  // },
   {
     title: 'Music & Tabs',
     url: '/music-and-tabs',
   },
-  {
-    title: 'Projects',
-    url: '/',
-  },
-  {
-    title: 'Journal',
-    url: '/',
-  },
+  // {
+  //   title: 'Projects',
+  //   url: '/',
+  // },
+  // {
+  //   title: 'Journal',
+  //   url: '/',
+  // },
 ];
 
 export const pages = [
@@ -22,26 +22,26 @@ export const pages = [
     title: 'Home',
     url: '/',
   },
-  {
-    title: 'About',
-    url: '/',
-  },
-  {
-    title: 'Now',
-    url: '/',
-  },
-  {
-    title: 'Shop',
-    url: '/',
-  },
-  {
-    title: 'Colophon',
-    url: '/',
-  },
-  {
-    title: 'Library',
-    url: '/',
-  },
+  // {
+  //   title: 'About',
+  //   url: '/',
+  // },
+  // {
+  //   title: 'Now',
+  //   url: '/',
+  // },
+  // {
+  //   title: 'Shop',
+  //   url: '/',
+  // },
+  // {
+  //   title: 'Colophon',
+  //   url: '/',
+  // },
+  // {
+  //   title: 'Library',
+  //   url: '/',
+  // },
 ];
 
 export const socialIcons = [
@@ -73,14 +73,14 @@ export const topNavigation = [
         url: '/',
       },
       ...categories,
-      {
-        title: 'About',
-        url: '/',
-      },
-      {
-        title: 'Now',
-        url: '/',
-      },
+      // {
+      //   title: 'About',
+      //   url: '/',
+      // },
+      // {
+      //   title: 'Now',
+      //   url: '/',
+      // },
     ],
   },
   {
@@ -94,16 +94,16 @@ export const topNavigation = [
     isDesktop: true,
     submenu: categories,
   },
-  {
-    title: 'About',
-    url: '/',
-    isDesktop: true,
-  },
-  {
-    title: 'Now',
-    url: '/',
-    isDesktop: true,
-  },
+  // {
+  //   title: 'About',
+  //   url: '/',
+  //   isDesktop: true,
+  // },
+  // {
+  //   title: 'Now',
+  //   url: '/',
+  //   isDesktop: true,
+  // },
 ];
 
 export const categoriesNavigation = [

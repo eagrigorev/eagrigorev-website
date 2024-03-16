@@ -20,12 +20,12 @@ const SocialWidget = () => {
           </li>
         ))}
       </ul>
-      <Link
+      {/* <Link
         className="link link--color paragraph paragraph--regular-s-100"
         href={'/'}
       >
         Privacy & Security
-      </Link>
+      </Link> */}
     </div>
   );
 };
