@@ -21,8 +21,8 @@ export const getPostsFromSingleCategory = (category) => {
 };
 
 export const getPosts = () => {
-  const music = getPostsFromSingleCategory('music');
-  const allPosts = [...music];
+  const musicAndTabs = getPostsFromSingleCategory('music-and-tabs');
+  const allPosts = [...musicAndTabs];
   return allPosts;
 };
 
