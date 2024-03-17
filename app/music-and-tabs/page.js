@@ -7,7 +7,7 @@ export default function Music() {
       <Title
         isPage={true}
         title="Music & Tabs"
-        subtitle="Boreal Heights is my musical project since 2013. I started with melodic doom metal but later switched to dark folk genre."
+        subtitle="My original music, fingerstyle guitar and ukulele arrangements, and related articles."
       />
       <PostsGrid showHeader={false} category="music-and-tabs" />
     </main>
