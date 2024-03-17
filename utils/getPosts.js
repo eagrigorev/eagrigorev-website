@@ -1,9 +1,14 @@
 import fs from 'fs';
 import matter from 'gray-matter';
+import { normalize } from './normalize';
 
 export const getPostsFromSingleCategory = (category) => {
-  return fs.readdirSync(`public/posts/${category}`).map((file) => {
-    const post = fs.readFileSync(`public/posts/${category}/${file}`, 'utf-8');
+  const normalizedCategory = normalize(category);
+  return fs.readdirSync(`public/posts/${normalizedCategory}`).map((file) => {
+    const post = fs.readFileSync(
+      `public/posts/${normalizedCategory}/${file}`,
+      'utf-8'
+    );
     const { data, content } = matter(post);
     return {
       meta: {

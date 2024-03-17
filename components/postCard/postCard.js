@@ -8,8 +8,8 @@ const PostCard = ({ title, slug, dateEdited, category, image }) => {
       <Link href={`/${slug}`}>
         <Image
           className={styles['image']}
-          alt="Post Image"
-          src={`/images/featured/${image}`}
+          alt={title}
+          src={`/images/${slug}/${image}`}
           width={436}
           height={327}
         />
