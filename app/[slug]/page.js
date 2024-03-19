@@ -16,11 +16,7 @@ const Page = (props) => {
         datePosted={post.meta.datePosted}
         dateEdited={post.meta.dateEdited}
       />
-      {post && post.meta.category === 'Music & Tabs' ? (
-        <ContentDefault content={post.content} />
-      ) : (
-        <p>Nothing here</p>
-      )}
+      {post ? <ContentDefault content={post.content} /> : <p>Nothing here</p>}
     </main>
   );
 };
