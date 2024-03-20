@@ -20,6 +20,7 @@ const ImageSingle = ({ src, alt, description, type }) => {
           width={900}
           height={900}
           alt={alt}
+          quality={100}
         />
         <p className="paragraph paragraph--light-xs-125">{description}</p>
       </div>
