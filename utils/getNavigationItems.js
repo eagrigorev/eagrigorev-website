@@ -1,8 +1,8 @@
 export const categories = [
-  // {
-  //   title: 'Illustrations',
-  //   url: '/',
-  // },
+  {
+    title: 'Illustrations',
+    url: '/illustrations',
+  },
   {
     title: 'Music & Tabs',
     url: '/music-and-tabs',
