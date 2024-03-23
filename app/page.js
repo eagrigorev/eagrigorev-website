@@ -5,7 +5,8 @@ export default function Home() {
   return (
     <main className="container">
       <Title
-        isPage={true}
+        isWide={true}
+        showMeta={false}
         title="Evgenii makes illustrations, writes music, and code."
         subtitle="Welcome to my online journal where I share my illustrations, designs,
         projects and other things I'm interested in."
