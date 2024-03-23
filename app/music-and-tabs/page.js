@@ -5,7 +5,8 @@ export default function Music() {
   return (
     <main className="container">
       <Title
-        isPage={true}
+        isWide={true}
+        showMeta={false}
         title="Music & Tabs"
         subtitle="My original music, fingerstyle guitar and ukulele arrangements, and related articles."
       />
