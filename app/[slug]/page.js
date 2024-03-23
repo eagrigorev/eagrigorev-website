@@ -10,7 +10,8 @@ const Page = (props) => {
     return (
       <main className="container">
         <Title
-          isPage={false}
+          isWide={false}
+          showMeta={true}
           title={post.meta.title}
           subtitle={post.meta.subtitle}
           category={post.meta.category}

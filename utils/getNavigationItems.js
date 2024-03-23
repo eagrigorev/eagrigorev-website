@@ -34,10 +34,10 @@ export const pages = [
   //   title: 'Shop',
   //   url: '/',
   // },
-  // {
-  //   title: 'Colophon',
-  //   url: '/',
-  // },
+  {
+    title: 'Colophon',
+    url: '/colophon',
+  },
   // {
   //   title: 'Library',
   //   url: '/',

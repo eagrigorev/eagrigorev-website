@@ -5,7 +5,8 @@ export default function Illustrations() {
   return (
     <main className="container">
       <Title
-        isPage={true}
+        isWide={true}
+        showMeta={false}
         title="Illustrations"
         subtitle="Pixel art drawings."
       />

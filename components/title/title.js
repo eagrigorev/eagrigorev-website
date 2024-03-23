@@ -1,7 +1,8 @@
 import styles from './title.module.scss';
 
 const Title = ({
-  isPage,
+  isWide,
+  showMeta,
   title,
   subtitle,
   category,
@@ -11,16 +12,16 @@ const Title = ({
   return (
     <header className={`${styles['wrapper']} grid`}>
       <h1
-        className={`heading heading--bold-3xl-125 ${styles['title']} ${isPage ? styles['title--page'] : styles['title--post']}`}
+        className={`heading heading--bold-3xl-125 ${styles['title']} ${isWide ? styles['title--page'] : styles['title--post']}`}
       >
         {title}
       </h1>
       <h2
-        className={`paragraph paragraph--light-l-125 ${styles['subtitle']} ${isPage ? styles['subtitle--page'] : styles['subtitle--post']}`}
+        className={`paragraph paragraph--light-l-125 ${styles['subtitle']} ${isWide ? styles['subtitle--page'] : styles['subtitle--post']}`}
       >
         {subtitle}
       </h2>
-      {!isPage ? (
+      {showMeta ? (
         <p className={`paragraph paragraph--light-s-125 ${styles['meta']}`}>
           Posted in {category} on {datePosted}. Last edited on {dateEdited}.
         </p>
