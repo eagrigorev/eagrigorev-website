@@ -26,10 +26,10 @@ export const pages = [
   //   title: 'About',
   //   url: '/',
   // },
-  // {
-  //   title: 'Now',
-  //   url: '/',
-  // },
+  {
+    title: 'Now',
+    url: '/now',
+  },
   // {
   //   title: 'Shop',
   //   url: '/',
@@ -77,10 +77,10 @@ export const topNavigation = [
       //   title: 'About',
       //   url: '/',
       // },
-      // {
-      //   title: 'Now',
-      //   url: '/',
-      // },
+      {
+        title: 'Now',
+        url: '/now',
+      },
     ],
   },
   {
@@ -99,11 +99,11 @@ export const topNavigation = [
   //   url: '/',
   //   isDesktop: true,
   // },
-  // {
-  //   title: 'Now',
-  //   url: '/',
-  //   isDesktop: true,
-  // },
+  {
+    title: 'Now',
+    url: '/now',
+    isDesktop: true,
+  },
 ];
 
 export const categoriesNavigation = [
