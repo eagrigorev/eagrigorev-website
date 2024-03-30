@@ -9,7 +9,9 @@ const ImageSingle = ({ src, alt, description, type }) => {
         ? styles['image-container--left']
         : type === 'half-right'
           ? styles['image-container--right']
-          : ''
+          : type === 'wide-half'
+            ? styles['image-container--wide-half']
+            : ''
   }`;
   return (
     <div className={classList}>
