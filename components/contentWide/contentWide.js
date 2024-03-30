@@ -3,13 +3,13 @@ import React from 'react';
 import Markdown from 'markdown-to-jsx';
 import ImageSingle from '../imageSingle/imageSingle';
 
-const ContentWide = ({ image, content }) => {
+const ContentWide = ({ image, alt, description, content }) => {
   return (
     <section className={`${styles['wrapper']} grid`}>
       <ImageSingle
-        src="about.jpg"
-        alt="Evgenii Grigorev"
-        description="Evgenii Grigorev"
+        src={image}
+        alt={alt}
+        description={description}
         type="wide-half"
       />
       <div className={styles['content']}>

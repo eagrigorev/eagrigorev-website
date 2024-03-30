@@ -12,7 +12,12 @@ const About = () => {
         title={page.meta.title}
         subtitle={page.meta.subtitle}
       />
-      <ContentWide image="about.jpg" content={page.content} />
+      <ContentWide
+        image="about.jpg"
+        alt="Evgenii Grigorev"
+        description="Image by Svetlana Krestiantseva"
+        content={page.content}
+      />
     </main>
   );
 };
