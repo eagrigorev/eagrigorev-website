@@ -22,10 +22,10 @@ export const pages = [
     title: 'Home',
     url: '/',
   },
-  // {
-  //   title: 'About',
-  //   url: '/',
-  // },
+  {
+    title: 'About',
+    url: '/about',
+  },
   {
     title: 'Now',
     url: '/now',
@@ -73,10 +73,10 @@ export const topNavigation = [
         url: '/',
       },
       ...categories,
-      // {
-      //   title: 'About',
-      //   url: '/',
-      // },
+      {
+        title: 'About',
+        url: '/about',
+      },
       {
         title: 'Now',
         url: '/now',
@@ -94,11 +94,11 @@ export const topNavigation = [
     isDesktop: true,
     submenu: categories,
   },
-  // {
-  //   title: 'About',
-  //   url: '/',
-  //   isDesktop: true,
-  // },
+  {
+    title: 'About',
+    url: '/about',
+    isDesktop: true,
+  },
   {
     title: 'Now',
     url: '/now',
