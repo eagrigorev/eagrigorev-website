@@ -1,16 +1,21 @@
 import getPage from '@/utils/getPage';
-import PageNarrow from '@/templates/pages/pageNarrow';
+import Title from '@/components/title/title';
+import MdxWrapper from '@/components/mdxWrapper/mdxWrapper';
 
 const Colophon = () => {
   const page = getPage('colophon.mdx');
   return (
-    <PageNarrow
-      isWide={false}
-      showMeta={false}
-      title={page.meta.title}
-      subtitle={page.meta.subtitle}
-      content={page.content}
-    />
+    <main className="container">
+      <Title
+        isWide={false}
+        showMeta={false}
+        title={page.meta.title}
+        subtitle={page.meta.subtitle}
+      />
+      <section className="content-wrapper grid">
+        <MdxWrapper layout="content-narrow" content={page.content} />
+      </section>
+    </main>
   );
 };
 

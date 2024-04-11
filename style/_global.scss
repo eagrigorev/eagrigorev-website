@@ -15,6 +15,11 @@ body {
   gap: var(--grid-gutter);
 }
 
+.content-wrapper {
+  padding-top: var(--space-2xl-6xl);
+  padding-bottom: var(--space-2xl-7xl);
+}
+
 .content-narrow {
   grid-column: 4 / 10;
 }
