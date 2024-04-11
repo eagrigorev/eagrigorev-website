@@ -1,6 +1,7 @@
 import getPage from '@/utils/getPage';
 import Title from '@/components/title/title';
-import ContentWide from '@/components/contentWide/contentWide';
+import ImageSingle from '@/components/imageSingle/imageSingle';
+import MdxWrapper from '@/components/mdxWrapper/mdxWrapper';
 
 const About = () => {
   const page = getPage('about.mdx');
@@ -12,12 +13,17 @@ const About = () => {
         title={page.meta.title}
         subtitle={page.meta.subtitle}
       />
-      <ContentWide
-        image="about.jpg"
-        alt="Evgenii Grigorev"
-        description="Image by Svetlana Krestiantseva"
-        content={page.content}
-      />
+      <section className="content-wrapper grid">
+        <ImageSingle
+          src="about.jpg"
+          alt="Evgenii Grigorev"
+          description="Image by Svetlana Krestiantseva"
+          type="wide-half"
+        />
+        <div className="content-wide-split">
+          <MdxWrapper content={page.content} />
+        </div>
+      </section>
     </main>
   );
 };
