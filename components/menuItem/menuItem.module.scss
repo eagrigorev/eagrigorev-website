@@ -6,6 +6,16 @@
   display: none;
 }
 
+.dropdown-wrapper {
+  position: absolute;
+  margin-top: var(--space-m-l);
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs-s);
+  background: var(--color-white);
+}
+
 @media only screen and (width <= 480px) {
   .desktop {
     display: none;

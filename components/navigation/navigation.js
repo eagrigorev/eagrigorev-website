@@ -28,8 +28,8 @@ const Navigation = ({ links }) => {
       {links.map((item, index) => (
         <MenuItem
           item={item}
-          isVisible={showDropdown}
-          visibilityHandler={handleDropdown}
+          showDropdown={showDropdown}
+          handleDropdown={handleDropdown}
           key={index}
         />
       ))}
