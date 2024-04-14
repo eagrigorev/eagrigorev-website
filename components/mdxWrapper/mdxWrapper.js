@@ -3,6 +3,8 @@ import Markdown from 'markdown-to-jsx';
 import ImageSingle from '@/components/imageSingle/imageSingle';
 
 const MdxWrapper = ({ layout = '', content }) => {
+  // Layout: 'content-narrow' | skippped for default or content-wide-split
+
   return (
     <Markdown
       options={{

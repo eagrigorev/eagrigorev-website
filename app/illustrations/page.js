@@ -1,5 +1,5 @@
 import Title from '@/components/title/title';
-import PostsGrid from '@/components/postsGrid/postsGrid';
+import ContentGrid from '@/components/contentGrid/contentGrid';
 
 export default function Illustrations() {
   return (
@@ -10,7 +10,7 @@ export default function Illustrations() {
         title="Illustrations"
         subtitle="Pixel art drawings."
       />
-      <PostsGrid showHeader={false} category="illustrations" />
+      <ContentGrid showHeader={false} category="illustrations" />
     </main>
   );
 }
