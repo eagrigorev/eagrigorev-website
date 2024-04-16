@@ -1,5 +1,5 @@
 import Title from '@/components/title/title';
-import PostsGrid from '@/components/postsGrid/postsGrid';
+import ContentGrid from '@/components/contentGrid/contentGrid';
 
 export default function Music() {
   return (
@@ -10,7 +10,7 @@ export default function Music() {
         title="Music & Tabs"
         subtitle="My original music, fingerstyle guitar and ukulele arrangements, and related articles."
       />
-      <PostsGrid showHeader={false} category="music-and-tabs" />
+      <ContentGrid showHeader={false} category="music-and-tabs" />
     </main>
   );
 }
