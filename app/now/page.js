@@ -1,6 +1,6 @@
 import getPage from '@/utils/getPage';
 import Title from '@/components/title/title';
-import ContentDefault from '@/components/contentDefaut/contentDefault';
+import MdxWrapper from '@/components/mdxWrapper/mdxWrapper';
 
 const Now = () => {
   const page = getPage('now.mdx');
@@ -12,7 +12,9 @@ const Now = () => {
         title={page.meta.title}
         subtitle={page.meta.subtitle}
       />
-      <ContentDefault content={page.content} />
+      <section className="content-wrapper grid">
+        <MdxWrapper layout="content-narrow" content={page.content} />
+      </section>
     </main>
   );
 };

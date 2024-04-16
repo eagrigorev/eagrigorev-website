@@ -1,5 +1,5 @@
 import Title from '@/components/title/title';
-import PostsGrid from '@/components/postsGrid/postsGrid';
+import ContentGrid from '@/components/contentGrid/contentGrid';
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
         subtitle="Welcome to my online journal where I share my illustrations, designs,
         projects and other things I'm interested in."
       />
-      <PostsGrid showHeader={true} category="all" />
+      <ContentGrid showHeader={true} category="all" />
     </main>
   );
 }

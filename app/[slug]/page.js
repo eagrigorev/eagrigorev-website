@@ -1,7 +1,6 @@
 import { getPosts, getPostsSlugs } from '@/utils/getPosts';
-import React from 'react';
 import Title from '@/components/title/title';
-import ContentDefault from '@/components/contentDefaut/contentDefault';
+import MdxWrapper from '@/components/mdxWrapper/mdxWrapper';
 
 const Page = (props) => {
   const slug = props.params.slug;
@@ -18,7 +17,9 @@ const Page = (props) => {
           datePosted={post.meta.datePosted}
           dateEdited={post.meta.dateEdited}
         />
-        <ContentDefault content={post.content} />
+        <section className="content-wrapper grid">
+          <MdxWrapper layout="content-narrow" content={post.content} />
+        </section>
       </main>
     );
   } else {

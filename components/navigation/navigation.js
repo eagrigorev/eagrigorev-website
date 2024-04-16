@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import styles from './navigation.module.scss';
-import MenuItem from '../menuItem/menuItem';
+import Link from 'next/link';
 
 const Navigation = ({ links }) => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -28,8 +28,8 @@ const Navigation = ({ links }) => {
       {links.map((item, index) => (
         <MenuItem
           item={item}
-          isVisible={showDropdown}
-          visibilityHandler={handleDropdown}
+          showDropdown={showDropdown}
+          handleDropdown={handleDropdown}
           key={index}
         />
       ))}
@@ -38,3 +38,41 @@ const Navigation = ({ links }) => {
 };
 
 export default Navigation;
+
+const MenuItem = ({ item, showDropdown, handleDropdown }) => {
+  return (
+    <li className={item.isDesktop ? styles['desktop'] : styles['mobile']}>
+      {item.submenu ? (
+        <>
+          <span
+            className="link link--dropdown heading heading--regular-m-100"
+            onClick={handleDropdown}
+          >
+            {item.title}
+          </span>
+          {showDropdown ? (
+            <ul className={styles['dropdown-wrapper']}>
+              {item.submenu.map((subItem, index) => (
+                <li key={index}>
+                  <Link
+                    className="link link--color heading heading--regular-s-100"
+                    href={subItem.url}
+                  >
+                    {subItem.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          ) : null}
+        </>
+      ) : (
+        <Link
+          className="link link--underline heading heading--regular-m-100"
+          href={item.url}
+        >
+          {item.title}
+        </Link>
+      )}
+    </li>
+  );
+};
