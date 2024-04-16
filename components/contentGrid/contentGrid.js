@@ -42,7 +42,6 @@ const Header = () => {
 };
 
 const PostCard = ({ postMeta }) => {
-  console.log(postMeta);
   return (
     <article className={styles['card__wrapper']}>
       <Link href={`/${postMeta.slug}`}>
