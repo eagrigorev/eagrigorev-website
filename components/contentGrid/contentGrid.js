@@ -9,7 +9,7 @@ import Navigation from '../navigation/navigation';
 const ContentGrid = ({ showHeader, layout, category }) => {
   let allPosts = [];
   if (category === 'all') {
-    allPosts = sortPostsDesc(getPosts()).slice(0, 6);
+    allPosts = sortPostsDesc(getPosts()).slice(0, 12);
   } else {
     allPosts = sortPostsDesc(getPostsFromSingleCategory(category));
   }
