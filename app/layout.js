@@ -1,4 +1,5 @@
 import './style.scss';
+import { Analytics } from '@vercel/analytics/react';
 import { roboto, roboto_condensed } from '@/utils/getFonts';
 import Header from '@/components/header/header';
 import Footer from '@/components/footer/footer';
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
