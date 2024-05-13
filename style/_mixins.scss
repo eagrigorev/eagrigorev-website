@@ -1,0 +1,13 @@
+/* Breakpoints */
+
+@mixin desktop {
+  @media only screen and (width <= 1480px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (width <= 768px) {
+    @content;
+  }
+}

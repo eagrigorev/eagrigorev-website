@@ -1,0 +1,18 @@
+:root {
+  /* Colors */
+
+  --black: #222222;
+  --grey: #969696;
+  --white: #ffffff;
+
+  /* Fonts */
+
+  --font-2xl: clamp(1.728rem, 1.4987rem + 1.0192vi, 2.4414rem);
+  --font-xl: clamp(1.44rem, 1.2751rem + 0.733vi, 1.9531rem);
+  --font-l: clamp(1.2rem, 1.0835rem + 0.5179vi, 1.5625rem);
+  --font-m: clamp(1rem, 0.9196rem + 0.3571vi, 1.25rem);
+  --font-s: clamp(0.8333rem, 0.7798rem + 0.2381vi, 1rem);
+  --font-xs: clamp(0.6944rem, 0.6605rem + 0.1508vi, 0.8rem);
+
+  /* Spaces */
+}
