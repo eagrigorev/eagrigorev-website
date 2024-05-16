@@ -1,5 +1,5 @@
 import styles from './footer.module.scss';
-import { categories, pages, socialIcons } from '@/utils/getNavigationItems';
+import { categories, pages, socialIcons } from '@/temp/getNavigationItems';
 import Link from 'next/link';
 
 const Footer = () => {

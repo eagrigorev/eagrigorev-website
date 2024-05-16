@@ -1,0 +1,19 @@
+.wrapper {
+  padding-top: var(--space-90-120);
+}
+
+.heading {
+  grid-column: span 5;
+}
+
+@media only screen and (width <= 768px) {
+  .heading {
+    grid-column: span 6;
+  }
+}
+
+@media only screen and (width <= 480px) {
+  .heading {
+    grid-column: span 2;
+  }
+}

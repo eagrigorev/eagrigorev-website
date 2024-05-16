@@ -1,5 +1,5 @@
 import styles from './header.module.scss';
-import { topNavigation } from '@/utils/getNavigationItems';
+import { topNavigation } from '@/temp/getNavigationItems';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '../navigation/navigation';

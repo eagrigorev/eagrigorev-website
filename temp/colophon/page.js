@@ -1,9 +1,9 @@
-import getPage from '@/utils/getPage';
+import getPage from '@/src/utils/getPage';
 import Title from '@/components/title/title';
 import MdxWrapper from '@/components/mdxWrapper/mdxWrapper';
 
-const Now = () => {
-  const page = getPage('now.mdx');
+const Colophon = () => {
+  const page = getPage('colophon.mdx');
   return (
     <main className="container">
       <Title
@@ -19,4 +19,4 @@ const Now = () => {
   );
 };
 
-export default Now;
+export default Colophon;

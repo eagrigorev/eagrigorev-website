@@ -1,4 +1,4 @@
-import getPage from '@/utils/getPage';
+import getPage from '@/src/utils/getPage';
 import Title from '@/components/title/title';
 import ImageSingle from '@/components/imageSingle/imageSingle';
 import MdxWrapper from '@/components/mdxWrapper/mdxWrapper';

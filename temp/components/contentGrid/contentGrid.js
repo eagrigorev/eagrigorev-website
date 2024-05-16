@@ -1,7 +1,7 @@
 import styles from './contentGrid.module.scss';
-import { getPosts, getPostsFromSingleCategory } from '@/utils/getPosts';
-import { sortPostsDesc } from '@/utils/sort';
-import { categoriesNavigation } from '@/utils/getNavigationItems';
+import { getPosts, getPostsFromSingleCategory } from '@/src/utils/getPosts';
+import { sortPostsDesc } from '@/src/utils/sort';
+import { categoriesNavigation } from '@/temp/getNavigationItems';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '../navigation/navigation';

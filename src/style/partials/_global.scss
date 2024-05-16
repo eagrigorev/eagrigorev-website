@@ -49,4 +49,8 @@ body {
   .content-narrow {
     grid-column: span 6;
   }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

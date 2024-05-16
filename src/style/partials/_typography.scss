@@ -1,0 +1,68 @@
+.title {
+  font-family: var(--font-spectral);
+  font-weight: 300;
+  line-height: 135%;
+  color: var(--black);
+  &--h1 {
+    @extend .title;
+    font-size: var(--font-27-39);
+  }
+
+  &--h2 {
+    @extend .title;
+    font-size: var(--font-23-31);
+  }
+
+  &--h3 {
+    @extend .title;
+    font-size: var(--font-19-25);
+  }
+
+  &--h4 {
+    @extend .title;
+    font-size: var(--font-16-20);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+}
+
+.paragraph {
+  font-family: var(--font-jost);
+  font-weight: 300;
+  line-height: 150%;
+  letter-spacing: 0.012em;
+  color: var(--black);
+  &--regular {
+    @extend .paragraph;
+    font-size: var(--font-16-20);
+  }
+
+  &--caption {
+    @extend .paragraph;
+    font-size: var(--font-13-16);
+    color: var(--grey);
+  }
+
+  &--button-text {
+    @extend .paragraph;
+    font-size: var(--font-13-16);
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+  }
+}
+
+.navigation {
+  &--top {
+    @extend .paragraph;
+    font-weight: 400;
+  }
+
+  &--categories {
+    @extend .paragraph;
+    font-size: var(--font-11-12);
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+  }
+}

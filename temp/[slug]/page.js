@@ -1,4 +1,4 @@
-import { getPosts, getPostsSlugs } from '@/utils/getPosts';
+import { getPosts, getPostsSlugs } from '@/src/utils/getPosts';
 import Title from '@/components/title/title';
 import MdxWrapper from '@/components/mdxWrapper/mdxWrapper';
 
