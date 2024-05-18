@@ -14,21 +14,25 @@
 .heading {
   &--h1 {
     @extend %spectral;
+
     font-size: var(--font-27-39);
   }
 
   &--h2 {
     @extend %spectral;
+
     font-size: var(--font-23-31);
   }
 
   &--h3 {
     @extend %spectral;
+
     font-size: var(--font-19-25);
   }
 
   &--h4 {
     @extend %spectral;
+
     font-size: var(--font-16-20);
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -38,17 +42,20 @@
 .paragraph {
   &--regular {
     @extend %jost;
+
     font-size: var(--font-16-20);
   }
 
   &--caption {
     @extend %jost;
+
     font-size: var(--font-13-16);
     color: var(--grey);
   }
 
   &--copyright {
     @extend %jost;
+
     font-size: var(--font-13-16);
     font-weight: 400;
     color: var(--grey);
@@ -57,6 +64,7 @@
 
 .button-text {
   @extend %jost;
+
   font-size: var(--font-13-16);
   text-transform: uppercase;
   font-weight: 500;
@@ -65,12 +73,14 @@
 
 .navigation-text {
   @extend %jost;
+
   font-size: var(--font-16-20);
   font-weight: 400;
 }
 
 .meta-categories-text {
   @extend %jost;
+
   font-size: var(--font-11-12);
   text-transform: uppercase;
   font-weight: 400;

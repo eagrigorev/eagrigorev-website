@@ -1,28 +1,9 @@
-import styles from './ContentGrid.module.scss';
 import { loadContent } from '@/utils/loadContent';
-import ProjectCard from '../ProjectCard/ProjectCard';
-import LoadMoreButton from '../LoadMoreButton/LoadMoreButton';
+import GridGenerator from '../GridGenerator/GridGenerator';
 
-const ContentGrid = ({ type, category, amountToShow }) => {
+const ContentGrid = ({ type, category }) => {
   let allContent = loadContent(type, category);
-  const loadMore = () => {
-    return amountToShow + 6;
-  };
-  let displayedContent = allContent.splice(0, amountToShow);
-  return (
-    <section>
-      <div className={`${styles['wrapper']} grid`}>
-        {displayedContent.map((content) =>
-          type === 'projects' ? (
-            <ProjectCard projectMeta={content.meta} key={content.meta.slug} />
-          ) : (
-            ''
-          )
-        )}
-      </div>
-      <LoadMoreButton />
-    </section>
-  );
+  return <GridGenerator type={'projects'} content={allContent} />;
 };
 
 export default ContentGrid;
