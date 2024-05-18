@@ -14,9 +14,11 @@ const ProjectCard = ({ projectMeta }) => {
           height={330}
         />
       </Link>
-      <h3 className={`${styles['title']} paragraph--regular`}>
-        {projectMeta.title}
-      </h3>
+      <Link href={projectMeta.slug}>
+        <h3 className={`${styles['title']} paragraph--regular`}>
+          {projectMeta.title}
+        </h3>
+      </Link>
     </article>
   );
 };

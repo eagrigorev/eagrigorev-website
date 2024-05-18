@@ -2,6 +2,7 @@ import '@/style/main.scss';
 import { Analytics } from '@vercel/analytics/react';
 import { spectral, jost } from '@/scripts/getFonts';
 import TopNavigation from '@/components/TopNavigation/TopNavigation';
+import CopyrightNotice from '@/components/CopyrightNotice/CopyrightNotice';
 
 export const metadata = {
   title: 'Evgenii Grigorev',
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
       <body>
         <TopNavigation />
         {children}
+        <CopyrightNotice />
         <Analytics />
       </body>
     </html>

@@ -46,6 +46,13 @@
     font-size: var(--font-13-16);
     color: var(--grey);
   }
+
+  &--copyright {
+    @extend %jost;
+    font-size: var(--font-13-16);
+    font-weight: 400;
+    color: var(--grey);
+  }
 }
 
 .button-text {

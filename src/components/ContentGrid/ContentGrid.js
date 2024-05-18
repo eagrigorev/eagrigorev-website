@@ -1,28 +1,26 @@
 import styles from './ContentGrid.module.scss';
-import { getProjects, getMarkdownSingleCategory } from '@/scripts/getMarkdown';
-import { sortContentDesc } from '@/utils/sort';
+import { loadContent } from '@/utils/loadContent';
 import ProjectCard from '../ProjectCard/ProjectCard';
+import LoadMoreButton from '../LoadMoreButton/LoadMoreButton';
 
-const ContentGrid = ({ type, category }) => {
-  let allContent = [];
-  if (type === 'projects') {
-    if (category === 'all') {
-      allContent = sortContentDesc(getProjects()).slice(0, 6);
-    } else {
-      allContent = sortContentDesc(
-        getMarkdownSingleCategory(type, category)
-      ).slice(0, 6);
-    }
-  }
+const ContentGrid = ({ type, category, amountToShow }) => {
+  let allContent = loadContent(type, category);
+  const loadMore = () => {
+    return amountToShow + 6;
+  };
+  let displayedContent = allContent.splice(0, amountToShow);
   return (
     <section>
-      {allContent.map((content) =>
-        type === 'projects' ? (
-          <ProjectCard projectMeta={content.meta} key={content.meta.slug} />
-        ) : (
-          ''
-        )
-      )}
+      <div className={`${styles['wrapper']} grid`}>
+        {displayedContent.map((content) =>
+          type === 'projects' ? (
+            <ProjectCard projectMeta={content.meta} key={content.meta.slug} />
+          ) : (
+            ''
+          )
+        )}
+      </div>
+      <LoadMoreButton />
     </section>
   );
 };
