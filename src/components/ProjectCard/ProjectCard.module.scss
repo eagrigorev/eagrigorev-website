@@ -1,0 +1,14 @@
+.wrapper {
+  grid-column: span 4;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+}
+
+.title {
+  padding-top: var(--space-10-15);
+  text-align: right;
+}

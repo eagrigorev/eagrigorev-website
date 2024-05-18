@@ -1,25 +1,34 @@
-.title {
+%spectral {
   font-family: var(--font-spectral);
   font-weight: 300;
   line-height: 135%;
-  color: var(--black);
+}
+
+%jost {
+  font-family: var(--font-jost);
+  font-weight: 300;
+  line-height: 150%;
+  letter-spacing: 0.012em;
+}
+
+.heading {
   &--h1 {
-    @extend .title;
+    @extend %spectral;
     font-size: var(--font-27-39);
   }
 
   &--h2 {
-    @extend .title;
+    @extend %spectral;
     font-size: var(--font-23-31);
   }
 
   &--h3 {
-    @extend .title;
+    @extend %spectral;
     font-size: var(--font-19-25);
   }
 
   &--h4 {
-    @extend .title;
+    @extend %spectral;
     font-size: var(--font-16-20);
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -27,42 +36,36 @@
 }
 
 .paragraph {
-  font-family: var(--font-jost);
-  font-weight: 300;
-  line-height: 150%;
-  letter-spacing: 0.012em;
-  color: var(--black);
   &--regular {
-    @extend .paragraph;
+    @extend %jost;
     font-size: var(--font-16-20);
   }
 
   &--caption {
-    @extend .paragraph;
+    @extend %jost;
     font-size: var(--font-13-16);
     color: var(--grey);
   }
-
-  &--button-text {
-    @extend .paragraph;
-    font-size: var(--font-13-16);
-    text-transform: uppercase;
-    font-weight: 500;
-    letter-spacing: 0.25em;
-  }
 }
 
-.navigation {
-  &--top {
-    @extend .paragraph;
-    font-weight: 400;
-  }
+.button-text {
+  @extend %jost;
+  font-size: var(--font-13-16);
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+}
 
-  &--categories {
-    @extend .paragraph;
-    font-size: var(--font-11-12);
-    text-transform: uppercase;
-    font-weight: 400;
-    letter-spacing: 0.1em;
-  }
+.navigation-text {
+  @extend %jost;
+  font-size: var(--font-16-20);
+  font-weight: 400;
+}
+
+.meta-categories-text {
+  @extend %jost;
+  font-size: var(--font-11-12);
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.1em;
 }

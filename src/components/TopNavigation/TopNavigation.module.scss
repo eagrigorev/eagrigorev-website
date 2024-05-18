@@ -1,5 +1,3 @@
-@use '@/style/partials/mixins';
-
 .wrapper {
   padding: var(--space-20-40) var(--space-40-60-wide);
   display: flex;
@@ -7,7 +5,7 @@
   align-items: center;
 }
 
-.navigation {
+.links--desktop {
   display: flex;
   list-style: none;
   gap: var(--space-40-50);
@@ -17,14 +15,14 @@
   display: none;
 }
 
-@include mixins.desktop {
+@media only screen and (width <= 1480px) {
   .wrapper {
     padding: var(--space-20-40) var(--space-30-40);
   }
 }
 
-@include mixins.tablet {
-  .navigation {
+@media only screen and (width <= 768px) {
+  .links--desktop {
     display: none;
   }
 

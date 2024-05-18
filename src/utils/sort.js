@@ -1,4 +1,4 @@
-export const sortPostsDesc = (posts) => {
+export const sortContentDesc = (posts) => {
   return posts.sort((prev, next) => {
     if (new Date(prev.meta.dateEdited) < new Date(next.meta.dateEdited)) {
       return 1;

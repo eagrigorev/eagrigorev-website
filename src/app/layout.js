@@ -1,7 +1,7 @@
 import '@/style/main.scss';
 import { Analytics } from '@vercel/analytics/react';
-import { spectral, jost } from '@/utils/getFonts';
-import TheHeader from '@/components/TheHeader/TheHeader';
+import { spectral, jost } from '@/scripts/getFonts';
+import TopNavigation from '@/components/TopNavigation/TopNavigation';
 
 export const metadata = {
   title: 'Evgenii Grigorev',
@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${spectral.variable} ${jost.variable}`}>
       <body>
-        <TheHeader />
+        <TopNavigation />
         {children}
         <Analytics />
       </body>
