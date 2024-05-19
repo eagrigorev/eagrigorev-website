@@ -1,10 +1,15 @@
 import styles from './CategoriesNavigation.module.scss';
 import Link from 'next/link';
 
-const CategoriesNavigation = () => {
+const CategoriesNavigation = ({ showAll }) => {
   return (
     <div className={`${styles['wrapper']} meta-categories-text`}>
       <ul className={styles['links']}>
+        {showAll ? (
+          <li>
+            <Link href={'/'}>All</Link>
+          </li>
+        ) : null}
         {categoriesNavigationItems.map((item, index) => (
           <li key={index}>
             <Link href={item.url}>{item.title}</Link>

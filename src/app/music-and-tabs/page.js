@@ -5,11 +5,9 @@ import ContentGrid from '@/components/ContentGrid/ContentGrid';
 export default function Home() {
   return (
     <main className="container">
-      <PageTitle
-        title={'Software developer and artist based in Thessaloniki, Greece.'}
-      />
-      <CategoriesNavigation showAll={false} />
-      <ContentGrid type={'projects'} category={'all'} />
+      <PageTitle title={'Music & Tabs.'} />
+      <CategoriesNavigation showAll={true} />
+      <ContentGrid type={'projects'} category={'music-and-tabs'} />
     </main>
   );
 }

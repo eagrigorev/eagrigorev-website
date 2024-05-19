@@ -3,17 +3,47 @@
 }
 
 .heading {
-  grid-column: span 5;
+  &--left {
+    grid-column: span 5;
+  }
+  &--centered {
+    grid-column-start: 4;
+    grid-column-end: 10;
+    text-align: center;
+  }
+}
+
+.separator {
+  &::after {
+    display: block;
+    content: '';
+    width: var(--space-80-120);
+    height: 1px;
+    background: var(--black);
+    margin: var(--space-20-30) auto;
+  }
+}
+
+.meta {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-30-40);
 }
 
 @media only screen and (width <= 768px) {
   .heading {
-    grid-column: span 6;
+    &--left,
+    &--centered {
+      grid-column: span 6;
+    }
   }
 }
 
 @media only screen and (width <= 480px) {
   .heading {
-    grid-column: span 2;
+    &--left,
+    &--centered {
+      grid-column: span 2;
+    }
   }
 }

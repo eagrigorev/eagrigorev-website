@@ -12,3 +12,15 @@
   padding-top: var(--space-10-15);
   text-align: right;
 }
+
+@media only screen and (width <= 768px) {
+  .wrapper {
+    grid-column: span 3;
+  }
+}
+
+@media only screen and (width <= 480px) {
+  .wrapper {
+    grid-column: span 2;
+  }
+}
