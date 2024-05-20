@@ -21,7 +21,7 @@ export const getProjects = () => {
 };
 
 export const getPage = (file) => {
-  const page = fs.readFileSync(`markdown/pages/${file}`, 'utf-8');
+  const page = fs.readFileSync(`src/markdown/pages/${file}`, 'utf-8');
   const { data, content } = matter(page);
   return {
     meta: data,

@@ -11,22 +11,22 @@ const MarkdownWrapper = ({ layout, content }) => {
         overrides: {
           p: {
             props: {
-              className: `${styles[layout]} paragraph--regular`,
+              className: `${layout ? styles[layout] : ''} paragraph--regular`,
             },
           },
           h2: {
             props: {
-              className: `${styles[layout]} heading--h2`,
+              className: `${layout ? styles[layout] : ''} heading--h2`,
             },
           },
           h3: {
             props: {
-              className: `${styles[layout]} heading--h3`,
+              className: `${layout ? styles[layout] : ''} heading--h3`,
             },
           },
           h4: {
             props: {
-              className: `${styles[layout]} heading--h4`,
+              className: `${layout ? styles[layout] : ''} heading--h4`,
             },
           },
           ImageWithCaption: {
