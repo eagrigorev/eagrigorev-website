@@ -1,7 +1,9 @@
+import styles from './MarkdownWrapper.module.scss';
 import React from 'react';
 import Markdown from 'markdown-to-jsx';
+import ImageWithCaption from '../ImageWithCaption/ImageWithCaption';
 
-const MarkdownWrapper = ({ content }) => {
+const MarkdownWrapper = ({ layout, content }) => {
   return (
     <Markdown
       options={{
@@ -9,23 +11,26 @@ const MarkdownWrapper = ({ content }) => {
         overrides: {
           p: {
             props: {
-              className: 'paragraph--regular',
+              className: `${styles[layout]} paragraph--regular`,
             },
           },
           h2: {
             props: {
-              className: 'heading--h2',
+              className: `${styles[layout]} heading--h2`,
             },
           },
           h3: {
             props: {
-              className: 'heading--h3',
+              className: `${styles[layout]} heading--h3`,
             },
           },
           h4: {
             props: {
-              className: 'heading--h4',
+              className: `${styles[layout]} heading--h4`,
             },
+          },
+          ImageWithCaption: {
+            component: ImageWithCaption,
           },
         },
       }}

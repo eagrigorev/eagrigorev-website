@@ -1,5 +1,7 @@
-import { getProjects } from '@/scripts/getMarkdown';
+import styles from './page.module.scss';
+import { getProjects, getProjectsSlugs } from '@/scripts/getMarkdown';
 import PageTitle from '@/components/PageTitle/PageTitle';
+import MarkdownWrapper from '@/components/MarkdownWrapper/MarkdownWrapper';
 
 const Page = (props) => {
   const slug = props.params.slug;
@@ -15,9 +17,16 @@ const Page = (props) => {
           dateEdited={post.meta.dateEdited}
           category={post.meta.category}
         />
+        <section className={`${styles['wrapper']} grid`}>
+          <MarkdownWrapper layout="content--narrow" content={post.content} />
+        </section>
       </main>
     );
   }
 };
 
 export default Page;
+
+export const generateStaticParams = async () => {
+  return getProjectsSlugs();
+};
