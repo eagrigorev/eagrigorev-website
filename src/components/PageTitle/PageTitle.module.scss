@@ -6,9 +6,9 @@
   &--left {
     grid-column: span 5;
   }
+
   &--centered {
-    grid-column-start: 4;
-    grid-column-end: 10;
+    grid-column: 4 / 10;
     text-align: center;
   }
 }
