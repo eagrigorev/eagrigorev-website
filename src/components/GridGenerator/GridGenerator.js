@@ -5,14 +5,14 @@ import { useState } from 'react';
 import ProjectCard from '../ProjectCard/ProjectCard';
 import LoadMoreButton from '../LoadMoreButton/LoadMoreButton';
 
-const GridGenerator = ({ type, content }) => {
-  const [amountToShow, setAmountToShow] = useState(6);
+const GridGenerator = ({ type, content, postsToShow, postsToLoad }) => {
+  const [amountToShow, setAmountToShow] = useState(postsToShow);
   let displayedContent = content.slice(0, amountToShow);
   const loadMore = () => {
-    setAmountToShow(amountToShow + 6);
+    setAmountToShow(amountToShow + postsToLoad);
   };
   return (
-    <section>
+    <>
       <div className={`${styles['wrapper']} grid`}>
         {displayedContent.map((item) =>
           type === 'projects' ? (
@@ -29,7 +29,7 @@ const GridGenerator = ({ type, content }) => {
           All posts were loaded.
         </p>
       )}
-    </section>
+    </>
   );
 };
 

@@ -1,9 +1,18 @@
 import { loadContent } from '@/utils/loadContent';
 import GridGenerator from '../GridGenerator/GridGenerator';
 
-const ContentGrid = ({ type, category }) => {
+const ContentGrid = ({ type, category, postsToShow, postsToLoad }) => {
   let allContent = loadContent(type, category);
-  return <GridGenerator type={'projects'} content={allContent} />;
+  return (
+    <section>
+      <GridGenerator
+        type={'projects'}
+        content={allContent}
+        postsToShow={postsToShow}
+        postsToLoad={postsToLoad}
+      />
+    </section>
+  );
 };
 
 export default ContentGrid;

@@ -9,7 +9,12 @@ export default function Home() {
         title={'Software developer and artist based in Thessaloniki, Greece.'}
       />
       <CategoriesNavigation showAll={false} />
-      <ContentGrid type={'projects'} category={'all'} />
+      <ContentGrid
+        type={'projects'}
+        category={'all'}
+        postsToShow={6}
+        postsToLoad={6}
+      />
     </main>
   );
 }

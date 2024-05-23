@@ -7,7 +7,12 @@ export default function Home() {
     <main className="container">
       <PageTitle title={'Music & Tabs.'} />
       <CategoriesNavigation showAll={true} />
-      <ContentGrid type={'projects'} category={'music-and-tabs'} />
+      <ContentGrid
+        type={'projects'}
+        category={'music-and-tabs'}
+        postsToShow={6}
+        postsToLoad={6}
+      />
     </main>
   );
 }
