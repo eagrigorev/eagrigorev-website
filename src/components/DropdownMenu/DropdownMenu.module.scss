@@ -1,0 +1,17 @@
+.wrapper {
+  display: none;
+}
+
+.links {
+  position: absolute;
+  padding-top: var(--space-20-40);
+  left: var(--space-30-40);
+}
+
+@media only screen and (width <= 768px) {
+  .wrapper {
+    display: block;
+    border: none;
+    background: none;
+  }
+}

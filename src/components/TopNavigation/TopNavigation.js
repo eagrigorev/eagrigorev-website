@@ -1,6 +1,6 @@
 import styles from './TopNavigation.module.scss';
 import Link from 'next/link';
-// import topNavigationItems from '@/const/topNavigationItems';
+import DropdownMenu from '../DropdownMenu/DropdownMenu';
 
 const TopNavigation = () => {
   return (
@@ -13,7 +13,7 @@ const TopNavigation = () => {
           </li>
         ))}
       </ul>
-      <button className={`${styles['menu']} navigation-text`}>Menu</button>
+      <DropdownMenu links={topNavigationItems} />
     </nav>
   );
 };

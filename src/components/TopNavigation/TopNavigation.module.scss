@@ -11,10 +11,6 @@
   gap: var(--space-40-50);
 }
 
-.menu {
-  display: none;
-}
-
 @media only screen and (width <= 1480px) {
   .wrapper {
     padding: var(--space-20-40) var(--space-30-40);
@@ -24,11 +20,5 @@
 @media only screen and (width <= 768px) {
   .links--desktop {
     display: none;
-  }
-
-  .menu {
-    display: block;
-    border: none;
-    background: none;
   }
 }
