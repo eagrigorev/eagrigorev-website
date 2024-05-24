@@ -6,6 +6,10 @@
 
 .button {
   background: var(--black);
+  border: none;
   color: var(--white);
   padding: var(--space-15-20) var(--space-60-120);
+  &:hover {
+    cursor: pointer;
+  }
 }

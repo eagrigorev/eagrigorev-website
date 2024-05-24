@@ -6,9 +6,13 @@ const CopyrightNotice = () => {
     <footer className={`${styles['wrapper']} paragraph--copyright`}>
       <p>© 2024 Evgenii Grigorev</p>
       <div>
-        <Link href={'/'}>Privacy & Security</Link>
+        <Link className="link--darker transition--color" href={'/'}>
+          Privacy & Security
+        </Link>
         <span> | </span>
-        <Link href={'/'}>RSS Feed</Link>
+        <Link className="link--darker transition--color" href={'/'}>
+          RSS Feed
+        </Link>
       </div>
     </footer>
   );

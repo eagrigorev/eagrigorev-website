@@ -30,7 +30,7 @@ const DropdownMenu = ({ links }) => {
   return (
     <div className={styles['wrapper']} ref={dropdown}>
       <button
-        className={`${styles['menu']} navigation-text`}
+        className={`${styles['menu']} paragraph--bolder`}
         onClick={handleShowDropdown}
       >
         {showDropdown ? 'Close' : 'Menu'}

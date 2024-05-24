@@ -4,7 +4,7 @@ const LoadMoreButton = ({ clickHandler }) => {
   return (
     <div className={styles['wrapper']}>
       <button
-        className={`${styles['button']} button-text`}
+        className={`${styles['button']} button-text transition--opacity`}
         onClick={clickHandler}
       >
         Load More

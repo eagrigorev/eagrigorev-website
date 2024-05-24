@@ -12,7 +12,9 @@ const CategoriesNavigation = ({ showAll }) => {
         ) : null}
         {categoriesNavigationItems.map((item, index) => (
           <li key={index}>
-            <Link href={item.url}>{item.title}</Link>
+            <Link className="link--darker transition--color" href={item.url}>
+              {item.title}
+            </Link>
           </li>
         ))}
       </ul>
