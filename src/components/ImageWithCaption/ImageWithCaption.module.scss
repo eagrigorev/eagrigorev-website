@@ -1,4 +1,4 @@
-%common-layout {
+%layout {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,59 +6,63 @@
 
 .layout {
   &--wide {
-    @extend %common-layout;
+    @extend %layout;
 
     grid-column: 3 / 11;
+
+    @media only screen and (width <= 768px) {
+      grid-column: span 6;
+    }
+
+    @media only screen and (width <= 480px) {
+      grid-column: span 2;
+    }
   }
 
   &--left {
-    @extend %common-layout;
+    @extend %layout;
 
     grid-column: 3 / 7;
+
+    @media only screen and (width <= 768px) {
+      grid-column: 1 / 4;
+    }
+
+    @media only screen and (width <= 480px) {
+      grid-column: span 2;
+    }
   }
 
   &--right {
-    @extend %common-layout;
+    @extend %layout;
 
     grid-column: 7 / 11;
+
+    @media only screen and (width <= 768px) {
+      grid-column: 4 / 7;
+    }
+
+    @media only screen and (width <= 480px) {
+      grid-column: span 2;
+    }
   }
 
   &--left-split {
-    @extend %common-layout;
+    @extend %layout;
 
     grid-column: 3 / 7;
     justify-content: start;
+
+    @media only screen and (width <= 768px) {
+      grid-column: 1 / 4;
+    }
+
+    @media only screen and (width <= 480px) {
+      grid-column: span 2;
+    }
   }
 }
 
 .image {
   height: auto;
-}
-
-@media only screen and (width <= 768px) {
-  .layout {
-    &--wide {
-      grid-column: span 6;
-    }
-
-    &--left,
-    &--left-split {
-      grid-column: 1 / 4;
-    }
-
-    &--right {
-      grid-column: 4 / 7;
-    }
-  }
-}
-
-@media only screen and (width <= 480px) {
-  .layout {
-    &--wide,
-    &--left,
-    &--left-split,
-    &--right {
-      grid-column: span 2;
-    }
-  }
 }
