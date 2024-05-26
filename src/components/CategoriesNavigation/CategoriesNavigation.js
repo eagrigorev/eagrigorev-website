@@ -7,7 +7,9 @@ const CategoriesNavigation = ({ showAll }) => {
       <ul className={styles['links']}>
         {showAll ? (
           <li>
-            <Link href={'/'}>All</Link>
+            <Link className="link--darker transition--color" href={'/'}>
+              All
+            </Link>
           </li>
         ) : null}
         {categoriesNavigationItems.map((item, index) => (
