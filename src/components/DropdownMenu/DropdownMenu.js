@@ -30,7 +30,7 @@ const DropdownMenu = ({ links }) => {
   return (
     <div className={styles['wrapper']} ref={dropdown}>
       <button
-        className={`${styles['menu']} paragraph--bolder`}
+        className={`${styles['menu']} paragraph--bolder link--lighter transition--color`}
         onClick={handleShowDropdown}
       >
         {showDropdown ? 'Close' : 'Menu'}
@@ -39,7 +39,9 @@ const DropdownMenu = ({ links }) => {
         <ul className={styles['links']}>
           {links.map((item, index) => (
             <li key={index}>
-              <Link href={item.url}>{item.title}</Link>
+              <Link className="link--lighter transition--color" href={item.url}>
+                {item.title}
+              </Link>
             </li>
           ))}
         </ul>
