@@ -15,6 +15,11 @@ const MarkdownWrapper = ({ layout, content }) => {
               className: `${layout ? styles[layout] : ''} paragraph--regular`,
             },
           },
+          a: {
+            props: {
+              className: 'link--underline transition--border',
+            },
+          },
           h2: {
             props: {
               className: `${layout ? styles[layout] : ''} heading--h2`,

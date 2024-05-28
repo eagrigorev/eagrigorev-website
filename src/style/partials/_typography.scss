@@ -43,6 +43,18 @@
       color: var(--black);
     }
   }
+
+  &--underline {
+    @extend %link;
+
+    margin-bottom: 1px;
+    border-bottom: 1px solid var(--grey);
+
+    &:hover {
+      color: var(--black);
+      border-bottom: 1px solid var(--black);
+    }
+  }
 }
 
 .heading {
