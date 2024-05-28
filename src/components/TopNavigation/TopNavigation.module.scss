@@ -1,0 +1,20 @@
+.wrapper {
+  padding: var(--space-20-40) var(--space-40-60-wide);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media only screen and (width <= 1480px) {
+    padding: var(--space-20-40) var(--space-30-40);
+  }
+}
+
+.links--desktop {
+  display: flex;
+  list-style: none;
+  gap: var(--space-40-50);
+
+  @media only screen and (width <= 768px) {
+    display: none;
+  }
+}

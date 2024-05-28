@@ -1,0 +1,26 @@
+.wrapper {
+  grid-column: span 4;
+
+  @media only screen and (width <= 768px) {
+    grid-column: span 3;
+  }
+
+  @media only screen and (width <= 480px) {
+    grid-column: span 2;
+  }
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.title {
+  padding-top: var(--space-10-15);
+  text-align: right;
+}

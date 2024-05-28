@@ -1,0 +1,55 @@
+:root {
+  /* Colors */
+
+  --black: #222;
+  --grey: #969696;
+  --light-grey: #f0f0f0;
+  --white: #fff;
+
+  /* Fonts */
+
+  --font-27-39: clamp(1.728rem, 1.4987rem + 1.0192vi, 2.4414rem);
+  --font-23-31: clamp(1.44rem, 1.2751rem + 0.733vi, 1.9531rem);
+  --font-19-25: clamp(1.2rem, 1.0835rem + 0.5179vi, 1.5625rem);
+  --font-16-20: clamp(1rem, 0.9196rem + 0.3571vi, 1.25rem);
+  --font-13-16: clamp(0.8333rem, 0.7798rem + 0.2381vi, 1rem);
+  --font-11-12: clamp(0.6944rem, 0.6605rem + 0.1508vi, 0.8rem);
+
+  /* Spaces */
+
+  --space-10-10: 10px;
+  --space-10-15: clamp(0.625rem, 0.5246rem + 0.4464vi, 0.9375rem);
+  --space-15-20: clamp(0.9375rem, 0.8371rem + 0.4464vi, 1.25rem);
+  --space-20-30: clamp(1.25rem, 1.0491rem + 0.8929vi, 1.875rem);
+  --space-20-40: clamp(1.25rem, 0.8482rem + 1.7857vi, 2.5rem);
+  --space-30-40: clamp(1.875rem, 1.6741rem + 0.8929vi, 2.5rem);
+  --space-40-40: 40px;
+  --space-40-50: clamp(2.5rem, 2.2991rem + 0.8929vi, 3.125rem);
+  --space-40-60: clamp(2.5rem, 2.0982rem + 1.7857vi, 3.75rem);
+  --space-40-60-wide: clamp(2.5rem, -1.7045rem + 4.5455vi, 3.75rem);
+  --space-50-50: 50px;
+  --space-60-120: clamp(3.75rem, 2.5446rem + 5.3571vi, 7.5rem);
+  --space-80-80: 80px;
+  --space-80-120: clamp(5rem, 4.1964rem + 3.5714vi, 7.5rem);
+  --space-90-120: clamp(5.625rem, 5.0223rem + 2.6786vi, 7.5rem);
+
+  /* Grid */
+
+  --grid-max-width: 92.5rem;
+  --grid-gutter: var(
+    --space-30-40,
+    clamp(1.875rem, 1.6741rem + 0.8929vw, 2.5rem)
+  );
+  --grid-columns: 12;
+
+  .u-container {
+    max-width: var(--grid-max-width);
+    padding-inline: var(--grid-gutter);
+    margin-inline: auto;
+  }
+
+  .u-grid {
+    display: grid;
+    gap: var(--grid-gutter);
+  }
+}
