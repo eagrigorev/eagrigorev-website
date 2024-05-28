@@ -5,11 +5,27 @@
 .heading {
   &--left {
     grid-column: span 5;
+
+    @media only screen and (width <= 768px) {
+      grid-column: span 6;
+    }
+
+    @media only screen and (width <= 480px) {
+      grid-column: span 2;
+    }
   }
 
   &--centered {
     grid-column: 4 / 10;
     text-align: center;
+
+    @media only screen and (width <= 768px) {
+      grid-column: span 6;
+    }
+
+    @media only screen and (width <= 480px) {
+      grid-column: span 2;
+    }
   }
 }
 
@@ -28,22 +44,4 @@
   display: flex;
   justify-content: center;
   gap: var(--space-30-40);
-}
-
-@media only screen and (width <= 768px) {
-  .heading {
-    &--left,
-    &--centered {
-      grid-column: span 6;
-    }
-  }
-}
-
-@media only screen and (width <= 480px) {
-  .heading {
-    &--left,
-    &--centered {
-      grid-column: span 2;
-    }
-  }
 }

@@ -1,5 +1,11 @@
 .wrapper {
   display: none;
+
+  @media only screen and (width <= 768px) {
+    display: block;
+    border: none;
+    background: none;
+  }
 }
 
 .links {
@@ -15,13 +21,5 @@
 
   &:hover {
     cursor: pointer;
-  }
-}
-
-@media only screen and (width <= 768px) {
-  .wrapper {
-    display: block;
-    border: none;
-    background: none;
   }
 }

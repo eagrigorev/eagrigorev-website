@@ -9,7 +9,7 @@ export const metadata = {
   description: 'Artist & Software Developer',
 };
 
-export default function RootLayout({ children }) {
+const RootLayout = ({ children }) => {
   return (
     <html lang="en" className={`${spectral.variable} ${jost.variable}`}>
       <body>
@@ -20,4 +20,6 @@ export default function RootLayout({ children }) {
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

@@ -1,5 +1,13 @@
 .wrapper {
   grid-column: span 4;
+
+  @media only screen and (width <= 768px) {
+    grid-column: span 3;
+  }
+
+  @media only screen and (width <= 480px) {
+    grid-column: span 2;
+  }
 }
 
 .image {
@@ -15,16 +23,4 @@
 .title {
   padding-top: var(--space-10-15);
   text-align: right;
-}
-
-@media only screen and (width <= 768px) {
-  .wrapper {
-    grid-column: span 3;
-  }
-}
-
-@media only screen and (width <= 480px) {
-  .wrapper {
-    grid-column: span 2;
-  }
 }

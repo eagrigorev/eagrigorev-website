@@ -2,7 +2,7 @@ import PageTitle from '@/components/PageTitle/PageTitle';
 import CategoriesNavigation from '@/components/CategoriesNavigation/CategoriesNavigation';
 import ContentGrid from '@/components/ContentGrid/ContentGrid';
 
-export default function Home() {
+const MusicAndTabs = () => {
   return (
     <main className="container">
       <PageTitle title="Music & Tabs." />
@@ -15,4 +15,6 @@ export default function Home() {
       />
     </main>
   );
-}
+};
+
+export default MusicAndTabs;

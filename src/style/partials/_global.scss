@@ -14,34 +14,12 @@ body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: var(--grid-gutter);
-}
 
-.transition {
-  &--opacity {
-    transition: opacity 0.4s;
-
-    &:hover {
-      opacity: 0.8;
-    }
-  }
-
-  &--color {
-    transition: color 0.4s;
-  }
-
-  &--border {
-    transition: border-color 0.4s;
-  }
-}
-
-@media only screen and (width <= 768px) {
-  .grid {
+  @media only screen and (width <= 768px) {
     grid-template-columns: repeat(6, 1fr);
   }
-}
 
-@media only screen and (width <= 480px) {
-  .grid {
+  @media only screen and (width <= 480px) {
     grid-template-columns: repeat(2, 1fr);
   }
 }
