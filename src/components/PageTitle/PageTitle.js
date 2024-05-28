@@ -1,4 +1,6 @@
 import styles from './PageTitle.module.scss';
+import { normalize } from '@/utils/normalize';
+import Link from 'next/link';
 
 const PageTitle = ({
   title,
@@ -18,7 +20,12 @@ const PageTitle = ({
       {showMeta ? (
         <div className={`${styles['meta']} meta-categories-text`}>
           <p>{dateEdited}</p>
-          <p>{category}</p>
+          <Link
+            className="link--darker transition--color"
+            href={`/${normalize(category)}`}
+          >
+            {category}
+          </Link>
         </div>
       ) : null}
     </header>
