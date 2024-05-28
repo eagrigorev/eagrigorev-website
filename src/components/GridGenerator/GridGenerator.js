@@ -15,7 +15,7 @@ const GridGenerator = ({ type, content, postsToShow, postsToLoad }) => {
     <>
       <div className={`${styles['wrapper']} grid`}>
         {displayedContent.map((item) =>
-          type === 'projects' ? (
+          type === 'project' ? (
             <ProjectCard projectMeta={item.meta} key={item.meta.slug} />
           ) : (
             ''

@@ -9,7 +9,7 @@ const ProjectCard = ({ projectMeta }) => {
         <Image
           className={`${styles['image']} transition--opacity`}
           alt={projectMeta.title}
-          src={`/images/projects/${projectMeta.slug}/${projectMeta.featuredImage}`}
+          src={`/images/featured/${projectMeta.featuredImage}`}
           width={440}
           height={330}
         />

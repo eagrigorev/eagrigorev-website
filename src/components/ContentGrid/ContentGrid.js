@@ -1,13 +1,13 @@
-import { loadContent } from '@/utils/loadContent';
+import { getSortedPosts } from '@/scripts/getPosts';
 import GridGenerator from '../GridGenerator/GridGenerator';
 
 const ContentGrid = ({ type, category, postsToShow, postsToLoad }) => {
-  let allContent = loadContent(type, category);
+  const allPosts = getSortedPosts(type, category);
   return (
     <section>
       <GridGenerator
-        type={'projects'}
-        content={allContent}
+        type={type}
+        content={allPosts}
         postsToShow={postsToShow}
         postsToLoad={postsToLoad}
       />

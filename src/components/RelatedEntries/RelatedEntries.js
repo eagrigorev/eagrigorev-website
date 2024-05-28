@@ -8,7 +8,7 @@ const RelatedEntries = ({ content }) => {
         <h2 className="paragraph--bolder">Related Entries:</h2>
         <div>
           <GridGenerator
-            type={'projects'}
+            type="project"
             content={content}
             postsToShow={3}
             postsToLoad={3}

@@ -1,8 +1,10 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 
-export const getMarkdownSingleCategory = (type, category) => {
-  const path = `src/markdown/${type}/${category}`;
+const categories = ['illustrations', 'music-and-tabs'];
+
+export const getPostsFromSingleCategory = (category) => {
+  const path = `src/markdown/posts/${category}`;
   return fs.readdirSync(path).map((file) => {
     const markdown = fs.readFileSync(`${path}/${file}`, 'utf-8');
     const { data, content } = matter(markdown);
@@ -13,11 +15,12 @@ export const getMarkdownSingleCategory = (type, category) => {
   });
 };
 
-export const getProjects = () => {
-  const musicAndTabs = getMarkdownSingleCategory('projects', 'music-and-tabs');
-  const illustrations = getMarkdownSingleCategory('projects', 'illustrations');
-  const allProjects = [...musicAndTabs, ...illustrations];
-  return allProjects;
+export const getAllPosts = () => {
+  let allPosts = [];
+  categories.forEach((category) => {
+    allPosts.push(...getPostsFromSingleCategory(category));
+  });
+  return allPosts;
 };
 
 export const getPage = (file) => {
@@ -29,8 +32,8 @@ export const getPage = (file) => {
   };
 };
 
-export const getProjectsSlugs = () => {
-  const allProjects = getProjects();
-  const slugs = allProjects.map((project) => ({ slug: project.meta.slug }));
+export const getPostsSlugs = () => {
+  const allPosts = getAllPosts();
+  const slugs = allPosts.map((post) => ({ slug: post.meta.slug }));
   return slugs;
 };

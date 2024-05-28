@@ -1,13 +1,14 @@
 import styles from './page.module.scss';
-import { getProjects, getProjectsSlugs } from '@/scripts/getMarkdown';
+import { getAllPosts, getPostsSlugs } from '@/scripts/getMarkdown';
+import { getSortedPosts } from '@/scripts/getPosts';
 import PageTitle from '@/components/PageTitle/PageTitle';
 import MarkdownWrapper from '@/components/MarkdownWrapper/MarkdownWrapper';
 import RelatedEntries from '@/components/RelatedEntries/RelatedEntries';
 
 const Page = (props) => {
   const slug = props.params.slug;
-  const allProjects = getProjects();
-  const post = allProjects.find((project) => project.meta.slug === slug);
+  const allPosts = getAllPosts();
+  const post = allPosts.find((post) => post.meta.slug === slug);
   if (post) {
     return (
       <main>
@@ -23,7 +24,13 @@ const Page = (props) => {
             <MarkdownWrapper layout="content--narrow" content={post.content} />
           </div>
         </section>
-        <RelatedEntries content={allProjects} />
+        <RelatedEntries
+          content={getSortedPosts(
+            post.meta.postType,
+            post.meta.category,
+            post.meta.title
+          )}
+        />
       </main>
     );
   }
@@ -32,5 +39,5 @@ const Page = (props) => {
 export default Page;
 
 export const generateStaticParams = async () => {
-  return getProjectsSlugs();
+  return getPostsSlugs();
 };

@@ -8,7 +8,7 @@ const ImageWithCaption = ({ src, alt, caption, layout }) => {
       <Image
         className={styles['image']}
         alt={alt}
-        src={`/images/featured/${src}`}
+        src={`/images/${src}`}
         width={920}
         height={920}
       />
