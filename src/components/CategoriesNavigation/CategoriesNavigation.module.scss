@@ -4,6 +4,8 @@
 
 .links {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   gap: var(--space-40-50);
+  row-gap: var(--space-10-15);
 }
