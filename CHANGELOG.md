@@ -1,3 +1,5 @@
+**v2.5.0** May 28, 2024 — Major design update
+
 **v2.4.1** April 16, 2024 — Minor components rework
 
 **v2.4.0** March 30, 2024 — Added About page and new components logic
