@@ -11,10 +11,10 @@ const About = () => {
       <PageTitle title={page.meta.title} showSeparator={true} />
       <section className={`${styles['wrapper']} grid`}>
         <ImageWithCaption
-          src="about.jpg"
+          src="pages/evgenii-grigorev.jpg"
           alt="Evgenii Grigorev"
           caption="Image by Svetlana Krestiantseva"
-          layout="layout--left-split"
+          layout="left-split"
         />
         <div className={styles['wrapper--content']}>
           <MarkdownWrapper content={page.content} />

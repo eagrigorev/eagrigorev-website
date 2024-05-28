@@ -2,6 +2,7 @@ import styles from './MarkdownWrapper.module.scss';
 import React from 'react';
 import Markdown from 'markdown-to-jsx';
 import ImageWithCaption from '../ImageWithCaption/ImageWithCaption';
+import SpotifyEmbed from '../SpotifyEmbed/SpotifyEmbed';
 
 const MarkdownWrapper = ({ layout, content }) => {
   return (
@@ -31,6 +32,9 @@ const MarkdownWrapper = ({ layout, content }) => {
           },
           ImageWithCaption: {
             component: ImageWithCaption,
+          },
+          SpotifyEmbed: {
+            component: SpotifyEmbed,
           },
         },
       }}
