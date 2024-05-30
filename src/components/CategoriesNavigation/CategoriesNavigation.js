@@ -1,7 +1,7 @@
 import styles from './CategoriesNavigation.module.scss';
 import Link from 'next/link';
 
-const CategoriesNavigation = ({ showAll }) => {
+const CategoriesNavigation = ({ categories, showAll }) => {
   return (
     <div className={`${styles['wrapper']} meta-categories-text`}>
       <ul className={styles['links']}>
@@ -12,7 +12,7 @@ const CategoriesNavigation = ({ showAll }) => {
             </Link>
           </li>
         ) : null}
-        {categoriesNavigationItems.map((item, index) => (
+        {categories.map((item, index) => (
           <li key={index}>
             <Link className="link--darker transition--color" href={item.url}>
               {item.title}
@@ -25,14 +25,3 @@ const CategoriesNavigation = ({ showAll }) => {
 };
 
 export default CategoriesNavigation;
-
-const categoriesNavigationItems = [
-  {
-    title: 'Illustrations',
-    url: '/illustrations',
-  },
-  {
-    title: 'Music & Tabs',
-    url: '/music-and-tabs',
-  },
-];

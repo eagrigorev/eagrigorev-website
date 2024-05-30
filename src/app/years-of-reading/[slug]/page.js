@@ -31,8 +31,8 @@ const Page = (props) => {
             post.meta.category,
             post.meta.title
           )}
-          postsToShow={3}
-          postsToLoad={3}
+          postsToShow={6}
+          postsToLoad={6}
         />
       </main>
     );

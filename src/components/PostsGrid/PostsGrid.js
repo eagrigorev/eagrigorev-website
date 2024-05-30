@@ -1,7 +1,7 @@
 import { getSortedPosts } from '@/scripts/getPosts';
 import GridGenerator from '../GridGenerator/GridGenerator';
 
-const ContentGrid = ({ type, category, postsToShow, postsToLoad }) => {
+const PostsGrid = ({ type, category, postsToShow, postsToLoad }) => {
   const allPosts = getSortedPosts(type, category);
   return (
     <section>
@@ -15,4 +15,4 @@ const ContentGrid = ({ type, category, postsToShow, postsToLoad }) => {
   );
 };
 
-export default ContentGrid;
+export default PostsGrid;
