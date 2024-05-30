@@ -1,14 +1,14 @@
 import { projectCategories } from '@/const/projectCategories';
 import PageTitle from '@/components/PageTitle/PageTitle';
 import CategoriesNavigation from '@/components/CategoriesNavigation/CategoriesNavigation';
-import ContentGrid from '@/components/ContentGrid/ContentGrid';
+import PostsGrid from '@/components/PostsGrid/PostsGrid';
 
 const MusicAndTabs = () => {
   return (
     <main className="container">
       <PageTitle title="Music & Tabs." />
       <CategoriesNavigation categories={projectCategories} showAll={true} />
-      <ContentGrid
+      <PostsGrid
         type="project"
         category="Music & Tabs"
         postsToShow={6}

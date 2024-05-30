@@ -1,17 +1,17 @@
 import { libraryLinks } from '@/const/libraryLinks';
-import { readingThisYear } from '@/const/readingThisYear';
+import { wantToRead } from '@/const/wantToRead';
 import PageTitle from '@/components/PageTitle/PageTitle';
 import CategoriesNavigation from '@/components/CategoriesNavigation/CategoriesNavigation';
 import BooksGrid from '@/components/BooksGrid/BooksGrid';
 
-const ReadingThisYear = () => {
+const WantToRead = () => {
   return (
     <main className="container">
-      <PageTitle title="Library: Reading this Year" />
+      <PageTitle title="Library: Want to Read" />
       <CategoriesNavigation categories={libraryLinks} showAll={false} />
-      <BooksGrid content={readingThisYear} postsToShow={12} postsToLoad={6} />
+      <BooksGrid content={wantToRead} postsToShow={12} postsToLoad={6} />
     </main>
   );
 };
 
-export default ReadingThisYear;
+export default WantToRead;

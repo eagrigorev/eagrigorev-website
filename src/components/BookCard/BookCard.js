@@ -8,10 +8,10 @@ const BookCard = ({ bookMeta }) => {
       <Link className="link--neutral" href={bookMeta.url}>
         <Image
           className={`${styles['image']} transition--opacity`}
-          alt={bookMeta.alt}
+          alt={`${bookMeta.title} by ${bookMeta.author}`}
           src={`/images/books/${bookMeta.image}`}
-          width={200}
-          height={300}
+          width={250}
+          height={375}
         />
         <div className={styles['description']}>
           <h3 className="meta-categories-text">{bookMeta.author}</h3>
