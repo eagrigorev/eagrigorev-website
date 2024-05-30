@@ -25,11 +25,14 @@ const Page = (props) => {
           </div>
         </section>
         <RelatedEntries
+          type={post.meta.postType}
           content={getSortedPosts(
             post.meta.postType,
             post.meta.category,
             post.meta.title
           )}
+          postsToShow={3}
+          postsToLoad={3}
         />
       </main>
     );
