@@ -1,16 +1,17 @@
-import { projectCategories } from '@/const/projectCategories';
+import { libraryLinks } from '@/const/libraryLinks';
+import { readingThisYear } from '@/const/bookMeta';
 import PageTitle from '@/components/PageTitle/PageTitle';
 import CategoriesNavigation from '@/components/CategoriesNavigation/CategoriesNavigation';
 import ContentGrid from '@/components/ContentGrid/ContentGrid';
 
-const Illustrations = () => {
+const ReadingThisYear = () => {
   return (
     <main className="container">
-      <PageTitle title="Illustrations." />
-      <CategoriesNavigation categories={projectCategories} showAll={true} />
+      <PageTitle title="Library: Reading this Year" />
+      <CategoriesNavigation categories={libraryLinks} showAll={false} />
       <ContentGrid
         type="project"
-        category="Illustrations"
+        category="Music & Tabs"
         postsToShow={6}
         postsToLoad={6}
       />
@@ -18,4 +19,4 @@ const Illustrations = () => {
   );
 };
 
-export default Illustrations;
+export default ReadingThisYear;

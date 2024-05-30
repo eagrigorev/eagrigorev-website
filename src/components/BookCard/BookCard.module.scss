@@ -1,0 +1,17 @@
+.wrapper {
+  grid-column: span 2;
+
+  @media only screen and (width <= 480px) {
+    grid-column: span 1;
+  }
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3;
+}
+
+.description {
+  padding-top: var(--space-10-15);
+}
