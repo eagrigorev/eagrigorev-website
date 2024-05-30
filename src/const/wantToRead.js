@@ -1,44 +1,8 @@
 export const wantToRead = [
   {
-    title: 'Hear the Wind Sing (1111)',
+    title: 'The City and Its Uncertain Walls: A Novel (TBA 2024)',
     author: 'Haruki Murakami',
-    image: 'hear-the-wind-sing.jpg',
-    url: '/about',
-    dateRead: 'January 31, 2024',
-  },
-  {
-    title: 'Hear the Wind Sing (1111)',
-    author: 'Haruki Murakami',
-    image: 'hear-the-wind-sing.jpg',
-    url: '/about',
-    dateRead: 'January 31, 2024',
-  },
-  {
-    title: 'Hear the Wind Sing (1111)',
-    author: 'Haruki Murakami',
-    image: 'hear-the-wind-sing.jpg',
-    url: '/about',
-    dateRead: 'January 31, 2024',
-  },
-  {
-    title: 'Hear the Wind Sing (1111)',
-    author: 'Haruki Murakami',
-    image: 'hear-the-wind-sing.jpg',
-    url: '/about',
-    dateRead: 'January 31, 2024',
-  },
-  {
-    title: 'Hear the Wind Sing (1111)',
-    author: 'Haruki Murakami',
-    image: 'hear-the-wind-sing.jpg',
-    url: '/about',
-    dateRead: 'January 31, 2024',
-  },
-  {
-    title: 'Hear the Wind Sing (1111)',
-    author: 'Haruki Murakami',
-    image: 'hear-the-wind-sing.jpg',
-    url: '/about',
-    dateRead: 'January 31, 2024',
+    image: 'the-city-and-its-uncertain-walls.jpg',
+    url: 'https://www.amazon.com/City-Its-Uncertain-Walls-novel/dp/0593801970',
   },
 ];
