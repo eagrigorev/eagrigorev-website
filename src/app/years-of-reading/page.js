@@ -9,7 +9,7 @@ const YearsOfReading = () => {
       <PageTitle title="Library: Years of Reading" />
       <CategoriesNavigation categories={libraryLinks} showAll={false} />
       <PostsGrid
-        type="year-of-reading"
+        type="booklist"
         category="Years of Reading"
         postsToShow={12}
         postsToLoad={6}

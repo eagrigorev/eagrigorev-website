@@ -1,0 +1,55 @@
+%image {
+  width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  &--book,
+  &--booklist {
+    grid-column: span 2;
+
+    @media only screen and (width <= 480px) {
+      grid-column: span 1;
+    }
+  }
+
+  &--project {
+    grid-column: span 4;
+
+    @media only screen and (width <= 768px) {
+      grid-column: span 3;
+    }
+
+    @media only screen and (width <= 480px) {
+      grid-column: span 2;
+    }
+  }
+}
+
+.image {
+  &--book {
+    @extend %image;
+  }
+
+  &--booklist {
+    @extend %image;
+
+    aspect-ratio: 2 / 3;
+  }
+
+  &--project {
+    @extend %image;
+
+    aspect-ratio: 4 / 3;
+  }
+}
+
+.description {
+  padding-top: var(--space-10-15);
+}
+
+.title {
+  &--project {
+    text-align: right;
+  }
+}

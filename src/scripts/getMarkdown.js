@@ -1,7 +1,13 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 
-const categories = ['illustrations', 'music-and-tabs', 'years-of-reading'];
+const categories = [
+  'illustrations',
+  'music-and-tabs',
+  'reading-this-year',
+  'want-to-read',
+  'years-of-reading',
+];
 
 export const getPostsFromSingleCategory = (category) => {
   const path = `src/markdown/posts/${category}`;
