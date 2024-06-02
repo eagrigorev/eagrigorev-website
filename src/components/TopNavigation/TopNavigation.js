@@ -1,5 +1,5 @@
 import styles from './TopNavigation.module.scss';
-import { navigationLinks } from '@/const/navigationLinks';
+import { TOP_NAVIGATION } from '@/const/TOP_NAVIGATION';
 import Link from 'next/link';
 import DropdownMenu from '../DropdownMenu/DropdownMenu';
 
@@ -9,8 +9,8 @@ const TopNavigation = () => {
       <Link className="link--neutral" href={'/'}>
         Evgenii Grigorev
       </Link>
-      <ul className={styles['links--desktop']}>
-        {navigationLinks.map((item, index) => (
+      <ul className={styles['links']}>
+        {TOP_NAVIGATION.map((item, index) => (
           <li key={index}>
             <Link className="link--lighter transition--color" href={item.url}>
               {item.title}
@@ -18,7 +18,7 @@ const TopNavigation = () => {
           </li>
         ))}
       </ul>
-      <DropdownMenu links={navigationLinks} />
+      <DropdownMenu navigationItems={TOP_NAVIGATION} />
     </nav>
   );
 };

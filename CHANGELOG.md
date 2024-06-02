@@ -1,3 +1,7 @@
+**v2.6.1** June 2, 2024 — Components unification
+
+**v2.6.0** May 30, 2024 — Added library pages
+
 **v2.5.0** May 28, 2024 — Major design update
 
 **v2.4.1** April 16, 2024 — Minor components rework

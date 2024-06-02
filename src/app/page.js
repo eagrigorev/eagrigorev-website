@@ -1,15 +1,18 @@
-import { projectCategories } from '@/const/projectCategories';
+import { PROJECTS_SUB_NAVIGATION } from '@/const/SUB_NAVIGATION';
 import PageTitle from '@/components/PageTitle/PageTitle';
-import CategoriesNavigation from '@/components/CategoriesNavigation/CategoriesNavigation';
+import SubNavigation from '@/components/SubNavigation/SubNavigation';
 import PostsGrid from '@/components/PostsGrid/PostsGrid';
 
 const Home = () => {
   return (
     <main className="container">
       <PageTitle title="Software developer and artist based in Thessaloniki, Greece." />
-      <CategoriesNavigation categories={projectCategories} showAll={false} />
+      <SubNavigation
+        navigationItems={PROJECTS_SUB_NAVIGATION}
+        showAll={false}
+      />
       <PostsGrid
-        type="project"
+        postType="project"
         category="all"
         postsToShow={6}
         postsToLoad={6}

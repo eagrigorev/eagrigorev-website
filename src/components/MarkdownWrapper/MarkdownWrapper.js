@@ -12,7 +12,7 @@ const MarkdownWrapper = ({ layout, content }) => {
         overrides: {
           p: {
             props: {
-              className: `${layout ? styles[layout] : ''} paragraph--regular`,
+              className: `${layout ? styles[`content--${layout}`] : ''} paragraph--regular`,
             },
           },
           a: {
@@ -22,17 +22,17 @@ const MarkdownWrapper = ({ layout, content }) => {
           },
           h2: {
             props: {
-              className: `${layout ? styles[layout] : ''} heading--h2`,
+              className: `${layout ? styles[`content--${layout}`] : ''} heading--h2`,
             },
           },
           h3: {
             props: {
-              className: `${layout ? styles[layout] : ''} heading--h3`,
+              className: `${layout ? styles[`content--${layout}`] : ''} heading--h3`,
             },
           },
           h4: {
             props: {
-              className: `${layout ? styles[layout] : ''} heading--h4`,
+              className: `${layout ? styles[`content--${layout}`] : ''} heading--h4`,
             },
           },
           ImageWithCaption: {

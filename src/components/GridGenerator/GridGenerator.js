@@ -2,33 +2,23 @@
 
 import styles from './GridGenerator.module.scss';
 import { useState } from 'react';
-import ProjectCard from '../ProjectCard/ProjectCard';
-import BookCard from '../BookCard/BookCard';
-import YearOfReadingCard from '../YearOfReadingCard/YearOfReadingCard';
+import PostCard from '../PostCard/PostCard';
 import LoadMoreButton from '../LoadMoreButton/LoadMoreButton';
 
-const GridGenerator = ({ type, content, postsToShow, postsToLoad }) => {
+const GridGenerator = ({ postType, posts, postsToShow, postsToLoad }) => {
   const [amountToShow, setAmountToShow] = useState(postsToShow);
-  let displayedContent = content.slice(0, amountToShow);
+  let displayedContent = posts.slice(0, amountToShow);
   const loadMore = () => {
     setAmountToShow(amountToShow + postsToLoad);
   };
   return (
     <>
       <div className={`${styles['wrapper']} grid`}>
-        {displayedContent.map((item, index) =>
-          type === 'project' ? (
-            <ProjectCard projectMeta={item.meta} key={index} />
-          ) : type === 'books' ? (
-            <BookCard bookMeta={item} key={index} />
-          ) : type === 'year-of-reading' ? (
-            <YearOfReadingCard postMeta={item.meta} key={index} />
-          ) : (
-            ''
-          )
-        )}
+        {displayedContent.map((item, index) => (
+          <PostCard cardType={postType} postMeta={item.meta} key={index} />
+        ))}
       </div>
-      {amountToShow < content.length ? (
+      {amountToShow < posts.length ? (
         <LoadMoreButton clickHandler={loadMore} />
       ) : (
         <p className={`${styles['no-more-posts']} paragraph--regular`}>

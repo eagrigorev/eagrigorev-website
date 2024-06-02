@@ -1,4 +1,4 @@
-export const navigationLinks = [
+export const TOP_NAVIGATION = [
   {
     title: 'Portfolio',
     url: '/',
