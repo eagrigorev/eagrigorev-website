@@ -8,18 +8,18 @@
   }
 }
 
-.links {
-  list-style: none;
-  position: absolute;
-  padding-top: var(--space-20-40);
-  left: var(--space-30-40);
-}
-
-.menu {
+.menu-button {
   border: none;
   background: none;
 
   &:hover {
     cursor: pointer;
   }
+}
+
+.links {
+  list-style: none;
+  position: absolute;
+  padding-top: var(--space-20-40);
+  left: var(--space-30-40);
 }

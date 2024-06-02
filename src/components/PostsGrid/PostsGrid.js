@@ -1,13 +1,13 @@
 import { getSortedPosts } from '@/scripts/getPosts';
 import GridGenerator from '../GridGenerator/GridGenerator';
 
-const PostsGrid = ({ type, category, postsToShow, postsToLoad }) => {
-  const allPosts = getSortedPosts(type, category);
+const PostsGrid = ({ postType, category, postsToShow, postsToLoad }) => {
+  const allPosts = getSortedPosts(postType, category);
   return (
     <section>
       <GridGenerator
-        type={type}
-        content={allPosts}
+        postType={postType}
+        posts={allPosts}
         postsToShow={postsToShow}
         postsToLoad={postsToLoad}
       />

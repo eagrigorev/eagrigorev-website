@@ -4,18 +4,18 @@ import styles from './DropdownMenu.module.scss';
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 
-const DropdownMenu = ({ links }) => {
+const DropdownMenu = ({ navigationItems }) => {
   const [showDropdown, setShowDropdown] = useState(false);
   const handleShowDropdown = () => {
     setShowDropdown(!showDropdown);
   };
-  const dropdown = useRef();
+  const dropdownWrapper = useRef();
   useEffect(() => {
     const clickOutsideHandler = (event) => {
       if (
         showDropdown &&
-        dropdown.current &&
-        !dropdown.current.contains(event.target)
+        dropdownWrapper.current &&
+        !dropdownWrapper.current.contains(event.target)
       ) {
         setShowDropdown(false);
       }
@@ -28,16 +28,16 @@ const DropdownMenu = ({ links }) => {
     };
   }, [showDropdown]);
   return (
-    <div className={styles['wrapper']} ref={dropdown}>
+    <div className={styles['wrapper']} ref={dropdownWrapper}>
       <button
-        className={`${styles['menu']} paragraph--bolder link--lighter transition--color`}
+        className={`${styles['menu-button']} paragraph--bolder link--lighter transition--color`}
         onClick={handleShowDropdown}
       >
         {showDropdown ? 'Close' : 'Menu'}
       </button>
       {showDropdown ? (
         <ul className={styles['links']}>
-          {links.map((item, index) => (
+          {navigationItems.map((item, index) => (
             <li key={index}>
               <Link className="link--lighter transition--color" href={item.url}>
                 {item.title}
