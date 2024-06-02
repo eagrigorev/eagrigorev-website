@@ -1,13 +1,7 @@
+import { CARD_OPTIONS } from '@/const/POST_CARD';
+
 export const generateCardOptions = (cardType, postMeta) => {
-  const cardOptions = {
-    href: '',
-    imageSrc: '',
-    imageAlt: '',
-    imageWidth: 0,
-    imageHeight: 0,
-    title: '',
-    description: '',
-  };
+  const cardOptions = CARD_OPTIONS;
   if (cardType === 'project') {
     cardOptions.href = postMeta.slug;
     cardOptions.imageSrc = `/images/featured/${postMeta.featuredImage}`;

@@ -21,12 +21,12 @@ const Page = (props) => {
             category={post.meta.category}
           />
           <div className={`${styles['wrapper']} grid`}>
-            <MarkdownWrapper layout="content--narrow" content={post.content} />
+            <MarkdownWrapper layout="narrow" content={post.content} />
           </div>
         </section>
         <RelatedEntries
-          type={post.meta.postType}
-          content={getSortedPosts(
+          postType={post.meta.postType}
+          posts={getSortedPosts(
             post.meta.postType,
             post.meta.category,
             post.meta.title

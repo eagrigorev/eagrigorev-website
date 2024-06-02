@@ -9,7 +9,7 @@ const Now = () => {
     <main className="container">
       <PageTitle title={page.meta.title} showSeparator={true} />
       <section className={`${styles['wrapper']} grid`}>
-        <MarkdownWrapper layout="content--narrow" content={page.content} />
+        <MarkdownWrapper layout="narrow" content={page.content} />
       </section>
     </main>
   );

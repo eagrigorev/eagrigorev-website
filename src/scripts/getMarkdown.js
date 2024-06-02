@@ -1,13 +1,6 @@
 import fs from 'fs';
 import matter from 'gray-matter';
-
-const categories = [
-  'illustrations',
-  'music-and-tabs',
-  'reading-this-year',
-  'want-to-read',
-  'years-of-reading',
-];
+import { CATEGORIES_LIST } from '@/const/CATEGORIES';
 
 export const getPostsFromSingleCategory = (category) => {
   const path = `src/markdown/posts/${category}`;
@@ -23,7 +16,7 @@ export const getPostsFromSingleCategory = (category) => {
 
 export const getAllPosts = () => {
   let allPosts = [];
-  categories.forEach((category) => {
+  CATEGORIES_LIST.forEach((category) => {
     allPosts.push(...getPostsFromSingleCategory(category));
   });
   return allPosts;

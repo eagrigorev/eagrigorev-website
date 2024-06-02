@@ -1,6 +1,6 @@
-import { libraryLinks } from '@/const/libraryLinks';
+import { LIBRARY_SUB_NAVIGATION } from '@/const/SUB_NAVIGATION';
 import PageTitle from '@/components/PageTitle/PageTitle';
-import CategoriesNavigation from '@/components/CategoriesNavigation/CategoriesNavigation';
+import SubNavigation from '@/components/SubNavigation/SubNavigation';
 import PostsGrid from '@/components/PostsGrid/PostsGrid';
 PostsGrid;
 
@@ -8,9 +8,9 @@ const ReadingThisYear = () => {
   return (
     <main className="container">
       <PageTitle title="Library: Reading this Year" />
-      <CategoriesNavigation categories={libraryLinks} showAll={false} />
+      <SubNavigation navigationItems={LIBRARY_SUB_NAVIGATION} showAll={false} />
       <PostsGrid
-        type="book"
+        postType="book"
         category="Reading this Year"
         postsToShow={12}
         postsToLoad={6}
