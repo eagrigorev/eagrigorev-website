@@ -10,7 +10,7 @@ const CopyrightNotice = () => {
           Privacy & Security
         </Link>
         <span> | </span>
-        <Link className="link--darker transition--color" href={'/'}>
+        <Link className="link--darker transition--color" href={'/rss.xml'}>
           RSS Feed
         </Link>
       </div>
