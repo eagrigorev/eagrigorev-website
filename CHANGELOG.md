@@ -1,3 +1,5 @@
+**v2.6.2** June 3, 2024 — Added RSS feed
+
 **v2.6.1** June 2, 2024 — Components unification
 
 **v2.6.0** May 30, 2024 — Added library pages
