@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Evgenii Grigorev</title>
+        <link>https://eagrigorev.com</link>
+        <description>Software developer and artist based in Thessaloniki, Greece.</description>
+        <lastBuildDate>Mon, 03 Jun 2024 18:45:31 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[Critters]]></title>
+            <link>https://eagrigorev.com/critters</link>
+            <guid>https://eagrigorev.com/critters</guid>
+            <pubDate>Tue, 19 Jul 2022 21:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Fan Art Illustrations]]></title>
+            <link>https://eagrigorev.com/fan-art-illustrations</link>
+            <guid>https://eagrigorev.com/fan-art-illustrations</guid>
+            <pubDate>Sat, 13 Aug 2022 21:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Into a Vanished Age]]></title>
+            <link>https://eagrigorev.com/into-a-vanished-age</link>
+            <guid>https://eagrigorev.com/into-a-vanished-age</guid>
+            <pubDate>Fri, 22 Sep 2023 21:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Pale Views]]></title>
+            <link>https://eagrigorev.com/pale-views</link>
+            <guid>https://eagrigorev.com/pale-views</guid>
+            <pubDate>Wed, 14 Jun 2023 21:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Old Pixel Art Illustrations]]></title>
+            <link>https://eagrigorev.com/old-pixel-art-illustrations</link>
+            <guid>https://eagrigorev.com/old-pixel-art-illustrations</guid>
+            <pubDate>Sat, 13 Mar 2021 22:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Boreal Heights Music]]></title>
+            <link>https://eagrigorev.com/boreal-heights-music</link>
+            <guid>https://eagrigorev.com/boreal-heights-music</guid>
+            <pubDate>Sat, 16 Mar 2024 22:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[New Tabs]]></title>
+            <link>https://eagrigorev.com/new-tabs</link>
+            <guid>https://eagrigorev.com/new-tabs</guid>
+            <pubDate>Wed, 24 Apr 2024 21:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Tabs Archive]]></title>
+            <link>https://eagrigorev.com/tabs-archive</link>
+            <guid>https://eagrigorev.com/tabs-archive</guid>
+            <pubDate>Sat, 20 Apr 2024 21:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Books of 2010]]></title>
+            <link>https://eagrigorev.com/years-of-reading/2010</link>
+            <guid>https://eagrigorev.com/years-of-reading/2010</guid>
+            <pubDate>Thu, 30 Dec 2010 22:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Books of 2011]]></title>
+            <link>https://eagrigorev.com/years-of-reading/2011</link>
+            <guid>https://eagrigorev.com/years-of-reading/2011</guid>
+            <pubDate>Fri, 30 Dec 2011 22:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Books of 2012]]></title>
+            <link>https://eagrigorev.com/years-of-reading/2012</link>
+            <guid>https://eagrigorev.com/years-of-reading/2012</guid>
+            <pubDate>Sun, 30 Dec 2012 22:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Books of 2013]]></title>
+            <link>https://eagrigorev.com/years-of-reading/2013</link>
+            <guid>https://eagrigorev.com/years-of-reading/2013</guid>
+            <pubDate>Mon, 30 Dec 2013 22:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Books of 2014]]></title>
+            <link>https://eagrigorev.com/years-of-reading/2014</link>
+            <guid>https://eagrigorev.com/years-of-reading/2014</guid>
+            <pubDate>Tue, 30 Dec 2014 22:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Books of 2015]]></title>
+            <link>https://eagrigorev.com/years-of-reading/2015</link>
+            <guid>https://eagrigorev.com/years-of-reading/2015</guid>
+            <pubDate>Wed, 30 Dec 2015 22:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Books of 2016]]></title>
+            <link>https://eagrigorev.com/years-of-reading/2016</link>
+            <guid>https://eagrigorev.com/years-of-reading/2016</guid>
+            <pubDate>Fri, 30 Dec 2016 22:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Books of 2017]]></title>
+            <link>https://eagrigorev.com/years-of-reading/2017</link>
+            <guid>https://eagrigorev.com/years-of-reading/2017</guid>
+            <pubDate>Sat, 30 Dec 2017 22:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Books of 2018]]></title>
+            <link>https://eagrigorev.com/years-of-reading/2018</link>
+            <guid>https://eagrigorev.com/years-of-reading/2018</guid>
+            <pubDate>Sun, 30 Dec 2018 22:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Books of 2019]]></title>
+            <link>https://eagrigorev.com/years-of-reading/2019</link>
+            <guid>https://eagrigorev.com/years-of-reading/2019</guid>
+            <pubDate>Mon, 30 Dec 2019 22:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Books of 2020]]></title>
+            <link>https://eagrigorev.com/years-of-reading/2020</link>
+            <guid>https://eagrigorev.com/years-of-reading/2020</guid>
+            <pubDate>Wed, 30 Dec 2020 22:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Books of 2021]]></title>
+            <link>https://eagrigorev.com/years-of-reading/2021</link>
+            <guid>https://eagrigorev.com/years-of-reading/2021</guid>
+            <pubDate>Thu, 30 Dec 2021 22:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Books of 2022]]></title>
+            <link>https://eagrigorev.com/years-of-reading/2022</link>
+            <guid>https://eagrigorev.com/years-of-reading/2022</guid>
+            <pubDate>Fri, 30 Dec 2022 22:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Books of 2023]]></title>
+            <link>https://eagrigorev.com/years-of-reading/2023</link>
+            <guid>https://eagrigorev.com/years-of-reading/2023</guid>
+            <pubDate>Sat, 30 Dec 2023 22:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>

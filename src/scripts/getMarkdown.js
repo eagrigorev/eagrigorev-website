@@ -1,5 +1,6 @@
 import fs from 'fs';
 import matter from 'gray-matter';
+import generateRssFeed from '@/utils/generateRssFeed';
 import { CATEGORIES_LIST } from '@/const/CATEGORIES';
 
 export const getPostsFromSingleCategory = (category) => {
@@ -33,6 +34,10 @@ export const getPage = (file) => {
 
 export const getPostsSlugs = () => {
   const allPosts = getAllPosts();
+  const rssFeedPosts = allPosts.filter((post) => {
+    return post.meta.postType !== 'book';
+  });
+  generateRssFeed(rssFeedPosts);
   const slugs = allPosts.map((post) => ({ slug: post.meta.slug }));
   return slugs;
 };
