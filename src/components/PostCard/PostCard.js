@@ -1,5 +1,5 @@
 import styles from './PostCard.module.scss';
-import { generateCardOptions } from '@/utils/generateCardOptions';
+import { generateCardOptions } from '@/scripts/generateCardOptions';
 import Image from 'next/image';
 import Link from 'next/link';
 

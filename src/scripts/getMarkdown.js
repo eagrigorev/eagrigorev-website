@@ -1,7 +1,7 @@
 import fs from 'fs';
 import matter from 'gray-matter';
-import generateRssFeed from '@/utils/generateRssFeed';
-import { CATEGORIES_LIST } from '@/const/CATEGORIES';
+import generateRssFeed from '@/scripts/generateRssFeed';
+import { categoriesList } from './getCategoriesList';
 
 export const getPostsFromSingleCategory = (category) => {
   const path = `src/markdown/posts/${category}`;
@@ -17,7 +17,7 @@ export const getPostsFromSingleCategory = (category) => {
 
 export const getAllPosts = () => {
   let allPosts = [];
-  CATEGORIES_LIST.forEach((category) => {
+  categoriesList.forEach((category) => {
     allPosts.push(...getPostsFromSingleCategory(category));
   });
   return allPosts;

@@ -1,5 +1,5 @@
 import styles from './PageTitle.module.scss';
-import { normalize } from '@/utils/normalize';
+import { normalize } from '@/scripts/normalize';
 import Link from 'next/link';
 
 const PageTitle = ({
