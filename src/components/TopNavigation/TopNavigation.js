@@ -1,5 +1,5 @@
 import styles from './TopNavigation.module.scss';
-import { TOP_NAVIGATION } from '@/const/TOP_NAVIGATION';
+import { TOP_NAVIGATION } from '@/const/navigation';
 import Link from 'next/link';
 import DropdownMenu from '../DropdownMenu/DropdownMenu';
 
