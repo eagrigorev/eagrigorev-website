@@ -1,31 +1,64 @@
-import { CARD_OPTIONS } from '@/const/POST_CARD';
-
 export const generateCardOptions = (cardType, postMeta) => {
-  const cardOptions = CARD_OPTIONS;
-  if (cardType === 'project') {
-    cardOptions.href = postMeta.slug;
-    cardOptions.imageSrc = `/images/featured/${postMeta.featuredImage}`;
-    cardOptions.imageAlt = postMeta.title;
-    cardOptions.imageWidth = 440;
-    cardOptions.imageHeight = 330;
-    cardOptions.title = postMeta.title;
+  let cardOptions = {};
+  if (cardType === 'blogpost') {
+    cardOptions = {
+      href: postMeta.slug,
+      image: {
+        src: `/images/featured/${postMeta.featuredImage}`,
+        alt: postMeta.title,
+        width: 440,
+        height: 330,
+      },
+      blogpost: {
+        title: postMeta.title,
+        dateEdited: postMeta.dateEdited,
+        category: postMeta.category,
+        excerpt: postMeta.excerpt,
+      },
+    };
   }
   if (cardType === 'book') {
-    cardOptions.href = postMeta.url;
-    cardOptions.imageSrc = `/images/books/${postMeta.image}`;
-    cardOptions.imageAlt = `${postMeta.title} by ${postMeta.author}`;
-    cardOptions.imageWidth = 250;
-    cardOptions.imageHeight = 375;
-    cardOptions.title = postMeta.author;
-    cardOptions.description = postMeta.title;
+    cardOptions = {
+      href: postMeta.url,
+      image: {
+        src: `/images/books/${postMeta.image}`,
+        alt: `${postMeta.title} by ${postMeta.author}`,
+        width: 250,
+        height: 375,
+      },
+      book: {
+        author: postMeta.author,
+        title: postMeta.title,
+      },
+    };
   }
   if (cardType === 'booklist') {
-    cardOptions.href = `/years-of-reading/${postMeta.slug}`;
-    cardOptions.imageSrc = `/images/books/years-of-reading/${postMeta.featuredImage}`;
-    cardOptions.imageAlt = postMeta.title;
-    cardOptions.imageWidth = 250;
-    cardOptions.imageHeight = 375;
-    cardOptions.title = postMeta.title;
+    cardOptions = {
+      href: `/years-of-reading/${postMeta.slug}`,
+      image: {
+        src: `/images/books/years-of-reading/${postMeta.featuredImage}`,
+        alt: postMeta.title,
+        width: 250,
+        height: 375,
+      },
+      booklist: {
+        title: postMeta.title,
+      },
+    };
+  }
+  if (cardType === 'project') {
+    cardOptions = {
+      href: postMeta.slug,
+      image: {
+        src: `/images/featured/${postMeta.featuredImage}`,
+        alt: postMeta.title,
+        width: 440,
+        height: 330,
+      },
+      project: {
+        title: postMeta.title,
+      },
+    };
   }
   return cardOptions;
 };

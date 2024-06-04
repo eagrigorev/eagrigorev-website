@@ -12,6 +12,10 @@ export const TOP_NAVIGATION = [
     url: '/now',
   },
   {
+    title: 'Journal',
+    url: '/journal',
+  },
+  {
     title: 'Library',
     url: '/reading-this-year',
   },
