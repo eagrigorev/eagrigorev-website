@@ -1,5 +1,5 @@
 import { getPage } from '@/scripts/getMarkdown';
-import SinglePageNarrowTemplate from '../templates/SinglePageNarrowTemplate/SinglePageNarrowTemplate';
+import SinglePageNarrowTemplate from '@/templates/SinglePageNarrowTemplate/SinglePageNarrowTemplate';
 
 const Now = () => {
   const page = getPage('now.mdx');

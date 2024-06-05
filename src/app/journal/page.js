@@ -1,5 +1,5 @@
 import { JOURNAL_SUB_NAVIGATION } from '@/const/navigation';
-import CategoryPageTemplate from '../templates/CategoryPageTemplate/CategoryPageTemplate';
+import CategoryPageTemplate from '@/templates/CategoryPageTemplate/CategoryPageTemplate';
 
 const Journal = () => {
   return (

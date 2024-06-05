@@ -5,8 +5,8 @@ import {
 import { getAllPosts, getPostsSlugs } from '@/scripts/getMarkdown';
 import { normalize } from '@/scripts/normalize';
 import { categoriesList } from '@/scripts/getCategoriesList';
-import CategoryPageTemplate from '../templates/CategoryPageTemplate/CategoryPageTemplate';
-import SinglePageNarrowTemplate from '../templates/SinglePageNarrowTemplate/SinglePageNarrowTemplate';
+import CategoryPageTemplate from '@/templates/CategoryPageTemplate/CategoryPageTemplate';
+import SinglePageNarrowTemplate from '@/templates/SinglePageNarrowTemplate/SinglePageNarrowTemplate';
 
 const Page = (props) => {
   const slug = props.params.slug;
