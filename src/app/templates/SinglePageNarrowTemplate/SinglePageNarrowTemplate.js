@@ -8,9 +8,15 @@ const SinglePageNarrowTemplate = ({
   showSeparator,
   showMeta,
   post,
+  showRelatedEntries,
   postsToShow,
   postsToLoad,
 }) => {
+  const relatedPosts = getSortedPosts(
+    post.meta.postType,
+    post.meta.category,
+    post.meta.title
+  );
   return (
     <main>
       <section className="container">
@@ -25,16 +31,14 @@ const SinglePageNarrowTemplate = ({
           <MarkdownWrapper layout="narrow" content={post.content} />
         </div>
       </section>
-      <RelatedEntries
-        postType={post.meta.postType}
-        posts={getSortedPosts(
-          post.meta.postType,
-          post.meta.category,
-          post.meta.title
-        )}
-        postsToShow={postsToShow}
-        postsToLoad={postsToLoad}
-      />
+      {relatedPosts.length && showRelatedEntries ? (
+        <RelatedEntries
+          postType={post.meta.postType}
+          posts={relatedPosts}
+          postsToShow={postsToShow}
+          postsToLoad={postsToLoad}
+        />
+      ) : null}
     </main>
   );
 };
