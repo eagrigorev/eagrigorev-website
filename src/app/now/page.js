@@ -7,7 +7,11 @@ const Now = () => {
   const page = getPage('now.mdx');
   return (
     <main className="container">
-      <PageTitle title={page.meta.title} showSeparator={true} />
+      <PageTitle
+        title={page.meta.title}
+        showSeparator={true}
+        showMeta={false}
+      />
       <section className={`${styles['wrapper']} grid`}>
         <MarkdownWrapper layout="narrow" content={page.content} />
       </section>

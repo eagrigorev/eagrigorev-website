@@ -1,16 +1,12 @@
-import styles from './page.module.scss';
 import {
   JOURNAL_SUB_NAVIGATION,
   PROJECTS_SUB_NAVIGATION,
 } from '@/const/navigation';
 import { getAllPosts, getPostsSlugs } from '@/scripts/getMarkdown';
 import { normalize } from '@/scripts/normalize';
-import { getSortedPosts } from '@/scripts/getPosts';
 import { categoriesList } from '@/scripts/getCategoriesList';
 import CategoryPageTemplate from '../templates/CategoryPageTemplate';
-import PageTitle from '@/components/PageTitle/PageTitle';
-import MarkdownWrapper from '@/components/MarkdownWrapper/MarkdownWrapper';
-import RelatedEntries from '@/components/RelatedEntries/RelatedEntries';
+import SinglePageNarrowTemplate from '../templates/SinglePageNarrowTemplate';
 
 const Page = (props) => {
   const slug = props.params.slug;
@@ -26,7 +22,7 @@ const Page = (props) => {
       : PROJECTS_SUB_NAVIGATION;
     return (
       <CategoryPageTemplate
-        pageTitle={slug}
+        pageTitle={`${postTypeByCategory.meta.category}.`}
         navigationItems={navigationItemsByCategory}
         showAll={true}
         postType={postTypeByCategory.meta.postType}
@@ -39,30 +35,13 @@ const Page = (props) => {
   const post = allPosts.find((post) => post.meta.slug === slug);
   if (post) {
     return (
-      <main>
-        <section className="container">
-          <PageTitle
-            title={post.meta.title}
-            showSeparator={true}
-            showMeta={true}
-            dateEdited={post.meta.dateEdited}
-            category={post.meta.category}
-          />
-          <div className={`${styles['wrapper']} grid`}>
-            <MarkdownWrapper layout="narrow" content={post.content} />
-          </div>
-        </section>
-        <RelatedEntries
-          postType={post.meta.postType}
-          posts={getSortedPosts(
-            post.meta.postType,
-            post.meta.category,
-            post.meta.title
-          )}
-          postsToShow={3}
-          postsToLoad={3}
-        />
-      </main>
+      <SinglePageNarrowTemplate
+        showSeparator={true}
+        showMeta={true}
+        post={post}
+        postsToShow={3}
+        postsToLoad={3}
+      />
     );
   }
 };

@@ -8,7 +8,11 @@ const About = () => {
   const page = getPage('about.mdx');
   return (
     <main className="container">
-      <PageTitle title={page.meta.title} showSeparator={true} />
+      <PageTitle
+        title={page.meta.title}
+        showSeparator={true}
+        showMeta={false}
+      />
       <section className={`${styles['wrapper']} grid`}>
         <ImageWithCaption
           src="pages/evgenii-grigorev.jpg"
