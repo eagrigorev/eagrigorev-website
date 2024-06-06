@@ -13,6 +13,7 @@
     }
   }
 
+  &--blogpost,
   &--project {
     grid-column: span 4;
 
@@ -37,6 +38,7 @@
     aspect-ratio: 2 / 3;
   }
 
+  &--blogpost,
   &--project {
     @extend %image;
 
@@ -51,5 +53,19 @@
 .title {
   &--project {
     text-align: right;
+  }
+}
+
+.meta {
+  &--blogpost {
+    display: flex;
+    gap: var(--space-30-40);
+  }
+}
+
+.excerpt {
+  &--blogpost {
+    padding-top: var(--space-10-15);
+    color: var(--black);
   }
 }

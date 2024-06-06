@@ -2,16 +2,14 @@ import styles from './SubNavigation.module.scss';
 import Link from 'next/link';
 
 const SubNavigation = ({ navigationItems, showAll }) => {
+  if (!showAll) {
+    navigationItems = navigationItems.filter((item) => {
+      return item.title !== 'All';
+    });
+  }
   return (
     <div className={`${styles['wrapper']} meta-categories-text`}>
       <ul className={styles['links']}>
-        {showAll ? (
-          <li>
-            <Link className="link--darker transition--color" href={'/'}>
-              All
-            </Link>
-          </li>
-        ) : null}
         {navigationItems.map((item, index) => (
           <li key={index}>
             <Link className="link--darker transition--color" href={item.url}>
