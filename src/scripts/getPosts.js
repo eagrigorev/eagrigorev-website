@@ -1,5 +1,5 @@
 import { getAllPosts } from '@/scripts/getMarkdown';
-import { sortPostsDesc } from '@/utils/sort';
+import { sortPostsDesc } from '@/scripts/sort';
 
 export const getSortedPosts = (postType, category, postToExclude = '') => {
   const allPosts = getAllPosts();

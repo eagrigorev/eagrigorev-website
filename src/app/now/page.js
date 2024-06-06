@@ -1,17 +1,17 @@
-import styles from './page.module.scss';
 import { getPage } from '@/scripts/getMarkdown';
-import PageTitle from '@/components/PageTitle/PageTitle';
-import MarkdownWrapper from '@/components/MarkdownWrapper/MarkdownWrapper';
+import SinglePageNarrowTemplate from '@/templates/SinglePageNarrowTemplate/SinglePageNarrowTemplate';
 
 const Now = () => {
   const page = getPage('now.mdx');
   return (
-    <main className="container">
-      <PageTitle title={page.meta.title} showSeparator={true} />
-      <section className={`${styles['wrapper']} grid`}>
-        <MarkdownWrapper layout="narrow" content={page.content} />
-      </section>
-    </main>
+    <SinglePageNarrowTemplate
+      showSeparator={true}
+      showMeta={false}
+      post={page}
+      showRelatedEntries={false}
+      postsToShow={0}
+      postsToLoad={0}
+    />
   );
 };
 
