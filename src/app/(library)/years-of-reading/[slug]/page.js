@@ -1,9 +1,5 @@
-import styles from './page.module.scss';
 import { getAllPosts, getPostsSlugs } from '@/scripts/getMarkdown';
-import { getSortedPosts } from '@/scripts/getPosts';
-import PageTitle from '@/components/PageTitle/PageTitle';
-import MarkdownWrapper from '@/components/MarkdownWrapper/MarkdownWrapper';
-import RelatedEntries from '@/components/RelatedEntries/RelatedEntries';
+import SinglePageNarrowTemplate from '@/templates/SinglePageNarrowTemplate/SinglePageNarrowTemplate';
 
 const Page = (props) => {
   const slug = props.params.slug;
@@ -11,30 +7,14 @@ const Page = (props) => {
   const post = allPosts.find((post) => post.meta.slug === slug);
   if (post) {
     return (
-      <main>
-        <section className="container">
-          <PageTitle
-            title={post.meta.title}
-            showSeparator={true}
-            showMeta={true}
-            dateEdited={post.meta.dateEdited}
-            category={post.meta.category}
-          />
-          <div className={`${styles['wrapper']} grid`}>
-            <MarkdownWrapper layout="narrow" content={post.content} />
-          </div>
-        </section>
-        <RelatedEntries
-          postType={post.meta.postType}
-          posts={getSortedPosts(
-            post.meta.postType,
-            post.meta.category,
-            post.meta.title
-          )}
-          postsToShow={6}
-          postsToLoad={6}
-        />
-      </main>
+      <SinglePageNarrowTemplate
+        showSeparator={true}
+        showMeta={true}
+        post={post}
+        showRelatedEntries={true}
+        postsToShow={6}
+        postsToLoad={6}
+      />
     );
   }
 };

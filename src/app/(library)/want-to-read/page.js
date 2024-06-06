@@ -1,20 +1,17 @@
 import { LIBRARY_SUB_NAVIGATION } from '@/const/navigation';
-import PageTitle from '@/components/PageTitle/PageTitle';
-import SubNavigation from '@/components/SubNavigation/SubNavigation';
-import PostsGrid from '@/components/PostsGrid/PostsGrid';
+import CategoryPageTemplate from '@/templates/CategoryPageTemplate/CategoryPageTemplate';
 
 const WantToRead = () => {
   return (
-    <main className="container">
-      <PageTitle title="Library: Want to Read" />
-      <SubNavigation navigationItems={LIBRARY_SUB_NAVIGATION} showAll={false} />
-      <PostsGrid
-        postType="book"
-        category="Want to Read"
-        postsToShow={12}
-        postsToLoad={6}
-      />
-    </main>
+    <CategoryPageTemplate
+      pageTitle="Library: Want to Read."
+      navigationItems={LIBRARY_SUB_NAVIGATION}
+      showAll={false}
+      postType="book"
+      category="Want to Read"
+      postsToShow={12}
+      postsToLoad={6}
+    />
   );
 };
 

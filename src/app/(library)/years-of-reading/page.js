@@ -1,20 +1,17 @@
 import { LIBRARY_SUB_NAVIGATION } from '@/const/navigation';
-import PageTitle from '@/components/PageTitle/PageTitle';
-import SubNavigation from '@/components/SubNavigation/SubNavigation';
-import PostsGrid from '@/components/PostsGrid/PostsGrid';
+import CategoryPageTemplate from '@/templates/CategoryPageTemplate/CategoryPageTemplate';
 
 const YearsOfReading = () => {
   return (
-    <main className="container">
-      <PageTitle title="Library: Years of Reading" />
-      <SubNavigation navigationItems={LIBRARY_SUB_NAVIGATION} showAll={false} />
-      <PostsGrid
-        postType="booklist"
-        category="Years of Reading"
-        postsToShow={12}
-        postsToLoad={6}
-      />
-    </main>
+    <CategoryPageTemplate
+      pageTitle="Library: Years of Reading."
+      navigationItems={LIBRARY_SUB_NAVIGATION}
+      showAll={false}
+      postType="booklist"
+      category="Years of Reading"
+      postsToShow={12}
+      postsToLoad={6}
+    />
   );
 };
 
