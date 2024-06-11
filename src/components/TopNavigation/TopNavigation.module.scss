@@ -10,11 +10,37 @@
 }
 
 .links {
-  display: flex;
-  list-style: none;
-  gap: var(--space-40-50);
+  &--desktop {
+    display: flex;
+    list-style: none;
+    gap: var(--space-40-50);
+
+    @media only screen and (width <= 768px) {
+      display: none;
+    }
+  }
+
+  &--mobile {
+    display: none;
+
+    @media only screen and (width <= 768px) {
+      display: block;
+      list-style: none;
+      padding-left: var(--space-30-40);
+    }
+  }
+}
+
+.menu-button {
+  display: none;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   @media only screen and (width <= 768px) {
-    display: none;
+    display: block;
+    border: none;
+    background: none;
   }
 }
