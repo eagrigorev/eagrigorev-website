@@ -7,10 +7,13 @@ import LoadMoreButton from '../LoadMoreButton/LoadMoreButton';
 
 const GridGenerator = ({ postType, posts, postsToShow, postsToLoad }) => {
   const [amountToShow, setAmountToShow] = useState(postsToShow);
+  const [clickedOnce, setClickedOnce] = useState(false);
   let displayedContent = posts.slice(0, amountToShow);
   const loadMore = () => {
     setAmountToShow(amountToShow + postsToLoad);
+    setClickedOnce(true);
   };
+  const showButton = amountToShow < posts.length;
   return (
     <>
       <div className={`${styles['wrapper']} grid`}>
@@ -18,13 +21,13 @@ const GridGenerator = ({ postType, posts, postsToShow, postsToLoad }) => {
           <PostCard cardType={postType} postMeta={item.meta} key={index} />
         ))}
       </div>
-      {amountToShow < posts.length ? (
+      {showButton ? (
         <LoadMoreButton clickHandler={loadMore} />
-      ) : (
-        <p className={`${styles['no-more-posts']} paragraph--regular`}>
+      ) : clickedOnce ? (
+        <p className={`${styles['notification']} paragraph--regular`}>
           All posts were loaded.
         </p>
-      )}
+      ) : null}
     </>
   );
 };
