@@ -16,17 +16,17 @@
     "focus-trap-react": "^10.2.3",
     "gray-matter": "^4.0.3",
     "markdown-to-jsx": "^7.4.7",
-    "next": "^14.2.3",
+    "next": "^14.2.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
-    "eslint-config-next": "^14.2.3",
+    "eslint-config-next": "^14.2.4",
     "eslint-config-prettier": "^9.1.0",
     "feed": "^4.2.2",
-    "prettier": "^3.3.1",
-    "sass": "^1.77.4",
+    "prettier": "^3.3.2",
+    "sass": "^1.77.5",
     "stylelint": "^16.6.1",
     "stylelint-config-prettier-scss": "^1.0.0",
     "stylelint-config-standard-scss": "^13.1.0"

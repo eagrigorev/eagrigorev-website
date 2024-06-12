@@ -1,3 +1,5 @@
+**v2.7.1** June 12, 2024 — Bug fixes and AX improvements
+
 **v2.7.0** June 6, 2024 — Added templates and blog page
 
 **v2.6.2** June 3, 2024 — Added RSS feed
