@@ -11,6 +11,7 @@ import SinglePageNarrowTemplate from '@/templates/SinglePageNarrowTemplate/Singl
 const Page = (props) => {
   const slug = props.params.slug;
   const allPosts = getAllPosts();
+  const post = allPosts.find((post) => post.meta.slug === slug);
   if (categoriesList.includes(slug)) {
     const postTypeByCategory = allPosts.find((post) => {
       return normalize(post.meta.category) === slug;
@@ -31,9 +32,7 @@ const Page = (props) => {
         postsToLoad={6}
       />
     );
-  }
-  const post = allPosts.find((post) => post.meta.slug === slug);
-  if (post) {
+  } else if (post) {
     return (
       <SinglePageNarrowTemplate
         showSeparator={true}
@@ -44,6 +43,8 @@ const Page = (props) => {
         postsToLoad={3}
       />
     );
+  } else {
+    return <p>Nothing is here</p>;
   }
 };
 
