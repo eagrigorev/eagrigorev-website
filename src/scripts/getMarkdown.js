@@ -39,5 +39,6 @@ export const getPostsSlugs = () => {
   });
   generateRssFeed(rssFeedPosts);
   const slugs = allPosts.map((post) => ({ slug: post.meta.slug }));
+  console.log('LOG: slugs', slugs);
   return slugs;
 };

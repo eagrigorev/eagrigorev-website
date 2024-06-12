@@ -13,6 +13,10 @@ const Page = (props) => {
   const allPosts = getAllPosts();
   const post = allPosts.find((post) => post.meta.slug === slug);
   if (categoriesList.includes(slug)) {
+    console.log(
+      'LOG: categoriesList.includes(slug)',
+      categoriesList.includes(slug)
+    );
     const postTypeByCategory = allPosts.find((post) => {
       return normalize(post.meta.category) === slug;
     });
