@@ -38,7 +38,8 @@ export const getPostsSlugs = () => {
     return post.meta.postType !== 'book';
   });
   generateRssFeed(rssFeedPosts);
-  const slugs = allPosts.map((post) => ({ slug: post.meta.slug }));
+  const postSlugs = allPosts.map((post) => ({ slug: post.meta.slug }));
+  const categorySlugs = categoriesList.map((category) => ({ slug }));
   console.log('LOG: slugs', slugs);
   return slugs;
 };
