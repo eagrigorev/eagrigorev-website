@@ -39,8 +39,8 @@ const Page = (props) => {
         showMeta={true}
         post={post}
         showRelatedEntries={true}
-        postsToShow={3}
-        postsToLoad={3}
+        postsToShow={post.meta.postType === 'booklist' ? 6 : 3}
+        postsToLoad={post.meta.postType === 'booklist' ? 6 : 3}
       />
     );
   } else {
