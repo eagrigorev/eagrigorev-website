@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "prettier --check . && stylelint --allow-empty-input \"**/*.{css,scss}\" && next build",
+    "build": "prettier --check . && stylelint --allow-empty-input \"**/*.{css,scss}\" && next build && next-sitemap",
     "build:local": "prettier --write . && stylelint --allow-empty-input \"**/*.{css,scss}\" && next build",
     "start": "next start",
     "lint": "prettier --check . && stylelint --allow-empty-input \"**/*.{css,scss}\" && next lint",
@@ -17,6 +17,7 @@
     "gray-matter": "^4.0.3",
     "markdown-to-jsx": "^7.4.7",
     "next": "^14.2.4",
+    "next-sitemap": "^4.2.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

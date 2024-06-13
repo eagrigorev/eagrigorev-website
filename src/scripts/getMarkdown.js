@@ -36,10 +36,7 @@ export const getPostsSlugs = () => {
   const allPosts = getAllPosts().filter((post) => {
     return post.meta.postType !== 'book';
   });
-  const rssFeedPosts = allPosts.filter((post) => {
-    return post.meta.postType !== 'book';
-  });
-  generateRssFeed(rssFeedPosts);
+  generateRssFeed(allPosts);
   const postSlugs = allPosts.map((post) => ({ slug: post.meta.slug }));
   const categorySlugs = categoriesList.map((category) => ({ slug: category }));
   const slugs = [...postSlugs, ...categorySlugs];
