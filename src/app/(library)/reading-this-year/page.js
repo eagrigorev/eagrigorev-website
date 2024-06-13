@@ -4,7 +4,7 @@ import CategoryPageTemplate from '@/templates/CategoryPageTemplate/CategoryPageT
 const ReadingThisYear = () => {
   return (
     <CategoryPageTemplate
-      pageTitle="Library: Readig this Year."
+      pageTitle="Library: Reading this Year."
       navigationItems={LIBRARY_SUB_NAVIGATION}
       showAll={false}
       postType="book"
