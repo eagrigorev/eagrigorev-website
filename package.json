@@ -3,9 +3,10 @@
   "version": "2.7.0",
   "private": true,
   "scripts": {
-    "lint": "prettier --check . && prettier --write . && stylelint --allow-empty-input \"**/*.{css,scss}\" && next lint",
+    "lint": "stylelint --allow-empty-input \"**/*.{css,scss}\" && next lint",
+    "format": "prettier --check --write .",
     "dev": "next dev",
-    "build": "npm run lint && next build && next-sitemap",
+    "build": "npm run lint && npm run format && next build && next-sitemap",
     "start": "next start"
   },
   "dependencies": {

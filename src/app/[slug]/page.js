@@ -20,7 +20,6 @@ const Page = (props) => {
     if (
       ['reading-this-year', 'want-to-read', 'years-of-reading'].includes(slug)
     ) {
-      console.log('Triggered library');
       return (
         <CategoryPageTemplate
           pageTitle={`Library: ${postByCategory.meta.category}.`}
@@ -33,7 +32,6 @@ const Page = (props) => {
         />
       );
     } else if (['illustrations', 'music-and-tabs'].includes(slug)) {
-      console.log('Triggered portfolio');
       return (
         <CategoryPageTemplate
           pageTitle={`Portfolio: ${postByCategory.meta.category}.`}
@@ -46,7 +44,6 @@ const Page = (props) => {
         />
       );
     } else if (['life-updates'].includes(slug)) {
-      console.log('Triggered journal');
       return (
         <CategoryPageTemplate
           pageTitle={`Journal: ${postByCategory.meta.category}.`}
