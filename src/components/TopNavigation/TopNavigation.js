@@ -1,7 +1,7 @@
 'use client';
 
 import styles from './TopNavigation.module.scss';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { TOP_NAVIGATION } from '@/const/navigation';
 import Link from 'next/link';
 import FocusTrap from 'focus-trap-react';
@@ -11,28 +11,14 @@ const TopNavigation = () => {
   const handleShowDropdown = () => {
     setShowDropdown(!showDropdown);
   };
-  const dropdownWrapper = useRef();
   useEffect(() => {
-    const clickOutsideHandler = (event) => {
-      if (
-        showDropdown &&
-        dropdownWrapper.current &&
-        !dropdownWrapper.current.contains(event.target)
-      ) {
-        setShowDropdown(false);
-      }
-    };
     const escKeyHandler = (event) => {
       if (showDropdown && event.key === 'Escape') {
         setShowDropdown(false);
       }
     };
-    document.addEventListener('mousedown', clickOutsideHandler);
-    document.addEventListener('touchstart', clickOutsideHandler);
     document.addEventListener('keydown', escKeyHandler);
     return () => {
-      document.removeEventListener('mousedown', clickOutsideHandler);
-      document.removeEventListener('touchstart', clickOutsideHandler);
       document.removeEventListener('keydown', escKeyHandler);
     };
   }, [showDropdown]);
@@ -59,8 +45,8 @@ const TopNavigation = () => {
         </button>
       </div>
       {showDropdown ? (
-        <FocusTrap>
-          <ul className={styles['links--mobile']} ref={dropdownWrapper}>
+        <FocusTrap focusTrapOptions={{ clickOutsideDeactivates: true }}>
+          <ul className={styles['links--mobile']}>
             {TOP_NAVIGATION.map((item, index) => (
               <li key={index}>
                 <Link
