@@ -19,10 +19,7 @@ const generateRssFeed = (posts) => {
     author,
   });
   posts.forEach((post) => {
-    const slug =
-      post.meta.postType === 'booklist'
-        ? `${URL}/years-of-reading/${post.meta.slug}`
-        : `${URL}/${post.meta.slug}`;
+    const slug = `${URL}/${post.meta.slug}`;
     feed.addItem({
       title: post.meta.title,
       id: slug,

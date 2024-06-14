@@ -34,7 +34,7 @@ export const generateCardOptions = (cardType, postMeta) => {
   }
   if (cardType === 'booklist') {
     cardOptions = {
-      href: `/years-of-reading/${postMeta.slug}`,
+      href: postMeta.slug,
       image: {
         src: `/images/books/years-of-reading/${postMeta.featuredImage}`,
         alt: postMeta.title,

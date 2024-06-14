@@ -1,6 +1,7 @@
 import {
   JOURNAL_SUB_NAVIGATION,
   PROJECTS_SUB_NAVIGATION,
+  LIBRARY_SUB_NAVIGATION,
 } from '@/const/navigation';
 import { getAllPosts, getPostsSlugs } from '@/scripts/getMarkdown';
 import { normalize } from '@/scripts/normalize';
@@ -13,25 +14,51 @@ const Page = (props) => {
   const allPosts = getAllPosts();
   const post = allPosts.find((post) => post.meta.slug === slug);
   if (categoriesList.includes(slug)) {
-    const postTypeByCategory = allPosts.find((post) => {
+    const postByCategory = allPosts.find((post) => {
       return normalize(post.meta.category) === slug;
     });
-    const navigationItemsByCategory = JOURNAL_SUB_NAVIGATION.find((item) => {
-      return normalize(item.title) === slug;
-    })
-      ? JOURNAL_SUB_NAVIGATION
-      : PROJECTS_SUB_NAVIGATION;
-    return (
-      <CategoryPageTemplate
-        pageTitle={`${postTypeByCategory.meta.category}.`}
-        navigationItems={navigationItemsByCategory}
-        showAll={true}
-        postType={postTypeByCategory.meta.postType}
-        category={postTypeByCategory.meta.category}
-        postsToShow={6}
-        postsToLoad={6}
-      />
-    );
+    if (
+      ['reading-this-year', 'want-to-read', 'years-of-reading'].includes(slug)
+    ) {
+      console.log('Triggered library');
+      return (
+        <CategoryPageTemplate
+          pageTitle={`Library: ${postByCategory.meta.category}.`}
+          navigationItems={LIBRARY_SUB_NAVIGATION}
+          showAll={true}
+          postType={postByCategory.meta.postType}
+          category={postByCategory.meta.category}
+          postsToShow={12}
+          postsToLoad={6}
+        />
+      );
+    } else if (['illustrations', 'music-and-tabs'].includes(slug)) {
+      console.log('Triggered portfolio');
+      return (
+        <CategoryPageTemplate
+          pageTitle={`Portfolio: ${postByCategory.meta.category}.`}
+          navigationItems={PROJECTS_SUB_NAVIGATION}
+          showAll={true}
+          postType={postByCategory.meta.postType}
+          category={postByCategory.meta.category}
+          postsToShow={6}
+          postsToLoad={6}
+        />
+      );
+    } else if (['life-updates'].includes(slug)) {
+      console.log('Triggered journal');
+      return (
+        <CategoryPageTemplate
+          pageTitle={`Journal: ${postByCategory.meta.category}.`}
+          navigationItems={JOURNAL_SUB_NAVIGATION}
+          showAll={true}
+          postType={postByCategory.meta.postType}
+          category={postByCategory.meta.category}
+          postsToShow={6}
+          postsToLoad={6}
+        />
+      );
+    }
   } else if (post) {
     return (
       <SinglePageNarrowTemplate
@@ -39,8 +66,8 @@ const Page = (props) => {
         showMeta={true}
         post={post}
         showRelatedEntries={true}
-        postsToShow={3}
-        postsToLoad={3}
+        postsToShow={post.meta.postType === 'booklist' ? 6 : 3}
+        postsToLoad={post.meta.postType === 'booklist' ? 6 : 3}
       />
     );
   } else {
