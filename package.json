@@ -1,6 +1,6 @@
 {
   "name": "eagrigorev-website",
-  "version": "2.7.0",
+  "version": "2.8.0",
   "private": true,
   "scripts": {
     "lint": "stylelint --allow-empty-input \"**/*.{css,scss}\" && next lint",
