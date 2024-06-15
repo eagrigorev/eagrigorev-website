@@ -18,7 +18,7 @@ const PageTitle = ({
         <h1 className={classList}>{title}</h1>
       </div>
       {showMeta ? (
-        <div className={`${styles['meta']} meta-categories-text`}>
+        <div className={`${styles['meta']} small-uppercase`}>
           <p>{dateEdited}</p>
           <Link
             className="link--darker transition--color"

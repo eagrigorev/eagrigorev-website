@@ -22,7 +22,7 @@ const PostCard = ({ cardType, postMeta }) => {
             <Link className="link--neutral" href={cardOptions.href}>
               <h3 className="heading--h3">{cardOptions.blogpost.title}</h3>
             </Link>
-            <div className={`${styles['meta--blogpost']} meta-categories-text`}>
+            <div className={`${styles['meta--blogpost']} small-uppercase`}>
               <p>{cardOptions.blogpost.dateEdited}</p>
               <p>{cardOptions.blogpost.category}</p>
             </div>
@@ -32,7 +32,7 @@ const PostCard = ({ cardType, postMeta }) => {
           </>
         ) : cardType === 'book' ? (
           <>
-            <p className="meta-categories-text">{cardOptions.book.author}</p>
+            <p className="small-uppercase">{cardOptions.book.author}</p>
             <Link className="link--neutral" href={cardOptions.href}>
               <h3 className="paragraph--regular">{cardOptions.book.title}</h3>
             </Link>

@@ -17,64 +17,6 @@
   text-decoration: none;
 }
 
-.link {
-  &--neutral {
-    @extend %link;
-
-    &:hover {
-      color: var(--black);
-    }
-  }
-
-  &--lighter {
-    @extend %link;
-
-    &:hover {
-      color: var(--grey);
-    }
-  }
-
-  &--darker {
-    @extend %link;
-
-    color: var(--grey);
-
-    &:hover {
-      color: var(--black);
-    }
-  }
-
-  &--underline {
-    @extend %link;
-
-    margin-bottom: 1px;
-    border-bottom: 1px solid var(--grey);
-
-    &:hover {
-      color: var(--black);
-      border-bottom: 1px solid var(--black);
-    }
-  }
-}
-
-.transition {
-  &--opacity {
-    transition: opacity 0.4s;
-
-    &:hover {
-      opacity: 0.8;
-    }
-  }
-
-  &--color {
-    transition: color 0.4s;
-  }
-
-  &--border {
-    transition: border-color 0.4s;
-  }
-}
-
 .heading {
   &--h1 {
     @extend %spectral;
@@ -142,7 +84,7 @@
   letter-spacing: 0.25em;
 }
 
-.meta-categories-text {
+.small-uppercase {
   @extend %jost;
 
   font-size: var(--font-11-12);
@@ -150,4 +92,44 @@
   font-weight: 400;
   letter-spacing: 0.1em;
   color: var(--grey);
+}
+
+.link {
+  &--neutral {
+    @extend %link;
+
+    &:hover {
+      color: var(--black);
+    }
+  }
+
+  &--lighter {
+    @extend %link;
+
+    &:hover {
+      color: var(--grey);
+    }
+  }
+
+  &--darker {
+    @extend %link;
+
+    color: var(--grey);
+
+    &:hover {
+      color: var(--black);
+    }
+  }
+
+  &--underline {
+    @extend %link;
+
+    margin-bottom: 1px;
+    border-bottom: 1px solid var(--grey);
+
+    &:hover {
+      color: var(--black);
+      border-bottom: 1px solid var(--black);
+    }
+  }
 }

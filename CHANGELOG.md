@@ -1,3 +1,5 @@
+**v2.8.1** June 15, 2024 — Bug fixes
+
 **v2.8.0** June 13, 2024 — Added Privacy page, robots, and sitemap files
 
 **v2.7.1** June 12, 2024 — Bug fixes and AX improvements

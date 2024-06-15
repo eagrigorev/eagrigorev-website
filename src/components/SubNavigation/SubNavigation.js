@@ -8,7 +8,7 @@ const SubNavigation = ({ navigationItems, showAll }) => {
     });
   }
   return (
-    <div className={`${styles['wrapper']} meta-categories-text`}>
+    <div className={`${styles['wrapper']} small-uppercase`}>
       <ul className={styles['links']}>
         {navigationItems.map((item, index) => (
           <li key={index}>
