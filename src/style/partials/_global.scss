@@ -1,6 +1,9 @@
 body {
   background-color: var(--white);
   color: var(--black);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
