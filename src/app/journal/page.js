@@ -1,6 +1,10 @@
 import { JOURNAL_SUB_NAVIGATION } from '@/const/navigation';
 import CategoryPageTemplate from '@/templates/CategoryPageTemplate/CategoryPageTemplate';
 
+export const metadata = {
+  title: 'Journal',
+};
+
 const Journal = () => {
   return (
     <CategoryPageTemplate

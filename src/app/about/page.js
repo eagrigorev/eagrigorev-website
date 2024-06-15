@@ -1,6 +1,10 @@
 import { getPage } from '@/scripts/getMarkdown';
 import SinglePageSplitTemplate from '@/templates/SinglePageSplitTemplate/SinglePageSplitTemplate';
 
+export const metadata = {
+  title: 'About',
+};
+
 const About = () => {
   const page = getPage('about.mdx');
   return (

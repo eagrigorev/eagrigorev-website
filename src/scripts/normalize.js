@@ -1,3 +1,3 @@
-export const normalize = (term) => {
-  return term.toLowerCase().replace(/ /g, '-').replace('&', 'and');
+export const normalize = (category) => {
+  return category.toLowerCase().replace(/ /g, '-').replace('&', 'and');
 };
