@@ -9,6 +9,21 @@ import { categoriesList } from '@/scripts/getCategoriesList';
 import CategoryPageTemplate from '@/templates/CategoryPageTemplate/CategoryPageTemplate';
 import SinglePageNarrowTemplate from '@/templates/SinglePageNarrowTemplate/SinglePageNarrowTemplate';
 
+export function generateMetadata({ params }) {
+  const slug = params.slug;
+  const allPosts = getAllPosts();
+  if (categoriesList.includes(slug)) {
+    return {
+      title: allPosts.find((post) => normalize(post.meta.category) === slug)
+        .meta.category,
+    };
+  } else {
+    return {
+      title: allPosts.find((post) => post.meta.slug === slug).meta.title,
+    };
+  }
+}
+
 const Page = (props) => {
   const slug = props.params.slug;
   const allPosts = getAllPosts();
