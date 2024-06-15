@@ -1,0 +1,17 @@
+.transition {
+  &--opacity {
+    transition: opacity 0.4s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &--color {
+    transition: color 0.4s;
+  }
+
+  &--border {
+    transition: border-color 0.4s;
+  }
+}
