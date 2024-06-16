@@ -1,5 +1,6 @@
 import styles from './PostCard.module.scss';
 import { generateCardOptions } from '@/scripts/generateCardOptions';
+import { normalize } from '@/scripts/normalize';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -24,7 +25,12 @@ const PostCard = ({ cardType, postMeta }) => {
             </Link>
             <div className={`${styles['meta--blogpost']} small-uppercase`}>
               <p>{cardOptions.blogpost.dateEdited}</p>
-              <p>{cardOptions.blogpost.category}</p>
+              <Link
+                className="link--darker transition--color"
+                href={`/${normalize(cardOptions.blogpost.category)}`}
+              >
+                {cardOptions.blogpost.category}
+              </Link>
             </div>
             <p className={`${styles['excerpt--blogpost']} paragraph--caption`}>
               {cardOptions.blogpost.excerpt}
