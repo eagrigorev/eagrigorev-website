@@ -1,0 +1,15 @@
+{
+  "name": "Evgenii Grigorev",
+  "short_name": "Evgenii Grigorev",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "A portfolio and a digital garden of Evgenii Grigorev",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import { notFound } from 'next/navigation';
 import {
   JOURNAL_SUB_NAVIGATION,
   PROJECTS_SUB_NAVIGATION,
@@ -8,6 +9,25 @@ import { normalize } from '@/scripts/normalize';
 import { categoriesList } from '@/scripts/getCategoriesList';
 import CategoryPageTemplate from '@/templates/CategoryPageTemplate/CategoryPageTemplate';
 import SinglePageNarrowTemplate from '@/templates/SinglePageNarrowTemplate/SinglePageNarrowTemplate';
+
+export function generateMetadata({ params }) {
+  const slug = params.slug;
+  const allPosts = getAllPosts();
+  const isCategoryPage = categoriesList.includes(slug);
+  const isPostPage = allPosts.find((post) => post.meta.slug === slug);
+  if (isCategoryPage) {
+    return {
+      title: allPosts.find((post) => normalize(post.meta.category) === slug)
+        .meta.category,
+    };
+  } else if (isPostPage) {
+    return {
+      title: isPostPage.meta.title,
+    };
+  } else {
+    return notFound();
+  }
+}
 
 const Page = (props) => {
   const slug = props.params.slug;
@@ -68,7 +88,7 @@ const Page = (props) => {
       />
     );
   } else {
-    return <p>Nothing is here</p>;
+    return notFound();
   }
 };
 

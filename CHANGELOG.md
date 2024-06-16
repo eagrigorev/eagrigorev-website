@@ -1,3 +1,5 @@
+**v2.8.2** June 16, 2024 — Adding 400 and 500 pages
+
 **v2.8.1** June 15, 2024 — Bug fixes
 
 **v2.8.0** June 13, 2024 — Added Privacy page, robots, and sitemap files
