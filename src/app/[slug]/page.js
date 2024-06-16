@@ -88,7 +88,7 @@ const Page = (props) => {
       />
     );
   } else {
-    return <p>Nothing is here</p>;
+    return notFound();
   }
 };
 

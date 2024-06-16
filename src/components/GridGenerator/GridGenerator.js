@@ -22,7 +22,7 @@ const GridGenerator = ({ postType, posts, postsToShow, postsToLoad }) => {
         ))}
       </div>
       {showButton ? (
-        <LoadMoreButton clickHandler={loadMore} />
+        <LoadMoreButton clickHandler={loadMore} buttonText="Load More" />
       ) : clickedOnce ? (
         <p className={`${styles['notification']} paragraph--regular`}>
           All posts were loaded.
