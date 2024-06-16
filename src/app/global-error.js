@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect } from 'react';
 import { NOT_FOUND_SUB_NAVIGATION } from '@/const/navigation';
 import TopNavigation from '@/components/TopNavigation/TopNavigation';
 import PageTitle from '@/components/PageTitle/PageTitle';
@@ -8,6 +9,9 @@ import LoadMoreButton from '@/components/LoadMoreButton/LoadMoreButton';
 import CopyrightNotice from '@/components/CopyrightNotice/CopyrightNotice';
 
 const GlobalError = ({ error, reset }) => {
+  useEffect(() => {
+    console.error(error);
+  }, [error]);
   return (
     <html lang="en" className={`${spectral.variable} ${jost.variable}`}>
       <body>
