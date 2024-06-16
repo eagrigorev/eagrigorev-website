@@ -1,4 +1,4 @@
-**v2.8.2** June 16, 2024 — Adding 400 and 500 pages
+**v2.8.2** June 16, 2024 — Adding 404 and 500 pages
 
 **v2.8.1** June 15, 2024 — Bug fixes
 

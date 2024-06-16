@@ -25,7 +25,7 @@ export function generateMetadata({ params }) {
       title: isPostPage.meta.title,
     };
   } else {
-    return notFound();
+    notFound();
   }
 }
 
@@ -88,7 +88,7 @@ const Page = (props) => {
       />
     );
   } else {
-    return notFound();
+    notFound();
   }
 };
 
