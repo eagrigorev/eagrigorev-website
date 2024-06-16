@@ -61,3 +61,14 @@ export const LIBRARY_SUB_NAVIGATION = [
     url: '/years-of-reading',
   },
 ];
+
+export const NOT_FOUND_SUB_NAVIGATION = [
+  {
+    title: 'Check Latest Projects',
+    url: '/',
+  },
+  {
+    title: 'Read the Journal',
+    url: '/journal',
+  },
+];

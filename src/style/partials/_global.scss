@@ -1,6 +1,9 @@
 body {
   background-color: var(--white);
   color: var(--black);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
@@ -8,4 +11,8 @@ body {
   padding-inline: var(--grid-gutter);
   margin-inline: auto;
   padding-bottom: var(--space-90-120);
+}
+
+.error-button {
+  padding-top: var(--space-90-120);
 }
