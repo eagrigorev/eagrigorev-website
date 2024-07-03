@@ -97,3 +97,5 @@ export default Page;
 export const generateStaticParams = async () => {
   return getPostsSlugs();
 };
+
+export const dynamicParams = false;
