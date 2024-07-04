@@ -1,3 +1,7 @@
+**v2.8.4** July 4, 2024 — Added social icons
+
+**v2.8.3** July 3, 2024 — Added new books
+
 **v2.8.2** June 16, 2024 — Adding 404 and 500 pages
 
 **v2.8.1** June 15, 2024 — Bug fixes

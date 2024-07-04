@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import { TOP_NAVIGATION } from '@/const/navigation';
 import Link from 'next/link';
 import FocusTrap from 'focus-trap-react';
+import SocialIcons from '../SocialIcons/SocialIcons';
 
 const TopNavigation = () => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -37,20 +38,7 @@ const TopNavigation = () => {
             </li>
           ))}
           <li>
-            <ul className={styles['links--socials']}>
-              <Link
-                className="link--lighter transition--color"
-                href={'https://www.instagram.com/eagrigorev/'}
-              >
-                Ig.
-              </Link>
-              <Link
-                className="link--lighter transition--color"
-                href={'https://github.com/eagrigorev/'}
-              >
-                Gh.
-              </Link>
-            </ul>
+            <SocialIcons />
           </li>
         </ul>
         <button
@@ -74,20 +62,7 @@ const TopNavigation = () => {
               </li>
             ))}
             <li>
-              <ul className={styles['links--socials']}>
-                <Link
-                  className="link--lighter transition--color"
-                  href={'https://www.instagram.com/eagrigorev/'}
-                >
-                  Ig.
-                </Link>
-                <Link
-                  className="link--lighter transition--color"
-                  href={'https://github.com/eagrigorev/'}
-                >
-                  Gh.
-                </Link>
-              </ul>
+              <SocialIcons />
             </li>
           </ul>
         </FocusTrap>
