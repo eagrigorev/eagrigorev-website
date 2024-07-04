@@ -36,6 +36,22 @@ const TopNavigation = () => {
               </Link>
             </li>
           ))}
+          <li>
+            <ul className={styles['links--socials']}>
+              <Link
+                className="link--lighter transition--color"
+                href={'https://www.instagram.com/eagrigorev/'}
+              >
+                Ig.
+              </Link>
+              <Link
+                className="link--lighter transition--color"
+                href={'https://github.com/eagrigorev/'}
+              >
+                Gh.
+              </Link>
+            </ul>
+          </li>
         </ul>
         <button
           className={`${styles['menu-button']} paragraph--bolder link--lighter transition--color`}
@@ -57,6 +73,22 @@ const TopNavigation = () => {
                 </Link>
               </li>
             ))}
+            <li>
+              <ul className={styles['links--socials']}>
+                <Link
+                  className="link--lighter transition--color"
+                  href={'https://www.instagram.com/eagrigorev/'}
+                >
+                  Ig.
+                </Link>
+                <Link
+                  className="link--lighter transition--color"
+                  href={'https://github.com/eagrigorev/'}
+                >
+                  Gh.
+                </Link>
+              </ul>
+            </li>
           </ul>
         </FocusTrap>
       ) : null}
