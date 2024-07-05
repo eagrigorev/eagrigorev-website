@@ -1,3 +1,5 @@
+**v2.8.5** July 5, 2024 — TopNavigation rework
+
 **v2.8.4** July 4, 2024 — Added social icons
 
 **v2.8.3** July 3, 2024 — Added new books
