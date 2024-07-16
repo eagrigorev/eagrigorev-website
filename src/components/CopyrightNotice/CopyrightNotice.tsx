@@ -1,7 +1,11 @@
-import styles from './CopyrightNotice.module.scss';
+/* Global */
 import Link from 'next/link';
+import React from 'react';
 
-const CopyrightNotice = () => {
+/* Local */
+import styles from './CopyrightNotice.module.scss';
+
+const CopyrightNotice: React.FunctionComponent<{}> = () => {
   return (
     <footer className={`${styles['wrapper']} paragraph--copyright`}>
       <p>© 2024 Evgenii Grigorev</p>

@@ -1,11 +1,12 @@
 import '@/style/main.scss';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Metadata } from 'next';
 import { spectral, jost } from '@/scripts/getFonts';
 import TopNavigation from '@/components/TopNavigation/TopNavigation';
 import CopyrightNotice from '@/components/CopyrightNotice/CopyrightNotice';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: {
     default: 'Evgenii Grigorev',
     template: '%s • Evgenii Grigorev',
@@ -25,7 +26,7 @@ export const metadata = {
   metadataBase: new URL('https://eagrigorev.com'),
 };
 
-const RootLayout = ({ children }) => {
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en" className={`${spectral.variable} ${jost.variable}`}>
       <body>
