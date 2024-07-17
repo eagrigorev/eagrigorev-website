@@ -1,4 +1,7 @@
-export const TOP_NAVIGATION = [
+/* Utils */
+import { NavigationItem } from '@/utils/types';
+
+export const TOP_NAVIGATION: NavigationItem[] = [
   {
     title: 'Portfolio',
     url: '/',

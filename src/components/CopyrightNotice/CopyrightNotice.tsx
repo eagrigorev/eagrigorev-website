@@ -1,8 +1,10 @@
-/* Global */
-import Link from 'next/link';
+/* Namespaces */
 import React from 'react';
 
-/* Local */
+/* Components */
+import Link from 'next/link';
+
+/* Utils */
 import styles from './CopyrightNotice.module.scss';
 
 const CopyrightNotice: React.FunctionComponent<{}> = () => {

@@ -1,10 +1,12 @@
-/* Global */
-import '@testing-library/jest-dom';
+/* Namespaces */
 import React from 'react';
-import { render, screen } from '@testing-library/react';
 
-/* Local */
+/* Components */
 import CopyrightNotice from './CopyrightNotice';
+
+/* Utils */
+import '@testing-library/jest-dom';
+import { render, screen } from '@testing-library/react';
 
 describe('CopyrightNotice', () => {
   render(<CopyrightNotice />);
