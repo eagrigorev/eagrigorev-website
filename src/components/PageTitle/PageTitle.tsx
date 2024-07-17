@@ -1,8 +1,23 @@
-import styles from './PageTitle.module.scss';
-import { normalize } from '@/scripts/normalize';
+/* Namespaces */
+import React from 'react';
+
+/* Components */
 import Link from 'next/link';
 
-const PageTitle = ({
+/* Utils */
+import styles from './PageTitle.module.scss';
+import { PostCategory } from '@/utils/types';
+import { normalize } from '@/scripts/normalize';
+
+type Props = {
+  title: string;
+  showSeparator?: boolean;
+  showMeta?: boolean;
+  dateEdited?: string;
+  category?: PostCategory;
+};
+
+const PageTitle: React.FunctionComponent<Props> = ({
   title,
   showSeparator,
   showMeta,
