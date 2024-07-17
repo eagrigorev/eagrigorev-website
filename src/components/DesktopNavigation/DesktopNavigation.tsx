@@ -3,7 +3,7 @@ import React from 'react';
 
 /* Components */
 import Link from 'next/link';
-import SocialIcons from '../SocialIcons/SocialIcons';
+import SocialIcons from '@/components/SocialIcons/SocialIcons';
 
 /* Utils */
 import styles from './DesktopNavigation.module.scss';

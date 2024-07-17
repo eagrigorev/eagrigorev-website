@@ -1,7 +1,13 @@
-import styles from './SocialIcons.module.scss';
+/* Namespaces */
+import React from 'react';
+
+/* Components */
 import Link from 'next/link';
 
-const SocialIcons = () => {
+/* Utils */
+import styles from './SocialIcons.module.scss';
+
+const SocialIcons: React.FunctionComponent<{}> = () => {
   return (
     <ul className={styles['wrapper']}>
       <li>

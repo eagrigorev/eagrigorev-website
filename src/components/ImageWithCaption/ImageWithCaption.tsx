@@ -1,7 +1,25 @@
-import styles from './ImageWithCaption.module.scss';
+/* Namespaces */
+import React from 'react';
+
+/* Components */
 import Image from 'next/image';
 
-const ImageWithCaption = ({ src, alt, caption, layout }) => {
+/* Utils */
+import styles from './ImageWithCaption.module.scss';
+
+type Props = {
+  src: string;
+  alt: string;
+  caption: string;
+  layout: string;
+};
+
+const ImageWithCaption: React.FunctionComponent<Props> = ({
+  src,
+  alt,
+  caption,
+  layout,
+}) => {
   const imageLayout = `layout--${layout}`;
   return (
     <div className={styles[imageLayout]}>
