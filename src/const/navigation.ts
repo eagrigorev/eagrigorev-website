@@ -24,7 +24,7 @@ export const TOP_NAVIGATION: NavigationItem[] = [
   },
 ];
 
-export const JOURNAL_SUB_NAVIGATION = [
+export const JOURNAL_SUB_NAVIGATION: NavigationItem[] = [
   {
     title: 'All',
     url: '/journal',
@@ -35,7 +35,7 @@ export const JOURNAL_SUB_NAVIGATION = [
   },
 ];
 
-export const PROJECTS_SUB_NAVIGATION = [
+export const PROJECTS_SUB_NAVIGATION: NavigationItem[] = [
   {
     title: 'All',
     url: '/',
@@ -50,7 +50,7 @@ export const PROJECTS_SUB_NAVIGATION = [
   },
 ];
 
-export const LIBRARY_SUB_NAVIGATION = [
+export const LIBRARY_SUB_NAVIGATION: NavigationItem[] = [
   {
     title: 'Reading this Year',
     url: '/reading-this-year',
@@ -65,7 +65,7 @@ export const LIBRARY_SUB_NAVIGATION = [
   },
 ];
 
-export const NOT_FOUND_SUB_NAVIGATION = [
+export const NOT_FOUND_SUB_NAVIGATION: NavigationItem[] = [
   {
     title: 'Check Latest Projects',
     url: '/',

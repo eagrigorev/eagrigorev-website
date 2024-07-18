@@ -1,7 +1,22 @@
-import styles from './SubNavigation.module.scss';
+/* Namespaces */
+import React from 'react';
+
+/* Components */
 import Link from 'next/link';
 
-const SubNavigation = ({ navigationItems, showAll }) => {
+/* Utils */
+import styles from './SubNavigation.module.scss';
+import { NavigationItem } from '@/utils/types';
+
+type Props = {
+  navigationItems: NavigationItem[];
+  showAll: boolean;
+};
+
+const SubNavigation: React.FunctionComponent<Props> = ({
+  navigationItems,
+  showAll,
+}) => {
   if (!showAll) {
     navigationItems = navigationItems.filter((item) => {
       return item.title !== 'All';
