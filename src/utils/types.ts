@@ -10,3 +10,5 @@ export type PostCategory =
   | 'Reading this Year'
   | 'Want to Read'
   | 'Years of Reading';
+
+export type ImageLayout = 'wide' | 'left' | 'right' | 'left-split';

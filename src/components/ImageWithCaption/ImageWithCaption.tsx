@@ -6,12 +6,13 @@ import Image from 'next/image';
 
 /* Utils */
 import styles from './ImageWithCaption.module.scss';
+import { ImageLayout } from '@/utils/types';
 
 type Props = {
   src: string;
   alt: string;
   caption: string;
-  layout: string;
+  layout: ImageLayout;
 };
 
 const ImageWithCaption: React.FunctionComponent<Props> = ({
