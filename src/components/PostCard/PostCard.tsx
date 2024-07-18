@@ -1,14 +1,26 @@
-import styles from './PostCard.module.scss';
-import { generateCardOptions } from '@/scripts/generateCardOptions';
-import { normalize } from '@/scripts/normalize';
+/* Namespaces */
+import React from 'react';
+
+/* Components */
 import Image from 'next/image';
 import Link from 'next/link';
 
-const PostCard = ({ cardType, postMeta }) => {
+/* Utils */
+import styles from './PostCard.module.scss';
+import { generateCardOptions } from '@/scripts/generateCardOptions';
+import { normalize } from '@/scripts/normalize';
+import { PostCardType, PostMeta } from '@/utils/types';
+
+type Props = {
+  cardType: PostCardType;
+  postMeta: PostMeta;
+};
+
+const PostCard: React.FunctionComponent<Props> = ({ cardType, postMeta }) => {
   const cardOptions = generateCardOptions(cardType, postMeta);
   return (
     <article className={styles[`wrapper--${cardType}`]}>
-      <Link className="link--neutral" href={cardOptions.href} tabIndex="-1">
+      <Link className="link--neutral" href={cardOptions.href} tabIndex={-1}>
         <Image
           className={`${styles[`image--${cardType}`]} transition--opacity`}
           src={cardOptions.image.src}

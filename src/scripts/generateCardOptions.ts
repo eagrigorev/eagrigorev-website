@@ -1,5 +1,11 @@
-export const generateCardOptions = (cardType, postMeta) => {
-  let cardOptions = {};
+/* Utils */
+import { PostCardType, PostCard, PostMeta } from '@/utils/types';
+
+export const generateCardOptions = (
+  cardType: PostCardType,
+  postMeta: PostMeta
+): PostCard => {
+  let cardOptions: PostCard;
   if (cardType === 'blogpost') {
     cardOptions = {
       href: postMeta.slug,
