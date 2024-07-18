@@ -12,3 +12,5 @@ export type PostCategory =
   | 'Years of Reading';
 
 export type ImageLayout = 'wide' | 'left' | 'right' | 'left-split';
+
+export type SpotifyLayout = 'big' | 'small';

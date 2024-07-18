@@ -1,6 +1,16 @@
-import styles from './SpotifyEmbed.module.scss';
+/* Namespaces */
+import React from 'react';
 
-const SpotifyEmbed = ({ src, layout }) => {
+/* Utils */
+import styles from './SpotifyEmbed.module.scss';
+import { SpotifyLayout } from '@/utils/types';
+
+type Props = {
+  src: string;
+  layout: SpotifyLayout;
+};
+
+const SpotifyEmbed: React.FunctionComponent<Props> = ({ src, layout }) => {
   const height = layout === 'big' ? '352' : '152';
   return (
     <iframe
@@ -10,7 +20,7 @@ const SpotifyEmbed = ({ src, layout }) => {
       width="100%"
       height={height}
       frameBorder="0"
-      allowFullScreen=""
+      allowFullScreen={false}
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
       loading="lazy"
     ></iframe>
