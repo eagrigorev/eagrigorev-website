@@ -66,3 +66,8 @@ export type PostMeta = {
   url?: string;
   excerpt?: string;
 };
+
+export type Post = {
+  meta: PostMeta;
+  content: string;
+};
