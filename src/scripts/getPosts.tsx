@@ -1,9 +1,15 @@
+/* Utils */
 import { getAllPosts } from '@/scripts/getMarkdown';
 import { sortPostsDesc } from '@/scripts/sort';
+import { Post, PostCardType, PostCategory } from '@/utils/types';
 
-export const getSortedPosts = (postType, category, postToExclude = '') => {
-  const allPosts = getAllPosts();
-  let sortedPosts = [];
+export const getSortedPosts = (
+  postType: PostCardType,
+  category: PostCategory,
+  postToExclude = ''
+): Post[] => {
+  const allPosts: Post[] = getAllPosts();
+  let sortedPosts: Post[] = [];
   if (category === 'all') {
     sortedPosts = sortPostsDesc(
       allPosts.filter((post) => {

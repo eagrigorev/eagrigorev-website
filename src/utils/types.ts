@@ -4,6 +4,7 @@ export type NavigationItem = {
 };
 
 export type PostCategory =
+  | 'all'
   | 'Illustrations'
   | 'Life Updates'
   | 'Music & Tabs'
