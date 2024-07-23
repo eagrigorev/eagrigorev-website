@@ -1,10 +1,26 @@
-import styles from './SinglePageNarrowTemplate.module.scss';
-import { getSortedPosts } from '@/scripts/getPosts';
-import PageTitle from '@/components/PageTitle/PageTitle';
+/* Namespaces */
+import React from 'react';
+
+/* Components */
 import MarkdownWrapper from '@/components/MarkdownWrapper/MarkdownWrapper';
+import PageTitle from '@/components/PageTitle/PageTitle';
 import RelatedEntries from '@/components/RelatedEntries/RelatedEntries';
 
-const SinglePageNarrowTemplate = ({
+/* Utils */
+import styles from './SinglePageNarrowTemplate.module.scss';
+import { getSortedPosts } from '@/scripts/getPosts';
+import { Post } from '@/utils/types';
+
+type Props = {
+  showSeparator: boolean;
+  showMeta: boolean;
+  post: Post;
+  showRelatedEntries: boolean;
+  postsToShow: number;
+  postsToLoad: number;
+};
+
+const SinglePageNarrowTemplate: React.FunctionComponent<Props> = ({
   showSeparator,
   showMeta,
   post,
