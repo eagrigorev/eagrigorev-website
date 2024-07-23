@@ -4,8 +4,8 @@
 import React, { useState } from 'react';
 
 /* Components */
-import LoadMoreButton from '../LoadMoreButton/LoadMoreButton';
-import PostCard from '../PostCard/PostCard';
+import LoadMoreButton from '@/components/LoadMoreButton/LoadMoreButton';
+import PostCard from '@/components/PostCard/PostCard';
 
 /* Utils */
 import styles from './GridGenerator.module.scss';

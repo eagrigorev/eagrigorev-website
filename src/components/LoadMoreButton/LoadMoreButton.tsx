@@ -1,6 +1,18 @@
+/* Namespaces */
+import React from 'react';
+
+/* Utils */
 import styles from './LoadMoreButton.module.scss';
 
-const LoadMoreButton = ({ clickHandler, buttonText }) => {
+type Props = {
+  clickHandler: () => void;
+  buttonText: string;
+};
+
+const LoadMoreButton: React.FunctionComponent<Props> = ({
+  clickHandler,
+  buttonText,
+}) => {
   return (
     <div className={styles['wrapper']}>
       <button

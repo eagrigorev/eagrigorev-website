@@ -14,6 +14,8 @@ export type PostCategory =
 
 export type ImageLayout = 'wide' | 'left' | 'right' | 'left-split';
 
+export type PostLayout = 'narrow';
+
 export type SpotifyLayout = 'big' | 'small';
 
 export type PostCardType = 'book' | 'booklist' | 'blogpost' | 'project';

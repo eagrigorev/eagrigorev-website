@@ -1,10 +1,24 @@
-import styles from './MarkdownWrapper.module.scss';
+/* Namespaces */
 import React from 'react';
-import Markdown from 'markdown-to-jsx';
+
+/* Components */
 import ImageWithCaption from '../ImageWithCaption/ImageWithCaption';
+import Markdown from 'markdown-to-jsx';
 import SpotifyEmbed from '../SpotifyEmbed/SpotifyEmbed';
 
-const MarkdownWrapper = ({ layout, content }) => {
+/* Utils */
+import styles from './MarkdownWrapper.module.scss';
+import { PostLayout } from '@/utils/types';
+
+type Props = {
+  layout?: PostLayout;
+  content: string;
+};
+
+const MarkdownWrapper: React.FunctionComponent<Props> = ({
+  layout,
+  content,
+}) => {
   return (
     <Markdown
       options={{
