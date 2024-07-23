@@ -1,19 +1,25 @@
 'use client';
 
-import styles from './MobileNavigation.module.scss';
-import { useState, useEffect } from 'react';
-import { TOP_NAVIGATION } from '@/const/navigation';
-import Link from 'next/link';
+/* Namespaces */
+import React, { useState, useEffect } from 'react';
+
+/* Components */
 import FocusTrap from 'focus-trap-react';
+import Link from 'next/link';
 import SocialIcons from '../SocialIcons/SocialIcons';
 
-const MobileNavigation = () => {
-  const [showMenu, setShowMenu] = useState(false);
-  const handleShowMenu = () => {
+/* Utils */
+import styles from './MobileNavigation.module.scss';
+import { TOP_NAVIGATION } from '@/const/navigation';
+import { NavigationItem } from '@/utils/types';
+
+const MobileNavigation: React.FunctionComponent<{}> = () => {
+  const [showMenu, setShowMenu] = useState<boolean>(false);
+  const handleShowMenu = (): void => {
     setShowMenu(!showMenu);
   };
   useEffect(() => {
-    const escKeyHandler = (event) => {
+    const escKeyHandler = (event: KeyboardEvent): void => {
       if (showMenu && event.key === 'Escape') {
         setShowMenu(false);
       }
@@ -39,7 +45,7 @@ const MobileNavigation = () => {
       {showMenu ? (
         <FocusTrap focusTrapOptions={{ clickOutsideDeactivates: true }}>
           <ul className={styles['links']}>
-            {TOP_NAVIGATION.map((item, index) => (
+            {TOP_NAVIGATION.map((item: NavigationItem, index: number) => (
               <li key={index}>
                 <Link
                   className="link--lighter transition--color"
