@@ -1,7 +1,26 @@
-import styles from './RelatedEntries.module.scss';
+/* Namespaces */
+import React from 'react';
+
+/* Components */
 import GridGenerator from '../GridGenerator/GridGenerator';
 
-const RelatedEntries = ({ postType, posts, postsToShow, postsToLoad }) => {
+/* Utils */
+import styles from './RelatedEntries.module.scss';
+import { Post, PostCardType } from '@/utils/types';
+
+type Props = {
+  postType: PostCardType;
+  posts: Post[];
+  postsToShow: number;
+  postsToLoad: number;
+};
+
+const RelatedEntries: React.FunctionComponent<Props> = ({
+  postType,
+  posts,
+  postsToShow,
+  postsToLoad,
+}) => {
   return (
     <section className={styles['wrapper']}>
       <div className="container">
