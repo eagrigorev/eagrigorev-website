@@ -1,3 +1,11 @@
+/* Namespaces */
+import React from 'react';
+
+/* Components */
+import CategoryPageTemplate from '@/templates/CategoryPageTemplate/CategoryPageTemplate';
+import SinglePageNarrowTemplate from '@/templates/SinglePageNarrowTemplate/SinglePageNarrowTemplate';
+
+/* Utils */
 import { notFound } from 'next/navigation';
 import {
   JOURNAL_SUB_NAVIGATION,
@@ -7,14 +15,20 @@ import {
 import { getAllPosts, getPostsSlugs } from '@/scripts/getMarkdown';
 import { normalize } from '@/scripts/normalize';
 import { categoriesList } from '@/scripts/getCategoriesList';
-import CategoryPageTemplate from '@/templates/CategoryPageTemplate/CategoryPageTemplate';
-import SinglePageNarrowTemplate from '@/templates/SinglePageNarrowTemplate/SinglePageNarrowTemplate';
+import { Metadata } from 'next';
+import { Post } from '@/utils/types';
 
-export function generateMetadata({ params }) {
-  const slug = params.slug;
-  const allPosts = getAllPosts();
-  const isCategoryPage = categoriesList.includes(slug);
-  const isPostPage = allPosts.find((post) => post.meta.slug === slug);
+type Props = {
+  params: { slug: string };
+};
+
+export function generateMetadata({ params }: Props): Metadata {
+  const slug: string = params.slug;
+  const allPosts: Post[] = getAllPosts();
+  const isCategoryPage: boolean = categoriesList.includes(slug);
+  const isPostPage: Post | undefined = allPosts.find(
+    (post: Post) => post.meta.slug === slug
+  );
   if (isCategoryPage) {
     return {
       title: allPosts.find((post) => normalize(post.meta.category) === slug)
@@ -29,12 +43,14 @@ export function generateMetadata({ params }) {
   }
 }
 
-const Page = (props) => {
-  const slug = props.params.slug;
-  const allPosts = getAllPosts();
-  const post = allPosts.find((post) => post.meta.slug === slug);
+const Page: React.FunctionComponent<Props> = (props) => {
+  const slug: string = props.params.slug;
+  const allPosts: Post[] = getAllPosts();
+  const post: Post | undefined = allPosts.find(
+    (post) => post.meta.slug === slug
+  );
   if (categoriesList.includes(slug)) {
-    const postByCategory = allPosts.find((post) => {
+    const postByCategory: Post | undefined = allPosts.find((post) => {
       return normalize(post.meta.category) === slug;
     });
     if (
@@ -94,8 +110,8 @@ const Page = (props) => {
 
 export default Page;
 
-export const generateStaticParams = async () => {
+export const generateStaticParams = async (): Promise<{ slug: string }[]> => {
   return getPostsSlugs();
 };
 
-export const dynamicParams = false;
+export const dynamicParams: boolean = false;

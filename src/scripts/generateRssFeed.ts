@@ -1,7 +1,11 @@
-import { Feed } from 'feed';
+/* Namespaces */
 import fs from 'fs';
 
-const generateRssFeed = (posts) => {
+/* Utils */
+import { Feed } from 'feed';
+import { Post } from '@/utils/types';
+
+const generateRssFeed = (posts: Post[]) => {
   const URL = 'https://eagrigorev.com';
   const author = {
     name: 'Evgenii Grigorev',
@@ -16,15 +20,16 @@ const generateRssFeed = (posts) => {
     feedLinks: {
       rss2: `${URL}/rss.xml`,
     },
-    author,
+    author: { name: 'Evgenii Grigorev', link: URL },
+    copyright: 'Evgenii Grigorev',
   });
-  posts.forEach((post) => {
-    const slug = `${URL}/${post.meta.slug}`;
+  posts.forEach((post: Post) => {
+    const slug: string = `${URL}/${post.meta.slug}`;
     feed.addItem({
       title: post.meta.title,
       id: slug,
       link: slug,
-      author: author,
+      author: [{ name: 'Evgenii Grigorev', link: URL }],
       date: new Date(post.meta.dateEdited),
     });
   });

@@ -1,11 +1,18 @@
-import { JOURNAL_SUB_NAVIGATION } from '@/const/navigation';
+/* Namespaces */
+import React from 'react';
+
+/* Components */
 import CategoryPageTemplate from '@/templates/CategoryPageTemplate/CategoryPageTemplate';
 
-export const metadata = {
+/* Utils */
+import { JOURNAL_SUB_NAVIGATION } from '@/const/navigation';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
   title: 'Journal',
 };
 
-const Journal = () => {
+const Journal: React.FunctionComponent<{}> = () => {
   return (
     <CategoryPageTemplate
       pageTitle="Journal."

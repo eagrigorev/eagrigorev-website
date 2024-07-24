@@ -1,12 +1,20 @@
-import { getPage } from '@/scripts/getMarkdown';
+/* Namespaces */
+import React from 'react';
+
+/* Components */
 import SinglePageNarrowTemplate from '@/templates/SinglePageNarrowTemplate/SinglePageNarrowTemplate';
 
-export const metadata = {
+/* Utils */
+import { getPage } from '@/scripts/getMarkdown';
+import { Metadata } from 'next';
+import { Post } from '@/utils/types';
+
+export const metadata: Metadata = {
   title: 'Now',
 };
 
-const Now = () => {
-  const page = getPage('now.mdx');
+const Now: React.FunctionComponent<{}> = () => {
+  const page: Post = getPage('now.mdx');
   return (
     <SinglePageNarrowTemplate
       showSeparator={true}

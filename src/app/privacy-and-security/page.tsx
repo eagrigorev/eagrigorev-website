@@ -1,12 +1,20 @@
-import { getPage } from '@/scripts/getMarkdown';
+/* Namespaces */
+import React from 'react';
+
+/* Components */
 import SinglePageNarrowTemplate from '@/templates/SinglePageNarrowTemplate/SinglePageNarrowTemplate';
 
-export const metadata = {
+/* Utils */
+import { getPage } from '@/scripts/getMarkdown';
+import { Metadata } from 'next';
+import { Post } from '@/utils/types';
+
+export const metadata: Metadata = {
   title: 'Privacy and Security',
 };
 
-const PrivacyAndSecurity = () => {
-  const page = getPage('privacy-and-security.mdx');
+const PrivacyAndSecurity: React.FunctionComponent<{}> = () => {
+  const page: Post = getPage('privacy-and-security.mdx');
   return (
     <SinglePageNarrowTemplate
       showSeparator={true}

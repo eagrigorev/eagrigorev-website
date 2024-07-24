@@ -1,12 +1,23 @@
 'use client';
 
-import { useEffect } from 'react';
-import { NOT_FOUND_SUB_NAVIGATION } from '@/const/navigation';
+/* Namespaces */
+import React, { useEffect } from 'react';
+
+/* Components */
+import LoadMoreButton from '@/components/LoadMoreButton/LoadMoreButton';
 import PageTitle from '@/components/PageTitle/PageTitle';
 import SubNavigation from '@/components/SubNavigation/SubNavigation';
-import LoadMoreButton from '@/components/LoadMoreButton/LoadMoreButton';
 
-const Error = ({ error, reset }) => {
+/* Utils */
+import { NOT_FOUND_SUB_NAVIGATION } from '@/const/navigation';
+
+const Error = ({
+  error,
+  reset,
+}: {
+  error: Error & { digest?: string };
+  reset: () => void;
+}) => {
   useEffect(() => {
     console.error(error);
   }, [error]);

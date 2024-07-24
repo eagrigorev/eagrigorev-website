@@ -1,10 +1,16 @@
-import '@/style/main.scss';
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/next';
-import { Metadata } from 'next';
-import { spectral, jost } from '@/scripts/getFonts';
+/* Namespaces */
+import React from 'react';
+
+/* Components */
 import TopNavigation from '@/components/TopNavigation/TopNavigation';
 import CopyrightNotice from '@/components/CopyrightNotice/CopyrightNotice';
+
+/* Utils */
+import '@/style/main.scss';
+import { Analytics } from '@vercel/analytics/react';
+import { Metadata } from 'next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { spectral, jost } from '@/scripts/getFonts';
 
 export const metadata: Metadata = {
   title: {

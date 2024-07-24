@@ -1,9 +1,15 @@
-import { PROJECTS_SUB_NAVIGATION } from '@/const/navigation';
-import PageTitle from '@/components/PageTitle/PageTitle';
-import SubNavigation from '@/components/SubNavigation/SubNavigation';
-import PostsGrid from '@/components/PostsGrid/PostsGrid';
+/* Namespaces */
+import React from 'react';
 
-const Home = () => {
+/* Components */
+import PageTitle from '@/components/PageTitle/PageTitle';
+import PostsGrid from '@/components/PostsGrid/PostsGrid';
+import SubNavigation from '@/components/SubNavigation/SubNavigation';
+
+/* Utils */
+import { PROJECTS_SUB_NAVIGATION } from '@/const/navigation';
+
+const Home: React.FunctionComponent<{}> = () => {
   return (
     <main className="container">
       <PageTitle title="Software developer and artist based in Thessaloniki, Greece." />
