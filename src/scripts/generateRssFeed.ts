@@ -20,7 +20,7 @@ const generateRssFeed = (posts: Post[]) => {
     feedLinks: {
       rss2: `${URL}/rss.xml`,
     },
-    author: { name: 'Evgenii Grigorev', link: URL },
+    author: author,
     copyright: 'Evgenii Grigorev',
   });
   posts.forEach((post: Post) => {
@@ -29,7 +29,7 @@ const generateRssFeed = (posts: Post[]) => {
       title: post.meta.title,
       id: slug,
       link: slug,
-      author: [{ name: 'Evgenii Grigorev', link: URL }],
+      author: [author],
       date: new Date(post.meta.dateEdited),
     });
   });
