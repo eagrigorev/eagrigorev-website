@@ -6,7 +6,7 @@ import { URL } from '@/const/url';
 export const postCard: PostCard = {
   href: postMeta.slug,
   image: {
-    src: `${URL.FEATURED_IMG}/${postMeta.featuredImage}`,
+    src: `/${URL.FEATURED_IMG}/${postMeta.featuredImage}`,
     alt: postMeta.title,
     width: 440,
     height: 330,

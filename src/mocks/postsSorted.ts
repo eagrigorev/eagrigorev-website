@@ -24,7 +24,7 @@ export const postsSorted: Post[] = [
       category: 'Reading this Year',
       datePublished: undefined,
       dateEdited: 'July 25, 2024',
-      featuredImage: 'https://www.goodreads.com/book/show/591978.Pinball_1973',
+      featuredImage: 'pinball-1973.jpg',
       bookAuthor: 'Haruki Murakami',
       excerpt: undefined,
     },

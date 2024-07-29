@@ -12,7 +12,7 @@ export const generateCardOptions = (
     cardOptions = {
       href: postMeta.slug,
       image: {
-        src: `${URL.FEATURED_IMG}/${postMeta.featuredImage}`,
+        src: `/${URL.FEATURED_IMG}/${postMeta.featuredImage}`,
         alt: postMeta.title,
         width: 440,
         height: 330,
@@ -29,7 +29,7 @@ export const generateCardOptions = (
     cardOptions = {
       href: postMeta.slug,
       image: {
-        src: `${URL.BOOK_IMG}/${postMeta.featuredImage}`,
+        src: `/${URL.BOOK_IMG}/${postMeta.featuredImage}`,
         alt: `${postMeta.title} by ${postMeta.bookAuthor}`,
         width: 250,
         height: 375,
@@ -44,7 +44,7 @@ export const generateCardOptions = (
     cardOptions = {
       href: postMeta.slug,
       image: {
-        src: `${URL.YEARS_OF_READING}/${postMeta.featuredImage}`,
+        src: `/${URL.YEARS_OF_READING}/${postMeta.featuredImage}`,
         alt: postMeta.title,
         width: 250,
         height: 375,
@@ -58,7 +58,7 @@ export const generateCardOptions = (
     cardOptions = {
       href: postMeta.slug,
       image: {
-        src: `${URL.FEATURED_IMG}/${postMeta.featuredImage}`,
+        src: `/${URL.FEATURED_IMG}/${postMeta.featuredImage}`,
         alt: postMeta.title,
         width: 440,
         height: 330,
