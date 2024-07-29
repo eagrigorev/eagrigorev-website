@@ -1,11 +1,12 @@
 /* Utils */
 import { PostCard } from '@/types/postCard';
 import { postMeta } from './postMeta';
+import { URL } from '@/const/url';
 
 export const postCard: PostCard = {
   href: postMeta.slug,
   image: {
-    src: `/images/featured/${postMeta.featuredImage}`,
+    src: `${URL.FEATURED_IMG}/${postMeta.featuredImage}`,
     alt: postMeta.title,
     width: 440,
     height: 330,

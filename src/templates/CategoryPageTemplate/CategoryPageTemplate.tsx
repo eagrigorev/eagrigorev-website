@@ -7,13 +7,14 @@ import PostsGrid from '@/components/PostsGrid/PostsGrid';
 import SubNavigation from '@/components/SubNavigation/SubNavigation';
 
 /* Utils */
-import { NavigationItem, PostCardType, PostCategory } from '@/utils/types';
+import { NavigationItem } from '@/types/navigation';
+import { PostType, PostCategory } from '@/types/post';
 
 type Props = {
   pageTitle: string;
   navigationItems: NavigationItem[];
   showAll: boolean;
-  postType: PostCardType;
+  postType: PostType;
   category: PostCategory;
   postsToShow: number;
   postsToLoad: number;

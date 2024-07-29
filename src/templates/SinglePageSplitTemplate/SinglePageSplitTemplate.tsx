@@ -8,7 +8,8 @@ import PageTitle from '@/components/PageTitle/PageTitle';
 
 /* Utils */
 import styles from './SinglePageSplitTemplate.module.scss';
-import { ImageLayout, Post } from '@/utils/types';
+import { Post } from '@/types/post';
+import { ImageLayout } from '@/types/layout';
 
 type Props = {
   showSeparator: boolean;
@@ -44,7 +45,7 @@ const SinglePageSplitTemplate: React.FunctionComponent<Props> = ({
           layout={imageLayout}
         />
         <div className={styles['wrapper--content']}>
-          <MarkdownWrapper content={post.content} />
+          <MarkdownWrapper layout="split" content={post.content} />
         </div>
       </section>
     </main>

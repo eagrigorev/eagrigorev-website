@@ -9,7 +9,7 @@ import RelatedEntries from '@/components/RelatedEntries/RelatedEntries';
 /* Utils */
 import styles from './SinglePageNarrowTemplate.module.scss';
 import { getSortedPosts } from '@/scripts/getPosts';
-import { Post } from '@/utils/types';
+import { Post } from '@/types/post';
 
 type Props = {
   showSeparator: boolean;
@@ -29,7 +29,7 @@ const SinglePageNarrowTemplate: React.FunctionComponent<Props> = ({
   postsToLoad,
 }) => {
   const relatedPosts = getSortedPosts(
-    post.meta.postType,
+    post.meta.type,
     post.meta.category,
     post.meta.title
   );
@@ -49,7 +49,7 @@ const SinglePageNarrowTemplate: React.FunctionComponent<Props> = ({
       </section>
       {relatedPosts.length && showRelatedEntries ? (
         <RelatedEntries
-          postType={post.meta.postType}
+          postType={post.meta.type}
           posts={relatedPosts}
           postsToShow={postsToShow}
           postsToLoad={postsToLoad}

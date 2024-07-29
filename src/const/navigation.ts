@@ -1,5 +1,5 @@
 /* Utils */
-import { NavigationItem } from '@/utils/types';
+import { NavigationItem } from '@/types/navigation';
 
 export const TOP_NAVIGATION: NavigationItem[] = [
   {
