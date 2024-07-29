@@ -8,25 +8,13 @@ export interface PostCardImage {
   height: number;
 }
 
-export interface BlogPost {
+export interface PostCardContent {
   title: string;
-  dateEdited: string;
-  category: PostCategory;
-  excerpt: string;
+  dateEdited?: string;
+  category?: PostCategory;
+  bookAuthor?: string;
+  excerpt?: string;
 }
-
-export interface BookPost {
-  bookAuthor: string;
-  title: string;
-}
-
-export interface BookListPost {
-  title: string;
-}
-
-export interface ProjectPost extends BookListPost {}
-
-export type PostCardContent = BlogPost | BookPost | BookListPost | ProjectPost;
 
 export interface PostCard {
   href: string;

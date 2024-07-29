@@ -8,7 +8,7 @@ import SpotifyEmbed from '../SpotifyEmbed/SpotifyEmbed';
 
 /* Utils */
 import styles from './MarkdownWrapper.module.scss';
-import { PostLayout } from '@/utils/types';
+import { PostLayout } from '@/types/layout';
 
 type Props = {
   layout?: PostLayout;
@@ -26,7 +26,7 @@ const MarkdownWrapper: React.FunctionComponent<Props> = ({
         overrides: {
           p: {
             props: {
-              className: `${layout ? styles[`content--${layout}`] : ''} paragraph--regular`,
+              className: `${layout === 'narrow' ? styles[`content--${layout}`] : ''} paragraph--regular`,
             },
           },
           a: {

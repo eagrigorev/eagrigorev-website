@@ -8,11 +8,11 @@ import Link from 'next/link';
 /* Utils */
 import styles from './PostCard.module.scss';
 import { generateCardOptions } from '@/scripts/generateCardOptions';
-import { normalize } from '@/scripts/normalize';
-import { PostCardType, PostMeta } from '@/utils/types';
+import { normalize } from '@/scripts/utils';
+import { PostType, PostMeta } from '@/types/post';
 
 type Props = {
-  cardType: PostCardType;
+  cardType: PostType;
   postMeta: PostMeta;
 };
 
@@ -33,36 +33,38 @@ const PostCard: React.FunctionComponent<Props> = ({ cardType, postMeta }) => {
         {cardType === 'blogpost' ? (
           <>
             <Link className="link--neutral" href={cardOptions.href}>
-              <h3 className="heading--h3">{cardOptions.blogpost.title}</h3>
+              <h3 className="heading--h3">{cardOptions.content.title}</h3>
             </Link>
             <div className={`${styles['meta--blogpost']} small-uppercase`}>
-              <p>{cardOptions.blogpost.dateEdited}</p>
+              <p>{cardOptions.content.dateEdited}</p>
               <Link
                 className="link--darker transition--color"
-                href={`/${normalize(cardOptions.blogpost.category)}`}
+                href={`/${normalize(cardOptions.content.category)}`}
               >
-                {cardOptions.blogpost.category}
+                {cardOptions.content.category}
               </Link>
             </div>
             <p className={`${styles['excerpt--blogpost']} paragraph--caption`}>
-              {cardOptions.blogpost.excerpt}
+              {cardOptions.content.excerpt}
             </p>
           </>
         ) : cardType === 'book' ? (
           <>
-            <p className="small-uppercase">{cardOptions.book.author}</p>
+            <p className="small-uppercase">{cardOptions.content.bookAuthor}</p>
             <Link className="link--neutral" href={cardOptions.href}>
-              <h3 className="paragraph--regular">{cardOptions.book.title}</h3>
+              <h3 className="paragraph--regular">
+                {cardOptions.content.title}
+              </h3>
             </Link>
           </>
         ) : cardType === 'booklist' ? (
           <Link className="link--neutral" href={cardOptions.href}>
-            <h3 className="paragraph--regular">{cardOptions.booklist.title}</h3>
+            <h3 className="paragraph--regular">{cardOptions.content.title}</h3>
           </Link>
         ) : cardType === 'project' ? (
           <Link className="link--neutral" href={cardOptions.href}>
             <h3 className={`${styles['title--project']} paragraph--regular`}>
-              {cardOptions.project.title}
+              {cardOptions.content.title}
             </h3>
           </Link>
         ) : null}

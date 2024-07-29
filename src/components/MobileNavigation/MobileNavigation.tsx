@@ -11,7 +11,7 @@ import SocialIcons from '../SocialIcons/SocialIcons';
 /* Utils */
 import styles from './MobileNavigation.module.scss';
 import { TOP_NAVIGATION } from '@/const/navigation';
-import { NavigationItem } from '@/utils/types';
+import { NavigationItem } from '@/types/navigation';
 
 const MobileNavigation: React.FunctionComponent<{}> = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false);

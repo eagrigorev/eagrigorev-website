@@ -15,7 +15,7 @@ type Props = {
   navigationItems: NavigationItem[];
   showAll: boolean;
   postType: PostType;
-  category: PostCategory;
+  category: PostCategory | 'all';
   postsToShow: number;
   postsToLoad: number;
 };

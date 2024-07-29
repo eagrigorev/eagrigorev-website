@@ -9,10 +9,10 @@ import PostCard from '@/components/PostCard/PostCard';
 
 /* Utils */
 import styles from './GridGenerator.module.scss';
-import { Post, PostCardType } from '@/utils/types';
+import { Post, PostType } from '@/types/post';
 
 type Props = {
-  postType: PostCardType;
+  postType: PostType;
   posts: Post[];
   postsToShow: number;
   postsToLoad: number;

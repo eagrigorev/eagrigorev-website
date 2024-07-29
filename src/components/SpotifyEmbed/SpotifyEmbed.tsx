@@ -3,7 +3,7 @@ import React from 'react';
 
 /* Utils */
 import styles from './SpotifyEmbed.module.scss';
-import { SpotifyLayout } from '@/utils/types';
+import { SpotifyLayout } from '@/types/layout';
 
 type Props = {
   src: string;

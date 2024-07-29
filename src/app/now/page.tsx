@@ -7,19 +7,19 @@ import SinglePageNarrowTemplate from '@/templates/SinglePageNarrowTemplate/Singl
 /* Utils */
 import { getPage } from '@/scripts/getMarkdown';
 import { Metadata } from 'next';
-import { Post } from '@/utils/types';
+import { Page } from '@/types/page';
 
 export const metadata: Metadata = {
   title: 'Now',
 };
 
 const Now: React.FunctionComponent<{}> = () => {
-  const page: Post = getPage('now.mdx');
+  const page: Page = getPage('now.mdx');
   return (
     <SinglePageNarrowTemplate
       showSeparator={true}
       showMeta={false}
-      post={page}
+      page={page}
       showRelatedEntries={false}
       postsToShow={0}
       postsToLoad={0}

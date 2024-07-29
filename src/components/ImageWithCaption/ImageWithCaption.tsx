@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 /* Utils */
 import styles from './ImageWithCaption.module.scss';
-import { ImageLayout } from '@/utils/types';
+import { ImageLayout } from '@/types/layout';
 
 type Props = {
   src: string;

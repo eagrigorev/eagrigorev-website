@@ -8,13 +8,13 @@ import PageTitle from '@/components/PageTitle/PageTitle';
 
 /* Utils */
 import styles from './SinglePageSplitTemplate.module.scss';
-import { Post } from '@/types/post';
+import { Page } from '@/types/page';
 import { ImageLayout } from '@/types/layout';
 
 type Props = {
   showSeparator: boolean;
   showMeta: boolean;
-  post: Post;
+  post: Page;
   imageSrc: string;
   imageAlt: string;
   imageCaption: string;
