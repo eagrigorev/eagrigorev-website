@@ -1,3 +1,5 @@
+**v3.0.0** July 29, 2024 — TypeScript and Jest migration
+
 **v2.8.5** July 5, 2024 — TopNavigation rework
 
 **v2.8.4** July 4, 2024 — Added social icons
