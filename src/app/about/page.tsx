@@ -7,14 +7,14 @@ import SinglePageSplitTemplate from '@/templates/SinglePageSplitTemplate/SingleP
 /* Utils */
 import { getPage } from '@/scripts/getMarkdown';
 import { Metadata } from 'next';
-import { Post } from '@/utils/types';
+import { Page } from '@/types/page';
 
 export const metadata: Metadata = {
   title: 'About',
 };
 
 const About: React.FunctionComponent<{}> = () => {
-  const page: Post = getPage('about.mdx');
+  const page: Page = getPage('about.mdx');
   return (
     <SinglePageSplitTemplate
       showSeparator={true}

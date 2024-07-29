@@ -13,13 +13,14 @@ import {
   LIBRARY_SUB_NAVIGATION,
 } from '@/const/navigation';
 import { getAllPosts, getPostsSlugs } from '@/scripts/getMarkdown';
-import { normalize } from '@/scripts/normalize';
+import { normalize } from '@/scripts/utils';
 import { categoriesList } from '@/scripts/getCategoriesList';
 import { Metadata } from 'next';
-import { Post } from '@/utils/types';
+import { Post } from '@/types/post';
+import { Slug } from '@/types/slug';
 
 type Props = {
-  params: { slug: string };
+  params: Slug;
 };
 
 export function generateMetadata({ params }: Props): Metadata {
@@ -61,7 +62,7 @@ const Page: React.FunctionComponent<Props> = (props) => {
           pageTitle={`Library: ${postByCategory.meta.category}.`}
           navigationItems={LIBRARY_SUB_NAVIGATION}
           showAll={true}
-          postType={postByCategory.meta.postType}
+          postType={postByCategory.meta.type}
           category={postByCategory.meta.category}
           postsToShow={12}
           postsToLoad={6}
@@ -73,7 +74,7 @@ const Page: React.FunctionComponent<Props> = (props) => {
           pageTitle={`Portfolio: ${postByCategory.meta.category}.`}
           navigationItems={PROJECTS_SUB_NAVIGATION}
           showAll={true}
-          postType={postByCategory.meta.postType}
+          postType={postByCategory.meta.type}
           category={postByCategory.meta.category}
           postsToShow={6}
           postsToLoad={6}
@@ -85,7 +86,7 @@ const Page: React.FunctionComponent<Props> = (props) => {
           pageTitle={`Journal: ${postByCategory.meta.category}.`}
           navigationItems={JOURNAL_SUB_NAVIGATION}
           showAll={true}
-          postType={postByCategory.meta.postType}
+          postType={postByCategory.meta.type}
           category={postByCategory.meta.category}
           postsToShow={6}
           postsToLoad={6}
@@ -99,8 +100,8 @@ const Page: React.FunctionComponent<Props> = (props) => {
         showMeta={true}
         post={post}
         showRelatedEntries={true}
-        postsToShow={post.meta.postType === 'booklist' ? 6 : 3}
-        postsToLoad={post.meta.postType === 'booklist' ? 6 : 3}
+        postsToShow={post.meta.type === 'booklist' ? 6 : 3}
+        postsToLoad={post.meta.type === 'booklist' ? 6 : 3}
       />
     );
   } else {

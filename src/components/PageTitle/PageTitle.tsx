@@ -6,8 +6,8 @@ import Link from 'next/link';
 
 /* Utils */
 import styles from './PageTitle.module.scss';
-import { PostCategory } from '@/utils/types';
-import { normalize } from '@/scripts/normalize';
+import { PostCategory } from '@/types/post';
+import { normalize } from '@/scripts/utils';
 
 type Props = {
   title: string;

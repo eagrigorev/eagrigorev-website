@@ -7,24 +7,13 @@ import CategoryPageTemplate from './CategoryPageTemplate';
 /* Utils */
 import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
-import { NavigationItem } from '@/utils/types';
-
-const navItems: NavigationItem[] = [
-  {
-    title: 'Test Link 1',
-    url: 'Test Url 1',
-  },
-  {
-    title: 'Test Link 2',
-    url: 'Test Url 2',
-  },
-];
+import { navigationItems } from '@/mocks/navigationItems';
 
 describe('CategoryPageTemplate', () => {
   const { container } = render(
     <CategoryPageTemplate
       pageTitle="Test Page"
-      navigationItems={navItems}
+      navigationItems={navigationItems}
       showAll={true}
       postType="project"
       category="Illustrations"

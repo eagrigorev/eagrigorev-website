@@ -1,4 +1,7 @@
 /* Namespaces */
 import fs from 'fs';
 
-export const categoriesList: string[] = fs.readdirSync('src/markdown/posts');
+/* Utils */
+import { URL } from '@/const/url';
+
+export const categoriesList: string[] = fs.readdirSync(URL.POSTS);

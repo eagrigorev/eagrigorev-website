@@ -1,8 +1,10 @@
 /* Utils */
-import { PostCardType, PostCard, PostMeta } from '@/utils/types';
+import { PostType, PostMeta } from '@/types/post';
+import { PostCard } from '@/types/postCard';
+import { URL } from '@/const/url';
 
 export const generateCardOptions = (
-  cardType: PostCardType,
+  cardType: PostType,
   postMeta: PostMeta
 ): PostCard => {
   let cardOptions: PostCard;
@@ -10,12 +12,12 @@ export const generateCardOptions = (
     cardOptions = {
       href: postMeta.slug,
       image: {
-        src: `/images/featured/${postMeta.featuredImage}`,
+        src: `/${URL.FEATURED_IMG}/${postMeta.featuredImage}`,
         alt: postMeta.title,
         width: 440,
         height: 330,
       },
-      blogpost: {
+      content: {
         title: postMeta.title,
         dateEdited: postMeta.dateEdited,
         category: postMeta.category,
@@ -25,15 +27,15 @@ export const generateCardOptions = (
   }
   if (cardType === 'book') {
     cardOptions = {
-      href: postMeta.url,
+      href: postMeta.slug,
       image: {
-        src: `/images/books/${postMeta.image}`,
-        alt: `${postMeta.title} by ${postMeta.author}`,
+        src: `/${URL.BOOK_IMG}/${postMeta.featuredImage}`,
+        alt: `${postMeta.title} by ${postMeta.bookAuthor}`,
         width: 250,
         height: 375,
       },
-      book: {
-        author: postMeta.author,
+      content: {
+        bookAuthor: postMeta.bookAuthor,
         title: postMeta.title,
       },
     };
@@ -42,12 +44,12 @@ export const generateCardOptions = (
     cardOptions = {
       href: postMeta.slug,
       image: {
-        src: `/images/books/years-of-reading/${postMeta.featuredImage}`,
+        src: `/${URL.YEARS_OF_READING}/${postMeta.featuredImage}`,
         alt: postMeta.title,
         width: 250,
         height: 375,
       },
-      booklist: {
+      content: {
         title: postMeta.title,
       },
     };
@@ -56,12 +58,12 @@ export const generateCardOptions = (
     cardOptions = {
       href: postMeta.slug,
       image: {
-        src: `/images/featured/${postMeta.featuredImage}`,
+        src: `/${URL.FEATURED_IMG}/${postMeta.featuredImage}`,
         alt: postMeta.title,
         width: 440,
         height: 330,
       },
-      project: {
+      content: {
         title: postMeta.title,
       },
     };

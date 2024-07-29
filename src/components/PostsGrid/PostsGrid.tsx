@@ -6,11 +6,11 @@ import GridGenerator from '../GridGenerator/GridGenerator';
 
 /* Utils */
 import { getSortedPosts } from '@/scripts/getPosts';
-import { Post, PostCardType, PostCategory } from '@/utils/types';
+import { Post, PostType, PostCategory } from '@/types/post';
 
 type Props = {
-  postType: PostCardType;
-  category: PostCategory;
+  postType: PostType;
+  category: PostCategory | 'all';
   postsToShow: number;
   postsToLoad: number;
 };
