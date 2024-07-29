@@ -3,10 +3,10 @@ import fs from 'fs';
 
 /* Utils */
 import { Feed } from 'feed';
-import { Post } from '@/utils/types';
+import { Post } from '@/types/post';
+import { URL } from '@/const/url';
 
 const generateRssFeed = (posts: Post[]) => {
-  const URL = 'https://eagrigorev.com';
   const author = {
     name: 'Evgenii Grigorev',
     link: 'https://www.instagram.com/eagrigorev/',
@@ -14,17 +14,17 @@ const generateRssFeed = (posts: Post[]) => {
   const feed = new Feed({
     title: 'Evgenii Grigorev',
     description: 'Software developer and artist based in Thessaloniki, Greece.',
-    id: URL,
-    link: URL,
+    id: URL.BASE,
+    link: URL.BASE,
     language: 'en',
     feedLinks: {
-      rss2: `${URL}/rss.xml`,
+      rss2: `${URL.BASE}/rss.xml`,
     },
     author: author,
     copyright: 'Evgenii Grigorev',
   });
   posts.forEach((post: Post) => {
-    const slug: string = `${URL}/${post.meta.slug}`;
+    const slug: string = `${URL.BASE}/${post.meta.slug}`;
     feed.addItem({
       title: post.meta.title,
       id: slug,
