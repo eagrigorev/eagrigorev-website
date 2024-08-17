@@ -4,23 +4,11 @@
         <title>Evgenii Grigorev</title>
         <link>https://eagrigorev.com</link>
         <description>Software developer and artist based in Thessaloniki, Greece.</description>
-        <lastBuildDate>Fri, 16 Aug 2024 13:07:19 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 17 Aug 2024 16:36:42 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>Evgenii Grigorev</copyright>
-        <item>
-            <title><![CDATA[Critters]]></title>
-            <link>https://eagrigorev.com/critters</link>
-            <guid>https://eagrigorev.com/critters</guid>
-            <pubDate>Tue, 19 Jul 2022 21:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Fan Art Illustrations]]></title>
-            <link>https://eagrigorev.com/fan-art-illustrations</link>
-            <guid>https://eagrigorev.com/fan-art-illustrations</guid>
-            <pubDate>Sat, 13 Aug 2022 21:00:00 GMT</pubDate>
-        </item>
         <item>
             <title><![CDATA[Into a Vanished Age]]></title>
             <link>https://eagrigorev.com/into-a-vanished-age</link>
@@ -28,16 +16,22 @@
             <pubDate>Fri, 22 Sep 2023 21:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Pale Views]]></title>
+            <title><![CDATA[Pale Views. Japanese Woodblock Printing Pixel Arts]]></title>
             <link>https://eagrigorev.com/pale-views</link>
             <guid>https://eagrigorev.com/pale-views</guid>
             <pubDate>Wed, 14 Jun 2023 21:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Old Pixel Art Illustrations]]></title>
-            <link>https://eagrigorev.com/old-pixel-art-illustrations</link>
-            <guid>https://eagrigorev.com/old-pixel-art-illustrations</guid>
+            <title><![CDATA[Pixel Arts of 2021]]></title>
+            <link>https://eagrigorev.com/pixel-arts-of-2021</link>
+            <guid>https://eagrigorev.com/pixel-arts-of-2021</guid>
             <pubDate>Sat, 13 Mar 2021 22:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Pixel Arts of 2022]]></title>
+            <link>https://eagrigorev.com/pixel-arts-of-2022</link>
+            <guid>https://eagrigorev.com/pixel-arts-of-2022</guid>
+            <pubDate>Sat, 13 Aug 2022 21:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Test Post for the Journal]]></title>
@@ -46,10 +40,46 @@
             <pubDate>Mon, 03 Jun 2024 21:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Boreal Heights Music]]></title>
-            <link>https://eagrigorev.com/boreal-heights-music</link>
-            <guid>https://eagrigorev.com/boreal-heights-music</guid>
-            <pubDate>Sat, 16 Mar 2024 22:00:00 GMT</pubDate>
+            <title><![CDATA[Beyond the Sea of Ghosts]]></title>
+            <link>https://eagrigorev.com/beyond-the-sea-of-ghosts</link>
+            <guid>https://eagrigorev.com/beyond-the-sea-of-ghosts</guid>
+            <pubDate>Fri, 29 Jun 2018 21:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Crystal Maze]]></title>
+            <link>https://eagrigorev.com/crystal-maze</link>
+            <guid>https://eagrigorev.com/crystal-maze</guid>
+            <pubDate>Sat, 09 Nov 2013 22:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Early Rains]]></title>
+            <link>https://eagrigorev.com/early-rains</link>
+            <guid>https://eagrigorev.com/early-rains</guid>
+            <pubDate>Mon, 12 Aug 2019 21:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Far Lands]]></title>
+            <link>https://eagrigorev.com/far-lands</link>
+            <guid>https://eagrigorev.com/far-lands</guid>
+            <pubDate>Wed, 08 May 2019 21:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Morning Star]]></title>
+            <link>https://eagrigorev.com/morning-star</link>
+            <guid>https://eagrigorev.com/morning-star</guid>
+            <pubDate>Fri, 14 Aug 2015 21:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Under Åpen Himmel]]></title>
+            <link>https://eagrigorev.com/under-apen-himmel</link>
+            <guid>https://eagrigorev.com/under-apen-himmel</guid>
+            <pubDate>Sat, 03 Sep 2016 21:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Winds & Windows]]></title>
+            <link>https://eagrigorev.com/winds-and-windows</link>
+            <guid>https://eagrigorev.com/winds-and-windows</guid>
+            <pubDate>Wed, 01 Jul 2020 21:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[New Tabs]]></title>

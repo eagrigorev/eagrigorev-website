@@ -45,8 +45,12 @@ export const PROJECTS_SUB_NAVIGATION: NavigationItem[] = [
     url: '/illustrations',
   },
   {
-    title: 'Music & Tabs',
-    url: '/music-and-tabs',
+    title: 'Music',
+    url: '/music',
+  },
+  {
+    title: 'Tabs',
+    url: '/tabs',
   },
 ];
 

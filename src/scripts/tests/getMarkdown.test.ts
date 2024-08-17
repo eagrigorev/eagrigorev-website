@@ -19,7 +19,7 @@ describe('GetPostsFromSingleCategory', () => {
 
 describe('GetAllPosts', () => {
   it('should get all posts', () => {
-    expect(getAllPosts().length).toBe(34);
+    expect(getAllPosts().length).toBe(39);
   });
 });
 
@@ -31,6 +31,6 @@ describe('GetPage', () => {
 
 describe('GetPostsSlugs', () => {
   it('should generate the correct slugs amount', () => {
-    expect(getPostsSlugs().length).toBe(29);
+    expect(getPostsSlugs().length).toBe(35);
   });
 });
