@@ -4,7 +4,7 @@
         <title>Evgenii Grigorev</title>
         <link>https://eagrigorev.com</link>
         <description>Software developer and artist based in Thessaloniki, Greece.</description>
-        <lastBuildDate>Sat, 17 Aug 2024 17:29:58 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 17 Aug 2024 18:28:14 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -32,12 +32,6 @@
             <link>https://eagrigorev.com/pixel-arts-of-2022</link>
             <guid>https://eagrigorev.com/pixel-arts-of-2022</guid>
             <pubDate>Sat, 13 Aug 2022 21:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Test Post for the Journal]]></title>
-            <link>https://eagrigorev.com/test-post-for-the-journal</link>
-            <guid>https://eagrigorev.com/test-post-for-the-journal</guid>
-            <pubDate>Mon, 03 Jun 2024 21:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Beyond the Sea of Ghosts]]></title>
@@ -80,6 +74,12 @@
             <link>https://eagrigorev.com/winds-and-windows</link>
             <guid>https://eagrigorev.com/winds-and-windows</guid>
             <pubDate>Wed, 01 Jul 2020 21:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[A Quiet Place for the Undecided]]></title>
+            <link>https://eagrigorev.com/a-quiet-place-for-the-undecided</link>
+            <guid>https://eagrigorev.com/a-quiet-place-for-the-undecided</guid>
+            <pubDate>Fri, 16 Aug 2024 21:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[New Tabs]]></title>

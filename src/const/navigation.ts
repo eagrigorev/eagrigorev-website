@@ -30,8 +30,8 @@ export const JOURNAL_SUB_NAVIGATION: NavigationItem[] = [
     url: '/journal',
   },
   {
-    title: 'Life Updates',
-    url: '/life-updates',
+    title: 'Notes',
+    url: '/notes',
   },
 ];
 
