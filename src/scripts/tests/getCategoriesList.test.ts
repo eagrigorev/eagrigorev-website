@@ -3,6 +3,6 @@ import { categoriesList } from '../getCategoriesList';
 
 describe('CategoriesList', () => {
   it('should get the right amount of categories', () => {
-    expect(categoriesList.length).toBe(7);
+    expect(categoriesList.length).toBe(6);
   });
 });

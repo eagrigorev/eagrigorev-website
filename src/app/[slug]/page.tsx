@@ -68,7 +68,7 @@ const Page: React.FunctionComponent<Props> = (props) => {
           postsToLoad={6}
         />
       );
-    } else if (['illustrations', 'music', 'tabs'].includes(slug)) {
+    } else if (['illustrations', 'music-and-tabs'].includes(slug)) {
       return (
         <CategoryPageTemplate
           pageTitle={`Portfolio: ${postByCategory.meta.category}.`}
