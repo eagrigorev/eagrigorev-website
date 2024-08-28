@@ -1,6 +1,6 @@
 export type PostCategory =
   | 'Illustrations'
-  | 'Life Updates'
+  | 'Notes'
   | 'Music & Tabs'
   | 'Reading this Year'
   | 'Want to Read'

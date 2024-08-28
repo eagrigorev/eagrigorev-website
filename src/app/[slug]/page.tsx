@@ -80,7 +80,7 @@ const Page: React.FunctionComponent<Props> = (props) => {
           postsToLoad={6}
         />
       );
-    } else if (['life-updates'].includes(slug)) {
+    } else if (['notes'].includes(slug)) {
       return (
         <CategoryPageTemplate
           pageTitle={`Journal: ${postByCategory.meta.category}.`}

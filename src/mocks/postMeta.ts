@@ -7,7 +7,7 @@ export const postMeta: PostMeta = {
   datePublished: 'January 31, 1999',
   dateEdited: 'March 4, 2001',
   type: 'blogpost',
-  category: 'Life Updates',
+  category: 'Notes',
   featuredImage: 'test.jpg',
   bookAuthor: undefined,
   excerpt: 'Test excerpt',

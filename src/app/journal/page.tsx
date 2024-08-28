@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 const Journal: React.FunctionComponent<{}> = () => {
   return (
     <CategoryPageTemplate
-      pageTitle="Journal."
+      pageTitle="Journal: A Space for the Unbound."
       navigationItems={JOURNAL_SUB_NAVIGATION}
       showAll={false}
       postType="blogpost"
