@@ -14,10 +14,10 @@ export const TOP_NAVIGATION: NavigationItem[] = [
     title: 'Now',
     url: '/now',
   },
-  // {
-  //   title: 'Journal',
-  //   url: '/journal',
-  // },
+  {
+    title: 'Journal',
+    url: '/journal',
+  },
   {
     title: 'Library',
     url: '/reading-this-year',
@@ -30,8 +30,8 @@ export const JOURNAL_SUB_NAVIGATION: NavigationItem[] = [
     url: '/journal',
   },
   {
-    title: 'Life Updates',
-    url: '/life-updates',
+    title: 'Notes',
+    url: '/notes',
   },
 ];
 
