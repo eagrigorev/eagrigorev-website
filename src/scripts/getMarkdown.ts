@@ -10,9 +10,44 @@ import { Post, PostCategory } from '@/types/post';
 import { Page } from '@/types/page';
 import { Slug } from '@/types/slug';
 import { URL } from '@/const/url';
+import {
+  JOURNAL_SLUGS,
+  LIBRARY_SLUGS,
+  WORKS_SLUGS,
+} from '@/const/categoriesSlugs';
 
-export const getPostsFromSingleCategory = (category: PostCategory): Post[] => {
-  const path: string = `${URL.POSTS}/${category}`;
+export const getWorksPostsFromSingleCategory = (
+  category: PostCategory
+): Post[] => {
+  const path: string = `${URL.WORKS}/${category}`;
+  return fs.readdirSync(path).map((file: string) => {
+    const markdown: string = fs.readFileSync(`${path}/${file}`, 'utf-8');
+    const { data, content } = matter(markdown);
+    return {
+      meta: mapMatterDataToPostMeta(data),
+      content,
+    };
+  });
+};
+
+export const getJournalPostsFromSingleCategory = (
+  category: PostCategory
+): Post[] => {
+  const path: string = `${URL.JOURNAL}/${category}`;
+  return fs.readdirSync(path).map((file: string) => {
+    const markdown: string = fs.readFileSync(`${path}/${file}`, 'utf-8');
+    const { data, content } = matter(markdown);
+    return {
+      meta: mapMatterDataToPostMeta(data),
+      content,
+    };
+  });
+};
+
+export const getLibraryPostsFromSingleCategory = (
+  category: PostCategory
+): Post[] => {
+  const path: string = `${URL.LIBRARY}/${category}`;
   return fs.readdirSync(path).map((file: string) => {
     const markdown: string = fs.readFileSync(`${path}/${file}`, 'utf-8');
     const { data, content } = matter(markdown);
@@ -25,8 +60,14 @@ export const getPostsFromSingleCategory = (category: PostCategory): Post[] => {
 
 export const getAllPosts = (): Post[] => {
   let allPosts: Post[] = [];
-  categoriesList.forEach((category: PostCategory) => {
-    allPosts.push(...getPostsFromSingleCategory(category));
+  WORKS_SLUGS.forEach((category: PostCategory) => {
+    allPosts.push(...getWorksPostsFromSingleCategory(category));
+  });
+  JOURNAL_SLUGS.forEach((category: PostCategory) => {
+    allPosts.push(...getJournalPostsFromSingleCategory(category));
+  });
+  LIBRARY_SLUGS.forEach((category: PostCategory) => {
+    allPosts.push(...getLibraryPostsFromSingleCategory(category));
   });
   return allPosts;
 };

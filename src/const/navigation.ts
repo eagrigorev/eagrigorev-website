@@ -3,7 +3,7 @@ import { NavigationItem } from '@/types/navigation';
 
 export const TOP_NAVIGATION: NavigationItem[] = [
   {
-    title: 'Portfolio',
+    title: 'Works',
     url: '/',
   },
   {
@@ -11,16 +11,8 @@ export const TOP_NAVIGATION: NavigationItem[] = [
     url: '/about',
   },
   {
-    title: 'Now',
-    url: '/now',
-  },
-  {
     title: 'Journal',
     url: '/journal',
-  },
-  {
-    title: 'Library',
-    url: '/reading-this-year',
   },
 ];
 
@@ -67,7 +59,7 @@ export const LIBRARY_SUB_NAVIGATION: NavigationItem[] = [
 
 export const NOT_FOUND_SUB_NAVIGATION: NavigationItem[] = [
   {
-    title: 'Check Latest Projects',
+    title: 'Check Latest Works',
     url: '/',
   },
   {

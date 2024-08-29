@@ -1,7 +1,12 @@
-/* Namespaces */
-import fs from 'fs';
-
 /* Utils */
-import { URL } from '@/const/url';
+import {
+  JOURNAL_SLUGS,
+  LIBRARY_SLUGS,
+  WORKS_SLUGS,
+} from '@/const/categoriesSlugs';
 
-export const categoriesList: string[] = fs.readdirSync(URL.POSTS);
+export const categoriesList: string[] = [
+  ...JOURNAL_SLUGS,
+  ...LIBRARY_SLUGS,
+  ...WORKS_SLUGS,
+];

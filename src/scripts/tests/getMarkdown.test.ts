@@ -1,17 +1,17 @@
 /* Utils */
 import {
-  getPostsFromSingleCategory,
+  getJournalPostsFromSingleCategory,
   getAllPosts,
   getPage,
   getPostsSlugs,
 } from '../getMarkdown';
 import { Post } from '@/types/post';
 
-describe('GetPostsFromSingleCategory', () => {
+describe('GetJournalPostsFromSingleCategory', () => {
   it('should get the correct posts category', () => {
     expect(
-      getPostsFromSingleCategory('Illustrations').find(
-        (post: Post) => post.meta.category === 'Illustrations'
+      getJournalPostsFromSingleCategory('Notes').find(
+        (post: Post) => post.meta.category === 'Notes'
       )
     ).toBeTruthy();
   });

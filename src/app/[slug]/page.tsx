@@ -13,9 +13,9 @@ import {
   LIBRARY_SUB_NAVIGATION,
 } from '@/const/navigation';
 import {
-  BOOKS_SLUGS,
-  PROJECTS_SLUGS,
-  BLOGPOSTS_SLUGS,
+  JOURNAL_SLUGS,
+  LIBRARY_SLUGS,
+  WORKS_SLUGS,
 } from '@/const/categoriesSlugs';
 import { getAllPosts, getPostsSlugs } from '@/scripts/getMarkdown';
 import { normalize } from '@/scripts/utils';
@@ -59,7 +59,7 @@ const Page: React.FunctionComponent<Props> = (props) => {
     const postByCategory: Post | undefined = allPosts.find((post) => {
       return normalize(post.meta.category) === slug;
     });
-    if (BOOKS_SLUGS.includes(slug)) {
+    if (LIBRARY_SLUGS.includes(slug)) {
       return (
         <CategoryPageTemplate
           pageTitle={`Library: ${postByCategory.meta.category}.`}
@@ -71,10 +71,10 @@ const Page: React.FunctionComponent<Props> = (props) => {
           postsToLoad={6}
         />
       );
-    } else if (PROJECTS_SLUGS.includes(slug)) {
+    } else if (WORKS_SLUGS.includes(slug)) {
       return (
         <CategoryPageTemplate
-          pageTitle={`Portfolio: ${postByCategory.meta.category}.`}
+          pageTitle={`Works: ${postByCategory.meta.category}.`}
           navigationItems={PROJECTS_SUB_NAVIGATION}
           showAll={true}
           postType={postByCategory.meta.type}
@@ -83,7 +83,7 @@ const Page: React.FunctionComponent<Props> = (props) => {
           postsToLoad={6}
         />
       );
-    } else if (BLOGPOSTS_SLUGS.includes(slug)) {
+    } else if (JOURNAL_SLUGS.includes(slug)) {
       return (
         <CategoryPageTemplate
           pageTitle={`Journal: ${postByCategory.meta.category}.`}
