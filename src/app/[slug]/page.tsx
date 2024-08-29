@@ -12,6 +12,11 @@ import {
   PROJECTS_SUB_NAVIGATION,
   LIBRARY_SUB_NAVIGATION,
 } from '@/const/navigation';
+import {
+  BOOKS_SLUGS,
+  PROJECTS_SLUGS,
+  BLOGPOSTS_SLUGS,
+} from '@/const/categoriesSlugs';
 import { getAllPosts, getPostsSlugs } from '@/scripts/getMarkdown';
 import { normalize } from '@/scripts/utils';
 import { categoriesList } from '@/scripts/getCategoriesList';
@@ -54,9 +59,7 @@ const Page: React.FunctionComponent<Props> = (props) => {
     const postByCategory: Post | undefined = allPosts.find((post) => {
       return normalize(post.meta.category) === slug;
     });
-    if (
-      ['reading-this-year', 'want-to-read', 'years-of-reading'].includes(slug)
-    ) {
+    if (BOOKS_SLUGS.includes(slug)) {
       return (
         <CategoryPageTemplate
           pageTitle={`Library: ${postByCategory.meta.category}.`}
@@ -68,7 +71,7 @@ const Page: React.FunctionComponent<Props> = (props) => {
           postsToLoad={6}
         />
       );
-    } else if (['illustrations', 'music-and-tabs'].includes(slug)) {
+    } else if (PROJECTS_SLUGS.includes(slug)) {
       return (
         <CategoryPageTemplate
           pageTitle={`Portfolio: ${postByCategory.meta.category}.`}
@@ -80,7 +83,7 @@ const Page: React.FunctionComponent<Props> = (props) => {
           postsToLoad={6}
         />
       );
-    } else if (['notes'].includes(slug)) {
+    } else if (BLOGPOSTS_SLUGS.includes(slug)) {
       return (
         <CategoryPageTemplate
           pageTitle={`Journal: ${postByCategory.meta.category}.`}
