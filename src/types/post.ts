@@ -1,10 +1,14 @@
-export type PostCategory =
-  | 'Illustrations'
-  | 'Notes'
-  | 'Music & Tabs'
+export type WorksCategories = 'Illustrations' | 'Music & Tabs';
+export type JournalCategories = 'Notes';
+export type LibraryCategories =
   | 'Reading this Year'
   | 'Want to Read'
   | 'Years of Reading';
+
+export type PostCategory =
+  | WorksCategories
+  | JournalCategories
+  | LibraryCategories;
 
 export type PostType = 'blogpost' | 'book' | 'booklist' | 'project';
 
