@@ -31,6 +31,6 @@ describe('GetPage', () => {
 
 describe('GetPostsSlugs', () => {
   it('should generate the correct slugs amount', () => {
-    expect(getPostsSlugs().length).toBe(30);
+    expect(getPostsSlugs().length).toBe(35);
   });
 });
