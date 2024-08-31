@@ -116,6 +116,5 @@ export const getPostsSlugs = (): Slug[] => {
     slug: `${tag.title}`,
   }));
   const slugs: Slug[] = [...postSlugs, ...categorySlugs, ...tagsSlugs];
-  console.log(slugs);
   return slugs;
 };
