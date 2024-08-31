@@ -28,6 +28,7 @@ export const mapMatterDataToPostMeta = (data: Matter): PostMeta => {
     featuredImage: data.featuredImage,
     bookAuthor: data.bookAuthor,
     excerpt: data.excerpt,
+    tags: data.tags,
   };
 };
 

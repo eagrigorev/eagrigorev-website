@@ -4,7 +4,7 @@
         <title>Evgenii Grigorev</title>
         <link>https://eagrigorev.com</link>
         <description>Software developer and artist based in Thessaloniki, Greece.</description>
-        <lastBuildDate>Fri, 30 Aug 2024 10:22:48 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 31 Aug 2024 15:37:15 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -50,6 +50,12 @@
             <link>https://eagrigorev.com/tabs-archive</link>
             <guid>https://eagrigorev.com/tabs-archive</guid>
             <pubDate>Sat, 20 Apr 2024 21:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[On Drawing Again]]></title>
+            <link>https://eagrigorev.com/on-drawing-again</link>
+            <guid>https://eagrigorev.com/on-drawing-again</guid>
+            <pubDate>Thu, 29 Aug 2024 21:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Hello, World!]]></title>

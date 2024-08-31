@@ -22,6 +22,10 @@ export const JOURNAL_SUB_NAVIGATION: NavigationItem[] = [
     url: '/journal',
   },
   {
+    title: 'Hobbies',
+    url: '/hobbies',
+  },
+  {
     title: 'Notes',
     url: '/notes',
   },

@@ -1,5 +1,5 @@
 export type WorksCategories = 'Illustrations' | 'Music & Tabs';
-export type JournalCategories = 'Notes';
+export type JournalCategories = 'Hobbies' | 'Notes';
 export type LibraryCategories =
   | 'Reading this Year'
   | 'Want to Read'
@@ -22,6 +22,7 @@ export interface PostMeta {
   featuredImage: string;
   bookAuthor?: string;
   excerpt?: string;
+  tags?: string[];
 }
 
 export interface Post {

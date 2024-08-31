@@ -1,4 +1,4 @@
-export const JOURNAL_SLUGS: string[] = ['notes'];
+export const JOURNAL_SLUGS: string[] = ['hobbies', 'notes'];
 
 export const WORKS_SLUGS: string[] = ['illustrations', 'music-and-tabs'];
 
