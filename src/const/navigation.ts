@@ -71,22 +71,3 @@ export const NOT_FOUND_SUB_NAVIGATION: NavigationItem[] = [
     url: '/journal',
   },
 ];
-
-export const TAGS_SUB_NAVIGATION: NavigationItem[] = [
-  {
-    title: 'Tag1',
-    url: '/tag1',
-  },
-  {
-    title: 'Tag2',
-    url: '/tag2',
-  },
-  {
-    title: 'Tag3',
-    url: '/tag3',
-  },
-  {
-    title: 'Tag4',
-    url: '/tag4',
-  },
-];
