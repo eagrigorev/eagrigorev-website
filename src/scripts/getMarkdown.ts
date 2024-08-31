@@ -9,6 +9,7 @@ import { mapMatterDataToPageMeta, mapMatterDataToPostMeta } from './utils';
 import { Post, PostCategory } from '@/types/post';
 import { Page } from '@/types/page';
 import { Slug } from '@/types/slug';
+import { NavigationItem } from '@/types/navigation';
 import { URL } from '@/const/url';
 import {
   JOURNAL_SLUGS,
@@ -72,6 +73,23 @@ export const getAllPosts = (): Post[] => {
   return allPosts;
 };
 
+export const getAllTags = (): NavigationItem[] => {
+  let allPosts: Post[] = getAllPosts();
+  const tags: NavigationItem[] = [];
+  allPosts
+    .filter((post: Post) => post.meta.tags?.length)
+    .forEach((post: Post) => {
+      post.meta.tags.forEach((tag: string) =>
+        tags.push({ title: tag, url: `/${tag}` })
+      );
+    });
+  const uniqueTags: NavigationItem[] = tags.reduce(function (a, b) {
+    if (a.indexOf(b) < 0) a.push(b);
+    return a;
+  }, []);
+  return uniqueTags;
+};
+
 export const getPage = (file: string): Page => {
   const page: string = fs.readFileSync(`${URL.PAGES}/${file}`, 'utf-8');
   const { data, content } = matter(page);
@@ -94,6 +112,10 @@ export const getPostsSlugs = (): Slug[] => {
       slug: category,
     })
   );
-  const slugs: Slug[] = [...postSlugs, ...categorySlugs];
+  const tagsSlugs: Slug[] = getAllTags().map((tag: NavigationItem) => ({
+    slug: `${tag.title}`,
+  }));
+  const slugs: Slug[] = [...postSlugs, ...categorySlugs, ...tagsSlugs];
+  console.log(slugs);
   return slugs;
 };

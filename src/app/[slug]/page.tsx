@@ -11,18 +11,20 @@ import {
   JOURNAL_SUB_NAVIGATION,
   PROJECTS_SUB_NAVIGATION,
   LIBRARY_SUB_NAVIGATION,
+  TAGS_SUB_NAVIGATION,
 } from '@/const/navigation';
 import {
   JOURNAL_SLUGS,
   LIBRARY_SLUGS,
   WORKS_SLUGS,
 } from '@/const/categoriesSlugs';
-import { getAllPosts, getPostsSlugs } from '@/scripts/getMarkdown';
+import { getAllPosts, getAllTags, getPostsSlugs } from '@/scripts/getMarkdown';
 import { normalize } from '@/scripts/utils';
 import { categoriesList } from '@/scripts/getCategoriesList';
 import { Metadata } from 'next';
 import { Post } from '@/types/post';
 import { Slug } from '@/types/slug';
+import { NavigationItem } from '@/types/navigation';
 
 type Props = {
   params: Slug;
@@ -52,6 +54,7 @@ export function generateMetadata({ params }: Props): Metadata {
 const Page: React.FunctionComponent<Props> = (props) => {
   const slug: string = props.params.slug;
   const allPosts: Post[] = getAllPosts();
+  const allTags: NavigationItem[] = getAllTags();
   const post: Post | undefined = allPosts.find(
     (post) => post.meta.slug === slug
   );
