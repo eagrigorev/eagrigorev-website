@@ -9,7 +9,7 @@ import PageTitle from '@/components/PageTitle/PageTitle';
 import SubNavigation from '@/components/SubNavigation/SubNavigation';
 
 /* Utils */
-import { NOT_FOUND_SUB_NAVIGATION } from '@/const/navigation';
+import { miscNavItems } from '@/scripts/getNavigationItems';
 
 const Error = ({
   error,
@@ -24,10 +24,7 @@ const Error = ({
   return (
     <main className="container">
       <PageTitle title="Page 500: Internal Server Error. The server has encountered a situation it does not know how to handle. Try again?" />
-      <SubNavigation
-        navigationItems={NOT_FOUND_SUB_NAVIGATION}
-        showAll={false}
-      />
+      <SubNavigation navigationItems={miscNavItems} showAll={false} />
       <div className="error-button">
         <LoadMoreButton clickHandler={() => reset()} buttonText="Reload" />
       </div>

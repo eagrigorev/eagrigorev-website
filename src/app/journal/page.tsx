@@ -5,8 +5,8 @@ import React from 'react';
 import CategoryPageTemplate from '@/templates/CategoryPageTemplate/CategoryPageTemplate';
 
 /* Utils */
-import { JOURNAL_SUB_NAVIGATION } from '@/const/navigation';
 import { Metadata } from 'next';
+import { journalNavItems } from '@/scripts/getNavigationItems';
 
 export const metadata: Metadata = {
   title: 'Journal',
@@ -16,7 +16,7 @@ const Journal: React.FunctionComponent<{}> = () => {
   return (
     <CategoryPageTemplate
       pageTitle="Journal: A Space for the Unbound."
-      navigationItems={JOURNAL_SUB_NAVIGATION}
+      navigationItems={journalNavItems}
       showAll={false}
       postType="blogpost"
       category="all"

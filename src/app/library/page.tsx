@@ -5,8 +5,8 @@ import React from 'react';
 import CategoryPageTemplate from '@/templates/CategoryPageTemplate/CategoryPageTemplate';
 
 /* Utils */
-import { LIBRARY_SUB_NAVIGATION } from '@/const/navigation';
 import { Metadata } from 'next';
+import { libraryNavItems } from '@/scripts/getNavigationItems';
 
 export const metadata: Metadata = {
   title: 'Library',
@@ -16,7 +16,7 @@ const Journal: React.FunctionComponent<{}> = () => {
   return (
     <CategoryPageTemplate
       pageTitle="Library."
-      navigationItems={LIBRARY_SUB_NAVIGATION}
+      navigationItems={libraryNavItems}
       showAll={false}
       postType="library"
       category="all"

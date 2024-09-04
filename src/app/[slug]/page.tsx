@@ -8,22 +8,21 @@ import SinglePageNarrowTemplate from '@/templates/SinglePageNarrowTemplate/Singl
 /* Utils */
 import { notFound } from 'next/navigation';
 import {
-  JOURNAL_SUB_NAVIGATION,
-  PROJECTS_SUB_NAVIGATION,
-  LIBRARY_SUB_NAVIGATION,
-} from '@/const/navigation';
-import {
-  JOURNAL_SLUGS,
-  LIBRARY_SLUGS,
-  WORKS_SLUGS,
-} from '@/const/categoriesSlugs';
-import { getAllPosts, getAllTags, getPostsSlugs } from '@/scripts/getMarkdown';
-import { normalize } from '@/scripts/utils';
+  JOURNAL_CATEGORIES,
+  LIBRARY_CATEGORIES,
+  WORKS_CATEGORIES,
+} from '@/const/categories';
+import { getAllPosts, getPostsSlugs } from '@/scripts/getMarkdown';
+import { mapCategoriesToSlugs, normalize } from '@/scripts/utils';
 import { categoriesList } from '@/scripts/getCategoriesList';
 import { Metadata } from 'next';
 import { Post } from '@/types/post';
 import { Slug } from '@/types/slug';
-import { NavigationItem } from '@/types/navigation';
+import {
+  journalNavItems,
+  libraryNavItems,
+  worksNavItems,
+} from '@/scripts/getNavigationItems';
 
 type Props = {
   params: Slug;
@@ -53,7 +52,6 @@ export function generateMetadata({ params }: Props): Metadata {
 const Page: React.FunctionComponent<Props> = (props) => {
   const slug: string = props.params.slug;
   const allPosts: Post[] = getAllPosts();
-  const allTags: NavigationItem[] = getAllTags();
   const post: Post | undefined = allPosts.find(
     (post) => post.meta.slug === slug
   );
@@ -61,11 +59,11 @@ const Page: React.FunctionComponent<Props> = (props) => {
     const postByCategory: Post | undefined = allPosts.find((post) => {
       return normalize(post.meta.category) === slug;
     });
-    if (LIBRARY_SLUGS.includes(slug)) {
+    if (mapCategoriesToSlugs(LIBRARY_CATEGORIES).includes(slug)) {
       return (
         <CategoryPageTemplate
           pageTitle={`Library: ${postByCategory.meta.category}.`}
-          navigationItems={LIBRARY_SUB_NAVIGATION}
+          navigationItems={libraryNavItems}
           showAll={true}
           postType={postByCategory.meta.type}
           category={postByCategory.meta.category}
@@ -73,11 +71,11 @@ const Page: React.FunctionComponent<Props> = (props) => {
           postsToLoad={6}
         />
       );
-    } else if (WORKS_SLUGS.includes(slug)) {
+    } else if (mapCategoriesToSlugs(WORKS_CATEGORIES).includes(slug)) {
       return (
         <CategoryPageTemplate
           pageTitle={`Works: ${postByCategory.meta.category}.`}
-          navigationItems={PROJECTS_SUB_NAVIGATION}
+          navigationItems={worksNavItems}
           showAll={true}
           postType={postByCategory.meta.type}
           category={postByCategory.meta.category}
@@ -85,11 +83,11 @@ const Page: React.FunctionComponent<Props> = (props) => {
           postsToLoad={6}
         />
       );
-    } else if (JOURNAL_SLUGS.includes(slug)) {
+    } else if (mapCategoriesToSlugs(JOURNAL_CATEGORIES).includes(slug)) {
       return (
         <CategoryPageTemplate
           pageTitle={`Journal: ${postByCategory.meta.category}.`}
-          navigationItems={JOURNAL_SUB_NAVIGATION}
+          navigationItems={journalNavItems}
           showAll={true}
           postType={postByCategory.meta.type}
           category={postByCategory.meta.category}
