@@ -10,7 +10,7 @@ export type PostCategory =
   | JournalCategories
   | LibraryCategories;
 
-export type PostType = 'blogpost' | 'book' | 'booklist' | 'project';
+export type PostType = 'blogpost' | 'book' | 'project';
 
 export interface PostMeta {
   title: string;

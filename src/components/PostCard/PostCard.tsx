@@ -57,10 +57,6 @@ const PostCard: React.FunctionComponent<Props> = ({ cardType, postMeta }) => {
               </h3>
             </Link>
           </>
-        ) : cardType === 'booklist' ? (
-          <Link className="link--neutral" href={cardOptions.href}>
-            <h3 className="paragraph--regular">{cardOptions.content.title}</h3>
-          </Link>
         ) : cardType === 'project' ? (
           <Link className="link--neutral" href={cardOptions.href}>
             <h3 className={`${styles['title--project']} paragraph--regular`}>

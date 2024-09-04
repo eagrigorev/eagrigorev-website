@@ -4,8 +4,7 @@
 }
 
 .wrapper {
-  &--book,
-  &--booklist {
+  &--book {
     grid-column: span 2;
 
     @media only screen and (width <= 480px) {
@@ -29,10 +28,6 @@
 
 .image {
   &--book {
-    @extend %image;
-  }
-
-  &--booklist {
     @extend %image;
 
     aspect-ratio: 2 / 3;
