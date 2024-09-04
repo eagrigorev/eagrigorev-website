@@ -1,10 +1,14 @@
-export type PostCategory =
-  | 'Illustrations'
-  | 'Notes'
-  | 'Music & Tabs'
+export type WorksCategories = 'Illustrations' | 'Music & Tabs';
+export type JournalCategories = 'Hobbies' | 'Notes';
+export type LibraryCategories =
   | 'Reading this Year'
   | 'Want to Read'
   | 'Years of Reading';
+
+export type PostCategory =
+  | WorksCategories
+  | JournalCategories
+  | LibraryCategories;
 
 export type PostType = 'blogpost' | 'book' | 'booklist' | 'project';
 
@@ -18,6 +22,7 @@ export interface PostMeta {
   featuredImage: string;
   bookAuthor?: string;
   excerpt?: string;
+  tags?: string[];
 }
 
 export interface Post {

@@ -5,6 +5,7 @@ import React from 'react';
 import ImageWithCaption from '../ImageWithCaption/ImageWithCaption';
 import Markdown from 'markdown-to-jsx';
 import SpotifyEmbed from '../SpotifyEmbed/SpotifyEmbed';
+import PostTags from '../PostTags/PostTags';
 
 /* Utils */
 import styles from './MarkdownWrapper.module.scss';
@@ -54,6 +55,9 @@ const MarkdownWrapper: React.FunctionComponent<Props> = ({
           },
           SpotifyEmbed: {
             component: SpotifyEmbed,
+          },
+          PostTags: {
+            component: PostTags,
           },
         },
       }}
