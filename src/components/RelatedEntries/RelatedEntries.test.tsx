@@ -12,7 +12,7 @@ import { postsSorted } from '@/mocks/postsSorted';
 describe('RelatedEntries', () => {
   render(
     <RelatedEntries
-      postType="book"
+      postType="library"
       posts={postsSorted}
       postsToShow={3}
       postsToLoad={3}
@@ -25,7 +25,7 @@ describe('RelatedEntries', () => {
   it('renders the correct amount of posts', () => {
     const { container } = render(
       <RelatedEntries
-        postType="book"
+        postType="library"
         posts={postsSorted}
         postsToShow={3}
         postsToLoad={3}
@@ -37,7 +37,7 @@ describe('RelatedEntries', () => {
   it('renders the related posts grid unchanged', () => {
     const { container } = render(
       <RelatedEntries
-        postType="book"
+        postType="library"
         posts={postsSorted}
         postsToShow={3}
         postsToLoad={3}

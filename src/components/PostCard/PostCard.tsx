@@ -48,7 +48,7 @@ const PostCard: React.FunctionComponent<Props> = ({ cardType, postMeta }) => {
               {cardOptions.content.excerpt}
             </p>
           </>
-        ) : cardType === 'book' ? (
+        ) : cardType === 'library' ? (
           <>
             <p className="small-uppercase">{cardOptions.content.bookAuthor}</p>
             <Link className="link--neutral" href={cardOptions.href}>

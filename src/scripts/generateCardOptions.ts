@@ -25,7 +25,7 @@ export const generateCardOptions = (
       },
     };
   }
-  if (cardType === 'book') {
+  if (cardType === 'library') {
     cardOptions = {
       href: postMeta.slug,
       image: {

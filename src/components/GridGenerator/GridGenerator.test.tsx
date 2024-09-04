@@ -12,7 +12,7 @@ import { postsSorted } from '@/mocks/postsSorted';
 describe('GridGenerator', () => {
   const { container } = render(
     <GridGenerator
-      postType="book"
+      postType="library"
       posts={postsSorted}
       postsToShow={3}
       postsToLoad={3}
