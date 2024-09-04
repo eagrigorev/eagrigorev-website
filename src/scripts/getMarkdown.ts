@@ -9,10 +9,46 @@ import { mapMatterDataToPageMeta, mapMatterDataToPostMeta } from './utils';
 import { Post, PostCategory } from '@/types/post';
 import { Page } from '@/types/page';
 import { Slug } from '@/types/slug';
+import { NavigationItem } from '@/types/navigation';
 import { URL } from '@/const/url';
+import {
+  JOURNAL_SLUGS,
+  LIBRARY_SLUGS,
+  WORKS_SLUGS,
+} from '@/const/categoriesSlugs';
 
-export const getPostsFromSingleCategory = (category: PostCategory): Post[] => {
-  const path: string = `${URL.POSTS}/${category}`;
+export const getWorksPostsFromSingleCategory = (
+  category: PostCategory
+): Post[] => {
+  const path: string = `${URL.WORKS}/${category}`;
+  return fs.readdirSync(path).map((file: string) => {
+    const markdown: string = fs.readFileSync(`${path}/${file}`, 'utf-8');
+    const { data, content } = matter(markdown);
+    return {
+      meta: mapMatterDataToPostMeta(data),
+      content,
+    };
+  });
+};
+
+export const getJournalPostsFromSingleCategory = (
+  category: PostCategory
+): Post[] => {
+  const path: string = `${URL.JOURNAL}/${category}`;
+  return fs.readdirSync(path).map((file: string) => {
+    const markdown: string = fs.readFileSync(`${path}/${file}`, 'utf-8');
+    const { data, content } = matter(markdown);
+    return {
+      meta: mapMatterDataToPostMeta(data),
+      content,
+    };
+  });
+};
+
+export const getLibraryPostsFromSingleCategory = (
+  category: PostCategory
+): Post[] => {
+  const path: string = `${URL.LIBRARY}/${category}`;
   return fs.readdirSync(path).map((file: string) => {
     const markdown: string = fs.readFileSync(`${path}/${file}`, 'utf-8');
     const { data, content } = matter(markdown);
@@ -25,10 +61,33 @@ export const getPostsFromSingleCategory = (category: PostCategory): Post[] => {
 
 export const getAllPosts = (): Post[] => {
   let allPosts: Post[] = [];
-  categoriesList.forEach((category: PostCategory) => {
-    allPosts.push(...getPostsFromSingleCategory(category));
+  WORKS_SLUGS.forEach((category: PostCategory) => {
+    allPosts.push(...getWorksPostsFromSingleCategory(category));
+  });
+  JOURNAL_SLUGS.forEach((category: PostCategory) => {
+    allPosts.push(...getJournalPostsFromSingleCategory(category));
+  });
+  LIBRARY_SLUGS.forEach((category: PostCategory) => {
+    allPosts.push(...getLibraryPostsFromSingleCategory(category));
   });
   return allPosts;
+};
+
+export const getAllTags = (): NavigationItem[] => {
+  let allPosts: Post[] = getAllPosts();
+  const tags: NavigationItem[] = [];
+  allPosts
+    .filter((post: Post) => post.meta.tags?.length)
+    .forEach((post: Post) => {
+      post.meta.tags.forEach((tag: string) =>
+        tags.push({ title: tag, url: `/${tag}` })
+      );
+    });
+  const uniqueTags: NavigationItem[] = tags.reduce(function (a, b) {
+    if (a.indexOf(b) < 0) a.push(b);
+    return a;
+  }, []);
+  return uniqueTags;
 };
 
 export const getPage = (file: string): Page => {
@@ -53,6 +112,9 @@ export const getPostsSlugs = (): Slug[] => {
       slug: category,
     })
   );
-  const slugs: Slug[] = [...postSlugs, ...categorySlugs];
+  const tagsSlugs: Slug[] = getAllTags().map((tag: NavigationItem) => ({
+    slug: `${tag.title}`,
+  }));
+  const slugs: Slug[] = [...postSlugs, ...categorySlugs, ...tagsSlugs];
   return slugs;
 };

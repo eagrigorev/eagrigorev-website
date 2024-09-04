@@ -12,12 +12,18 @@ import {
   PROJECTS_SUB_NAVIGATION,
   LIBRARY_SUB_NAVIGATION,
 } from '@/const/navigation';
-import { getAllPosts, getPostsSlugs } from '@/scripts/getMarkdown';
+import {
+  JOURNAL_SLUGS,
+  LIBRARY_SLUGS,
+  WORKS_SLUGS,
+} from '@/const/categoriesSlugs';
+import { getAllPosts, getAllTags, getPostsSlugs } from '@/scripts/getMarkdown';
 import { normalize } from '@/scripts/utils';
 import { categoriesList } from '@/scripts/getCategoriesList';
 import { Metadata } from 'next';
 import { Post } from '@/types/post';
 import { Slug } from '@/types/slug';
+import { NavigationItem } from '@/types/navigation';
 
 type Props = {
   params: Slug;
@@ -47,6 +53,7 @@ export function generateMetadata({ params }: Props): Metadata {
 const Page: React.FunctionComponent<Props> = (props) => {
   const slug: string = props.params.slug;
   const allPosts: Post[] = getAllPosts();
+  const allTags: NavigationItem[] = getAllTags();
   const post: Post | undefined = allPosts.find(
     (post) => post.meta.slug === slug
   );
@@ -54,9 +61,7 @@ const Page: React.FunctionComponent<Props> = (props) => {
     const postByCategory: Post | undefined = allPosts.find((post) => {
       return normalize(post.meta.category) === slug;
     });
-    if (
-      ['reading-this-year', 'want-to-read', 'years-of-reading'].includes(slug)
-    ) {
+    if (LIBRARY_SLUGS.includes(slug)) {
       return (
         <CategoryPageTemplate
           pageTitle={`Library: ${postByCategory.meta.category}.`}
@@ -68,10 +73,10 @@ const Page: React.FunctionComponent<Props> = (props) => {
           postsToLoad={6}
         />
       );
-    } else if (['illustrations', 'music-and-tabs'].includes(slug)) {
+    } else if (WORKS_SLUGS.includes(slug)) {
       return (
         <CategoryPageTemplate
-          pageTitle={`Portfolio: ${postByCategory.meta.category}.`}
+          pageTitle={`Works: ${postByCategory.meta.category}.`}
           navigationItems={PROJECTS_SUB_NAVIGATION}
           showAll={true}
           postType={postByCategory.meta.type}
@@ -80,7 +85,7 @@ const Page: React.FunctionComponent<Props> = (props) => {
           postsToLoad={6}
         />
       );
-    } else if (['notes'].includes(slug)) {
+    } else if (JOURNAL_SLUGS.includes(slug)) {
       return (
         <CategoryPageTemplate
           pageTitle={`Journal: ${postByCategory.meta.category}.`}

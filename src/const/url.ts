@@ -1,8 +1,8 @@
 export enum URL {
   BASE = 'https://eagrigorev.com',
-  POSTS = 'src/markdown/posts',
+  JOURNAL = 'src/markdown/journal',
+  LIBRARY = 'src/markdown/library',
   PAGES = 'src/markdown/pages',
+  WORKS = 'src/markdown/works',
   FEATURED_IMG = 'images/featured',
-  BOOK_IMG = 'images/books',
-  YEARS_OF_READING = 'images/books/years-of-reading',
 }
