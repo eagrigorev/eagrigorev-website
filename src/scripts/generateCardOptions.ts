@@ -25,7 +25,7 @@ export const generateCardOptions = (
       },
     };
   }
-  if (cardType === 'book') {
+  if (cardType === 'library') {
     cardOptions = {
       href: postMeta.slug,
       image: {
@@ -36,20 +36,6 @@ export const generateCardOptions = (
       },
       content: {
         bookAuthor: postMeta.bookAuthor,
-        title: postMeta.title,
-      },
-    };
-  }
-  if (cardType === 'booklist') {
-    cardOptions = {
-      href: postMeta.slug,
-      image: {
-        src: `/${URL.FEATURED_IMG}/${postMeta.featuredImage}`,
-        alt: postMeta.title,
-        width: 250,
-        height: 375,
-      },
-      content: {
         title: postMeta.title,
       },
     };

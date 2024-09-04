@@ -105,8 +105,8 @@ const Page: React.FunctionComponent<Props> = (props) => {
         showMeta={true}
         post={post}
         showRelatedEntries={true}
-        postsToShow={post.meta.type === 'booklist' ? 6 : 3}
-        postsToLoad={post.meta.type === 'booklist' ? 6 : 3}
+        postsToShow={post.meta.type === 'library' ? 6 : 3}
+        postsToLoad={post.meta.type === 'library' ? 6 : 3}
       />
     );
   } else {

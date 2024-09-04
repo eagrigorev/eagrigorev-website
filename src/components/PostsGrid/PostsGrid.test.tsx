@@ -11,7 +11,7 @@ import { render } from '@testing-library/react';
 describe('PostsGrid', () => {
   const { container } = render(
     <PostsGrid
-      postType="book"
+      postType="library"
       category="Want to Read"
       postsToShow={3}
       postsToLoad={3}

@@ -100,9 +100,9 @@ export const getPage = (file: string): Page => {
 };
 
 export const getPostsSlugs = (): Slug[] => {
-  const allPosts: Post[] = getAllPosts().filter((post: Post) => {
-    return post.meta.type !== 'book';
-  });
+  const allPosts: Post[] = getAllPosts().filter(
+    (post: Post) => !post.meta.slug.includes('http')
+  );
   generateRssFeed(allPosts);
   const postSlugs: Slug[] = allPosts.map((post: Post) => ({
     slug: post.meta.slug,
