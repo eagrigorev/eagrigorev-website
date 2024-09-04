@@ -1,12 +1,13 @@
 /* Utils */
+import { mapCategoriesToSlugs } from './utils';
 import {
-  JOURNAL_SLUGS,
-  LIBRARY_SLUGS,
-  WORKS_SLUGS,
-} from '@/const/categoriesSlugs';
+  JOURNAL_CATEGORIES,
+  LIBRARY_CATEGORIES,
+  WORKS_CATEGORIES,
+} from '@/const/categories';
 
 export const categoriesList: string[] = [
-  ...JOURNAL_SLUGS,
-  ...LIBRARY_SLUGS,
-  ...WORKS_SLUGS,
+  ...mapCategoriesToSlugs(JOURNAL_CATEGORIES),
+  ...mapCategoriesToSlugs(LIBRARY_CATEGORIES),
+  ...mapCategoriesToSlugs(WORKS_CATEGORIES),
 ];

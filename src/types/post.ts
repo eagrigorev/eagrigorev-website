@@ -1,9 +1,13 @@
-export type WorksCategories = 'Illustrations' | 'Music & Tabs';
-export type JournalCategories = 'Hobbies' | 'Notes';
-export type LibraryCategories =
-  | 'Reading this Year'
-  | 'Want to Read'
-  | 'Years of Reading';
+/* Utils */
+import {
+  JOURNAL_CATEGORIES,
+  LIBRARY_CATEGORIES,
+  WORKS_CATEGORIES,
+} from '@/const/categories';
+
+export type JournalCategories = (typeof JOURNAL_CATEGORIES)[number];
+export type LibraryCategories = (typeof LIBRARY_CATEGORIES)[number];
+export type WorksCategories = (typeof WORKS_CATEGORIES)[number];
 
 export type PostCategory =
   | WorksCategories

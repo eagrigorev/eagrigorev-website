@@ -7,16 +7,13 @@ import PostsGrid from '@/components/PostsGrid/PostsGrid';
 import SubNavigation from '@/components/SubNavigation/SubNavigation';
 
 /* Utils */
-import { PROJECTS_SUB_NAVIGATION } from '@/const/navigation';
+import { worksNavItems } from '@/scripts/getNavigationItems';
 
 const Home: React.FunctionComponent<{}> = () => {
   return (
     <main className="container">
       <PageTitle title="Software developer and artist based in Thessaloniki, Greece." />
-      <SubNavigation
-        navigationItems={PROJECTS_SUB_NAVIGATION}
-        showAll={false}
-      />
+      <SubNavigation navigationItems={worksNavItems} showAll={false} />
       <PostsGrid
         postType="project"
         category="all"
