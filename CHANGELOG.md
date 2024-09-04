@@ -1,3 +1,5 @@
+**v3.0.2** September 4, 2024 — New posts and category tweaks
+
 **v3.0.1** August 28, 2024 — Enabled blog page and added page infos
 
 **v3.0.0** July 29, 2024 — TypeScript and Jest migration
