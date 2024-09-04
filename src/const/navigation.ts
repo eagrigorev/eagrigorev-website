@@ -48,6 +48,10 @@ export const PROJECTS_SUB_NAVIGATION: NavigationItem[] = [
 
 export const LIBRARY_SUB_NAVIGATION: NavigationItem[] = [
   {
+    title: 'All',
+    url: '/library',
+  },
+  {
     title: 'Reading this Year',
     url: '/reading-this-year',
   },
