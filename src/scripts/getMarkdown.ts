@@ -5,17 +5,21 @@ import matter from 'gray-matter';
 /* Utils */
 import generateRssFeed from './generateRssFeed';
 import { categoriesList } from '@/scripts/getCategoriesList';
-import { mapMatterDataToPageMeta, mapMatterDataToPostMeta } from './utils';
+import {
+  mapCategoriesToSlugs,
+  mapMatterDataToPageMeta,
+  mapMatterDataToPostMeta,
+} from './utils';
 import { Post, PostCategory } from '@/types/post';
 import { Page } from '@/types/page';
 import { Slug } from '@/types/slug';
 import { NavigationItem } from '@/types/navigation';
 import { URL } from '@/const/url';
 import {
-  JOURNAL_SLUGS,
-  LIBRARY_SLUGS,
-  WORKS_SLUGS,
-} from '@/const/categoriesSlugs';
+  JOURNAL_CATEGORIES,
+  LIBRARY_CATEGORIES,
+  WORKS_CATEGORIES,
+} from '@/const/categories';
 
 export const getWorksPostsFromSingleCategory = (
   category: PostCategory
@@ -61,14 +65,14 @@ export const getLibraryPostsFromSingleCategory = (
 
 export const getAllPosts = (): Post[] => {
   let allPosts: Post[] = [];
-  WORKS_SLUGS.forEach((category: PostCategory) => {
-    allPosts.push(...getWorksPostsFromSingleCategory(category));
-  });
-  JOURNAL_SLUGS.forEach((category: PostCategory) => {
+  mapCategoriesToSlugs(JOURNAL_CATEGORIES).forEach((category: PostCategory) => {
     allPosts.push(...getJournalPostsFromSingleCategory(category));
   });
-  LIBRARY_SLUGS.forEach((category: PostCategory) => {
+  mapCategoriesToSlugs(LIBRARY_CATEGORIES).forEach((category: PostCategory) => {
     allPosts.push(...getLibraryPostsFromSingleCategory(category));
+  });
+  mapCategoriesToSlugs(WORKS_CATEGORIES).forEach((category: PostCategory) => {
+    allPosts.push(...getWorksPostsFromSingleCategory(category));
   });
   return allPosts;
 };
@@ -100,9 +104,9 @@ export const getPage = (file: string): Page => {
 };
 
 export const getPostsSlugs = (): Slug[] => {
-  const allPosts: Post[] = getAllPosts().filter((post: Post) => {
-    return post.meta.type !== 'book';
-  });
+  const allPosts: Post[] = getAllPosts().filter(
+    (post: Post) => !post.meta.slug.includes('http')
+  );
   generateRssFeed(allPosts);
   const postSlugs: Slug[] = allPosts.map((post: Post) => ({
     slug: post.meta.slug,

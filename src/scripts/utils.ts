@@ -2,6 +2,11 @@
 import { Post, PostCategory, PostMeta } from '@/types/post';
 import { PageMeta } from '@/types/page';
 import { Matter } from '@/types/matter';
+import {
+  JOURNAL_CATEGORIES,
+  LIBRARY_CATEGORIES,
+  WORKS_CATEGORIES,
+} from '@/const/categories';
 
 export const normalize = (category: PostCategory): string => {
   return category.toLowerCase().replace(/ /g, '-').replace('&', 'and');
@@ -37,4 +42,13 @@ export const mapMatterDataToPageMeta = (data: Matter): PageMeta => {
     title: data.title,
     slug: data.slug,
   };
+};
+
+export const mapCategoriesToSlugs = (
+  categories:
+    | typeof JOURNAL_CATEGORIES
+    | typeof LIBRARY_CATEGORIES
+    | typeof WORKS_CATEGORIES
+): string[] => {
+  return categories.map((category: PostCategory) => normalize(category));
 };
