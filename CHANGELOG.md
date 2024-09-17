@@ -1,3 +1,5 @@
+**v3.0.4** September 17, 2024 — Mocks update
+
 **v3.0.3** September 10, 2024 — Post types tweaks and library page updates
 
 **v3.0.2** September 4, 2024 — New posts and category tweaks

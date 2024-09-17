@@ -11,4 +11,5 @@ export const postMeta: PostMeta = {
   featuredImage: 'test.jpg',
   bookAuthor: undefined,
   excerpt: 'Test excerpt',
+  tags: undefined,
 };
