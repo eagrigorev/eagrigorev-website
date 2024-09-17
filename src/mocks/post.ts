@@ -10,6 +10,7 @@ export const post: Post = {
     type: 'project',
     category: 'Illustrations',
     featuredImage: 'test.jpg',
+    tags: ['tag1', 'tag2', 'tag3'],
   },
   content: 'Test content 1',
 };
