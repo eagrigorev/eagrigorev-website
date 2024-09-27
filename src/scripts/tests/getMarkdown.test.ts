@@ -6,7 +6,7 @@ import {
   getPostsSlugs,
 } from '../getMarkdown';
 import { Post } from '@/types/post';
-import { POSTS_AMOUNT, SLUGS_AMOUNT } from '@/const/global';
+import { AMOUNT } from '@/const/amount';
 
 describe('GetJournalPostsFromSingleCategory', () => {
   it('should get the correct posts category', () => {
@@ -20,7 +20,7 @@ describe('GetJournalPostsFromSingleCategory', () => {
 
 describe('GetAllPosts', () => {
   it('should get all posts', () => {
-    expect(getAllPosts().length).toBe(POSTS_AMOUNT);
+    expect(getAllPosts().length).toBe(AMOUNT.POSTS);
   });
 });
 
@@ -32,6 +32,6 @@ describe('GetPage', () => {
 
 describe('GetPostsSlugs', () => {
   it('should generate the correct slugs amount', () => {
-    expect(getPostsSlugs().length).toBe(SLUGS_AMOUNT);
+    expect(getPostsSlugs().length).toBe(AMOUNT.SLUGS);
   });
 });

@@ -19,6 +19,21 @@ export const postsUnsorted: Post[] = [
   },
   {
     meta: {
+      title: 'A Wild Sheep Chase (1982)',
+      slug: 'https://www.goodreads.com/book/show/11298.A_Wild_Sheep_Chase',
+      type: 'library',
+      category: 'Reading this Year',
+      datePublished: undefined,
+      dateEdited: 'September 27, 2024',
+      featuredImage: 'a-wild-sheep-chase.jpg',
+      bookAuthor: 'Haruki Murakami',
+      excerpt: undefined,
+      tags: undefined,
+    },
+    content: '',
+  },
+  {
+    meta: {
       title: 'Hardboiled & Hard Luck (1999)',
       slug: 'https://www.goodreads.com/book/show/50142.Hardboiled_Hard_Luck?ref=nav_sb_ss_1_11',
       type: 'library',
