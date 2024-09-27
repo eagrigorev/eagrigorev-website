@@ -16,8 +16,11 @@ export interface PostCardContent {
   excerpt?: string;
 }
 
+export type PostCardStyle = 'default' | 'default-with-excerpt' | 'small';
+
 export interface PostCard {
   href: string;
   image: PostCardImage;
   content: PostCardContent;
+  style: PostCardStyle;
 }

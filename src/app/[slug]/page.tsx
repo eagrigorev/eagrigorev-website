@@ -23,6 +23,7 @@ import {
   libraryNavItems,
   worksNavItems,
 } from '@/scripts/getNavigationItems';
+import { TITLE } from '@/const/title';
 
 type Props = {
   params: Slug;
@@ -62,7 +63,7 @@ const Page: React.FunctionComponent<Props> = (props) => {
     if (mapCategoriesToSlugs(LIBRARY_CATEGORIES).includes(slug)) {
       return (
         <CategoryPageTemplate
-          pageTitle={`Library: ${postByCategory.meta.category}.`}
+          pageTitle={`${TITLE.LIBRARY_CATEGORY} ${postByCategory.meta.category}.`}
           navigationItems={libraryNavItems}
           showAll={true}
           postType={postByCategory.meta.type}
@@ -86,7 +87,7 @@ const Page: React.FunctionComponent<Props> = (props) => {
     } else if (mapCategoriesToSlugs(JOURNAL_CATEGORIES).includes(slug)) {
       return (
         <CategoryPageTemplate
-          pageTitle={`Journal: ${postByCategory.meta.category}.`}
+          pageTitle={`${TITLE.JOURNAL_CATEGORY} ${postByCategory.meta.category}.`}
           navigationItems={journalNavItems}
           showAll={true}
           postType={postByCategory.meta.type}

@@ -1,14 +1,25 @@
 /* Utils */
-import { PostType, PostMeta } from '@/types/post';
+import {
+  PostMeta,
+  JournalCategories,
+  LibraryCategories,
+  WorksCategories,
+} from '@/types/post';
 import { PostCard } from '@/types/postCard';
 import { URL } from '@/const/url';
+import {
+  JOURNAL_CATEGORIES,
+  LIBRARY_CATEGORIES,
+  WORKS_CATEGORIES,
+} from '@/const/categories';
 
-export const generateCardOptions = (
-  cardType: PostType,
-  postMeta: PostMeta
-): PostCard => {
+export const generateCardOptions = (postMeta: PostMeta): PostCard => {
   let cardOptions: PostCard;
-  if (cardType === 'blogpost') {
+  if (
+    JOURNAL_CATEGORIES.find(
+      (category: JournalCategories) => category === postMeta.category
+    )
+  ) {
     cardOptions = {
       href: postMeta.slug,
       image: {
@@ -23,9 +34,14 @@ export const generateCardOptions = (
         category: postMeta.category,
         excerpt: postMeta.excerpt,
       },
+      style: 'default-with-excerpt',
     };
   }
-  if (cardType === 'library') {
+  if (
+    LIBRARY_CATEGORIES.find(
+      (category: LibraryCategories) => category === postMeta.category
+    )
+  ) {
     cardOptions = {
       href: postMeta.slug,
       image: {
@@ -38,9 +54,14 @@ export const generateCardOptions = (
         bookAuthor: postMeta.bookAuthor,
         title: postMeta.title,
       },
+      style: 'small',
     };
   }
-  if (cardType === 'project') {
+  if (
+    WORKS_CATEGORIES.find(
+      (category: WorksCategories) => category === postMeta.category
+    )
+  ) {
     cardOptions = {
       href: postMeta.slug,
       image: {
@@ -52,6 +73,7 @@ export const generateCardOptions = (
       content: {
         title: postMeta.title,
       },
+      style: 'default',
     };
   }
   return cardOptions;

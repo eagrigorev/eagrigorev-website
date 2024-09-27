@@ -9,20 +9,19 @@ import Link from 'next/link';
 import styles from './PostCard.module.scss';
 import { generateCardOptions } from '@/scripts/generateCardOptions';
 import { normalize } from '@/scripts/utils';
-import { PostType, PostMeta } from '@/types/post';
+import { PostMeta } from '@/types/post';
 
 type Props = {
-  cardType: PostType;
   postMeta: PostMeta;
 };
 
-const PostCard: React.FunctionComponent<Props> = ({ cardType, postMeta }) => {
-  const cardOptions = generateCardOptions(cardType, postMeta);
+const PostCard: React.FunctionComponent<Props> = ({ postMeta }) => {
+  const cardOptions = generateCardOptions(postMeta);
   return (
-    <article className={styles[`wrapper--${cardType}`]}>
+    <article className={styles[`wrapper--${cardOptions.style}`]}>
       <Link className="link--neutral" href={cardOptions.href} tabIndex={-1}>
         <Image
-          className={`${styles[`image--${cardType}`]} transition--opacity`}
+          className={`${styles[`image--${cardOptions.style}`]} transition--opacity`}
           src={cardOptions.image.src}
           alt={cardOptions.image.alt}
           width={cardOptions.image.width}
@@ -30,12 +29,14 @@ const PostCard: React.FunctionComponent<Props> = ({ cardType, postMeta }) => {
         />
       </Link>
       <div className={styles['description']}>
-        {cardType === 'blogpost' ? (
+        {cardOptions.style === 'default-with-excerpt' ? (
           <>
             <Link className="link--neutral" href={cardOptions.href}>
               <h3 className="heading--h3">{cardOptions.content.title}</h3>
             </Link>
-            <div className={`${styles['meta--blogpost']} small-uppercase`}>
+            <div
+              className={`${styles['meta--default-with-excerpt']} small-uppercase`}
+            >
               <p>{cardOptions.content.dateEdited}</p>
               <Link
                 className="link--darker transition--color"
@@ -44,11 +45,13 @@ const PostCard: React.FunctionComponent<Props> = ({ cardType, postMeta }) => {
                 {cardOptions.content.category}
               </Link>
             </div>
-            <p className={`${styles['excerpt--blogpost']} paragraph--caption`}>
+            <p
+              className={`${styles['excerpt--default-with-excerpt']} paragraph--caption`}
+            >
               {cardOptions.content.excerpt}
             </p>
           </>
-        ) : cardType === 'library' ? (
+        ) : cardOptions.style === 'small' ? (
           <>
             <p className="small-uppercase">{cardOptions.content.bookAuthor}</p>
             <Link className="link--neutral" href={cardOptions.href}>
@@ -57,9 +60,9 @@ const PostCard: React.FunctionComponent<Props> = ({ cardType, postMeta }) => {
               </h3>
             </Link>
           </>
-        ) : cardType === 'project' ? (
+        ) : cardOptions.style === 'default' ? (
           <Link className="link--neutral" href={cardOptions.href}>
-            <h3 className={`${styles['title--project']} paragraph--regular`}>
+            <h3 className={`${styles['title--default']} paragraph--regular`}>
               {cardOptions.content.title}
             </h3>
           </Link>
