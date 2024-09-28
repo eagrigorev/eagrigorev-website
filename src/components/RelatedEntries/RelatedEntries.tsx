@@ -6,17 +6,15 @@ import GridGenerator from '../GridGenerator/GridGenerator';
 
 /* Utils */
 import styles from './RelatedEntries.module.scss';
-import { Post, PostType } from '@/types/post';
+import { Post } from '@/types/post';
 
 type Props = {
-  postType: PostType;
   posts: Post[];
   postsToShow: number;
   postsToLoad: number;
 };
 
 const RelatedEntries: React.FunctionComponent<Props> = ({
-  postType,
   posts,
   postsToShow,
   postsToLoad,

@@ -8,13 +8,12 @@ import SubNavigation from '@/components/SubNavigation/SubNavigation';
 
 /* Utils */
 import { NavigationItem } from '@/types/navigationItem';
-import { PostType, PostCategory } from '@/types/post';
+import { PostCategory } from '@/types/post';
 
 type Props = {
   pageTitle: string;
   navigationItems: NavigationItem[];
   showAll: boolean;
-  postType: PostType;
   category: PostCategory | 'Journal' | 'Library' | 'Works';
   postsToShow: number;
   postsToLoad: number;
@@ -24,7 +23,6 @@ const CategoryPageTemplate: React.FunctionComponent<Props> = ({
   pageTitle,
   navigationItems,
   showAll,
-  postType,
   category,
   postsToShow,
   postsToLoad,
@@ -34,7 +32,6 @@ const CategoryPageTemplate: React.FunctionComponent<Props> = ({
       <PageTitle title={pageTitle} />
       <SubNavigation navigationItems={navigationItems} showAll={showAll} />
       <PostsGrid
-        postType={postType}
         category={category}
         postsToShow={postsToShow}
         postsToLoad={postsToLoad}

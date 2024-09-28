@@ -3,7 +3,6 @@ import { getAllPosts } from '@/scripts/getMarkdown';
 import { sortPostsDesc } from './utils';
 import {
   Post,
-  PostType,
   PostCategory,
   JournalCategories,
   LibraryCategories,
@@ -16,7 +15,6 @@ import {
 } from '@/const/categories';
 
 export const getSortedPosts = (
-  postType: PostType,
   category: PostCategory | 'Journal' | 'Library' | 'Works',
   postToExclude = ''
 ): Post[] => {

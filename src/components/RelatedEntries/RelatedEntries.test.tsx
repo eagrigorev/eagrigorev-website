@@ -11,12 +11,7 @@ import { postsSorted } from '@/mocks/postsSorted';
 
 describe('RelatedEntries', () => {
   render(
-    <RelatedEntries
-      postType="library"
-      posts={postsSorted}
-      postsToShow={3}
-      postsToLoad={3}
-    />
+    <RelatedEntries posts={postsSorted} postsToShow={3} postsToLoad={3} />
   );
   it('renders related entries text', () => {
     const heading = screen.getByText('Related Entries:');
@@ -24,24 +19,14 @@ describe('RelatedEntries', () => {
   });
   it('renders the correct amount of posts', () => {
     const { container } = render(
-      <RelatedEntries
-        postType="library"
-        posts={postsSorted}
-        postsToShow={3}
-        postsToLoad={3}
-      />
+      <RelatedEntries posts={postsSorted} postsToShow={3} postsToLoad={3} />
     );
     const postCards = container.querySelectorAll('article');
     expect(postCards.length).toBe(3);
   });
   it('renders the related posts grid unchanged', () => {
     const { container } = render(
-      <RelatedEntries
-        postType="library"
-        posts={postsSorted}
-        postsToShow={3}
-        postsToLoad={3}
-      />
+      <RelatedEntries posts={postsSorted} postsToShow={3} postsToLoad={3} />
     );
     expect(container).toMatchSnapshot();
   });

@@ -18,7 +18,6 @@ const Journal: React.FunctionComponent<{}> = () => {
       pageTitle="Journal: A Space for the Unbound."
       navigationItems={journalNavItems}
       showAll={false}
-      postType="blogpost"
       category="Journal"
       postsToShow={6}
       postsToLoad={6}
