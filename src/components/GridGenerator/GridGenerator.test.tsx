@@ -11,12 +11,7 @@ import { postsSorted } from '@/mocks/postsSorted';
 
 describe('GridGenerator', () => {
   const { container } = render(
-    <GridGenerator
-      postType="library"
-      posts={postsSorted}
-      postsToShow={3}
-      postsToLoad={3}
-    />
+    <GridGenerator posts={postsSorted} postsToShow={3} postsToLoad={3} />
   );
   it('renders the correct amount of posts', () => {
     const postCards = container.querySelectorAll('article');

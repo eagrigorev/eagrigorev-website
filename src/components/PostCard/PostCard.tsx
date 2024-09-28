@@ -9,20 +9,29 @@ import Link from 'next/link';
 import styles from './PostCard.module.scss';
 import { generateCardOptions } from '@/scripts/generateCardOptions';
 import { normalize } from '@/scripts/utils';
-import { PostType, PostMeta } from '@/types/post';
+import {
+  PostMeta,
+  JournalCategories,
+  LibraryCategories,
+  WorksCategories,
+} from '@/types/post';
+import {
+  JOURNAL_CATEGORIES,
+  LIBRARY_CATEGORIES,
+  WORKS_CATEGORIES,
+} from '@/const/categories';
 
 type Props = {
-  cardType: PostType;
   postMeta: PostMeta;
 };
 
-const PostCard: React.FunctionComponent<Props> = ({ cardType, postMeta }) => {
-  const cardOptions = generateCardOptions(cardType, postMeta);
+const PostCard: React.FunctionComponent<Props> = ({ postMeta }) => {
+  const cardOptions = generateCardOptions(postMeta);
   return (
-    <article className={styles[`wrapper--${cardType}`]}>
+    <article className={styles[`wrapper--${cardOptions.style}`]}>
       <Link className="link--neutral" href={cardOptions.href} tabIndex={-1}>
         <Image
-          className={`${styles[`image--${cardType}`]} transition--opacity`}
+          className={`${styles[`image--${cardOptions.style}`]} transition--opacity`}
           src={cardOptions.image.src}
           alt={cardOptions.image.alt}
           width={cardOptions.image.width}
@@ -30,7 +39,9 @@ const PostCard: React.FunctionComponent<Props> = ({ cardType, postMeta }) => {
         />
       </Link>
       <div className={styles['description']}>
-        {cardType === 'blogpost' ? (
+        {JOURNAL_CATEGORIES.find(
+          (category: JournalCategories) => category === postMeta.category
+        ) ? (
           <>
             <Link className="link--neutral" href={cardOptions.href}>
               <h3 className="heading--h3">{cardOptions.content.title}</h3>
@@ -48,7 +59,9 @@ const PostCard: React.FunctionComponent<Props> = ({ cardType, postMeta }) => {
               {cardOptions.content.excerpt}
             </p>
           </>
-        ) : cardType === 'library' ? (
+        ) : LIBRARY_CATEGORIES.find(
+            (category: LibraryCategories) => category === postMeta.category
+          ) ? (
           <>
             <p className="small-uppercase">{cardOptions.content.bookAuthor}</p>
             <Link className="link--neutral" href={cardOptions.href}>
@@ -57,7 +70,9 @@ const PostCard: React.FunctionComponent<Props> = ({ cardType, postMeta }) => {
               </h3>
             </Link>
           </>
-        ) : cardType === 'project' ? (
+        ) : WORKS_CATEGORIES.find(
+            (category: WorksCategories) => category === postMeta.category
+          ) ? (
           <Link className="link--neutral" href={cardOptions.href}>
             <h3 className={`${styles['title--project']} paragraph--regular`}>
               {cardOptions.content.title}

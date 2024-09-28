@@ -15,7 +15,6 @@ describe('CategoryPageTemplate', () => {
       pageTitle="Test Page"
       navigationItems={navigationItems}
       showAll={true}
-      postType="project"
       category="Illustrations"
       postsToShow={3}
       postsToLoad={3}

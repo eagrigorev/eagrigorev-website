@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 /* Utils */
 import styles from './SubNavigation.module.scss';
-import { NavigationItem } from '@/types/navigation';
+import { NavigationItem } from '@/types/navigationItem';
 
 type Props = {
   navigationItems: NavigationItem[];

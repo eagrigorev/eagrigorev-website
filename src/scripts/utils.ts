@@ -26,7 +26,6 @@ export const mapMatterDataToPostMeta = (data: Matter): PostMeta => {
   return {
     title: data.title,
     slug: data.slug,
-    type: data.type,
     category: data.category,
     datePublished: data.datePublished,
     dateEdited: data.dateEdited,
