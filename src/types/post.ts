@@ -14,12 +14,11 @@ export type PostCategory =
   | JournalCategories
   | LibraryCategories;
 
-export type PostType = 'blogpost' | 'library' | 'project';
+export type ParentCategories = 'Journal' | 'Library' | 'Works';
 
 export interface PostMeta {
   title: string;
   slug: string;
-  type: PostType;
   category: PostCategory;
   datePublished?: string;
   dateEdited: string;

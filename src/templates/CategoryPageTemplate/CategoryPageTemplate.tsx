@@ -8,13 +8,13 @@ import SubNavigation from '@/components/SubNavigation/SubNavigation';
 
 /* Utils */
 import { NavigationItem } from '@/types/navigationItem';
-import { PostCategory } from '@/types/post';
+import { ParentCategories, PostCategory } from '@/types/post';
 
 type Props = {
   pageTitle: string;
   navigationItems: NavigationItem[];
   showAll: boolean;
-  category: PostCategory | 'Journal' | 'Library' | 'Works';
+  category: PostCategory | ParentCategories;
   postsToShow: number;
   postsToLoad: number;
 };

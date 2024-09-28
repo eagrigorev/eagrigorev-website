@@ -7,7 +7,6 @@ export const post: Post = {
     slug: 'test-slug',
     datePublished: 'June 30, 2022',
     dateEdited: 'July 25, 2023',
-    type: 'project',
     category: 'Illustrations',
     featuredImage: 'test.jpg',
     tags: ['tag1', 'tag2', 'tag3'],

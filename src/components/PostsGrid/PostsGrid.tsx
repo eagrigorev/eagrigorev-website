@@ -6,10 +6,10 @@ import GridGenerator from '../GridGenerator/GridGenerator';
 
 /* Utils */
 import { getSortedPosts } from '@/scripts/getPosts';
-import { Post, PostCategory } from '@/types/post';
+import { ParentCategories, Post, PostCategory } from '@/types/post';
 
 type Props = {
-  category: PostCategory | 'Journal' | 'Library' | 'Works';
+  category: PostCategory | ParentCategories;
   postsToShow: number;
   postsToLoad: number;
 };

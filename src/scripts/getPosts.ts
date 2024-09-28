@@ -7,6 +7,7 @@ import {
   JournalCategories,
   LibraryCategories,
   WorksCategories,
+  ParentCategories,
 } from '@/types/post';
 import {
   JOURNAL_CATEGORIES,
@@ -15,7 +16,7 @@ import {
 } from '@/const/categories';
 
 export const getSortedPosts = (
-  category: PostCategory | 'Journal' | 'Library' | 'Works',
+  category: PostCategory | ParentCategories,
   postToExclude = ''
 ): Post[] => {
   const allPosts: Post[] = getAllPosts();
