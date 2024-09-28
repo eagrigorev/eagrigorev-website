@@ -27,7 +27,6 @@ const RelatedEntries: React.FunctionComponent<Props> = ({
         <h2 className="paragraph--bolder">Related Entries:</h2>
         <div>
           <GridGenerator
-            postType={postType}
             posts={posts}
             postsToShow={postsToShow}
             postsToLoad={postsToLoad}

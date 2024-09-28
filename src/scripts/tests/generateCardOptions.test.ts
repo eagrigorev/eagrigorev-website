@@ -5,6 +5,6 @@ import { postCard } from '@/mocks/postCard';
 
 describe('GenerateCardOptions', () => {
   it('should generate the proper card object', () => {
-    expect(generateCardOptions('blogpost', postMeta)).toStrictEqual(postCard);
+    expect(generateCardOptions(postMeta)).toStrictEqual(postCard);
   });
 });

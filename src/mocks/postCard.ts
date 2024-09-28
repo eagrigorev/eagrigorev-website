@@ -17,4 +17,5 @@ export const postCard: PostCard = {
     category: postMeta.category,
     excerpt: postMeta.excerpt,
   },
+  style: 'default-with-excerpt',
 };

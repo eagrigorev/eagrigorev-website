@@ -4,7 +4,7 @@
 }
 
 .wrapper {
-  &--library {
+  &--small {
     grid-column: span 2;
 
     @media only screen and (width <= 480px) {
@@ -12,8 +12,8 @@
     }
   }
 
-  &--blogpost,
-  &--project {
+  &--default-with-excerpt,
+  &--default {
     grid-column: span 4;
 
     @media only screen and (width <= 768px) {
@@ -27,14 +27,14 @@
 }
 
 .image {
-  &--library {
+  &--small {
     @extend %image;
 
     aspect-ratio: 2 / 3;
   }
 
-  &--blogpost,
-  &--project {
+  &--default-with-excerpt,
+  &--default {
     @extend %image;
 
     aspect-ratio: 4 / 3;
@@ -46,20 +46,20 @@
 }
 
 .title {
-  &--project {
+  &--default {
     text-align: right;
   }
 }
 
 .meta {
-  &--blogpost {
+  &--default-with-excerpt {
     display: flex;
     gap: var(--space-30-40);
   }
 }
 
 .excerpt {
-  &--blogpost {
+  &--default-with-excerpt {
     padding-top: var(--space-10-15);
     color: var(--black);
   }

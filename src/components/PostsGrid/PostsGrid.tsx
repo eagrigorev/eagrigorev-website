@@ -25,7 +25,6 @@ const PostsGrid: React.FunctionComponent<Props> = ({
   return (
     <section>
       <GridGenerator
-        postType={postType}
         posts={allPosts}
         postsToShow={postsToShow}
         postsToLoad={postsToLoad}
