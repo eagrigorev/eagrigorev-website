@@ -55,9 +55,6 @@ const Page: React.FunctionComponent<Props> = (props) => {
   const post: Post | undefined = allPosts.find(
     (post) => post.meta.slug === slug
   );
-  const isLibraryCategory = mapCategoriesToSlugs(LIBRARY_CATEGORIES).includes(
-    normalize(post.meta.category)
-  );
   if (categoriesList.includes(slug)) {
     const postByCategory: Post | undefined = allPosts.find((post) => {
       return normalize(post.meta.category) === slug;
@@ -103,8 +100,20 @@ const Page: React.FunctionComponent<Props> = (props) => {
         showMeta={true}
         post={post}
         showRelatedEntries={true}
-        postsToShow={isLibraryCategory ? 6 : 3}
-        postsToLoad={isLibraryCategory ? 6 : 3}
+        postsToShow={
+          mapCategoriesToSlugs(LIBRARY_CATEGORIES).includes(
+            normalize(post.meta.category)
+          )
+            ? 6
+            : 3
+        }
+        postsToLoad={
+          mapCategoriesToSlugs(LIBRARY_CATEGORIES).includes(
+            normalize(post.meta.category)
+          )
+            ? 6
+            : 3
+        }
       />
     );
   } else {
