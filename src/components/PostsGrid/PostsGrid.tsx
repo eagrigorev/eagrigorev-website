@@ -10,7 +10,7 @@ import { Post, PostType, PostCategory } from '@/types/post';
 
 type Props = {
   postType: PostType;
-  category: PostCategory | 'all';
+  category: PostCategory | 'Journal' | 'Library' | 'Works';
   postsToShow: number;
   postsToLoad: number;
 };

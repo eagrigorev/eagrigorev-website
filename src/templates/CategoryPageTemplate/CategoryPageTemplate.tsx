@@ -7,7 +7,7 @@ import PostsGrid from '@/components/PostsGrid/PostsGrid';
 import SubNavigation from '@/components/SubNavigation/SubNavigation';
 
 /* Utils */
-import { NavigationItem } from '@/types/navigation';
+import { NavigationItem } from '@/types/navigationItem';
 import { PostType, PostCategory } from '@/types/post';
 
 type Props = {
@@ -15,7 +15,7 @@ type Props = {
   navigationItems: NavigationItem[];
   showAll: boolean;
   postType: PostType;
-  category: PostCategory | 'all';
+  category: PostCategory | 'Journal' | 'Library' | 'Works';
   postsToShow: number;
   postsToLoad: number;
 };

@@ -13,7 +13,7 @@ import {
 import { Post, PostCategory } from '@/types/post';
 import { Page } from '@/types/page';
 import { Slug } from '@/types/slug';
-import { NavigationItem } from '@/types/navigation';
+import { NavigationItem } from '@/types/navigationItem';
 import { URL } from '@/const/url';
 import {
   JOURNAL_CATEGORIES,

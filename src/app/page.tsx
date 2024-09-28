@@ -16,7 +16,7 @@ const Home: React.FunctionComponent<{}> = () => {
       <SubNavigation navigationItems={worksNavItems} showAll={false} />
       <PostsGrid
         postType="project"
-        category="all"
+        category="Works"
         postsToShow={6}
         postsToLoad={6}
       />
