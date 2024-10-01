@@ -7,18 +7,14 @@ import GridGenerator from '../GridGenerator/GridGenerator';
 /* Utils */
 import styles from './RelatedEntries.module.scss';
 import { Post } from '@/types/post';
+import { calculatePostsToShowAndLoad } from '@/scripts/utils';
 
 type Props = {
   posts: Post[];
-  postsToShow: number;
-  postsToLoad: number;
 };
 
-const RelatedEntries: React.FunctionComponent<Props> = ({
-  posts,
-  postsToShow,
-  postsToLoad,
-}) => {
+const RelatedEntries: React.FunctionComponent<Props> = ({ posts }) => {
+  const postsAmount = calculatePostsToShowAndLoad(posts);
   return (
     <section className={styles['wrapper']}>
       <div className="container">
@@ -26,8 +22,8 @@ const RelatedEntries: React.FunctionComponent<Props> = ({
         <div>
           <GridGenerator
             posts={posts}
-            postsToShow={postsToShow}
-            postsToLoad={postsToLoad}
+            postsToShow={postsAmount.toShowInRelated}
+            postsToLoad={postsAmount.toLoadInRelated}
           />
         </div>
       </div>

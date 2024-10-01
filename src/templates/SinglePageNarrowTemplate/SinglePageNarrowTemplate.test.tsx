@@ -16,8 +16,6 @@ describe('SinglePageNarrowTemplate', () => {
       showMeta={true}
       post={post}
       showRelatedEntries={true}
-      postsToShow={3}
-      postsToLoad={6}
     />
   );
   it('renders the post content', () => {
@@ -31,8 +29,6 @@ describe('SinglePageNarrowTemplate', () => {
         showMeta={true}
         post={post}
         showRelatedEntries={true}
-        postsToShow={3}
-        postsToLoad={6}
       />
     );
     expect(container).toMatchSnapshot();

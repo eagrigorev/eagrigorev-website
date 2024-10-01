@@ -1,5 +1,12 @@
 /* Utils */
-import { Post, PostCategory, PostMeta } from '@/types/post';
+import {
+  Post,
+  PostCategory,
+  PostMeta,
+  JournalCategories,
+  LibraryCategories,
+  WorksCategories,
+} from '@/types/post';
 import { PageMeta } from '@/types/page';
 import { Matter } from '@/types/matter';
 import {
@@ -50,4 +57,38 @@ export const mapCategoriesToSlugs = (
     | typeof WORKS_CATEGORIES
 ): string[] => {
   return categories.map((category: PostCategory) => normalize(category));
+};
+
+export const calculatePostsToShowAndLoad = (posts: Post[]) => {
+  let postsAmount = {
+    toShowInGrid: 0,
+    toLoadInGrid: 0,
+    toShowInRelated: 0,
+    toLoadInRelated: 0,
+  };
+  const postCategory = posts[0].meta.category;
+  if (
+    JOURNAL_CATEGORIES.find(
+      (category: JournalCategories) => category === postCategory
+    ) ||
+    WORKS_CATEGORIES.find(
+      (category: WorksCategories) => category === postCategory
+    )
+  ) {
+    postsAmount.toShowInGrid = 6;
+    postsAmount.toLoadInGrid = 3;
+    postsAmount.toShowInRelated = 3;
+    postsAmount.toLoadInRelated = 3;
+  }
+  if (
+    LIBRARY_CATEGORIES.find(
+      (category: LibraryCategories) => category === postCategory
+    )
+  ) {
+    postsAmount.toShowInGrid = 12;
+    postsAmount.toLoadInGrid = 6;
+    postsAmount.toShowInRelated = 6;
+    postsAmount.toLoadInRelated = 6;
+  }
+  return postsAmount;
 };

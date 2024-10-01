@@ -19,8 +19,6 @@ const Journal: React.FunctionComponent<{}> = () => {
       navigationItems={libraryNavItems}
       showAll={false}
       category="Library"
-      postsToShow={12}
-      postsToLoad={6}
     />
   );
 };

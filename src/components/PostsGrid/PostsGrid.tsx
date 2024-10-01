@@ -7,25 +7,21 @@ import GridGenerator from '../GridGenerator/GridGenerator';
 /* Utils */
 import { getSortedPosts } from '@/scripts/getPosts';
 import { ParentCategories, Post, PostCategory } from '@/types/post';
+import { calculatePostsToShowAndLoad } from '@/scripts/utils';
 
 type Props = {
   category: PostCategory | ParentCategories;
-  postsToShow: number;
-  postsToLoad: number;
 };
 
-const PostsGrid: React.FunctionComponent<Props> = ({
-  category,
-  postsToShow,
-  postsToLoad,
-}) => {
+const PostsGrid: React.FunctionComponent<Props> = ({ category }) => {
   const allPosts: Post[] = getSortedPosts(category);
+  const postsAmount = calculatePostsToShowAndLoad(allPosts);
   return (
     <section>
       <GridGenerator
         posts={allPosts}
-        postsToShow={postsToShow}
-        postsToLoad={postsToLoad}
+        postsToShow={postsAmount.toShowInGrid}
+        postsToLoad={postsAmount.toLoadInGrid}
       />
     </section>
   );
