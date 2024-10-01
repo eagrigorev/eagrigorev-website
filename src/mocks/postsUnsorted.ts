@@ -4,6 +4,20 @@ import { Post } from '@/types/post';
 export const postsUnsorted: Post[] = [
   {
     meta: {
+      title: 'A Wild Sheep Chase (1982)',
+      slug: 'https://www.goodreads.com/book/show/11298.A_Wild_Sheep_Chase',
+      category: 'Reading this Year',
+      datePublished: undefined,
+      dateEdited: 'September 27, 2024',
+      featuredImage: 'a-wild-sheep-chase.jpg',
+      bookAuthor: 'Haruki Murakami',
+      excerpt: undefined,
+      tags: undefined,
+    },
+    content: '',
+  },
+  {
+    meta: {
       title: 'Hear the Wind Sing (1979)',
       slug: 'https://www.goodreads.com/book/show/226973.Hear_the_Wind_Sing',
       category: 'Reading this Year',
