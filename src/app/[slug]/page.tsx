@@ -65,10 +65,7 @@ const Page: React.FunctionComponent<Props> = (props) => {
           pageTitle={`Library: ${postByCategory.meta.category}.`}
           navigationItems={libraryNavItems}
           showAll={true}
-          postType={postByCategory.meta.type}
           category={postByCategory.meta.category}
-          postsToShow={12}
-          postsToLoad={6}
         />
       );
     } else if (mapCategoriesToSlugs(WORKS_CATEGORIES).includes(slug)) {
@@ -77,10 +74,7 @@ const Page: React.FunctionComponent<Props> = (props) => {
           pageTitle={`Works: ${postByCategory.meta.category}.`}
           navigationItems={worksNavItems}
           showAll={true}
-          postType={postByCategory.meta.type}
           category={postByCategory.meta.category}
-          postsToShow={6}
-          postsToLoad={6}
         />
       );
     } else if (mapCategoriesToSlugs(JOURNAL_CATEGORIES).includes(slug)) {
@@ -89,10 +83,7 @@ const Page: React.FunctionComponent<Props> = (props) => {
           pageTitle={`Journal: ${postByCategory.meta.category}.`}
           navigationItems={journalNavItems}
           showAll={true}
-          postType={postByCategory.meta.type}
           category={postByCategory.meta.category}
-          postsToShow={6}
-          postsToLoad={6}
         />
       );
     }
@@ -103,8 +94,6 @@ const Page: React.FunctionComponent<Props> = (props) => {
         showMeta={true}
         post={post}
         showRelatedEntries={true}
-        postsToShow={post.meta.type === 'library' ? 6 : 3}
-        postsToLoad={post.meta.type === 'library' ? 6 : 3}
       />
     );
   } else {

@@ -7,7 +7,7 @@ import SocialIcons from '@/components/SocialIcons/SocialIcons';
 
 /* Utils */
 import styles from './DesktopNavigation.module.scss';
-import { NavigationItem } from '@/types/navigation';
+import { NavigationItem } from '@/types/navigationItem';
 import { topNavItems } from '@/scripts/getNavigationItems';
 
 const DesktopNavigation: React.FunctionComponent<{}> = () => {

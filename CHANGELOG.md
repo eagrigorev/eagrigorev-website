@@ -1,3 +1,5 @@
+**v3.0.5** October 1, 2024 — Props and card refactoring
+
 **v3.0.4** September 17, 2024 — Mocks update
 
 **v3.0.3** September 10, 2024 — Post types tweaks and library page updates

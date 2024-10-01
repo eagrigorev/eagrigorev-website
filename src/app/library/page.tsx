@@ -18,10 +18,7 @@ const Journal: React.FunctionComponent<{}> = () => {
       pageTitle="Library."
       navigationItems={libraryNavItems}
       showAll={false}
-      postType="library"
-      category="all"
-      postsToShow={12}
-      postsToLoad={6}
+      category="Library"
     />
   );
 };

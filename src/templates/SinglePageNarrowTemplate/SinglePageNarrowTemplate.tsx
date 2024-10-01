@@ -18,8 +18,6 @@ type Props = {
   post?: Post;
   page?: Page;
   showRelatedEntries: boolean;
-  postsToShow: number;
-  postsToLoad: number;
 };
 
 const SinglePageNarrowTemplate: React.FunctionComponent<Props> = ({
@@ -28,15 +26,9 @@ const SinglePageNarrowTemplate: React.FunctionComponent<Props> = ({
   post,
   page,
   showRelatedEntries,
-  postsToShow,
-  postsToLoad,
 }) => {
   if (post) {
-    const relatedPosts = getSortedPosts(
-      post.meta.type,
-      post.meta.category,
-      post.meta.title
-    );
+    const relatedPosts = getSortedPosts(post.meta.category, post.meta.title);
     return (
       <main>
         <section className="container">
@@ -52,12 +44,7 @@ const SinglePageNarrowTemplate: React.FunctionComponent<Props> = ({
           </div>
         </section>
         {relatedPosts.length && showRelatedEntries ? (
-          <RelatedEntries
-            postType={post.meta.type}
-            posts={relatedPosts}
-            postsToShow={postsToShow}
-            postsToLoad={postsToLoad}
-          />
+          <RelatedEntries posts={relatedPosts} />
         ) : null}
       </main>
     );

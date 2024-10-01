@@ -10,9 +10,7 @@ import { render } from '@testing-library/react';
 import { postMeta } from '@/mocks/postMeta';
 
 describe('PostCard', () => {
-  const { container } = render(
-    <PostCard cardType="blogpost" postMeta={postMeta} />
-  );
+  const { container } = render(<PostCard postMeta={postMeta} />);
   it('renders the correct card width', () => {
     const image = container.querySelector('img');
     expect(image.width).toBe(440);

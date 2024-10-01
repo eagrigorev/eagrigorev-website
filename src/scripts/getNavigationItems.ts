@@ -1,10 +1,10 @@
 /* Utils */
-import { NavigationItem } from '@/types/navigation';
+import { NavigationItem } from '@/types/navigationItem';
 import {
   JournalCategories,
   LibraryCategories,
-  PostType,
   WorksCategories,
+  ParentCategories,
 } from '@/types/post';
 import {
   JOURNAL_CATEGORIES,
@@ -13,12 +13,14 @@ import {
 } from '@/const/categories';
 import { normalize } from './utils';
 
-const getNavigationItems = (postType: PostType): NavigationItem[] => {
+const getNavigationItems = (
+  parentCategory: ParentCategories
+): NavigationItem[] => {
   const navigationItems: NavigationItem[] = [];
   const categories =
-    postType === 'blogpost'
+    parentCategory === 'Journal'
       ? JOURNAL_CATEGORIES
-      : postType === 'library'
+      : parentCategory === 'Library'
         ? LIBRARY_CATEGORIES
         : WORKS_CATEGORIES;
   categories.forEach(
@@ -37,7 +39,7 @@ export const journalNavItems: NavigationItem[] = [
     title: 'All',
     url: '/journal',
   },
-  ...getNavigationItems('blogpost'),
+  ...getNavigationItems('Journal'),
 ];
 
 export const libraryNavItems: NavigationItem[] = [
@@ -45,7 +47,7 @@ export const libraryNavItems: NavigationItem[] = [
     title: 'All',
     url: '/library',
   },
-  ...getNavigationItems('library'),
+  ...getNavigationItems('Library'),
 ];
 
 export const worksNavItems: NavigationItem[] = [
@@ -53,7 +55,7 @@ export const worksNavItems: NavigationItem[] = [
     title: 'All',
     url: '/',
   },
-  ...getNavigationItems('project'),
+  ...getNavigationItems('Works'),
 ];
 
 export const topNavItems: NavigationItem[] = [

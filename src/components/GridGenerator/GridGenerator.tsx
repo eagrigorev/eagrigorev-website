@@ -9,17 +9,15 @@ import PostCard from '@/components/PostCard/PostCard';
 
 /* Utils */
 import styles from './GridGenerator.module.scss';
-import { Post, PostType } from '@/types/post';
+import { Post } from '@/types/post';
 
 type Props = {
-  postType: PostType;
   posts: Post[];
   postsToShow: number;
   postsToLoad: number;
 };
 
 const GridGenerator: React.FunctionComponent<Props> = ({
-  postType,
   posts,
   postsToShow,
   postsToLoad,
@@ -36,7 +34,7 @@ const GridGenerator: React.FunctionComponent<Props> = ({
     <>
       <div className={`${styles['wrapper']} grid`}>
         {displayedContent.map((item: Post, index: number) => (
-          <PostCard cardType={postType} postMeta={item.meta} key={index} />
+          <PostCard postMeta={item.meta} key={index} />
         ))}
       </div>
       {showButton ? (

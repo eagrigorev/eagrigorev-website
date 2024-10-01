@@ -6,31 +6,25 @@ import GridGenerator from '../GridGenerator/GridGenerator';
 
 /* Utils */
 import styles from './RelatedEntries.module.scss';
-import { Post, PostType } from '@/types/post';
+import { Post } from '@/types/post';
+import { calculatePostsToShowAndLoad } from '@/scripts/utils';
+import { PostsAmount } from '@/types/postsAmount';
 
 type Props = {
-  postType: PostType;
   posts: Post[];
-  postsToShow: number;
-  postsToLoad: number;
 };
 
-const RelatedEntries: React.FunctionComponent<Props> = ({
-  postType,
-  posts,
-  postsToShow,
-  postsToLoad,
-}) => {
+const RelatedEntries: React.FunctionComponent<Props> = ({ posts }) => {
+  const postsAmount: PostsAmount = calculatePostsToShowAndLoad(posts);
   return (
     <section className={styles['wrapper']}>
       <div className="container">
         <h2 className="paragraph--bolder">Related Entries:</h2>
         <div>
           <GridGenerator
-            postType={postType}
             posts={posts}
-            postsToShow={postsToShow}
-            postsToLoad={postsToLoad}
+            postsToShow={postsAmount.related.toShow}
+            postsToLoad={postsAmount.related.toLoad}
           />
         </div>
       </div>

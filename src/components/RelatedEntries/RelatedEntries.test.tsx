@@ -10,39 +10,18 @@ import { render, screen } from '@testing-library/react';
 import { postsSorted } from '@/mocks/postsSorted';
 
 describe('RelatedEntries', () => {
-  render(
-    <RelatedEntries
-      postType="library"
-      posts={postsSorted}
-      postsToShow={3}
-      postsToLoad={3}
-    />
-  );
+  render(<RelatedEntries posts={postsSorted} />);
   it('renders related entries text', () => {
     const heading = screen.getByText('Related Entries:');
     expect(heading).toBeInTheDocument();
   });
   it('renders the correct amount of posts', () => {
-    const { container } = render(
-      <RelatedEntries
-        postType="library"
-        posts={postsSorted}
-        postsToShow={3}
-        postsToLoad={3}
-      />
-    );
+    const { container } = render(<RelatedEntries posts={postsSorted} />);
     const postCards = container.querySelectorAll('article');
-    expect(postCards.length).toBe(3);
+    expect(postCards.length).toBe(6);
   });
   it('renders the related posts grid unchanged', () => {
-    const { container } = render(
-      <RelatedEntries
-        postType="library"
-        posts={postsSorted}
-        postsToShow={3}
-        postsToLoad={3}
-      />
-    );
+    const { container } = render(<RelatedEntries posts={postsSorted} />);
     expect(container).toMatchSnapshot();
   });
 });
