@@ -9,7 +9,7 @@ import {
   mapCategoriesToSlugs,
   mapMatterDataToPageMeta,
   mapMatterDataToPostMeta,
-} from './utils';
+} from './mappers';
 import { Post, PostCategory } from '@/types/post';
 import { Page } from '@/types/page';
 import { Slug } from '@/types/slug';

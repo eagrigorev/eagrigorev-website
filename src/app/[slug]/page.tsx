@@ -13,7 +13,8 @@ import {
   WORKS_CATEGORIES,
 } from '@/const/categories';
 import { getAllPosts, getPostsSlugs } from '@/scripts/getMarkdown';
-import { mapCategoriesToSlugs, normalize } from '@/scripts/utils';
+import { normalize } from '@/scripts/utils';
+import { mapCategoriesToSlugs } from '@/scripts/mappers';
 import { categoriesList } from '@/scripts/getCategoriesList';
 import { Metadata } from 'next';
 import { Post } from '@/types/post';

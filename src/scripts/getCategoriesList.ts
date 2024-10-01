@@ -1,5 +1,5 @@
 /* Utils */
-import { mapCategoriesToSlugs } from './utils';
+import { mapCategoriesToSlugs } from './mappers';
 import {
   JOURNAL_CATEGORIES,
   LIBRARY_CATEGORIES,
