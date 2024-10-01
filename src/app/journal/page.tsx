@@ -19,8 +19,6 @@ const Journal: React.FunctionComponent<{}> = () => {
       navigationItems={journalNavItems}
       showAll={false}
       category="Journal"
-      postsToShow={6}
-      postsToLoad={6}
     />
   );
 };

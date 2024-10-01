@@ -15,8 +15,6 @@ type Props = {
   navigationItems: NavigationItem[];
   showAll: boolean;
   category: PostCategory | ParentCategories;
-  postsToShow: number;
-  postsToLoad: number;
 };
 
 const CategoryPageTemplate: React.FunctionComponent<Props> = ({
@@ -24,18 +22,12 @@ const CategoryPageTemplate: React.FunctionComponent<Props> = ({
   navigationItems,
   showAll,
   category,
-  postsToShow,
-  postsToLoad,
 }) => {
   return (
     <main className="container">
       <PageTitle title={pageTitle} />
       <SubNavigation navigationItems={navigationItems} showAll={showAll} />
-      <PostsGrid
-        category={category}
-        postsToShow={postsToShow}
-        postsToLoad={postsToLoad}
-      />
+      <PostsGrid category={category} />
     </main>
   );
 };

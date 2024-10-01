@@ -21,8 +21,6 @@ const PrivacyAndSecurity: React.FunctionComponent<{}> = () => {
       showMeta={false}
       page={page}
       showRelatedEntries={false}
-      postsToShow={0}
-      postsToLoad={0}
     />
   );
 };

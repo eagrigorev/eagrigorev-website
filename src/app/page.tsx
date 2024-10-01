@@ -14,7 +14,7 @@ const Home: React.FunctionComponent<{}> = () => {
     <main className="container">
       <PageTitle title="Software developer and artist based in Thessaloniki, Greece." />
       <SubNavigation navigationItems={worksNavItems} showAll={false} />
-      <PostsGrid category="Works" postsToShow={6} postsToLoad={6} />
+      <PostsGrid category="Works" />
     </main>
   );
 };

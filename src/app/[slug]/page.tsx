@@ -66,8 +66,6 @@ const Page: React.FunctionComponent<Props> = (props) => {
           navigationItems={libraryNavItems}
           showAll={true}
           category={postByCategory.meta.category}
-          postsToShow={12}
-          postsToLoad={6}
         />
       );
     } else if (mapCategoriesToSlugs(WORKS_CATEGORIES).includes(slug)) {
@@ -77,8 +75,6 @@ const Page: React.FunctionComponent<Props> = (props) => {
           navigationItems={worksNavItems}
           showAll={true}
           category={postByCategory.meta.category}
-          postsToShow={6}
-          postsToLoad={6}
         />
       );
     } else if (mapCategoriesToSlugs(JOURNAL_CATEGORIES).includes(slug)) {
@@ -88,8 +84,6 @@ const Page: React.FunctionComponent<Props> = (props) => {
           navigationItems={journalNavItems}
           showAll={true}
           category={postByCategory.meta.category}
-          postsToShow={6}
-          postsToLoad={6}
         />
       );
     }
@@ -100,20 +94,6 @@ const Page: React.FunctionComponent<Props> = (props) => {
         showMeta={true}
         post={post}
         showRelatedEntries={true}
-        postsToShow={
-          mapCategoriesToSlugs(LIBRARY_CATEGORIES).includes(
-            normalize(post.meta.category)
-          )
-            ? 6
-            : 3
-        }
-        postsToLoad={
-          mapCategoriesToSlugs(LIBRARY_CATEGORIES).includes(
-            normalize(post.meta.category)
-          )
-            ? 6
-            : 3
-        }
       />
     );
   } else {
