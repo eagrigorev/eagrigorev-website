@@ -8,6 +8,7 @@ import SubNavigation from '@/components/SubNavigation/SubNavigation';
 /* Utils */
 import { Metadata } from 'next';
 import { miscNavItems } from '@/scripts/getNavigationItems';
+import { TITLE } from '@/const/title';
 
 export const metadata: Metadata = {
   title: '404: Not Found',
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
 const NotFound: React.FunctionComponent<{}> = () => {
   return (
     <main className="container">
-      <PageTitle title="Page 404: Not Found. There is nothing here. Maybe try something else?" />
+      <PageTitle title={TITLE.PAGE_404} />
       <SubNavigation navigationItems={miscNavItems} showAll={false} />
     </main>
   );

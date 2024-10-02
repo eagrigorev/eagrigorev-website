@@ -8,11 +8,12 @@ import SubNavigation from '@/components/SubNavigation/SubNavigation';
 
 /* Utils */
 import { worksNavItems } from '@/scripts/getNavigationItems';
+import { TITLE } from '@/const/title';
 
 const Home: React.FunctionComponent<{}> = () => {
   return (
     <main className="container">
-      <PageTitle title="Software developer and artist based in Thessaloniki, Greece." />
+      <PageTitle title={TITLE.HOMEPAGE} />
       <SubNavigation navigationItems={worksNavItems} showAll={false} />
       <PostsGrid category="Works" />
     </main>

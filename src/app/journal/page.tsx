@@ -7,6 +7,7 @@ import CategoryPageTemplate from '@/templates/CategoryPageTemplate/CategoryPageT
 /* Utils */
 import { Metadata } from 'next';
 import { journalNavItems } from '@/scripts/getNavigationItems';
+import { TITLE } from '@/const/title';
 
 export const metadata: Metadata = {
   title: 'Journal',
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
 const Journal: React.FunctionComponent<{}> = () => {
   return (
     <CategoryPageTemplate
-      pageTitle="Journal: A Space for the Unbound."
+      pageTitle={TITLE.JOURNAL}
       navigationItems={journalNavItems}
       showAll={false}
       category="Journal"

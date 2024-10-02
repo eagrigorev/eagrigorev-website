@@ -7,6 +7,7 @@ import CategoryPageTemplate from '@/templates/CategoryPageTemplate/CategoryPageT
 /* Utils */
 import { Metadata } from 'next';
 import { libraryNavItems } from '@/scripts/getNavigationItems';
+import { TITLE } from '@/const/title';
 
 export const metadata: Metadata = {
   title: 'Library',
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
 const Journal: React.FunctionComponent<{}> = () => {
   return (
     <CategoryPageTemplate
-      pageTitle="Library."
+      pageTitle={TITLE.LIBRARY}
       navigationItems={libraryNavItems}
       showAll={false}
       category="Library"
