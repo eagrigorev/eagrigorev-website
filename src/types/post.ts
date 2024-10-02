@@ -25,7 +25,6 @@ export interface PostMeta {
   featuredImage: string;
   bookAuthor?: string;
   excerpt?: string;
-  tags?: string[];
 }
 
 export interface Post {

@@ -77,23 +77,6 @@ export const getAllPosts = (): Post[] => {
   return allPosts;
 };
 
-// export const getAllTags = (): NavigationItem[] => {
-//   let allPosts: Post[] = getAllPosts();
-//   const tags: NavigationItem[] = [];
-//   allPosts
-//     .filter((post: Post) => post.meta.tags?.length)
-//     .forEach((post: Post) => {
-//       post.meta.tags.forEach((tag: string) =>
-//         tags.push({ title: tag, url: `/${tag}` })
-//       );
-//     });
-//   const uniqueTags: NavigationItem[] = tags.reduce(function (a, b) {
-//     if (a.indexOf(b) < 0) a.push(b);
-//     return a;
-//   }, []);
-//   return uniqueTags;
-// };
-
 export const getPage = (file: string): Page => {
   const page: string = fs.readFileSync(`${URL.PAGES}/${file}`, 'utf-8');
   const { data, content } = matter(page);
@@ -116,9 +99,6 @@ export const getPostsSlugs = (): Slug[] => {
       slug: category,
     })
   );
-  // const tagsSlugs: Slug[] = getAllTags().map((tag: NavigationItem) => ({
-  //   slug: `${tag.title}`,
-  // }));
   const slugs: Slug[] = [...postSlugs, ...categorySlugs];
   return slugs;
 };
