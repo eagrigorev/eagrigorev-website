@@ -13,13 +13,8 @@ import {
 import { Post, PostCategory } from '@/types/post';
 import { Page } from '@/types/page';
 import { Slug } from '@/types/slug';
-import { NavigationItem } from '@/types/navigationItem';
 import { URL } from '@/const/url';
-import {
-  JOURNAL_CATEGORIES,
-  LIBRARY_CATEGORIES,
-  WORKS_CATEGORIES,
-} from '@/const/categories';
+import { POST_CATEGORIES } from '@/const/categories';
 
 export const getWorksPostsFromSingleCategory = (
   category: PostCategory
@@ -65,15 +60,21 @@ export const getLibraryPostsFromSingleCategory = (
 
 export const getAllPosts = (): Post[] => {
   let allPosts: Post[] = [];
-  mapCategoriesToSlugs(JOURNAL_CATEGORIES).forEach((category: PostCategory) => {
-    allPosts.push(...getJournalPostsFromSingleCategory(category));
-  });
-  mapCategoriesToSlugs(LIBRARY_CATEGORIES).forEach((category: PostCategory) => {
-    allPosts.push(...getLibraryPostsFromSingleCategory(category));
-  });
-  mapCategoriesToSlugs(WORKS_CATEGORIES).forEach((category: PostCategory) => {
-    allPosts.push(...getWorksPostsFromSingleCategory(category));
-  });
+  mapCategoriesToSlugs(POST_CATEGORIES.JOURNAL).forEach(
+    (category: PostCategory) => {
+      allPosts.push(...getJournalPostsFromSingleCategory(category));
+    }
+  );
+  mapCategoriesToSlugs(POST_CATEGORIES.LIBRARY).forEach(
+    (category: PostCategory) => {
+      allPosts.push(...getLibraryPostsFromSingleCategory(category));
+    }
+  );
+  mapCategoriesToSlugs(POST_CATEGORIES.WORKS).forEach(
+    (category: PostCategory) => {
+      allPosts.push(...getWorksPostsFromSingleCategory(category));
+    }
+  );
   return allPosts;
 };
 

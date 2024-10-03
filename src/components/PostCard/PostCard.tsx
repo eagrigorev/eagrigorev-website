@@ -15,11 +15,7 @@ import {
   LibraryCategories,
   WorksCategories,
 } from '@/types/post';
-import {
-  JOURNAL_CATEGORIES,
-  LIBRARY_CATEGORIES,
-  WORKS_CATEGORIES,
-} from '@/const/categories';
+import { POST_CATEGORIES } from '@/const/categories';
 
 type Props = {
   postMeta: PostMeta;
@@ -39,14 +35,16 @@ const PostCard: React.FunctionComponent<Props> = ({ postMeta }) => {
         />
       </Link>
       <div className={styles['description']}>
-        {JOURNAL_CATEGORIES.find(
+        {POST_CATEGORIES.JOURNAL.find(
           (category: JournalCategories) => category === postMeta.category
         ) ? (
           <>
             <Link className="link--neutral" href={cardOptions.href}>
               <h3 className="heading--h3">{cardOptions.content.title}</h3>
             </Link>
-            <div className={`${styles['meta--blogpost']} small-uppercase`}>
+            <div
+              className={`${styles[`meta--${cardOptions.style}`]} small-uppercase`}
+            >
               <p>{cardOptions.content.dateEdited}</p>
               <Link
                 className="link--darker transition--color"
@@ -55,11 +53,13 @@ const PostCard: React.FunctionComponent<Props> = ({ postMeta }) => {
                 {cardOptions.content.category}
               </Link>
             </div>
-            <p className={`${styles['excerpt--blogpost']} paragraph--caption`}>
+            <p
+              className={`${styles[`excerpt--${cardOptions.style}`]} paragraph--caption`}
+            >
               {cardOptions.content.excerpt}
             </p>
           </>
-        ) : LIBRARY_CATEGORIES.find(
+        ) : POST_CATEGORIES.LIBRARY.find(
             (category: LibraryCategories) => category === postMeta.category
           ) ? (
           <>
@@ -70,11 +70,13 @@ const PostCard: React.FunctionComponent<Props> = ({ postMeta }) => {
               </h3>
             </Link>
           </>
-        ) : WORKS_CATEGORIES.find(
+        ) : POST_CATEGORIES.WORKS.find(
             (category: WorksCategories) => category === postMeta.category
           ) ? (
           <Link className="link--neutral" href={cardOptions.href}>
-            <h3 className={`${styles['title--project']} paragraph--regular`}>
+            <h3
+              className={`${styles[`title--${cardOptions.style}`]} paragraph--regular`}
+            >
               {cardOptions.content.title}
             </h3>
           </Link>

@@ -7,11 +7,7 @@ import {
   WorksCategories,
 } from '@/types/post';
 
-import {
-  JOURNAL_CATEGORIES,
-  LIBRARY_CATEGORIES,
-  WORKS_CATEGORIES,
-} from '@/const/categories';
+import { POST_CATEGORIES } from '@/const/categories';
 import { PostsAmount } from '@/types/postsAmount';
 
 export const normalize = (category: PostCategory): string => {
@@ -32,10 +28,10 @@ export const calculatePostsToShowAndLoad = (posts: Post[]): PostsAmount => {
   let postsAmount: PostsAmount;
   const postCategory = posts[0].meta.category;
   if (
-    JOURNAL_CATEGORIES.find(
+    POST_CATEGORIES.JOURNAL.find(
       (category: JournalCategories) => category === postCategory
     ) ||
-    WORKS_CATEGORIES.find(
+    POST_CATEGORIES.WORKS.find(
       (category: WorksCategories) => category === postCategory
     )
   ) {
@@ -51,7 +47,7 @@ export const calculatePostsToShowAndLoad = (posts: Post[]): PostsAmount => {
     };
   }
   if (
-    LIBRARY_CATEGORIES.find(
+    POST_CATEGORIES.LIBRARY.find(
       (category: LibraryCategories) => category === postCategory
     )
   ) {

@@ -7,11 +7,7 @@ import SinglePageNarrowTemplate from '@/templates/SinglePageNarrowTemplate/Singl
 
 /* Utils */
 import { notFound } from 'next/navigation';
-import {
-  JOURNAL_CATEGORIES,
-  LIBRARY_CATEGORIES,
-  WORKS_CATEGORIES,
-} from '@/const/categories';
+import { POST_CATEGORIES } from '@/const/categories';
 import { getAllPosts, getPostsSlugs } from '@/scripts/getMarkdown';
 import { normalize } from '@/scripts/utils';
 import { mapCategoriesToSlugs } from '@/scripts/mappers';
@@ -61,7 +57,7 @@ const Page: React.FunctionComponent<Props> = (props) => {
     const postByCategory: Post | undefined = allPosts.find((post) => {
       return normalize(post.meta.category) === slug;
     });
-    if (mapCategoriesToSlugs(LIBRARY_CATEGORIES).includes(slug)) {
+    if (mapCategoriesToSlugs(POST_CATEGORIES.LIBRARY).includes(slug)) {
       return (
         <CategoryPageTemplate
           pageTitle={`${TITLE.LIBRARY_CATEGORY} ${postByCategory.meta.category}.`}
@@ -70,7 +66,7 @@ const Page: React.FunctionComponent<Props> = (props) => {
           category={postByCategory.meta.category}
         />
       );
-    } else if (mapCategoriesToSlugs(WORKS_CATEGORIES).includes(slug)) {
+    } else if (mapCategoriesToSlugs(POST_CATEGORIES.WORKS).includes(slug)) {
       return (
         <CategoryPageTemplate
           pageTitle={`${TITLE.WORKS_CATEGORY} ${postByCategory.meta.category}.`}
@@ -79,7 +75,7 @@ const Page: React.FunctionComponent<Props> = (props) => {
           category={postByCategory.meta.category}
         />
       );
-    } else if (mapCategoriesToSlugs(JOURNAL_CATEGORIES).includes(slug)) {
+    } else if (mapCategoriesToSlugs(POST_CATEGORIES.JOURNAL).includes(slug)) {
       return (
         <CategoryPageTemplate
           pageTitle={`${TITLE.JOURNAL_CATEGORY} ${postByCategory.meta.category}.`}

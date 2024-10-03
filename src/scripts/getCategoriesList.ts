@@ -1,13 +1,9 @@
 /* Utils */
 import { mapCategoriesToSlugs } from './mappers';
-import {
-  JOURNAL_CATEGORIES,
-  LIBRARY_CATEGORIES,
-  WORKS_CATEGORIES,
-} from '@/const/categories';
+import { POST_CATEGORIES } from '@/const/categories';
 
 export const categoriesList: string[] = [
-  ...mapCategoriesToSlugs(JOURNAL_CATEGORIES),
-  ...mapCategoriesToSlugs(LIBRARY_CATEGORIES),
-  ...mapCategoriesToSlugs(WORKS_CATEGORIES),
+  ...mapCategoriesToSlugs(POST_CATEGORIES.JOURNAL),
+  ...mapCategoriesToSlugs(POST_CATEGORIES.LIBRARY),
+  ...mapCategoriesToSlugs(POST_CATEGORIES.WORKS),
 ];
