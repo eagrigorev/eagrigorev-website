@@ -1,3 +1,5 @@
+**v3.0.6** October 4, 2024 — Added social icons
+
 **v3.0.5** October 1, 2024 — Props and card refactoring
 
 **v3.0.4** September 17, 2024 — Mocks update
