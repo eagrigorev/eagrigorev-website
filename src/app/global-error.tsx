@@ -11,8 +11,14 @@ import SubNavigation from '@/components/SubNavigation/SubNavigation';
 import TopNavigation from '@/components/TopNavigation/TopNavigation';
 
 /* Utils */
+import { Metadata } from 'next';
 import { spectral, jost } from '@/scripts/getFonts';
 import { miscNavItems } from '@/scripts/getNavigationItems';
+import { TITLE } from '@/const/title';
+
+export const metadata: Metadata = {
+  title: '500: Internal Server Error',
+};
 
 const GlobalError = ({
   error,
@@ -29,7 +35,7 @@ const GlobalError = ({
       <body>
         <TopNavigation />
         <main className="container">
-          <PageTitle title="Page 500: Internal Server Error. The server has encountered a situation it does not know how to handle. Try again?" />
+          <PageTitle title={TITLE.PAGE_500} />
           <SubNavigation navigationItems={miscNavItems} showAll={false} />
           <div className="error-button">
             <LoadMoreButton clickHandler={() => reset()} buttonText="Reload" />

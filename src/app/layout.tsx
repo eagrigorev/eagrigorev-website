@@ -38,8 +38,8 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <body>
         <TopNavigation />
         {children}
-        <SpeedInsights />
         <CopyrightNotice />
+        <SpeedInsights />
         <Analytics />
       </body>
     </html>

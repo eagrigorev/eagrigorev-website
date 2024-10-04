@@ -7,13 +7,10 @@ import SinglePageNarrowTemplate from '@/templates/SinglePageNarrowTemplate/Singl
 
 /* Utils */
 import { notFound } from 'next/navigation';
-import {
-  JOURNAL_CATEGORIES,
-  LIBRARY_CATEGORIES,
-  WORKS_CATEGORIES,
-} from '@/const/categories';
+import { POST_CATEGORIES } from '@/const/categories';
 import { getAllPosts, getPostsSlugs } from '@/scripts/getMarkdown';
-import { mapCategoriesToSlugs, normalize } from '@/scripts/utils';
+import { normalize } from '@/scripts/utils';
+import { mapCategoriesToSlugs } from '@/scripts/mappers';
 import { categoriesList } from '@/scripts/getCategoriesList';
 import { Metadata } from 'next';
 import { Post } from '@/types/post';
@@ -23,6 +20,7 @@ import {
   libraryNavItems,
   worksNavItems,
 } from '@/scripts/getNavigationItems';
+import { TITLE } from '@/const/title';
 
 type Props = {
   params: Slug;
@@ -59,28 +57,28 @@ const Page: React.FunctionComponent<Props> = (props) => {
     const postByCategory: Post | undefined = allPosts.find((post) => {
       return normalize(post.meta.category) === slug;
     });
-    if (mapCategoriesToSlugs(LIBRARY_CATEGORIES).includes(slug)) {
+    if (mapCategoriesToSlugs(POST_CATEGORIES.LIBRARY).includes(slug)) {
       return (
         <CategoryPageTemplate
-          pageTitle={`Library: ${postByCategory.meta.category}.`}
+          pageTitle={`${TITLE.LIBRARY_CATEGORY} ${postByCategory.meta.category}.`}
           navigationItems={libraryNavItems}
           showAll={true}
           category={postByCategory.meta.category}
         />
       );
-    } else if (mapCategoriesToSlugs(WORKS_CATEGORIES).includes(slug)) {
+    } else if (mapCategoriesToSlugs(POST_CATEGORIES.WORKS).includes(slug)) {
       return (
         <CategoryPageTemplate
-          pageTitle={`Works: ${postByCategory.meta.category}.`}
+          pageTitle={`${TITLE.WORKS_CATEGORY} ${postByCategory.meta.category}.`}
           navigationItems={worksNavItems}
           showAll={true}
           category={postByCategory.meta.category}
         />
       );
-    } else if (mapCategoriesToSlugs(JOURNAL_CATEGORIES).includes(slug)) {
+    } else if (mapCategoriesToSlugs(POST_CATEGORIES.JOURNAL).includes(slug)) {
       return (
         <CategoryPageTemplate
-          pageTitle={`Journal: ${postByCategory.meta.category}.`}
+          pageTitle={`${TITLE.JOURNAL_CATEGORY} ${postByCategory.meta.category}.`}
           navigationItems={journalNavItems}
           showAll={true}
           category={postByCategory.meta.category}

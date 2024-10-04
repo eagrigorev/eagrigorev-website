@@ -9,11 +9,7 @@ import {
   WorksCategories,
   ParentCategories,
 } from '@/types/post';
-import {
-  JOURNAL_CATEGORIES,
-  LIBRARY_CATEGORIES,
-  WORKS_CATEGORIES,
-} from '@/const/categories';
+import { POST_CATEGORIES } from '@/const/categories';
 
 export const getSortedPosts = (
   category: PostCategory | ParentCategories,
@@ -24,7 +20,7 @@ export const getSortedPosts = (
   if (category === 'Journal') {
     sortedPosts = sortPostsDesc(
       allPosts.filter((post: Post) => {
-        return JOURNAL_CATEGORIES.find(
+        return POST_CATEGORIES.JOURNAL.find(
           (category: JournalCategories) => category === post.meta.category
         );
       })
@@ -32,7 +28,7 @@ export const getSortedPosts = (
   } else if (category === 'Library') {
     sortedPosts = sortPostsDesc(
       allPosts.filter((post: Post) => {
-        return LIBRARY_CATEGORIES.find(
+        return POST_CATEGORIES.LIBRARY.find(
           (category: LibraryCategories) => category === post.meta.category
         );
       })
@@ -40,7 +36,7 @@ export const getSortedPosts = (
   } else if (category === 'Works') {
     sortedPosts = sortPostsDesc(
       allPosts.filter((post: Post) => {
-        return WORKS_CATEGORIES.find(
+        return POST_CATEGORIES.WORKS.find(
           (category: WorksCategories) => category === post.meta.category
         );
       })

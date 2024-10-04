@@ -9,7 +9,6 @@ export const post: Post = {
     dateEdited: 'July 25, 2023',
     category: 'Illustrations',
     featuredImage: 'test.jpg',
-    tags: ['tag1', 'tag2', 'tag3'],
   },
   content: 'Test content 1',
 };

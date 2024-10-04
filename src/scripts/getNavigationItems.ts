@@ -6,11 +6,7 @@ import {
   WorksCategories,
   ParentCategories,
 } from '@/types/post';
-import {
-  JOURNAL_CATEGORIES,
-  LIBRARY_CATEGORIES,
-  WORKS_CATEGORIES,
-} from '@/const/categories';
+import { POST_CATEGORIES } from '@/const/categories';
 import { normalize } from './utils';
 
 const getNavigationItems = (
@@ -19,10 +15,10 @@ const getNavigationItems = (
   const navigationItems: NavigationItem[] = [];
   const categories =
     parentCategory === 'Journal'
-      ? JOURNAL_CATEGORIES
+      ? POST_CATEGORIES.JOURNAL
       : parentCategory === 'Library'
-        ? LIBRARY_CATEGORIES
-        : WORKS_CATEGORIES;
+        ? POST_CATEGORIES.LIBRARY
+        : POST_CATEGORIES.WORKS;
   categories.forEach(
     (category: JournalCategories | LibraryCategories | WorksCategories) => {
       return navigationItems.push({

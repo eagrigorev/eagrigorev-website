@@ -9,17 +9,12 @@ import {
   mapCategoriesToSlugs,
   mapMatterDataToPageMeta,
   mapMatterDataToPostMeta,
-} from './utils';
+} from './mappers';
 import { Post, PostCategory } from '@/types/post';
 import { Page } from '@/types/page';
 import { Slug } from '@/types/slug';
-import { NavigationItem } from '@/types/navigationItem';
 import { URL } from '@/const/url';
-import {
-  JOURNAL_CATEGORIES,
-  LIBRARY_CATEGORIES,
-  WORKS_CATEGORIES,
-} from '@/const/categories';
+import { POST_CATEGORIES } from '@/const/categories';
 
 export const getWorksPostsFromSingleCategory = (
   category: PostCategory
@@ -65,34 +60,23 @@ export const getLibraryPostsFromSingleCategory = (
 
 export const getAllPosts = (): Post[] => {
   let allPosts: Post[] = [];
-  mapCategoriesToSlugs(JOURNAL_CATEGORIES).forEach((category: PostCategory) => {
-    allPosts.push(...getJournalPostsFromSingleCategory(category));
-  });
-  mapCategoriesToSlugs(LIBRARY_CATEGORIES).forEach((category: PostCategory) => {
-    allPosts.push(...getLibraryPostsFromSingleCategory(category));
-  });
-  mapCategoriesToSlugs(WORKS_CATEGORIES).forEach((category: PostCategory) => {
-    allPosts.push(...getWorksPostsFromSingleCategory(category));
-  });
+  mapCategoriesToSlugs(POST_CATEGORIES.JOURNAL).forEach(
+    (category: PostCategory) => {
+      allPosts.push(...getJournalPostsFromSingleCategory(category));
+    }
+  );
+  mapCategoriesToSlugs(POST_CATEGORIES.LIBRARY).forEach(
+    (category: PostCategory) => {
+      allPosts.push(...getLibraryPostsFromSingleCategory(category));
+    }
+  );
+  mapCategoriesToSlugs(POST_CATEGORIES.WORKS).forEach(
+    (category: PostCategory) => {
+      allPosts.push(...getWorksPostsFromSingleCategory(category));
+    }
+  );
   return allPosts;
 };
-
-// export const getAllTags = (): NavigationItem[] => {
-//   let allPosts: Post[] = getAllPosts();
-//   const tags: NavigationItem[] = [];
-//   allPosts
-//     .filter((post: Post) => post.meta.tags?.length)
-//     .forEach((post: Post) => {
-//       post.meta.tags.forEach((tag: string) =>
-//         tags.push({ title: tag, url: `/${tag}` })
-//       );
-//     });
-//   const uniqueTags: NavigationItem[] = tags.reduce(function (a, b) {
-//     if (a.indexOf(b) < 0) a.push(b);
-//     return a;
-//   }, []);
-//   return uniqueTags;
-// };
 
 export const getPage = (file: string): Page => {
   const page: string = fs.readFileSync(`${URL.PAGES}/${file}`, 'utf-8');
@@ -116,9 +100,6 @@ export const getPostsSlugs = (): Slug[] => {
       slug: category,
     })
   );
-  // const tagsSlugs: Slug[] = getAllTags().map((tag: NavigationItem) => ({
-  //   slug: `${tag.title}`,
-  // }));
   const slugs: Slug[] = [...postSlugs, ...categorySlugs];
   return slugs;
 };

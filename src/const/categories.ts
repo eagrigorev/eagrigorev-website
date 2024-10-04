@@ -1,9 +1,6 @@
-export const JOURNAL_CATEGORIES = ['Hobbies', 'Notes'] as const;
-
-export const LIBRARY_CATEGORIES = [
-  'Reading this Year',
-  'Want to Read',
-  'Years of Reading',
-] as const;
-
-export const WORKS_CATEGORIES = ['Illustrations', 'Music & Tabs'] as const;
+export const POST_CATEGORIES = {
+  JOURNAL: ['Hobbies', 'Notes'] as const,
+  LIBRARY: ['Reading this Year', 'Want to Read', 'Years of Reading'] as const,
+  WORKS: ['Illustrations', 'Music & Tabs'] as const,
+  PARENT: ['Journal', 'Library', 'Works'] as const,
+};
