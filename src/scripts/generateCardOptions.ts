@@ -7,16 +7,12 @@ import {
 } from '@/types/post';
 import { PostCard } from '@/types/postCard';
 import { URL } from '@/const/url';
-import {
-  JOURNAL_CATEGORIES,
-  LIBRARY_CATEGORIES,
-  WORKS_CATEGORIES,
-} from '@/const/categories';
+import { POST_CATEGORIES } from '@/const/categories';
 
 export const generateCardOptions = (postMeta: PostMeta): PostCard => {
   let cardOptions: PostCard;
   if (
-    JOURNAL_CATEGORIES.find(
+    POST_CATEGORIES.JOURNAL.find(
       (category: JournalCategories) => category === postMeta.category
     )
   ) {
@@ -38,7 +34,7 @@ export const generateCardOptions = (postMeta: PostMeta): PostCard => {
     };
   }
   if (
-    LIBRARY_CATEGORIES.find(
+    POST_CATEGORIES.LIBRARY.find(
       (category: LibraryCategories) => category === postMeta.category
     )
   ) {
@@ -58,7 +54,7 @@ export const generateCardOptions = (postMeta: PostMeta): PostCard => {
     };
   }
   if (
-    WORKS_CATEGORIES.find(
+    POST_CATEGORIES.WORKS.find(
       (category: WorksCategories) => category === postMeta.category
     )
   ) {
