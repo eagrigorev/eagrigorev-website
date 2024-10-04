@@ -10,7 +10,7 @@ import SubNavigation from '@/components/SubNavigation/SubNavigation';
 
 /* Utils */
 import { Metadata } from 'next';
-import { miscNavItems } from '@/scripts/getNavigationItems';
+import { navigationItems } from '@/scripts/getNavigationItems';
 import { TITLE } from '@/const/title';
 
 export const metadata: Metadata = {
@@ -30,7 +30,7 @@ const Error = ({
   return (
     <main className="container">
       <PageTitle title={TITLE.PAGE_500} />
-      <SubNavigation navigationItems={miscNavItems} showAll={false} />
+      <SubNavigation navigationItems={navigationItems.error} showAll={false} />
       <div className="error-button">
         <LoadMoreButton clickHandler={() => reset()} buttonText="Reload" />
       </div>

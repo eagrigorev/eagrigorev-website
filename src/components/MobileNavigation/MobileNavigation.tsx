@@ -11,7 +11,7 @@ import SocialIcons from '../SocialIcons/SocialIcons';
 /* Utils */
 import styles from './MobileNavigation.module.scss';
 import { NavigationItem } from '@/types/navigationItem';
-import { topNavItems } from '@/scripts/getNavigationItems';
+import { navigationItems } from '@/scripts/getNavigationItems';
 
 const MobileNavigation: React.FunctionComponent<{}> = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
@@ -45,7 +45,7 @@ const MobileNavigation: React.FunctionComponent<{}> = () => {
       {showMenu ? (
         <FocusTrap focusTrapOptions={{ clickOutsideDeactivates: true }}>
           <ul className={styles['links']}>
-            {topNavItems.map((item: NavigationItem, index: number) => (
+            {navigationItems.top.map((item: NavigationItem, index: number) => (
               <li key={index}>
                 <Link
                   className="link--lighter transition--color"

@@ -1,5 +1,5 @@
 /* Utils */
-import { NavigationItem } from '@/types/navigationItem';
+import { NavigationItem, NavigationItems } from '@/types/navigationItem';
 import {
   JournalCategories,
   LibraryCategories,
@@ -8,6 +8,7 @@ import {
 } from '@/types/post';
 import { POST_CATEGORIES } from '@/const/categories';
 import { normalize } from './utils';
+import { STATIC_NAVIGATION_ITEMS } from '@/const/staticNavigationItems';
 
 const getNavigationItems = (
   parentCategory: ParentCategories
@@ -30,52 +31,78 @@ const getNavigationItems = (
   return navigationItems;
 };
 
-export const journalNavItems: NavigationItem[] = [
-  {
-    title: 'All',
-    url: '/journal',
-  },
-  ...getNavigationItems('Journal'),
-];
+export const navigationItems: NavigationItems = {
+  journal: [
+    {
+      title: 'All',
+      url: '/journal',
+    },
+    ...getNavigationItems('Journal'),
+  ],
+  library: [
+    {
+      title: 'All',
+      url: '/library',
+    },
+    ...getNavigationItems('Library'),
+  ],
+  works: [
+    {
+      title: 'All',
+      url: '/',
+    },
+    ...getNavigationItems('Works'),
+  ],
+  top: STATIC_NAVIGATION_ITEMS.TOP,
+  error: STATIC_NAVIGATION_ITEMS.ERROR,
+};
 
-export const libraryNavItems: NavigationItem[] = [
-  {
-    title: 'All',
-    url: '/library',
-  },
-  ...getNavigationItems('Library'),
-];
+// export const journalNavItems: NavigationItem[] = [
+//   {
+//     title: 'All',
+//     url: '/journal',
+//   },
+//   ...getNavigationItems('Journal'),
+// ];
 
-export const worksNavItems: NavigationItem[] = [
-  {
-    title: 'All',
-    url: '/',
-  },
-  ...getNavigationItems('Works'),
-];
+// export const libraryNavItems: NavigationItem[] = [
+//   {
+//     title: 'All',
+//     url: '/library',
+//   },
+//   ...getNavigationItems('Library'),
+// ];
 
-export const topNavItems: NavigationItem[] = [
-  {
-    title: 'Works',
-    url: '/',
-  },
-  {
-    title: 'About',
-    url: '/about',
-  },
-  {
-    title: 'Journal',
-    url: '/journal',
-  },
-];
+// export const worksNavItems: NavigationItem[] = [
+//   {
+//     title: 'All',
+//     url: '/',
+//   },
+//   ...getNavigationItems('Works'),
+// ];
 
-export const miscNavItems: NavigationItem[] = [
-  {
-    title: 'Check Latest Works',
-    url: '/',
-  },
-  {
-    title: 'Read the Journal',
-    url: '/journal',
-  },
-];
+// export const topNavItems: NavigationItem[] = [
+//   {
+//     title: 'Works',
+//     url: '/',
+//   },
+//   {
+//     title: 'About',
+//     url: '/about',
+//   },
+//   {
+//     title: 'Journal',
+//     url: '/journal',
+//   },
+// ];
+
+// export const miscNavItems: NavigationItem[] = [
+//   {
+//     title: 'Check Latest Works',
+//     url: '/',
+//   },
+//   {
+//     title: 'Read the Journal',
+//     url: '/journal',
+//   },
+// ];

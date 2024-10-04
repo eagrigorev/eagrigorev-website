@@ -8,7 +8,7 @@ import SocialIcons from '@/components/SocialIcons/SocialIcons';
 /* Utils */
 import styles from './DesktopNavigation.module.scss';
 import { NavigationItem } from '@/types/navigationItem';
-import { topNavItems } from '@/scripts/getNavigationItems';
+import { navigationItems } from '@/scripts/getNavigationItems';
 
 const DesktopNavigation: React.FunctionComponent<{}> = () => {
   return (
@@ -17,7 +17,7 @@ const DesktopNavigation: React.FunctionComponent<{}> = () => {
         Evgenii Grigorev
       </Link>
       <ul className={styles['links']}>
-        {topNavItems.map(
+        {navigationItems.top.map(
           (item: NavigationItem, index: number): React.JSX.Element => (
             <li key={index}>
               <Link className="link--lighter transition--color" href={item.url}>

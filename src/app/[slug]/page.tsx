@@ -15,11 +15,7 @@ import { categoriesList } from '@/scripts/getCategoriesList';
 import { Metadata } from 'next';
 import { Post } from '@/types/post';
 import { Slug } from '@/types/slug';
-import {
-  journalNavItems,
-  libraryNavItems,
-  worksNavItems,
-} from '@/scripts/getNavigationItems';
+import { navigationItems } from '@/scripts/getNavigationItems';
 import { TITLE } from '@/const/title';
 
 type Props = {
@@ -61,7 +57,7 @@ const Page: React.FunctionComponent<Props> = (props) => {
       return (
         <CategoryPageTemplate
           pageTitle={`${TITLE.LIBRARY_CATEGORY} ${postByCategory.meta.category}.`}
-          navigationItems={libraryNavItems}
+          navigationItems={navigationItems.library}
           showAll={true}
           category={postByCategory.meta.category}
         />
@@ -70,7 +66,7 @@ const Page: React.FunctionComponent<Props> = (props) => {
       return (
         <CategoryPageTemplate
           pageTitle={`${TITLE.WORKS_CATEGORY} ${postByCategory.meta.category}.`}
-          navigationItems={worksNavItems}
+          navigationItems={navigationItems.works}
           showAll={true}
           category={postByCategory.meta.category}
         />
@@ -79,7 +75,7 @@ const Page: React.FunctionComponent<Props> = (props) => {
       return (
         <CategoryPageTemplate
           pageTitle={`${TITLE.JOURNAL_CATEGORY} ${postByCategory.meta.category}.`}
-          navigationItems={journalNavItems}
+          navigationItems={navigationItems.journal}
           showAll={true}
           category={postByCategory.meta.category}
         />

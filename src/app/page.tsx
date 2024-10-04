@@ -7,14 +7,14 @@ import PostsGrid from '@/components/PostsGrid/PostsGrid';
 import SubNavigation from '@/components/SubNavigation/SubNavigation';
 
 /* Utils */
-import { worksNavItems } from '@/scripts/getNavigationItems';
+import { navigationItems } from '@/scripts/getNavigationItems';
 import { TITLE } from '@/const/title';
 
 const Home: React.FunctionComponent<{}> = () => {
   return (
     <main className="container">
       <PageTitle title={TITLE.HOMEPAGE} />
-      <SubNavigation navigationItems={worksNavItems} showAll={false} />
+      <SubNavigation navigationItems={navigationItems.works} showAll={false} />
       <PostsGrid category="Works" />
     </main>
   );
