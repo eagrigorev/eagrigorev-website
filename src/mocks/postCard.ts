@@ -1,7 +1,7 @@
 /* Utils */
 import { PostCard } from '@/types/postCard';
 import { postMeta } from './postMeta';
-import { URL } from '@/const/url';
+import { URL } from '@/utils/const/url';
 
 export const postCard: PostCard = {
   href: postMeta.slug,

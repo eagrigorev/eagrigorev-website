@@ -1,8 +1,3 @@
-export interface NavigationItem {
-  title: string;
-  url: string;
-}
-
 export interface NavigationItems {
   journal: NavigationItem[];
   library: NavigationItem[];

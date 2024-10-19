@@ -8,14 +8,14 @@ import SubNavigation from '@/components/SubNavigation/SubNavigation';
 
 /* Utils */
 import { navigationItems } from '@/scripts/getNavigationItems';
-import { TITLE } from '@/const/title';
+import { TITLE } from '@/utils/const/title';
 
 const Home: React.FunctionComponent<{}> = () => {
   return (
     <main className="container">
       <PageTitle title={TITLE.HOMEPAGE} />
       <SubNavigation navigationItems={navigationItems.works} showAll={false} />
-      <PostsGrid category="Works" />
+      {/* <PostsGrid category="Works" /> */}
     </main>
   );
 };

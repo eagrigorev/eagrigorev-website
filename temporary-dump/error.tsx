@@ -11,7 +11,7 @@ import SubNavigation from '@/components/SubNavigation/SubNavigation';
 /* Utils */
 import { Metadata } from 'next';
 import { navigationItems } from '@/scripts/getNavigationItems';
-import { TITLE } from '@/const/title';
+import { TITLE } from '@/utils/const/title';
 
 export const metadata: Metadata = {
   title: '500: Internal Server Error',

@@ -14,7 +14,7 @@ import TopNavigation from '@/components/TopNavigation/TopNavigation';
 import { Metadata } from 'next';
 import { spectral, jost } from '@/scripts/getFonts';
 import { navigationItems } from '@/scripts/getNavigationItems';
-import { TITLE } from '@/const/title';
+import { TITLE } from '@/utils/const/title';
 
 export const metadata: Metadata = {
   title: '500: Internal Server Error',

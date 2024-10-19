@@ -6,7 +6,7 @@ import {
   WorksCategories,
 } from '@/types/post';
 import { PostCard } from '@/types/postCard';
-import { URL } from '@/const/url';
+import { URL } from '@/utils/const/url';
 import { POST_CATEGORIES } from '@/const/categories';
 
 export const generateCardOptions = (postMeta: PostMeta): PostCard => {

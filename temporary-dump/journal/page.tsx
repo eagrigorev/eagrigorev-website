@@ -7,19 +7,19 @@ import CategoryPageTemplate from '@/templates/CategoryPageTemplate/CategoryPageT
 /* Utils */
 import { Metadata } from 'next';
 import { navigationItems } from '@/scripts/getNavigationItems';
-import { TITLE } from '@/const/title';
+import { TITLE } from '@/utils/const/title';
 
 export const metadata: Metadata = {
-  title: 'Library',
+  title: 'Journal',
 };
 
 const Journal: React.FunctionComponent<{}> = () => {
   return (
     <CategoryPageTemplate
-      pageTitle={TITLE.LIBRARY}
-      navigationItems={navigationItems.library}
+      pageTitle={TITLE.JOURNAL}
+      navigationItems={navigationItems.journal}
       showAll={false}
-      category="Library"
+      category="Journal"
     />
   );
 };

@@ -13,13 +13,12 @@ export type PostCategory =
 
 export interface PostMeta {
   title: string;
+  description: string;
   slug: string;
-  category: PostCategory;
+  type: string;
+  category: string;
   datePublished?: string;
   dateEdited: string;
-  featuredImage: string;
-  bookAuthor?: string;
-  excerpt?: string;
 }
 
 export interface Post {

@@ -16,7 +16,7 @@ import { Metadata } from 'next';
 import { Post } from '@/types/post';
 import { Slug } from '@/types/slug';
 import { navigationItems } from '@/scripts/getNavigationItems';
-import { TITLE } from '@/const/title';
+import { TITLE } from '@/utils/const/title';
 
 type Props = {
   params: Slug;
