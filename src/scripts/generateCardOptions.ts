@@ -12,28 +12,6 @@ import { POST_CATEGORIES } from '@/const/categories';
 export const generateCardOptions = (postMeta: PostMeta): PostCard => {
   let cardOptions: PostCard;
   if (
-    POST_CATEGORIES.JOURNAL.find(
-      (category: JournalCategories) => category === postMeta.category
-    )
-  ) {
-    cardOptions = {
-      href: postMeta.slug,
-      image: {
-        src: `/${URL.FEATURED_IMG}/${postMeta.featuredImage}`,
-        alt: postMeta.title,
-        width: 440,
-        height: 330,
-      },
-      content: {
-        title: postMeta.title,
-        dateEdited: postMeta.dateEdited,
-        category: postMeta.category,
-        excerpt: postMeta.excerpt,
-      },
-      style: 'default-with-excerpt',
-    };
-  }
-  if (
     POST_CATEGORIES.LIBRARY.find(
       (category: LibraryCategories) => category === postMeta.category
     )
@@ -52,12 +30,7 @@ export const generateCardOptions = (postMeta: PostMeta): PostCard => {
       },
       style: 'small',
     };
-  }
-  if (
-    POST_CATEGORIES.WORKS.find(
-      (category: WorksCategories) => category === postMeta.category
-    )
-  ) {
+  } else {
     cardOptions = {
       href: postMeta.slug,
       image: {
@@ -68,8 +41,11 @@ export const generateCardOptions = (postMeta: PostMeta): PostCard => {
       },
       content: {
         title: postMeta.title,
+        dateEdited: postMeta.dateEdited,
+        category: postMeta.category,
+        excerpt: postMeta.excerpt,
       },
-      style: 'default',
+      style: 'default-with-excerpt',
     };
   }
   return cardOptions;

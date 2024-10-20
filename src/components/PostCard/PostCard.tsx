@@ -35,9 +35,18 @@ const PostCard: React.FunctionComponent<Props> = ({ postMeta }) => {
         />
       </Link>
       <div className={styles['description']}>
-        {POST_CATEGORIES.JOURNAL.find(
-          (category: JournalCategories) => category === postMeta.category
+        {POST_CATEGORIES.LIBRARY.find(
+          (category: LibraryCategories) => category === postMeta.category
         ) ? (
+          <>
+            <p className="small-uppercase">{cardOptions.content.bookAuthor}</p>
+            <Link className="link--neutral" href={cardOptions.href}>
+              <h3 className="paragraph--regular">
+                {cardOptions.content.title}
+              </h3>
+            </Link>
+          </>
+        ) : (
           <>
             <Link className="link--neutral" href={cardOptions.href}>
               <h3 className="heading--h3">{cardOptions.content.title}</h3>
@@ -59,28 +68,7 @@ const PostCard: React.FunctionComponent<Props> = ({ postMeta }) => {
               {cardOptions.content.excerpt}
             </p>
           </>
-        ) : POST_CATEGORIES.LIBRARY.find(
-            (category: LibraryCategories) => category === postMeta.category
-          ) ? (
-          <>
-            <p className="small-uppercase">{cardOptions.content.bookAuthor}</p>
-            <Link className="link--neutral" href={cardOptions.href}>
-              <h3 className="paragraph--regular">
-                {cardOptions.content.title}
-              </h3>
-            </Link>
-          </>
-        ) : POST_CATEGORIES.WORKS.find(
-            (category: WorksCategories) => category === postMeta.category
-          ) ? (
-          <Link className="link--neutral" href={cardOptions.href}>
-            <h3
-              className={`${styles[`title--${cardOptions.style}`]} paragraph--regular`}
-            >
-              {cardOptions.content.title}
-            </h3>
-          </Link>
-        ) : null}
+        )}
       </div>
     </article>
   );
