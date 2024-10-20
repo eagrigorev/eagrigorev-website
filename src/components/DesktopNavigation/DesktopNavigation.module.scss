@@ -24,7 +24,8 @@
   align-items: center;
   list-style: none;
   gap: var(--space-40-50);
-  &:after {
+
+  &::after {
     content: '';
     width: var(--space-40-60);
     height: 1px;
