@@ -11,6 +11,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { Metadata } from 'next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { spectral, jost } from '@/scripts/getFonts';
+import HeaderNavigation from '@/components/HeaderNavigation/HeaderNavigation';
 
 export const metadata: Metadata = {
   title: {
@@ -36,7 +37,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en" className={`${spectral.variable} ${jost.variable}`}>
       <body>
-        <TopNavigation />
+        <HeaderNavigation />
         {children}
         <CopyrightNotice />
         <SpeedInsights />
