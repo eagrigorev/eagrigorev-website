@@ -13,9 +13,21 @@
   }
 }
 
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: var(--space-40-50);
+}
+
 .links {
   display: flex;
   align-items: center;
   list-style: none;
   gap: var(--space-40-50);
+  &:after {
+    content: '';
+    width: var(--space-40-60);
+    height: 1px;
+    background-color: var(--black);
+  }
 }

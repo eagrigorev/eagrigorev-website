@@ -16,20 +16,26 @@ const DesktopNavigation: React.FunctionComponent<{}> = () => {
       <Link className="link--neutral" href={'/'}>
         Evgenii Grigorev
       </Link>
-      <ul className={styles['links']}>
-        {navigationItems.top.map(
-          (item: NavigationItem, index: number): React.JSX.Element => (
-            <li key={index}>
-              <Link className="link--lighter transition--color" href={item.url}>
-                {item.title}
-              </Link>
-            </li>
-          )
-        )}
-        <li>
+      <div className={styles['navigation']}>
+        <ul className={styles['links']}>
+          {navigationItems.top.map(
+            (item: NavigationItem, index: number): React.JSX.Element => (
+              <li key={index}>
+                <Link
+                  className="link--lighter transition--color"
+                  href={item.url}
+                >
+                  {item.title}
+                </Link>
+              </li>
+            )
+          )}
+          {/* <li>
           <SocialIcons />
-        </li>
-      </ul>
+        </li> */}
+        </ul>
+        <SocialIcons />
+      </div>
     </div>
   );
 };
