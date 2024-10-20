@@ -4,7 +4,7 @@
 
 .heading {
   &--left {
-    grid-column: span 5;
+    grid-column: span 8;
 
     @media only screen and (width <= 768px) {
       grid-column: span 6;
@@ -33,7 +33,7 @@
   &::after {
     display: block;
     content: '';
-    width: var(--space-80-120);
+    width: var(--space-40-60);
     height: 1px;
     background: var(--black);
     margin: var(--space-20-30) auto;
