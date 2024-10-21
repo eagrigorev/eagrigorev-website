@@ -1,0 +1,31 @@
+.wrapper {
+  grid-column: span 4;
+
+  @media only screen and (width <= 768px) {
+    grid-column: span 3;
+  }
+
+  @media only screen and (width <= 480px) {
+    grid-column: span 2;
+  }
+}
+
+.image {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  height: auto;
+}
+
+.description {
+  padding-top: var(--space-10-15);
+}
+
+.meta {
+  padding-top: var(--space-5-10);
+  display: flex;
+  gap: var(--space-30-40);
+}
+
+.excerpt {
+  padding-top: var(--space-10-15);
+}

@@ -1,12 +1,10 @@
-/* Namespaces */
+/* Global */
 import React from 'react';
+import styles from './SocialIcons.module.scss';
 
 /* Components */
-import Link from 'next/link';
 import Image from 'next/image';
-
-/* Utils */
-import styles from './SocialIcons.module.scss';
+import Link from 'next/link';
 
 const SocialIcons: React.FunctionComponent<{}> = () => {
   return (

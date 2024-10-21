@@ -2,7 +2,7 @@
 import React from 'react';
 
 /* Components */
-import TopNavigation from './TopNavigation';
+import TopNavigation from './NavigationHeader';
 
 /* Utils */
 import '@testing-library/jest-dom';

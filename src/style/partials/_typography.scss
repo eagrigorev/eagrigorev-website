@@ -94,6 +94,16 @@
   color: var(--grey);
 }
 
+.smaller-uppercase {
+  @extend %jost;
+
+  font-size: var(--font-9-10);
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  color: var(--grey);
+}
+
 .link {
   &--neutral {
     @extend %link;

@@ -1,19 +1,21 @@
 'use client';
 
-/* Namespaces */
+/* GLobal */
 import React, { useState, useEffect } from 'react';
+import styles from './NavigationMobile.module.scss';
 
 /* Components */
 import FocusTrap from 'focus-trap-react';
 import Link from 'next/link';
-import SocialIcons from '../SocialIcons/SocialIcons';
+import SocialIcons from '@/components/navigation/SocialIcons/SocialIcons';
 
-/* Utils */
-import styles from './MobileNavigation.module.scss';
+/* Data */
+import navigationItemsHeader from '@/data/navigationItemsHeader.json';
+
+/* Types */
 import { NavigationItem } from '@/types/navigationItem';
-import { navigationItems } from '@/scripts/getNavigationItems';
 
-const MobileNavigation: React.FunctionComponent<{}> = () => {
+const NavigationMobile: React.FunctionComponent<{}> = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
   const handleShowMenu = (): void => {
     setShowMenu(!showMenu);
@@ -45,16 +47,18 @@ const MobileNavigation: React.FunctionComponent<{}> = () => {
       {showMenu ? (
         <FocusTrap focusTrapOptions={{ clickOutsideDeactivates: true }}>
           <ul className={styles['links']}>
-            {navigationItems.top.map((item: NavigationItem, index: number) => (
-              <li key={index}>
-                <Link
-                  className="link--lighter transition--color"
-                  href={item.url}
-                >
-                  {item.title}
-                </Link>
-              </li>
-            ))}
+            {navigationItemsHeader.map(
+              (item: NavigationItem, index: number) => (
+                <li key={index}>
+                  <Link
+                    className="link--lighter transition--color"
+                    href={item.url}
+                  >
+                    {item.title}
+                  </Link>
+                </li>
+              )
+            )}
             <li>
               <SocialIcons />
             </li>
@@ -65,4 +69,4 @@ const MobileNavigation: React.FunctionComponent<{}> = () => {
   );
 };
 
-export default MobileNavigation;
+export default NavigationMobile;

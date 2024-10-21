@@ -8,7 +8,7 @@ import CopyrightNotice from '@/components/CopyrightNotice/CopyrightNotice';
 import LoadMoreButton from '@/components/LoadMoreButton/LoadMoreButton';
 import PageTitle from '@/components/PageTitle/PageTitle';
 import SubNavigation from '@/components/SubNavigation/SubNavigation';
-import TopNavigation from '@/components/TopNavigation/TopNavigation';
+import TopNavigation from '@/components/navigation/NavigationHeader/NavigationHeader';
 
 /* Utils */
 import { Metadata } from 'next';

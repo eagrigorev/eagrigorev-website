@@ -1,16 +1,18 @@
-/* Namespaces */
+/* Global */
 import React from 'react';
+import styles from './NavigationDesktop.module.scss';
 
 /* Components */
 import Link from 'next/link';
-import SocialIcons from '@/components/SocialIcons/SocialIcons';
+import SocialIcons from '@/components/navigation/SocialIcons/SocialIcons';
 
-/* Utils */
-import styles from './DesktopNavigation.module.scss';
+/* Data */
+import navigationItemsHeader from '@/data/navigationItemsHeader.json';
+
+/* Types */
 import { NavigationItem } from '@/types/navigationItem';
-import { navigationItems } from '@/scripts/getNavigationItems';
 
-const DesktopNavigation: React.FunctionComponent<{}> = () => {
+const NavigationDesktop: React.FunctionComponent<{}> = () => {
   return (
     <div className={styles['wrapper']}>
       <Link className="link--neutral" href={'/'}>
@@ -18,7 +20,7 @@ const DesktopNavigation: React.FunctionComponent<{}> = () => {
       </Link>
       <div className={styles['navigation']}>
         <ul className={styles['links']}>
-          {navigationItems.top.map(
+          {navigationItemsHeader.map(
             (item: NavigationItem, index: number): React.JSX.Element => (
               <li key={index}>
                 <Link
@@ -30,9 +32,6 @@ const DesktopNavigation: React.FunctionComponent<{}> = () => {
               </li>
             )
           )}
-          {/* <li>
-          <SocialIcons />
-        </li> */}
         </ul>
         <SocialIcons />
       </div>
@@ -40,4 +39,4 @@ const DesktopNavigation: React.FunctionComponent<{}> = () => {
   );
 };
 
-export default DesktopNavigation;
+export default NavigationDesktop;

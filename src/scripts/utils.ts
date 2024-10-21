@@ -10,7 +10,7 @@ import {
 import { POST_CATEGORIES } from '@/const/categories';
 import { PostsAmount } from '@/types/postsAmount';
 
-export const normalize = (category: PostCategory): string => {
+export const normalize = (category: string): string => {
   return category.toLowerCase().replace(/ /g, '-').replace('&', 'and');
 };
 
