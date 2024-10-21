@@ -1,7 +1,7 @@
 /* Utils */
 import { PostCategory, PostMeta } from '@/types/post';
 import { PageMeta } from '@/types/page';
-import { Matter } from '@/types/matter';
+import { Matter } from '../../TEMPORARY_FOLDER/matter';
 import { POST_CATEGORIES } from '@/const/categories';
 import { normalize } from './utils';
 

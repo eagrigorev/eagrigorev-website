@@ -1,8 +1,11 @@
 /* Utils */
 import { normalize, sortPostsDesc } from '../utils';
-import { postsSorted } from '@/mocks/postsSorted';
-import { postsUnsorted } from '@/mocks/postsUnsorted';
-import { normalizedCategory, notNormalizedcategory } from '@/mocks/category';
+import { postsSorted } from '../../../TEMPORARY_FOLDER/mocks/postsSorted';
+import { postsUnsorted } from '../../../TEMPORARY_FOLDER/mocks/postsUnsorted';
+import {
+  normalizedCategory,
+  notNormalizedcategory,
+} from '../../../TEMPORARY_FOLDER/mocks/category';
 
 describe('Normalize', () => {
   it('should remove ampersands and convert to lower case', () => {

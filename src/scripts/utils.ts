@@ -8,7 +8,7 @@ import {
 } from '@/types/post';
 
 import { POST_CATEGORIES } from '@/const/categories';
-import { PostsAmount } from '@/types/postsAmount';
+import { PostsAmount } from '../../TEMPORARY_FOLDER/postsAmount';
 
 export const normalize = (category: string): string => {
   return category.toLowerCase().replace(/ /g, '-').replace('&', 'and');

@@ -2,7 +2,7 @@
 import React from 'react';
 
 /* Components */
-import NavigationHeader from '@/components/navigation/NavigationHeader/NavigationHeader';
+import HeaderNavigation from '@/components/navigation/HeaderNavigation/HeaderNavigation';
 import CopyrightNotice from '@/components/CopyrightNotice/CopyrightNotice';
 
 /* Utils */
@@ -36,7 +36,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en" className={`${spectral.variable} ${jost.variable}`}>
       <body>
-        <NavigationHeader />
+        <HeaderNavigation />
         {children}
         <CopyrightNotice />
         <SpeedInsights />

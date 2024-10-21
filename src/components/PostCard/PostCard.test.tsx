@@ -7,7 +7,7 @@ import PostCard from './PostCard';
 /* Utils */
 import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
-import { postMeta } from '@/mocks/postMeta';
+import { postMeta } from '../../../TEMPORARY_FOLDER/mocks/postMeta';
 
 describe('PostCard', () => {
   const { container } = render(<PostCard postMeta={postMeta} />);

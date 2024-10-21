@@ -1,21 +1,29 @@
-/* Namespaces */
+/* Global */
 import React from 'react';
 
 /* Components */
-import PageTitle from '@/components/PageTitle/PageTitle';
-import PostsGrid from '@/components/PostsGrid/PostsGrid';
-import SubNavigation from '@/components/SubNavigation/SubNavigation';
-
-/* Utils */
-import { navigationItems } from '@/scripts/getNavigationItems';
-import { TITLE } from '@/const/title';
 import FeaturedPost from '@/components/FeaturedPost/FeaturedPost';
+import PostsGrid from '@/components/PostsGrid/PostsGrid';
+import PageTitle from '@/components/PageTitle/PageTitle';
+import SecondaryNavigation from '@/components/navigation/SecondaryNavigation/SecondaryNavigation';
+
+/* Scripts */
+import { navigationItems } from '../../TEMPORARY_FOLDER/getNavigationItems';
+
+/* Data */
+import navigationItemsByPostType from '@/data/navigationItemsByPostType.json';
+
+/* Const */
+import { TITLE } from '@/const/title';
 
 const Home: React.FunctionComponent<{}> = () => {
   return (
     <main className="container">
       <PageTitle title={TITLE.HOMEPAGE} />
-      <SubNavigation navigationItems={navigationItems.works} showAll={false} />
+      <SecondaryNavigation
+        navigationItems={navigationItemsByPostType}
+        showAll={false}
+      />
       <FeaturedPost />
       <PostsGrid category="Works" />
     </main>

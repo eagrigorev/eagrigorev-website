@@ -1,10 +1,10 @@
-/* Namespaces */
+/* Global */
 import fs from 'fs';
 import matter from 'gray-matter';
 
 /* Utils */
-import generateRssFeed from './generateRssFeed';
-import { categoriesList } from '@/scripts/getCategoriesList';
+import generateRssFeed from '../../TEMPORARY_FOLDER/generateRssFeed';
+import { categoriesList } from '../../TEMPORARY_FOLDER/getCategoriesList';
 import {
   mapCategoriesToSlugs,
   mapMatterDataToPageMeta,
@@ -12,7 +12,7 @@ import {
 } from './mappers';
 import { Post, PostCategory } from '@/types/post';
 import { Page } from '@/types/page';
-import { Slug } from '@/types/slug';
+import { Slug } from '../../TEMPORARY_FOLDER/slug';
 import { URL } from '@/const/url';
 import { POST_CATEGORIES } from '@/const/categories';
 

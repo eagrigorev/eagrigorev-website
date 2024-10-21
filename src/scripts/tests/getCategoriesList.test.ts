@@ -1,5 +1,5 @@
 /* Utils */
-import { categoriesList } from '../getCategoriesList';
+import { categoriesList } from '../../../TEMPORARY_FOLDER/getCategoriesList';
 
 describe('CategoriesList', () => {
   it('should get the right amount of categories', () => {

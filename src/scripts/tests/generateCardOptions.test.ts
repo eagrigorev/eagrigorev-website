@@ -1,7 +1,7 @@
 /* Utils */
-import { generateCardOptions } from '../generateCardOptions';
-import { postMeta } from '@/mocks/postMeta';
-import { postCard } from '@/mocks/postCard';
+import { generateCardOptions } from '../../../TEMPORARY_FOLDER/generateCardOptions';
+import { postMeta } from '../../../TEMPORARY_FOLDER/mocks/postMeta';
+import { postCard } from '../../../TEMPORARY_FOLDER/mocks/postCard';
 
 describe('GenerateCardOptions', () => {
   it('should generate the proper card object', () => {

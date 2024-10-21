@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 /* Utils */
 import styles from './PostCard.module.scss';
-import { generateCardOptions } from '@/scripts/generateCardOptions';
+import { generateCardOptions } from '../../../TEMPORARY_FOLDER/generateCardOptions';
 import { normalize } from '@/scripts/utils';
 import {
   PostMeta,

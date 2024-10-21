@@ -7,7 +7,7 @@ import GridGenerator from './GridGenerator';
 /* Utils */
 import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
-import { postsSorted } from '@/mocks/postsSorted';
+import { postsSorted } from '../../../TEMPORARY_FOLDER/mocks/postsSorted';
 
 describe('GridGenerator', () => {
   const { container } = render(

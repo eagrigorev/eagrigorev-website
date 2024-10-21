@@ -8,7 +8,7 @@ import GridGenerator from '../GridGenerator/GridGenerator';
 import { getSortedPosts } from '@/scripts/getPosts';
 import { ParentCategories, Post, PostCategory } from '@/types/post';
 import { calculatePostsToShowAndLoad } from '@/scripts/utils';
-import { PostsAmount } from '@/types/postsAmount';
+import { PostsAmount } from '../../../TEMPORARY_FOLDER/postsAmount';
 
 type Props = {
   category: PostCategory | ParentCategories;

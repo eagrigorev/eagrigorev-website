@@ -1,4 +1,4 @@
-import { navigationItems } from '../getNavigationItems';
+import { navigationItems } from '../../../TEMPORARY_FOLDER/getNavigationItems';
 
 describe('GetNavigationItems', () => {
   it('should return the right amount of navigation items', () => {
