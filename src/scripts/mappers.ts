@@ -1,20 +1,21 @@
+/* Scripts */
+import getCategoriesList from './getCategoriesList';
+import formatSlug from './formatSlug';
+
 /* Utils */
-import { PostCategory, PostMeta } from '@/types/post';
-import { PageMeta } from '@/types/page';
-import { Matter } from '../../TEMPORARY_FOLDER/matter';
-import { POST_CATEGORIES } from '@/const/categories';
-import { normalize } from './utils';
+import { Matter, PageMeta, Post, PostMeta } from '@/utils/types/markdown';
+import { Slug } from '@/utils/types/common';
 
 export const mapMatterDataToPostMeta = (data: Matter): PostMeta => {
   return {
     title: data.title,
     slug: data.slug,
+    type: data.type,
     category: data.category,
+    description: data.description,
     datePublished: data.datePublished,
     dateEdited: data.dateEdited,
-    featuredImage: data.featuredImage,
-    bookAuthor: data.bookAuthor,
-    excerpt: data.excerpt,
+    externalLink: data.externalLink,
   };
 };
 
@@ -25,11 +26,21 @@ export const mapMatterDataToPageMeta = (data: Matter): PageMeta => {
   };
 };
 
-export const mapCategoriesToSlugs = (
-  categories:
-    | typeof POST_CATEGORIES.JOURNAL
-    | typeof POST_CATEGORIES.LIBRARY
-    | typeof POST_CATEGORIES.WORKS
-): string[] => {
-  return categories.map((category: PostCategory) => normalize(category));
+export const mapPostsToSlugs = (posts: Post[]): Slug[] => {
+  return posts.map((post: Post) => ({
+    slug: post.meta.slug,
+  }));
+};
+
+export const mapCategoriesToSlugs = (): Slug[] => {
+  const categories = getCategoriesList();
+  return categories.map((category) => ({
+    slug: formatSlug(category),
+  }));
+};
+
+export const mapLibraryBooksToSlugs = (books: Post[]): Slug[] => {
+  return books.map((book: Post) => ({
+    slug: book.meta.slug,
+  }));
 };

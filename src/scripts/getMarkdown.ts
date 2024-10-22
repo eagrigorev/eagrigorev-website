@@ -2,52 +2,23 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 
-/* Utils */
-import generateRssFeed from '../../TEMPORARY_FOLDER/generateRssFeed';
-import { categoriesList } from '../../TEMPORARY_FOLDER/getCategoriesList';
+/* Scripts */
+import generateRssFeed from './generateRssFeed';
 import {
   mapCategoriesToSlugs,
+  mapLibraryBooksToSlugs,
   mapMatterDataToPageMeta,
   mapMatterDataToPostMeta,
+  mapPostsToSlugs,
 } from './mappers';
-import { Post, PostCategory } from '@/types/post';
-import { Page } from '@/types/page';
-import { Slug } from '../../TEMPORARY_FOLDER/slug';
-import { URL } from '@/const/url';
-import { POST_CATEGORIES } from '@/const/categories';
 
-export const getWorksPostsFromSingleCategory = (
-  category: PostCategory
-): Post[] => {
-  const path: string = `${URL.WORKS}/${category}`;
-  return fs.readdirSync(path).map((file: string) => {
-    const markdown: string = fs.readFileSync(`${path}/${file}`, 'utf-8');
-    const { data, content } = matter(markdown);
-    return {
-      meta: mapMatterDataToPostMeta(data),
-      content,
-    };
-  });
-};
+/* Utils */
+import { Page, Post } from '@/utils/types/markdown';
+import { Slug } from '@/utils/types/common';
+import { URL } from '@/utils/const/url';
 
-export const getJournalPostsFromSingleCategory = (
-  category: PostCategory
-): Post[] => {
-  const path: string = `${URL.JOURNAL}/${category}`;
-  return fs.readdirSync(path).map((file: string) => {
-    const markdown: string = fs.readFileSync(`${path}/${file}`, 'utf-8');
-    const { data, content } = matter(markdown);
-    return {
-      meta: mapMatterDataToPostMeta(data),
-      content,
-    };
-  });
-};
-
-export const getLibraryPostsFromSingleCategory = (
-  category: PostCategory
-): Post[] => {
-  const path: string = `${URL.LIBRARY}/${category}`;
+export const getPostsFromSingleType = (postType: string) => {
+  const path: string = `${URL.POSTS}/${postType}`;
   return fs.readdirSync(path).map((file: string) => {
     const markdown: string = fs.readFileSync(`${path}/${file}`, 'utf-8');
     const { data, content } = matter(markdown);
@@ -60,20 +31,15 @@ export const getLibraryPostsFromSingleCategory = (
 
 export const getAllPosts = (): Post[] => {
   let allPosts: Post[] = [];
-  mapCategoriesToSlugs(POST_CATEGORIES.JOURNAL).forEach(
-    (category: PostCategory) => {
-      allPosts.push(...getJournalPostsFromSingleCategory(category));
-    }
-  );
-  mapCategoriesToSlugs(POST_CATEGORIES.LIBRARY).forEach(
-    (category: PostCategory) => {
-      allPosts.push(...getLibraryPostsFromSingleCategory(category));
-    }
-  );
-  mapCategoriesToSlugs(POST_CATEGORIES.WORKS).forEach(
-    (category: PostCategory) => {
-      allPosts.push(...getWorksPostsFromSingleCategory(category));
-    }
+  const postTypes = [
+    'illustrations',
+    'journal',
+    'music',
+    'programming',
+    'tabs',
+  ];
+  postTypes.forEach((postType: string) =>
+    allPosts.push(...getPostsFromSingleType(postType))
   );
   return allPosts;
 };
@@ -87,19 +53,28 @@ export const getPage = (file: string): Page => {
   };
 };
 
-export const getPostsSlugs = (): Slug[] => {
-  const allPosts: Post[] = getAllPosts().filter(
-    (post: Post) => !post.meta.slug.includes('http')
+export const getLibraryBooks = (): Post[] => {
+  return fs.readdirSync(URL.LIBRARY).map((file: string) => {
+    const markdown: string = fs.readFileSync(`${URL.LIBRARY}/${file}`, 'utf-8');
+    const { data, content } = matter(markdown);
+    return {
+      meta: mapMatterDataToPostMeta(data),
+      content,
+    };
+  });
+};
+
+export const getSlugs = (): Slug[] => {
+  const allPosts: Post[] = getAllPosts();
+  const indexableBooks: Post[] = getLibraryBooks().filter(
+    (book: Post) => !book.meta.externalLink
   );
-  generateRssFeed(allPosts);
-  const postSlugs: Slug[] = allPosts.map((post: Post) => ({
-    slug: post.meta.slug,
-  }));
-  const categorySlugs: Slug[] = categoriesList.map(
-    (category: PostCategory) => ({
-      slug: category,
-    })
-  );
-  const slugs: Slug[] = [...postSlugs, ...categorySlugs];
+  const slugs: Slug[] = [
+    ...mapPostsToSlugs(allPosts),
+    ...mapLibraryBooksToSlugs(indexableBooks),
+    ...mapCategoriesToSlugs(),
+  ];
+  const allRssPosts: Post[] = [...allPosts, ...indexableBooks];
+  generateRssFeed(allRssPosts);
   return slugs;
 };

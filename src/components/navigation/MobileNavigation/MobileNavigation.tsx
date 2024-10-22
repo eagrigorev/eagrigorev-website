@@ -10,7 +10,7 @@ import Link from 'next/link';
 import SocialIcons from '@/components/navigation/SocialIcons/SocialIcons';
 
 /* Data */
-import navigationItemsHeader from '@/utils/data/navigationItemsHeader.json';
+import headerNavigation from '@/utils/data/headerNavigation.json';
 
 /* Types */
 import { NavigationItem } from '@/types/navigationItem';
@@ -47,18 +47,16 @@ const MobileNavigation: React.FunctionComponent<{}> = () => {
       {showMenu ? (
         <FocusTrap focusTrapOptions={{ clickOutsideDeactivates: true }}>
           <ul className={styles['links']}>
-            {navigationItemsHeader.map(
-              (item: NavigationItem, index: number) => (
-                <li key={index}>
-                  <Link
-                    className="link--lighter transition--color"
-                    href={item.url}
-                  >
-                    {item.title}
-                  </Link>
-                </li>
-              )
-            )}
+            {headerNavigation.map((item: NavigationItem, index: number) => (
+              <li key={index}>
+                <Link
+                  className="link--lighter transition--color"
+                  href={item.url}
+                >
+                  {item.title}
+                </Link>
+              </li>
+            ))}
             <li>
               <SocialIcons />
             </li>

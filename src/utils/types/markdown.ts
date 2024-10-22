@@ -14,8 +14,8 @@ export interface Page {
 
 export interface PostMeta extends PageMeta {
   type: string;
-  description: string;
   category: string;
+  description: string;
   datePublished?: string;
   dateEdited: string;
   externalLink?: string;

@@ -24,43 +24,43 @@ export const sortPostsDesc = (posts: Post[]): Post[] => {
   });
 };
 
-export const calculatePostsToShowAndLoad = (posts: Post[]): PostsAmount => {
-  let postsAmount: PostsAmount;
-  const postCategory = posts[0].meta.category;
-  if (
-    POST_CATEGORIES.JOURNAL.find(
-      (category: JournalCategories) => category === postCategory
-    ) ||
-    POST_CATEGORIES.WORKS.find(
-      (category: WorksCategories) => category === postCategory
-    )
-  ) {
-    postsAmount = {
-      grid: {
-        toShow: 6,
-        toLoad: 3,
-      },
-      related: {
-        toShow: 3,
-        toLoad: 3,
-      },
-    };
-  }
-  if (
-    POST_CATEGORIES.LIBRARY.find(
-      (category: LibraryCategories) => category === postCategory
-    )
-  ) {
-    postsAmount = {
-      grid: {
-        toShow: 12,
-        toLoad: 6,
-      },
-      related: {
-        toShow: 6,
-        toLoad: 6,
-      },
-    };
-  }
-  return postsAmount;
-};
+// export const calculatePostsToShowAndLoad = (posts: Post[]): PostsAmount => {
+//   let postsAmount: PostsAmount;
+//   const postCategory = posts[0].meta.category;
+//   if (
+//     POST_CATEGORIES.JOURNAL.find(
+//       (category: JournalCategories) => category === postCategory
+//     ) ||
+//     POST_CATEGORIES.WORKS.find(
+//       (category: WorksCategories) => category === postCategory
+//     )
+//   ) {
+//     postsAmount = {
+//       grid: {
+//         toShow: 6,
+//         toLoad: 3,
+//       },
+//       related: {
+//         toShow: 3,
+//         toLoad: 3,
+//       },
+//     };
+//   }
+//   if (
+//     POST_CATEGORIES.LIBRARY.find(
+//       (category: LibraryCategories) => category === postCategory
+//     )
+//   ) {
+//     postsAmount = {
+//       grid: {
+//         toShow: 12,
+//         toLoad: 6,
+//       },
+//       related: {
+//         toShow: 6,
+//         toLoad: 6,
+//       },
+//     };
+//   }
+//   return postsAmount;
+// };

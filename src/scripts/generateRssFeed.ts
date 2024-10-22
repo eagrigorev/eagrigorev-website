@@ -3,7 +3,7 @@ import fs from 'fs';
 
 /* Utils */
 import { Feed } from 'feed';
-import { Post } from '@/types/post';
+import { Post } from '@/utils/types/markdown';
 import { URL } from '@/const/url';
 
 const generateRssFeed = (posts: Post[]) => {

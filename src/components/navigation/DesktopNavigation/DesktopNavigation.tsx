@@ -7,7 +7,7 @@ import Link from 'next/link';
 import SocialIcons from '@/components/navigation/SocialIcons/SocialIcons';
 
 /* Data */
-import navigationItemsHeader from '@/utils/data/navigationItemsHeader.json';
+import headerNavigation from '@/utils/data/headerNavigation.json';
 
 /* Types */
 import { NavigationItem } from '@/types/navigationItem';
@@ -20,7 +20,7 @@ const DesktopNavigation: React.FunctionComponent<{}> = () => {
       </Link>
       <div className={styles['navigation']}>
         <ul className={styles['links']}>
-          {navigationItemsHeader.map(
+          {headerNavigation.map(
             (item: NavigationItem, index: number): React.JSX.Element => (
               <li key={index}>
                 <Link

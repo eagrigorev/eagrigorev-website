@@ -8,7 +8,7 @@ import PostsGrid from '@/components/PostsGrid/PostsGrid';
 import SecondaryNavigation from '@/components/navigation/SecondaryNavigation/SecondaryNavigation';
 
 /* Utils */
-import navigationItemsByPostType from '@/utils/data/navigationItemsByPostType.json';
+import postTypesNavigation from '@/utils/data/postTypesNavigation.json';
 import { TITLE } from '@/utils/const/title';
 
 const Home: React.FunctionComponent<{}> = () => {
@@ -16,7 +16,7 @@ const Home: React.FunctionComponent<{}> = () => {
     <main className="container">
       <PageTitle title={TITLE.HOMEPAGE} />
       <SecondaryNavigation
-        navigationItems={navigationItemsByPostType}
+        navigationItems={postTypesNavigation}
         showAll={false}
       />
       <FeaturedPost />
