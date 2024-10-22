@@ -3,18 +3,13 @@ import React from 'react';
 
 /* Components */
 import FeaturedPost from '@/components/FeaturedPost/FeaturedPost';
-import PostsGrid from '@/components/PostsGrid/PostsGrid';
 import PageTitle from '@/components/PageTitle/PageTitle';
+import PostsGrid from '@/components/PostsGrid/PostsGrid';
 import SecondaryNavigation from '@/components/navigation/SecondaryNavigation/SecondaryNavigation';
 
-/* Scripts */
-import { navigationItems } from '../../TEMPORARY_FOLDER/getNavigationItems';
-
-/* Data */
-import navigationItemsByPostType from '@/data/navigationItemsByPostType.json';
-
-/* Const */
-import { TITLE } from '@/const/title';
+/* Utils */
+import navigationItemsByPostType from '@/utils/data/navigationItemsByPostType.json';
+import { TITLE } from '@/utils/const/title';
 
 const Home: React.FunctionComponent<{}> = () => {
   return (

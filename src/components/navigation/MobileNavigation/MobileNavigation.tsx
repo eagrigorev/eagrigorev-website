@@ -10,7 +10,7 @@ import Link from 'next/link';
 import SocialIcons from '@/components/navigation/SocialIcons/SocialIcons';
 
 /* Data */
-import navigationItemsHeader from '@/data/navigationItemsHeader.json';
+import navigationItemsHeader from '@/utils/data/navigationItemsHeader.json';
 
 /* Types */
 import { NavigationItem } from '@/types/navigationItem';
