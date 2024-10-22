@@ -3,7 +3,7 @@ import React from 'react';
 
 /* Components */
 import HeaderNavigation from '@/components/navigation/HeaderNavigation/HeaderNavigation';
-import CopyrightNotice from '@/components/CopyrightNotice/CopyrightNotice';
+import CopyrightNotice from '@/components/navigation/CopyrightNotice/CopyrightNotice';
 
 /* Utils */
 import '@/style/main.scss';

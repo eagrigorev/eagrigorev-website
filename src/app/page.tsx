@@ -2,9 +2,9 @@
 import React from 'react';
 
 /* Components */
-import FeaturedPost from '@/components/FeaturedPost/FeaturedPost';
-import PageTitle from '@/components/PageTitle/PageTitle';
-import PostsGrid from '@/components/PostsGrid/PostsGrid';
+import PageTitle from '@/components/title/PageTitle/PageTitle';
+import PostCardBig from '@/components/post-card/PostCardBig/PostCardBig';
+import PostsGrid from '@/components/post-grid/PostsGrid/PostsGrid';
 import SecondaryNavigation from '@/components/navigation/SecondaryNavigation/SecondaryNavigation';
 
 /* Utils */
@@ -19,7 +19,7 @@ const Home: React.FunctionComponent<{}> = () => {
         navigationItems={postTypesNavigation}
         showAll={false}
       />
-      <FeaturedPost />
+      <PostCardBig postMeta={} />
       <PostsGrid category="Works" />
     </main>
   );

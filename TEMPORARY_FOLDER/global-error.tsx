@@ -4,9 +4,9 @@
 import React, { useEffect } from 'react';
 
 /* Components */
-import CopyrightNotice from '@/components/CopyrightNotice/CopyrightNotice';
-import LoadMoreButton from '@/components/LoadMoreButton/LoadMoreButton';
-import PageTitle from '@/components/PageTitle/PageTitle';
+import CopyrightNotice from '@/components/navigation/CopyrightNotice/CopyrightNotice';
+import LoadMoreButton from '@/components/post-grid/LoadMoreButton/LoadMoreButton';
+import PageTitle from '@/components/title/PageTitle/PageTitle';
 import SubNavigation from './SubNavigation/SubNavigation';
 import TopNavigation from '@/components/navigation/HeaderNavigation/HeaderNavigation';
 

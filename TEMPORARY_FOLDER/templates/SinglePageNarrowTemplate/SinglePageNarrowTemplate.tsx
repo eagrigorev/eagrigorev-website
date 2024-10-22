@@ -3,7 +3,7 @@ import React from 'react';
 
 /* Components */
 import MarkdownWrapper from '@/components/MarkdownWrapper/MarkdownWrapper';
-import PageTitle from '@/components/PageTitle/PageTitle';
+import PageTitle from '@/components/title/PageTitle/PageTitle';
 import RelatedEntries from '../../../TEMPORARY_FOLDER/RelatedEntries/RelatedEntries';
 
 /* Utils */

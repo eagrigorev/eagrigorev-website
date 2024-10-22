@@ -2,8 +2,8 @@
 import React from 'react';
 
 /* Components */
-import PageTitle from '@/components/PageTitle/PageTitle';
-import PostsGrid from '@/components/PostsGrid/PostsGrid';
+import PageTitle from '@/components/title/PageTitle/PageTitle';
+import PostsGrid from '@/components/post-grid/PostsGrid/PostsGrid';
 import SubNavigation from '../../../TEMPORARY_FOLDER/SubNavigation/SubNavigation';
 
 /* Utils */

@@ -1,10 +1,10 @@
-/* Namespaces */
+/* Global */
 import fs from 'fs';
 
 /* Utils */
 import { Feed } from 'feed';
 import { Post } from '@/utils/types/markdown';
-import { URL } from '@/const/url';
+import { URL } from '@/utils/const/url';
 
 const generateRssFeed = (posts: Post[]) => {
   const author = {

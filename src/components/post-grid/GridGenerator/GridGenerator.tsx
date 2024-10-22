@@ -4,7 +4,7 @@
 import React, { useState } from 'react';
 
 /* Components */
-import LoadMoreButton from '@/components/LoadMoreButton/LoadMoreButton';
+import LoadMoreButton from '@/components/post-grid/LoadMoreButton/LoadMoreButton';
 import PostCard from '@/components/PostCard/PostCard';
 
 /* Utils */

@@ -1,3 +1,5 @@
+/* Global */
+
 import { Jost, Spectral } from 'next/font/google';
 
 export const jost = Jost({

@@ -4,8 +4,8 @@
 import React, { useEffect } from 'react';
 
 /* Components */
-import LoadMoreButton from '@/components/LoadMoreButton/LoadMoreButton';
-import PageTitle from '@/components/PageTitle/PageTitle';
+import LoadMoreButton from '@/components/post-grid/LoadMoreButton/LoadMoreButton';
+import PageTitle from '@/components/title/PageTitle/PageTitle';
 import SubNavigation from './SubNavigation/SubNavigation';
 
 /* Utils */
