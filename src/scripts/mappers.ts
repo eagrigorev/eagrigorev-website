@@ -1,6 +1,6 @@
 /* Scripts */
 import getCategoriesList from './getCategoriesList';
-import formatSlug from './formatSlug';
+import { formatSlug } from './format';
 
 /* Utils */
 import { Matter, PageMeta, Post, PostMeta } from '@/utils/types/markdown';

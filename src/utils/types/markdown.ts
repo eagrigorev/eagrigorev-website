@@ -12,8 +12,10 @@ export interface Page {
   content: string;
 }
 
-export interface PostMeta extends PageMeta {
-  type: string;
+export interface PostMeta {
+  title: string;
+  slug?: string;
+  type?: string;
   category: string;
   description: string;
   datePublished?: string;
