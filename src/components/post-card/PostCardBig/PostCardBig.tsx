@@ -6,10 +6,10 @@ import styles from './PostCardBig.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 
-/* Utils */
-import { normalize } from '@/scripts/utils';
+/* Scripts */
+import { formatSlug } from '@/scripts/format';
 
-/* Types */
+/* Utils */
 import { PostMeta } from '@/utils/types/markdown';
 
 type Props = {
@@ -28,7 +28,7 @@ const PostCardBig: React.FunctionComponent<Props> = ({ postMeta }) => {
             <p>{postMeta.dateEdited}</p>
             <Link
               className="link--darker transition--color"
-              href={`/${normalize(postMeta.category)}`}
+              href={`/${formatSlug(postMeta.category)}`}
             >
               {postMeta.category}
             </Link>

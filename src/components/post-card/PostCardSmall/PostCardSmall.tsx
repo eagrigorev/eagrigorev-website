@@ -6,7 +6,7 @@ import styles from './PostCardSmall.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 
-/* Types */
+/* Utils */
 import { PostMeta } from '@/utils/types/markdown';
 
 type Props = {

@@ -15,10 +15,7 @@ const Home: React.FunctionComponent<{}> = () => {
   return (
     <main className="container">
       <PageTitle title={TITLE.HOMEPAGE} />
-      <SecondaryNavigation
-        navigationItems={postTypesNavigation}
-        showAll={false}
-      />
+      <SecondaryNavigation navigationItems={postTypesNavigation} />
       <PostCardBig postMeta={} />
       <PostsGrid category="Works" />
     </main>

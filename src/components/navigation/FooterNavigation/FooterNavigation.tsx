@@ -1,13 +1,11 @@
-/* Namespaces */
+/* Global */
 import React from 'react';
+import styles from './FooterNavigation.module.scss';
 
 /* Components */
 import Link from 'next/link';
 
-/* Utils */
-import styles from './CopyrightNotice.module.scss';
-
-const CopyrightNotice: React.FunctionComponent<{}> = () => {
+const FooterNavigation: React.FunctionComponent<{}> = () => {
   return (
     <footer className={`${styles['wrapper']} paragraph--copyright`}>
       <p>© 2024 Evgenii Grigorev</p>
@@ -31,4 +29,4 @@ const CopyrightNotice: React.FunctionComponent<{}> = () => {
   );
 };
 
-export default CopyrightNotice;
+export default FooterNavigation;

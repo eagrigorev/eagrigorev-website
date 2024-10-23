@@ -1,15 +1,15 @@
-/* Namespaces */
+/* Global */
 import React from 'react';
+import '@/style/main.scss';
+import { Metadata } from 'next';
 
 /* Components */
+import FooterNavigation from '@/components/navigation/FooterNavigation/FooterNavigation';
 import HeaderNavigation from '@/components/navigation/HeaderNavigation/HeaderNavigation';
-import CopyrightNotice from '@/components/navigation/CopyrightNotice/CopyrightNotice';
-
-/* Utils */
-import '@/style/main.scss';
 import { Analytics } from '@vercel/analytics/react';
-import { Metadata } from 'next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+
+/* Scripts */
 import { spectral, jost } from '@/scripts/getFonts';
 
 export const metadata: Metadata = {
@@ -38,7 +38,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <body>
         <HeaderNavigation />
         {children}
-        <CopyrightNotice />
+        <FooterNavigation />
         <SpeedInsights />
         <Analytics />
       </body>

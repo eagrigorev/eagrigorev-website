@@ -2,7 +2,7 @@
 import React from 'react';
 
 /* Components */
-import CopyrightNotice from './CopyrightNotice';
+import CopyrightNotice from './FooterNavigation';
 
 /* Utils */
 import '@testing-library/jest-dom';

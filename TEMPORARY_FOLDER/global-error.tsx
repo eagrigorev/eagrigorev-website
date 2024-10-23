@@ -4,7 +4,7 @@
 import React, { useEffect } from 'react';
 
 /* Components */
-import CopyrightNotice from '@/components/navigation/CopyrightNotice/CopyrightNotice';
+import CopyrightNotice from '@/components/navigation/FooterNavigation/FooterNavigation';
 import LoadMoreButton from '@/components/post-grid/LoadMoreButton/LoadMoreButton';
 import PageTitle from '@/components/title/PageTitle/PageTitle';
 import SubNavigation from './SubNavigation/SubNavigation';
