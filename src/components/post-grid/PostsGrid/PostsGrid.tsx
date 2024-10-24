@@ -7,30 +7,29 @@ import styles from './PostsGrid.module.scss';
 /* Components */
 import LoadMoreButton from '@/components/post-grid/LoadMoreButton/LoadMoreButton';
 import PostCardMedium from '@/components/post-card/PostCardMedium/PostCardMedium';
-import PostCardSmall from '@/components/post-card/PostCardSmall/PostCardSmall';
 
 /* Utils */
 import { Post } from '@/utils/types/markdown';
 
 type Props = {
   posts: Post[];
-  showAmout: number;
+  showAmount: number;
   loadAmount: number;
 };
 
 const PostsGrid: React.FunctionComponent<Props> = ({
   posts,
-  showAmout,
+  showAmount,
   loadAmount,
 }) => {
-  const [amountToShow, setAmountToShow] = useState<number>(showAmout);
+  const [amountToShow, setAmountToShow] = useState<number>(showAmount);
   const [clickedOnce, setClickedOnce] = useState<boolean>(false);
-  let postsToShow = posts.slice(0, amountToShow);
+  let postsToShow: Post[] = posts.slice(0, amountToShow);
   const loadMore = (): void => {
     setAmountToShow(amountToShow + loadAmount);
     setClickedOnce(true);
   };
-  const showButton = amountToShow < posts.length;
+  const showButton: boolean = amountToShow < posts.length;
   return (
     <section className={styles['wrapper']}>
       <div className="grid">

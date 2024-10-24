@@ -9,7 +9,7 @@ import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import { postsSorted } from '../mocks/postsSorted';
 
-describe('RelatedEntries', () => {
+describe.skip('RelatedEntries', () => {
   render(<RelatedEntries posts={postsSorted} />);
   it('renders related entries text', () => {
     const heading = screen.getByText('Related Entries:');

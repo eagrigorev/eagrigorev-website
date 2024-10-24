@@ -1,0 +1,38 @@
+[
+  {
+    "meta": {
+      "title": "Pale Views",
+      "slug": "pale-views",
+      "type": "Test Type",
+      "category": "Test Category 1",
+      "description": "This is a test description for the card excerpt.",
+      "datePublished": "January 1, 2000",
+      "dateEdited": "February 5, 2002"
+    },
+    "content": "Test post 1 content."
+  },
+  {
+    "meta": {
+      "title": "Pale Views",
+      "slug": "pale-views",
+      "type": "Test Type",
+      "category": "Test Category 2",
+      "description": "This is a test description for the card excerpt.",
+      "datePublished": "January 1, 1900",
+      "dateEdited": "February 5, 1902"
+    },
+    "content": "Test post 2 content."
+  },
+  {
+    "meta": {
+      "title": "Pale Views",
+      "slug": "pale-views",
+      "type": "Test Type",
+      "category": "Test Category 3",
+      "description": "This is a test description for the card excerpt.",
+      "datePublished": "January 1, 1899",
+      "dateEdited": "February 5, 1900"
+    },
+    "content": "Test post 3 content."
+  }
+]

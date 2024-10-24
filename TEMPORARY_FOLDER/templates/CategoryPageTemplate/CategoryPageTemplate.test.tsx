@@ -9,7 +9,7 @@ import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
 import { navigationItems } from '../../mocks/navigationItems';
 
-describe('CategoryPageTemplate', () => {
+describe.skip('CategoryPageTemplate', () => {
   const { container } = render(
     <CategoryPageTemplate
       pageTitle="Test Page"

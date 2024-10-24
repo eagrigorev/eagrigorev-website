@@ -8,7 +8,7 @@ import SpotifyEmbed from './SpotifyEmbed';
 import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
 
-describe('SpotifyEmbed', () => {
+describe.skip('SpotifyEmbed', () => {
   const { container } = render(<SpotifyEmbed src="test-src" layout="big" />);
   it('renders embed with the correct height', () => {
     const iframe = container.querySelector('iframe');

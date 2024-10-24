@@ -1,12 +1,10 @@
-/* Namespaces */
+/* Global */
 import React from 'react';
+import '@testing-library/jest-dom';
+import { render, screen } from '@testing-library/react';
 
 /* Components */
 import LoadMoreButton from './LoadMoreButton';
-
-/* Utils */
-import '@testing-library/jest-dom';
-import { render, screen } from '@testing-library/react';
 
 const testHandler = (): void => {
   console.log('Clicked!');

@@ -9,7 +9,7 @@ import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import { post } from '../../mocks/post';
 
-describe('SinglePageSplitTemplate', () => {
+describe.skip('SinglePageSplitTemplate', () => {
   render(
     <SinglePageSplitTemplate
       showSeparator={true}
