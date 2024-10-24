@@ -1,0 +1,9 @@
+{
+  "title": "Test Post Title",
+  "slug": "test-post-title",
+  "type": "Test Type",
+  "category": "Test Category",
+  "description": "This is a test description for the card excerpt.",
+  "datePublished": "January 1, 2000",
+  "dateEdited": "February 5, 2002"
+}
