@@ -34,9 +34,7 @@
   list-style: none;
 
   &--desktop {
-    // display: flex;
     align-items: center;
-    // list-style: none;
     gap: var(--space-40-50);
 
     &::after {
@@ -48,10 +46,8 @@
   }
 
   &--mobile {
-    // display: flex;
     flex-direction: column;
     gap: var(--space-10-15);
-    // list-style: none;
     padding-left: var(--space-30-40);
     width: max-content;
   }

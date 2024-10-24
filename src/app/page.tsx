@@ -23,7 +23,7 @@ const Home: React.FunctionComponent<{}> = () => {
       <PageTitle title={TITLE.HOMEPAGE} />
       <SecondaryNavigation navigationItems={postTypesNavigation} />
       <PostCardBig postMeta={posts[0].meta} />
-      <PostsGrid posts={posts} showAmout={6} loadAmount={3} />
+      <PostsGrid posts={posts.slice(1)} showAmout={6} loadAmount={3} />
     </main>
   );
 };

@@ -9,7 +9,7 @@ import PageTitle from '@/components/title/PageTitle/PageTitle';
 /* Utils */
 import styles from './SinglePageSplitTemplate.module.scss';
 import { Page } from '@/types/page';
-import { ImageLayout } from '../../../TEMPORARY_FOLDER/layout';
+import { ImageLayout } from '../../layout';
 
 type Props = {
   showSeparator: boolean;

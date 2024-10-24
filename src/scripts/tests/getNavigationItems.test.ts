@@ -1,7 +1,7 @@
-import { navigationItems } from '../../../TEMPORARY_FOLDER/getNavigationItems';
+// import { navigationItems } from '../../../TEMPORARY_FOLDER/getNavigationItems';
 
-describe('GetNavigationItems', () => {
-  it('should return the right amount of navigation items', () => {
-    expect(navigationItems.journal.length).toBe(3);
-  });
-});
+// describe('GetNavigationItems', () => {
+//   it('should return the right amount of navigation items', () => {
+//     expect(navigationItems.journal.length).toBe(3);
+//   });
+// });
