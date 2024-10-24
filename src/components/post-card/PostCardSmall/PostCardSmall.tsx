@@ -23,7 +23,7 @@ const PostCardSmall: React.FunctionComponent<Props> = ({ postMeta }) => {
       >
         <Image
           className={`${styles['image']} transition--opacity`}
-          src={`images/${postMeta.slug}/${postMeta.slug}-featured.jpg`}
+          src={`/images/${postMeta.slug}/${postMeta.slug}-featured.jpg`}
           alt={postMeta.title}
           width={250}
           height={375}

@@ -41,7 +41,7 @@ const PostCardBig: React.FunctionComponent<Props> = ({ postMeta }) => {
           <Link className="link--neutral" href={postMeta.slug} tabIndex={-1}>
             <Image
               className={`${styles['image']} transition--opacity`}
-              src={`images/posts/${postMeta.slug}/${postMeta.slug}-featured.jpg`}
+              src={`/images/posts/${postMeta.slug}/${postMeta.slug}-featured.jpg`}
               alt={postMeta.title}
               width={920}
               height={690}
