@@ -18,7 +18,7 @@ const SecondaryNavigation: React.FunctionComponent<Props> = ({
   return (
     <div className={`${styles['wrapper']} small-uppercase`}>
       <ul className={styles['links']}>
-        {navigationItems.map((item, index) => (
+        {navigationItems.map((item: NavigationItem, index: number) => (
           <li key={index}>
             <Link className="link--darker transition--color" href={item.url}>
               {item.title}

@@ -1,12 +1,10 @@
-/* Namespaces */
+/* Global */
 import React from 'react';
+import '@testing-library/jest-dom';
+import { render } from '@testing-library/react';
 
 /* Components */
 import SocialIcons from './SocialIcons';
-
-/* Utils */
-import '@testing-library/jest-dom';
-import { render, screen } from '@testing-library/react';
 
 describe('SocialIcons', () => {
   render(<SocialIcons />);

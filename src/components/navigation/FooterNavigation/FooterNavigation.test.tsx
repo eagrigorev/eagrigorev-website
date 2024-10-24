@@ -1,21 +1,19 @@
-/* Namespaces */
+/* Global */
 import React from 'react';
-
-/* Components */
-import CopyrightNotice from './FooterNavigation';
-
-/* Utils */
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 
-describe('CopyrightNotice', () => {
-  render(<CopyrightNotice />);
+/* Components */
+import FooterNavigation from './FooterNavigation';
+
+describe('FooterNavigation', () => {
+  render(<FooterNavigation />);
   it('renders a footer with the correct text', () => {
     const footerHeading = screen.getByText('© 2024 Evgenii Grigorev');
     expect(footerHeading).toBeInTheDocument();
   });
   it('renders footer unchanged', () => {
-    const { container } = render(<CopyrightNotice />);
+    const { container } = render(<FooterNavigation />);
     expect(container).toMatchSnapshot();
   });
 });
