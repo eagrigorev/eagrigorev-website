@@ -19,14 +19,10 @@ type Props = {
 const PostCardMedium: React.FunctionComponent<Props> = ({ postMeta }) => {
   return (
     <article className={styles['wrapper']}>
-      <Link
-        className="link--neutral"
-        href={postMeta.externalLink}
-        tabIndex={-1}
-      >
+      <Link className="link--neutral" href={postMeta.slug} tabIndex={-1}>
         <Image
           className={`${styles['image']} transition--opacity`}
-          src={`images/${postMeta.slug}/${postMeta.slug}-featured.jpg`}
+          src={`images/posts/${postMeta.slug}/${postMeta.slug}-featured.jpg`}
           alt={postMeta.title}
           width={440}
           height={330}
@@ -45,7 +41,7 @@ const PostCardMedium: React.FunctionComponent<Props> = ({ postMeta }) => {
             {postMeta.category}
           </Link>
         </div>
-        <p className={`${styles['excerpt']} paragraph--caption`}>
+        <p className={`${styles['excerpt']} paragraph--description`}>
           {postMeta.description}
         </p>
       </div>

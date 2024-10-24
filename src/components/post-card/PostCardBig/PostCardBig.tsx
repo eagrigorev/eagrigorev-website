@@ -22,7 +22,7 @@ const PostCardBig: React.FunctionComponent<Props> = ({ postMeta }) => {
       <div className={`${styles['content']} grid`}>
         <div className={styles['description']}>
           <Link className="link--neutral" href={postMeta.slug}>
-            <h3 className="heading--h3">{postMeta.title}</h3>
+            <h2 className="heading--h2">{postMeta.title}</h2>
           </Link>
           <div className={`${styles['meta']} smaller-uppercase`}>
             <p>{postMeta.dateEdited}</p>
@@ -33,19 +33,15 @@ const PostCardBig: React.FunctionComponent<Props> = ({ postMeta }) => {
               {postMeta.category}
             </Link>
           </div>
-          <p className={`${styles['excerpt']} paragraph--caption`}>
+          <p className={`${styles['excerpt']} paragraph--description`}>
             {postMeta.description}
           </p>
         </div>
         <div className={styles['image--wrapper']}>
-          <Link
-            className="link--neutral"
-            href={postMeta.externalLink}
-            tabIndex={-1}
-          >
+          <Link className="link--neutral" href={postMeta.slug} tabIndex={-1}>
             <Image
               className={`${styles['image']} transition--opacity`}
-              src={`images/${postMeta.slug}/${postMeta.slug}-featured.jpg`}
+              src={`images/posts/${postMeta.slug}/${postMeta.slug}-featured.jpg`}
               alt={postMeta.title}
               width={920}
               height={690}

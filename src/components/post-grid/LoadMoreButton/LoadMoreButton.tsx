@@ -1,7 +1,5 @@
-/* Namespaces */
+/* Global */
 import React from 'react';
-
-/* Utils */
 import styles from './LoadMoreButton.module.scss';
 
 type Props = {

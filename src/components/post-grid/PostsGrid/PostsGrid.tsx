@@ -1,25 +1,50 @@
-/* Namespaces */
-import React from 'react';
+'use client';
+
+/* Global */
+import React, { useState } from 'react';
+import styles from './PostsGrid.module.scss';
 
 /* Components */
-import GridGenerator from '../GridGenerator/GridGenerator';
+import LoadMoreButton from '@/components/post-grid/LoadMoreButton/LoadMoreButton';
+import PostCardMedium from '@/components/post-card/PostCardMedium/PostCardMedium';
+import PostCardSmall from '@/components/post-card/PostCardSmall/PostCardSmall';
 
 /* Utils */
-import { getSortedPosts } from '@/scripts/getPosts';
-import { ParentCategories, Post, PostCategory } from '@/types/post';
-// import { calculatePostsToShowAndLoad } from '@/scripts/utils';
-import { PostsAmount } from '../../../../TEMPORARY_FOLDER/postsAmount';
+import { Post } from '@/utils/types/markdown';
 
 type Props = {
-  category: PostCategory | ParentCategories;
+  posts: Post[];
+  showAmout: number;
+  loadAmount: number;
 };
 
-const PostsGrid: React.FunctionComponent<Props> = ({ category }) => {
-  const allPosts: Post[] = getSortedPosts(category);
-  // const postsAmount: PostsAmount = calculatePostsToShowAndLoad(allPosts);
+const PostsGrid: React.FunctionComponent<Props> = ({
+  posts,
+  showAmout,
+  loadAmount,
+}) => {
+  const [amountToShow, setAmountToShow] = useState<number>(showAmout);
+  const [clickedOnce, setClickedOnce] = useState<boolean>(false);
+  let postsToShow = posts.slice(0, amountToShow);
+  const loadMore = (): void => {
+    setAmountToShow(amountToShow + loadAmount);
+    setClickedOnce(true);
+  };
+  const showButton = amountToShow < posts.length;
   return (
-    <section>
-      <GridGenerator posts={allPosts} postsToShow={6} postsToLoad={6} />
+    <section className={styles['wrapper']}>
+      <div className="grid">
+        {postsToShow.map((item: Post, index: number) => (
+          <PostCardMedium postMeta={item.meta} key={index} />
+        ))}
+      </div>
+      {showButton ? (
+        <LoadMoreButton clickHandler={loadMore} buttonText="Load More" />
+      ) : clickedOnce ? (
+        <p className={`${styles['notification']} paragraph--regular`}>
+          All posts were loaded.
+        </p>
+      ) : null}
     </section>
   );
 };

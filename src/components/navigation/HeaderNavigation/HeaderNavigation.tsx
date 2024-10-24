@@ -36,7 +36,7 @@ const HeaderNavigation: React.FunctionComponent<{}> = () => {
           Evgenii Grigorev
         </Link>
         <div className={styles['navigation']}>
-          <ul className={styles['links, links--desktop']}>
+          <ul className={`${styles['links']} ${styles['links--desktop']}`}>
             {headerNavigation.map(
               (item: NavigationItem, index: number): React.JSX.Element => (
                 <li key={index}>
@@ -67,7 +67,7 @@ const HeaderNavigation: React.FunctionComponent<{}> = () => {
         </div>
         {showMenu ? (
           <FocusTrap focusTrapOptions={{ clickOutsideDeactivates: true }}>
-            <ul className={styles['links, links--mobile']}>
+            <ul className={`${styles['links']} ${styles['links--mobile']}`}>
               {headerNavigation.map((item: NavigationItem, index: number) => (
                 <li key={index}>
                   <Link

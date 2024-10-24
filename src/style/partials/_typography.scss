@@ -66,6 +66,12 @@
     color: var(--grey);
   }
 
+  &--description {
+    @extend %jost;
+
+    font-size: var(--font-13-16);
+  }
+
   &--copyright {
     @extend %jost;
 
