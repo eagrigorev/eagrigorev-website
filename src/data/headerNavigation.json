@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Portfolio",
+    "url": "/"
+  },
+  {
+    "title": "About",
+    "url": "/about"
+  },
+  {
+    "title": "Journal",
+    "url": "/journal"
+  },
+  {
+    "title": "Library",
+    "url": "/library"
+  }
+]
