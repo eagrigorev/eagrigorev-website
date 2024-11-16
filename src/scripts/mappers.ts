@@ -1,27 +1,20 @@
 /* Utils */
-import { PostCategory, PostMeta } from '@/types/post';
-import { PageMeta } from '@/types/page';
+import { PostCategory } from '@/types/post';
 import { Matter } from '@/types/matter';
 import { POST_CATEGORIES } from '@/const/categories';
 import { normalize } from './utils';
+import { Meta } from '@/utils/types/markdown';
 
-export const mapMatterDataToPostMeta = (data: Matter): PostMeta => {
+export const mapMatterDataToMarkdownMeta = (data: Matter): Meta => {
   return {
     title: data.title,
     slug: data.slug,
+    type: data.type,
     category: data.category,
-    datePublished: data.datePublished,
     dateEdited: data.dateEdited,
-    featuredImage: data.featuredImage,
-    bookAuthor: data.bookAuthor,
-    excerpt: data.excerpt,
-  };
-};
-
-export const mapMatterDataToPageMeta = (data: Matter): PageMeta => {
-  return {
-    title: data.title,
-    slug: data.slug,
+    datePublished: data.datePublished,
+    description: data.description,
+    externalLink: data.externalLink,
   };
 };
 

@@ -1,12 +1,9 @@
-/* Namespaces */
 import fs from 'fs';
-
-/* Utils */
 import { Feed } from 'feed';
-import { Post } from '@/types/post';
 import { URL } from '@/const/url';
+import { Markdown } from '@/utils/types/markdown';
 
-const generateRssFeed = (posts: Post[]) => {
+const generateRssFeed = (posts: Markdown[]) => {
   const author = {
     name: 'Evgenii Grigorev',
     link: 'https://www.instagram.com/eagrigorev/',
@@ -23,7 +20,7 @@ const generateRssFeed = (posts: Post[]) => {
     author: author,
     copyright: 'Evgenii Grigorev',
   });
-  posts.forEach((post: Post) => {
+  posts.forEach((post: Markdown) => {
     const slug: string = `${URL.BASE}/${post.meta.slug}`;
     feed.addItem({
       title: post.meta.title,
