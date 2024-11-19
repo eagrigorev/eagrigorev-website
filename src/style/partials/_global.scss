@@ -13,6 +13,20 @@ body {
   padding-bottom: var(--space-90-120);
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--grid-gutter);
+
+  @media only screen and (width <= 768px) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  @media only screen and (width <= 480px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .error-button {
   padding-top: var(--space-90-120);
 }
