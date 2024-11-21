@@ -1,14 +1,17 @@
 /* Utils */
-import { NavigationItem, NavigationItems } from '@/types/navigationItem';
+import {
+  NavigationItem,
+  NavigationItems,
+} from '../../DUMP/types/navigationItem';
 import {
   JournalCategories,
   LibraryCategories,
   WorksCategories,
   ParentCategories,
-} from '@/types/post';
-import { POST_CATEGORIES } from '@/const/categories';
+} from '../../DUMP/types/post';
+import { POST_CATEGORIES } from '../const/categories';
 import { normalize } from './utils';
-import { STATIC_NAVIGATION_ITEMS } from '@/const/staticNavigationItems';
+import { STATIC_NAVIGATION_ITEMS } from '../const/staticNavigationItems';
 
 const getNavigationItems = (
   parentCategory: ParentCategories

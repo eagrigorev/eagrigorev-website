@@ -8,8 +8,8 @@ import PageTitle from '@/components/PageTitle/PageTitle';
 
 /* Utils */
 import styles from './SinglePageSplitTemplate.module.scss';
-import { Page } from '@/types/page';
-import { ImageLayout } from '@/types/layout';
+import { Page } from '../../../DUMP/types/page';
+import { ImageLayout } from '../../../DUMP/types/layout';
 
 type Props = {
   showSeparator: boolean;

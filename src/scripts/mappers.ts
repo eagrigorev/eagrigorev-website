@@ -1,7 +1,7 @@
 /* Utils */
-import { PostCategory } from '@/types/post';
-import { Matter } from '@/types/matter';
-import { POST_CATEGORIES } from '@/const/categories';
+import { PostCategory } from '../../DUMP/types/post';
+import { Matter } from '../../DUMP/types/matter';
+import { POST_CATEGORIES } from '../const/categories';
 import { normalize } from './utils';
 import { Meta } from '@/utils/types/markdown';
 

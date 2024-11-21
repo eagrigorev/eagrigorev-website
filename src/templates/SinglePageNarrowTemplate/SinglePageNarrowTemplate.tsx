@@ -9,8 +9,8 @@ import RelatedEntries from '@/components/RelatedEntries/RelatedEntries';
 /* Utils */
 import styles from './SinglePageNarrowTemplate.module.scss';
 import { getSortedPosts } from '@/scripts/getPosts';
-import { Post } from '@/types/post';
-import { Page } from '@/types/page';
+import { Post } from '../../../DUMP/types/post';
+import { Page } from '../../../DUMP/types/page';
 
 type Props = {
   showSeparator: boolean;

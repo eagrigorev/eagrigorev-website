@@ -8,7 +8,7 @@ import SubNavigation from '@/components/SubNavigation/SubNavigation';
 
 /* Utils */
 import { navigationItems } from '@/scripts/getNavigationItems';
-import { TITLE } from '@/const/title';
+import { TITLE } from '../../DUMP/const/title';
 
 const Home: React.FunctionComponent<{}> = () => {
   return (

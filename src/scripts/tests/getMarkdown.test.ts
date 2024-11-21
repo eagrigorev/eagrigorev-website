@@ -5,8 +5,8 @@ import {
   getPage,
   getPostsSlugs,
 } from '../getMarkdown';
-import { Post } from '@/types/post';
-import { POSTS_AMOUNT, SLUGS_AMOUNT } from '@/const/global';
+import { Post } from '../../../DUMP/types/post';
+import { POSTS_AMOUNT, SLUGS_AMOUNT } from '../../const/global';
 
 describe('GetJournalPostsFromSingleCategory', () => {
   it('should get the correct posts category', () => {

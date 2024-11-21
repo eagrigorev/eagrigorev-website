@@ -7,8 +7,8 @@ import PostsGrid from '@/components/PostsGrid/PostsGrid';
 import SubNavigation from '@/components/SubNavigation/SubNavigation';
 
 /* Utils */
-import { NavigationItem } from '@/types/navigationItem';
-import { ParentCategories, PostCategory } from '@/types/post';
+import { NavigationItem } from '../../../DUMP/types/navigationItem';
+import { ParentCategories, PostCategory } from '../../../DUMP/types/post';
 
 type Props = {
   pageTitle: string;

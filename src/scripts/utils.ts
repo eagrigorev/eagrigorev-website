@@ -5,10 +5,10 @@ import {
   JournalCategories,
   LibraryCategories,
   WorksCategories,
-} from '@/types/post';
+} from '../../DUMP/types/post';
 
-import { POST_CATEGORIES } from '@/const/categories';
-import { PostsAmount } from '@/types/postsAmount';
+import { POST_CATEGORIES } from '../const/categories';
+import { PostsAmount } from '../../DUMP/types/postsAmount';
 
 export const normalize = (category: PostCategory): string => {
   return category.toLowerCase().replace(/ /g, '-').replace('&', 'and');

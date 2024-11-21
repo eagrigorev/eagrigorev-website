@@ -1,6 +1,6 @@
 import fs from 'fs';
 import { Feed } from 'feed';
-import { URL } from '@/const/url';
+import { URL } from '../const/url';
 import { Markdown } from '@/utils/types/markdown';
 
 const generateRssFeed = (posts: Markdown[]) => {

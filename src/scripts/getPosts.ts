@@ -1,5 +1,5 @@
 /* Utils */
-import { getAllPosts } from '@/scripts/getMarkdown';
+import { getAllPosts } from './getMarkdown';
 import { sortPostsDesc } from './utils';
 import {
   Post,
@@ -8,8 +8,8 @@ import {
   LibraryCategories,
   WorksCategories,
   ParentCategories,
-} from '@/types/post';
-import { POST_CATEGORIES } from '@/const/categories';
+} from '../../DUMP/types/post';
+import { POST_CATEGORIES } from '../const/categories';
 
 export const getSortedPosts = (
   category: PostCategory | ParentCategories,

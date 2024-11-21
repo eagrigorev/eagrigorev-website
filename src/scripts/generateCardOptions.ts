@@ -4,10 +4,10 @@ import {
   JournalCategories,
   LibraryCategories,
   WorksCategories,
-} from '@/types/post';
-import { PostCard } from '@/types/postCard';
-import { URL } from '@/const/url';
-import { POST_CATEGORIES } from '@/const/categories';
+} from '../../DUMP/types/post';
+import { PostCard } from '../../DUMP/types/postCard';
+import { URL } from '../const/url';
+import { POST_CATEGORIES } from '../const/categories';
 
 export const generateCardOptions = (postMeta: PostMeta): PostCard => {
   let cardOptions: PostCard;
