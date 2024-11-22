@@ -1,6 +1,6 @@
 [
   {
-    "title": "Portfolio",
+    "title": "Home",
     "url": "/"
   },
   {
@@ -8,11 +8,7 @@
     "url": "/about"
   },
   {
-    "title": "Journal",
-    "url": "/journal"
-  },
-  {
-    "title": "Library",
-    "url": "/library"
+    "title": "Now",
+    "url": "/now"
   }
 ]

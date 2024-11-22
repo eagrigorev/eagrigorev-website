@@ -1,135 +1,14 @@
-%spectral {
-  font-family: var(--font-spectral);
-  font-weight: 300;
-  line-height: 135%;
-}
-
-%jost {
+.header-navigation {
   font-family: var(--font-jost);
-  font-weight: 300;
-  line-height: 150%;
-  letter-spacing: 0.012em;
-}
-
-%link {
-  list-style: none;
-  color: var(--black);
-  text-decoration: none;
-}
-
-.heading {
-  &--h1 {
-    @extend %spectral;
-
-    font-size: var(--font-27-39);
-  }
-
-  &--h2 {
-    @extend %spectral;
-
-    font-size: var(--font-23-31);
-  }
-
-  &--h3 {
-    @extend %spectral;
-
-    font-size: var(--font-19-25);
-  }
-
-  &--h4 {
-    @extend %spectral;
-
-    font-size: var(--font-16-20);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-  }
-}
-
-.paragraph {
-  &--regular {
-    @extend %jost;
-
-    font-size: var(--font-16-20);
-  }
-
-  &--bolder {
-    @extend %jost;
-
-    font-size: var(--font-16-20);
-    font-weight: 400;
-  }
-
-  &--caption {
-    @extend %jost;
-
-    font-size: var(--font-13-16);
-    color: var(--grey);
-  }
-
-  &--copyright {
-    @extend %jost;
-
-    font-size: var(--font-13-16);
-    font-weight: 400;
-    color: var(--grey);
-  }
-}
-
-.button-text {
-  @extend %jost;
-
-  font-size: var(--font-13-16);
-  text-transform: uppercase;
-  font-weight: 500;
-  letter-spacing: 0.25em;
-}
-
-.small-uppercase {
-  @extend %jost;
-
-  font-size: var(--font-11-12);
-  text-transform: uppercase;
   font-weight: 400;
-  letter-spacing: 0.1em;
-  color: var(--grey);
-}
+  line-height: 100%;
+  letter-spacing: 0.015em;
 
-.link {
-  &--neutral {
-    @extend %link;
-
-    &:hover {
-      color: var(--black);
-    }
+  &__logo {
+    font-size: var(--font-16-20);
   }
 
-  &--lighter {
-    @extend %link;
-
-    &:hover {
-      color: var(--grey);
-    }
-  }
-
-  &--darker {
-    @extend %link;
-
-    color: var(--grey);
-
-    &:hover {
-      color: var(--black);
-    }
-  }
-
-  &--underline {
-    @extend %link;
-
-    margin-bottom: 1px;
-    border-bottom: 1px solid var(--grey);
-
-    &:hover {
-      color: var(--black);
-      border-bottom: 1px solid var(--black);
-    }
+  &__links {
+    font-size: var(--font-13-16);
   }
 }

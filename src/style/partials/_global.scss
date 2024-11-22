@@ -1,16 +1,12 @@
 body {
-  background-color: var(--white);
-  color: var(--black);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  background-color: var(--background-primary);
+  color: var(--font-primary);
 }
 
 .container {
   max-width: var(--grid-max-width);
   padding-inline: var(--grid-gutter);
   margin-inline: auto;
-  padding-bottom: var(--space-90-120);
 }
 
 .grid {
@@ -27,6 +23,7 @@ body {
   }
 }
 
-.error-button {
-  padding-top: var(--space-90-120);
+a {
+  color: var(--font-primary);
+  text-decoration: none;
 }
