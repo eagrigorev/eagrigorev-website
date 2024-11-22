@@ -15,7 +15,7 @@ import styles from './SocialIcons.module.scss';
 import { NavigationItem } from '@/utils/types/common';
 
 type Props = {
-  style: 'header' | 'footer';
+  style: 'default' | 'extended';
 };
 
 const SocialIcons: React.FunctionComponent<Props> = ({ style }) => {
@@ -31,7 +31,7 @@ const SocialIcons: React.FunctionComponent<Props> = ({ style }) => {
               <Link href={item.url}>
                 <Image
                   className={`animation--decrease-opacity ${styles['icon']}`}
-                  src={`images/icons/icons8-${item.title.toLowerCase()}-${style}.svg`}
+                  src={`images/icons/icons8-${item.title.toLowerCase()}.svg`}
                   alt={`${item.title} icon`}
                   width={25}
                   height={25}

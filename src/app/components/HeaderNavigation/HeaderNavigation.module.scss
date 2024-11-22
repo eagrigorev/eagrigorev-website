@@ -5,25 +5,71 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media only screen and (width <= 768px) {
+      display: none;
+    }
+  }
+
+  &__mobile {
+    display: none;
+
+    @media only screen and (width <= 768px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 }
 
 .navigation {
-  display: flex;
-  gap: var(--space-30-40);
+  &__desktop {
+    display: flex;
+    gap: var(--space-30-40);
+  }
+
+  &__mobile {
+    display: none;
+
+    @media only screen and (width <= 768px) {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-30-40);
+      padding-top: var(--space-30-40);
+    }
+  }
 }
 
 .links {
-  display: flex;
-  align-items: center;
-  gap: var(--space-30-40);
-  list-style: none;
+  &__desktop {
+    display: flex;
+    align-items: center;
+    gap: var(--space-30-40);
+    list-style: none;
 
-  &::after {
-    display: block;
-    content: '';
-    width: var(--space-40-60);
-    height: 1px;
-    background: var(--accent-secondary);
+    &::after {
+      display: block;
+      content: '';
+      width: var(--space-40-60);
+      height: 1px;
+      background: var(--accent-secondary);
+    }
   }
+
+  &__mobile {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-20-25);
+    list-style: none;
+  }
+}
+
+.menu-button {
+  border: none;
+  background: none;
+}
+
+.icon {
+  width: var(--space-20-25);
+  height: var(--space-20-25);
 }
