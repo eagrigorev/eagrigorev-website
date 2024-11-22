@@ -29,7 +29,9 @@ const HeaderNavigation: React.FunctionComponent<{}> = () => {
             {headerNavigation.map(
               (item: NavigationItem, index: number): React.JSX.Element => (
                 <li key={index}>
-                  <Link href={item.url}>{item.title}</Link>
+                  <Link className="animation--decrease-opacity" href={item.url}>
+                    {item.title}
+                  </Link>
                 </li>
               )
             )}

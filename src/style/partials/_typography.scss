@@ -12,3 +12,13 @@
     font-size: var(--font-13-16);
   }
 }
+
+.animation {
+  &--decrease-opacity {
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
