@@ -1,6 +1,8 @@
 .wrapper {
   padding-top: var(--space-80-120);
+}
 
+.layout {
   &--page-left {
     grid-column: span 8;
 

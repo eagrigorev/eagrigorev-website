@@ -1,9 +1,6 @@
 /* Global */
 import React from 'react';
 
-/* Data */
-import categories from '@/data/categories.json';
-
 /* Style */
 import styles from './DynamicTitle.module.scss';
 
@@ -22,9 +19,9 @@ const DynamicTitle: React.FunctionComponent<Props> = ({
   title,
 }) => {
   return (
-    <header className={`${styles['wrapper']} ${styles[`wrapper--${style}`]}`}>
+    <header className={`grid ${styles['wrapper']}`}>
       {style === 'page-left' ? (
-        <div>
+        <div className={styles['layout--page-left']}>
           <h1 className="heading--h1">{title}</h1>
         </div>
       ) : null}

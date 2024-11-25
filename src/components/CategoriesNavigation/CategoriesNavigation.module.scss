@@ -1,0 +1,11 @@
+.wrapper {
+  padding-top: var(--space-30-40);
+}
+
+.items {
+  display: flex;
+  gap: var(--space-30-40);
+  row-gap: var(--space-20-25);
+  flex-wrap: wrap;
+  list-style: none;
+}

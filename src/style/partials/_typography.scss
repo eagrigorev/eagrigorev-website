@@ -13,12 +13,30 @@
   }
 }
 
+.categories-navigation {
+  font-family: var(--font-jost);
+  font-size: var(--font-11-12);
+  font-weight: 400;
+  line-height: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
 .animation {
   &--decrease-opacity {
     transition: opacity 0.3s;
 
     &:hover {
       opacity: 0.6;
+    }
+  }
+
+  &--increase-opacity {
+    opacity: 0.6;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 1;
     }
   }
 }
