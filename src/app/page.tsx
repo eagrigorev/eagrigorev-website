@@ -1,8 +1,11 @@
-/* Namespaces */
+/* Global */
 import React from 'react';
 
+/* Components */
+import HomePage from '@/templates/HomePage/HomePage';
+
 const Home: React.FunctionComponent<{}> = () => {
-  return <main className="container">OK</main>;
+  return <HomePage />;
 };
 
 export default Home;

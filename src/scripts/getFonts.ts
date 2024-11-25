@@ -1,4 +1,4 @@
-import { Jost } from 'next/font/google';
+import { Jost, Spectral } from 'next/font/google';
 
 export const jost = Jost({
   weight: ['400'], // Regular
@@ -6,4 +6,12 @@ export const jost = Jost({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-jost',
+});
+
+export const spectral = Spectral({
+  weight: ['300'], // Light
+  style: ['normal'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-spectral',
 });

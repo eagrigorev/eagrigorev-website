@@ -7,7 +7,7 @@ import React, { useState, useEffect } from 'react';
 import FocusTrap from 'focus-trap-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import SocialIcons from '../SocialIcons/SocialIcons';
+import SocialIcons from '@/components/SocialIcons/SocialIcons';
 
 /* Data */
 import headerNavigation from '@/data/headerNavigation.json';

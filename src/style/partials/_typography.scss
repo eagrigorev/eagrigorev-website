@@ -22,3 +22,12 @@
     }
   }
 }
+
+.heading {
+  &--h1 {
+    font-family: var(--font-spectral);
+    font-size: var(--font-27-39);
+    font-weight: 300;
+    line-height: 150%;
+  }
+}

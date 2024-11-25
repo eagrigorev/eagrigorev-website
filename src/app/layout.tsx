@@ -3,10 +3,10 @@ import React from 'react';
 import { Metadata } from 'next';
 
 /* Components */
-import HeaderNavigation from './components/HeaderNavigation/HeaderNavigation';
+import HeaderNavigation from '@/components/HeaderNavigation/HeaderNavigation';
 
 /* Scripts */
-import { jost } from '@/scripts/getFonts';
+import { jost, spectral } from '@/scripts/getFonts';
 
 /* Style */
 import '@/style/main.scss';
@@ -20,7 +20,7 @@ export const metadata: Metadata = websiteMetadata;
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html lang="en" className={`${jost.variable}`}>
+    <html lang="en" className={`${jost.variable} ${spectral.variable}`}>
       <body>
         <HeaderNavigation />
         {children}
