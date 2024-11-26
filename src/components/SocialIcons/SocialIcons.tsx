@@ -2,8 +2,7 @@
 import React from 'react';
 
 /* Components */
-import Image from 'next/image';
-import Link from 'next/link';
+import SocialIcon from '@/components/SocialIcon/SocialIcon';
 
 /* Data */
 import socialIcons from '@/data/socialIcons.json';
@@ -15,28 +14,20 @@ import styles from './SocialIcons.module.scss';
 import { NavigationItem } from '@/utils/types/common';
 
 type Props = {
-  style: 'default' | 'extended';
+  showFollowText: boolean;
 };
 
-const SocialIcons: React.FunctionComponent<Props> = ({ style }) => {
+const SocialIcons: React.FunctionComponent<Props> = ({ showFollowText }) => {
   return (
     <div className={styles['wrapper']}>
-      <p className={`header-navigation__links ${styles[`style--${style}`]}`}>
-        follow:
-      </p>
-      <ul className={styles['icons']}>
+      {showFollowText ? (
+        <p className="header-navigation__links">follow:</p>
+      ) : null}
+      <ul className={styles['items']}>
         {socialIcons.map(
           (item: NavigationItem, index: number): React.JSX.Element => (
             <li key={index}>
-              <Link href={item.url}>
-                <Image
-                  className={`animation--decrease-opacity ${styles['icon']}`}
-                  src={`/images/icons/icons8-${item.title.toLowerCase()}.svg`}
-                  alt={`${item.title} icon`}
-                  width={25}
-                  height={25}
-                />
-              </Link>
+              <SocialIcon icon={item} />
             </li>
           )
         )}

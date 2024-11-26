@@ -54,7 +54,7 @@ const HeaderNavigation: React.FunctionComponent<{}> = () => {
               )
             )}
           </ul>
-          <SocialIcons style="extended" />
+          <SocialIcons showFollowText={true} />
         </div>
       </div>
       <div className={styles['wrapper__mobile']}>
@@ -88,7 +88,7 @@ const HeaderNavigation: React.FunctionComponent<{}> = () => {
                 </li>
               ))}
             </ul>
-            <SocialIcons style="default" />
+            <SocialIcons showFollowText={false} />
           </div>
         </FocusTrap>
       ) : null}

@@ -7,13 +7,13 @@ import { render, screen } from '@testing-library/react';
 import SocialIcons from './SocialIcons';
 
 describe('SocialIcons', () => {
-  render(<SocialIcons style="default" />);
-  it('renders Instagram icon', () => {
-    const instagram = screen.getByAltText('Instagram icon');
-    expect(instagram).toBeInTheDocument();
+  render(<SocialIcons showFollowText={true} />);
+  it('renders follow text', () => {
+    const follow = screen.getByText('follow:');
+    expect(follow).toBeInTheDocument();
   });
   it('renders social icons block unchanged', () => {
-    const { container } = render(<SocialIcons style="default" />);
+    const { container } = render(<SocialIcons showFollowText={false} />);
     expect(container).toMatchSnapshot();
   });
 });

@@ -1,17 +1,27 @@
-.transition {
-  &--opacity {
-    transition: opacity 0.4s;
+// .transition {
+//   &--opacity {
+//     transition: opacity 0.4s;
+
+//     &:hover {
+//       opacity: 0.8;
+//     }
+//   }
+
+//   &--color {
+//     transition: color 0.4s;
+//   }
+
+//   &--border {
+//     transition: border-color 0.4s;
+//   }
+// }
+
+.opacity {
+  &--decrease {
+    transition: opacity 0.3s;
 
     &:hover {
-      opacity: 0.8;
+      opacity: 0.6;
     }
-  }
-
-  &--color {
-    transition: color 0.4s;
-  }
-
-  &--border {
-    transition: border-color 0.4s;
   }
 }
