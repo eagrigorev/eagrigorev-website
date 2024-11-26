@@ -31,7 +31,7 @@ const SocialIcons: React.FunctionComponent<Props> = ({ style }) => {
               <Link href={item.url}>
                 <Image
                   className={`animation--decrease-opacity ${styles['icon']}`}
-                  src={`images/icons/icons8-${item.title.toLowerCase()}.svg`}
+                  src={`/images/icons/icons8-${item.title.toLowerCase()}.svg`}
                   alt={`${item.title} icon`}
                   width={25}
                   height={25}
