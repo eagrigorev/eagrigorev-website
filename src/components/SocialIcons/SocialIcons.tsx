@@ -20,9 +20,7 @@ type Props = {
 const SocialIcons: React.FunctionComponent<Props> = ({ showFollowText }) => {
   return (
     <div className={styles['wrapper']}>
-      {showFollowText ? (
-        <p className="header-navigation__links">follow:</p>
-      ) : null}
+      {showFollowText ? <p className="header__links">follow:</p> : null}
       <ul className={styles['items']}>
         {socialIcons.map(
           (item: NavigationItem, index: number): React.JSX.Element => (

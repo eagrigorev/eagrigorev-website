@@ -21,7 +21,7 @@ const CategoriesNavigation: React.FunctionComponent<Props> = ({
   showBackLink,
 }) => {
   return (
-    <div className={`categories-navigation ${styles['wrapper']}`}>
+    <div className={`categories ${styles['wrapper']}`}>
       <ul className={styles['items']}>
         {showBackLink ? (
           <li>

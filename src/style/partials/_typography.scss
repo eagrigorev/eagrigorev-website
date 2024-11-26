@@ -1,53 +1,61 @@
-.header-navigation {
+%jost-header {
   font-family: var(--font-jost);
   font-weight: 400;
   line-height: 100%;
   letter-spacing: 0.015em;
+}
 
+%jost-uppercase {
+  font-family: var(--font-jost);
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+%spectral-heading {
+  font-family: var(--font-spectral);
+  font-weight: 300;
+  line-height: 150%;
+}
+
+.header {
   &__logo {
+    @extend %jost-header;
+
     font-size: var(--font-16-20);
   }
 
   &__links {
+    @extend %jost-header;
+
     font-size: var(--font-13-16);
   }
 }
 
-.categories-navigation {
-  font-family: var(--font-jost);
+.categories {
+  @extend %jost-uppercase;
+
   font-size: var(--font-11-12);
-  font-weight: 400;
-  line-height: 100%;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
 }
 
-.featured-card-description {
-  font-family: var(--font-jost);
-  font-size: var(--font-13-16);
-  font-weight: 300;
-  line-height: 150%;
-  letter-spacing: 0.015em;
-}
+.featured-post {
+  &__description {
+    font-family: var(--font-jost);
+    font-size: var(--font-13-16);
+    font-weight: 300;
+    line-height: 150%;
+    letter-spacing: 0.015em;
+  }
 
-.featured-card-meta {
-  font-family: var(--font-jost);
-  font-size: var(--font-9-10);
-  font-weight: 400;
-  line-height: 100%;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
+  &__meta {
+    @extend %jost-uppercase;
+
+    font-size: var(--font-9-10);
+  }
 }
 
 .animation {
-  &--decrease-opacity {
-    transition: opacity 0.3s;
-
-    &:hover {
-      opacity: 0.6;
-    }
-  }
-
   &--increase-opacity {
     opacity: 0.6;
     transition: opacity 0.3s;
@@ -60,16 +68,14 @@
 
 .heading {
   &--h1 {
-    font-family: var(--font-spectral);
+    @extend %spectral-heading;
+
     font-size: var(--font-27-39);
-    font-weight: 300;
-    line-height: 150%;
   }
 
   &--h2 {
-    font-family: var(--font-spectral);
+    @extend %spectral-heading;
+
     font-size: var(--font-23-31);
-    font-weight: 300;
-    line-height: 150%;
   }
 }

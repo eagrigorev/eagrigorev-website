@@ -21,7 +21,7 @@ const FeaturedPost: React.FunctionComponent<{}> = () => {
     <section className={styles['wrapper']}>
       <article className={`grid ${styles['container']}`}>
         <div className={styles['description']}>
-          <div className={`featured-card-meta ${styles['meta']}`}>
+          <div className={`featured-post__meta ${styles['meta']}`}>
             <p>September 25, 1999</p>
             <Link className={styles['red']} href="/">
               Illustrations
@@ -31,19 +31,19 @@ const FeaturedPost: React.FunctionComponent<{}> = () => {
             <Link href="/">
               <h2 className="heading--h2">Exploring the Northern Regions</h2>
             </Link>
-            <p className="featured-card-description">
+            <p className="featured-post__description">
               Lorem ipsum dolor sit amet consectetur. Posuere quisque pharetra
               nibh donec ut morbi tellus fames tempor. Feugiat in et elit donec.
             </p>
           </div>
           <Link
-            className={`featured-card-description ${styles['red']}`}
+            className={`featured-post__description ${styles['red']}`}
             href="/"
           >
             read more
           </Link>
         </div>
-        <Link className={styles['image-wrapper']} href="/">
+        <Link className={styles['image-wrapper']} href="/" tabIndex={-1}>
           <Image
             className={styles['image']}
             src={`/images/featured/pixel-arts-archive.jpg`}
