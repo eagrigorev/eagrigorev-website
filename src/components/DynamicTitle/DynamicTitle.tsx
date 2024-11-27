@@ -1,6 +1,9 @@
 /* Global */
 import React from 'react';
 
+/* Components */
+import PageTitleLeft from '@/components/PageTitleLeft/PageTitleLeft';
+
 /* Style */
 import styles from './DynamicTitle.module.scss';
 
@@ -8,23 +11,19 @@ import styles from './DynamicTitle.module.scss';
 import { Meta } from '@/utils/types/markdown';
 
 type Props = {
-  style: 'page-left' | 'page-centered' | 'post';
+  layout: 'page-left' | 'page-centered' | 'post';
   postMeta?: Meta;
   title?: string;
 };
 
 const DynamicTitle: React.FunctionComponent<Props> = ({
-  style,
+  layout,
   postMeta,
   title,
 }) => {
   return (
     <header className={`grid ${styles['wrapper']}`}>
-      {style === 'page-left' ? (
-        <div className={styles['layout--page-left']}>
-          <h1 className="heading--h1">{title}</h1>
-        </div>
-      ) : null}
+      {layout === 'page-left' ? <PageTitleLeft title={title} /> : null}
     </header>
   );
 };

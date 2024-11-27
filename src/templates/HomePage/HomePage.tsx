@@ -12,7 +12,7 @@ import { TITLE } from '@/utils/const/title';
 const HomePage: React.FunctionComponent<{}> = () => {
   return (
     <main className="container">
-      <DynamicTitle style="page-left" title={TITLE.HOMEPAGE} />
+      <DynamicTitle layout="page-left" title={TITLE.HOMEPAGE} />
       <CategoriesNavigation showBackLink={false} />
       <FeaturedPost />
     </main>

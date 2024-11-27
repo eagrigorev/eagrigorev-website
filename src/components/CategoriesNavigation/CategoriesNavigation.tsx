@@ -25,14 +25,14 @@ const CategoriesNavigation: React.FunctionComponent<Props> = ({
       <ul className={styles['items']}>
         {showBackLink ? (
           <li>
-            <Link className="animation--increase-opacity" href="/">
+            <Link className="opacity--increase" href="/">
               All
             </Link>
           </li>
         ) : null}
         {categories.map((item: NavigationItem, index: number) => (
           <li key={index}>
-            <Link className="animation--increase-opacity" href={item.url}>
+            <Link className="opacity--increase" href={item.url}>
               {item.title}
             </Link>
           </li>
