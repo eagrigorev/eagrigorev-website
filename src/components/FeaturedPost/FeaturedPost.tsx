@@ -2,8 +2,7 @@
 import React from 'react';
 
 /* Components */
-import Image from 'next/image';
-import Link from 'next/link';
+import PostCardBig from '@/components/PostCardBig/PostCardBig';
 
 /* Style */
 import styles from './FeaturedPost.module.scss';
@@ -19,40 +18,7 @@ import { NavigationItem } from '@/utils/types/common';
 const FeaturedPost: React.FunctionComponent<{}> = () => {
   return (
     <section className={styles['wrapper']}>
-      <article className={`grid ${styles['container']}`}>
-        <div className={styles['description']}>
-          <div className={`featured-post__meta ${styles['meta']}`}>
-            <p>September 25, 1999</p>
-            <Link className={styles['red']} href="/">
-              Illustrations
-            </Link>
-          </div>
-          <div className={styles['title']}>
-            <Link href="/">
-              <h2 className="heading--h2">Exploring the Northern Regions</h2>
-            </Link>
-            <p className="featured-post__description">
-              Lorem ipsum dolor sit amet consectetur. Posuere quisque pharetra
-              nibh donec ut morbi tellus fames tempor. Feugiat in et elit donec.
-            </p>
-          </div>
-          <Link
-            className={`featured-post__description ${styles['red']}`}
-            href="/"
-          >
-            read more
-          </Link>
-        </div>
-        <Link className={styles['image-wrapper']} href="/" tabIndex={-1}>
-          <Image
-            className={styles['image']}
-            src={`/images/featured/pixel-arts-archive.jpg`}
-            alt="Test"
-            width={920}
-            height={690}
-          />
-        </Link>
-      </article>
+      <PostCardBig />
     </section>
   );
 };

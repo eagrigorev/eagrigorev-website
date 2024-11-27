@@ -4,16 +4,16 @@ import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 
 /* Components */
-import FeaturedPost from './FeaturedPost';
+import PostCardBig from './PostCardBig';
 
-describe('FeaturedPost', () => {
-  render(<FeaturedPost />);
+describe('PostCardBig', () => {
+  render(<PostCardBig />);
   it('renders the correct title', () => {
     const title = screen.getByText('Exploring the Northern Regions');
     expect(title).toBeInTheDocument();
   });
-  it('renders the featured post unchanged', () => {
-    const { container } = render(<FeaturedPost />);
+  it('renders the big post card unchanged', () => {
+    const { container } = render(<PostCardBig />);
     expect(container).toMatchSnapshot();
   });
 });
