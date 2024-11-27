@@ -30,6 +30,10 @@
     flex-wrap: wrap;
     gap: var(--space-30-40);
     row-gap: var(--space-20-25);
+
+    &__date {
+      opacity: 0.6;
+    }
   }
 
   &__title {

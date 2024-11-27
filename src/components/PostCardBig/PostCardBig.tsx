@@ -21,8 +21,8 @@ const PostCardBig: React.FunctionComponent<{}> = () => {
     <article className={`grid ${styles['wrapper']}`}>
       <div className={styles['content__wrapper']}>
         <div className={`post-card-big__meta ${styles['content__meta']}`}>
-          <p>September 25, 1999</p>
-          <Link className={styles['red']} href="/">
+          <p className={styles['content__meta__date']}>September 25, 1999</p>
+          <Link className="color--grey-to-red" href="/">
             Illustrations
           </Link>
         </div>
@@ -36,7 +36,7 @@ const PostCardBig: React.FunctionComponent<{}> = () => {
           </p>
         </div>
         <Link
-          className={`post-card-big__description ${styles['red']}`}
+          className="post-card-big__description color--red-to-grey"
           href="/"
         >
           read more
