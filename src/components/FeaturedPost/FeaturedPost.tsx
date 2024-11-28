@@ -4,21 +4,22 @@ import React from 'react';
 /* Components */
 import PostCardBig from '@/components/PostCardBig/PostCardBig';
 
+/* Scripts */
+import { getAllPosts } from '@/scripts/getMarkdown';
+
 /* Style */
 import styles from './FeaturedPost.module.scss';
 
 /* Utils */
-import { Meta } from '@/utils/types/markdown';
-import { NavigationItem } from '@/utils/types/common';
-
-// type Props = {
-//   postMeta: Meta;
-// };
+import { Markdown } from '@/utils/types/markdown';
 
 const FeaturedPost: React.FunctionComponent<{}> = () => {
+  const post = getAllPosts().filter(
+    (post: Markdown) => post.meta.category !== 'Library'
+  )[0];
   return (
     <section className={styles['wrapper']}>
-      <PostCardBig />
+      <PostCardBig postMeta={post.meta} />
     </section>
   );
 };

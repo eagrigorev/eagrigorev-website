@@ -18,15 +18,16 @@ import { URL } from '@/utils/const/url';
 
 export const getPostsFromSingleCategory = (category: string): Markdown[] => {
   const path: string = `${URL.POSTS}/${category}`;
-  const allPosts: Markdown[] = fs.readdirSync(path).map((file: string) => {
+  let categoryPosts: Markdown[] = [];
+  fs.readdirSync(path).forEach((file: string) => {
     const markdown: string = fs.readFileSync(`${path}/${file}`, 'utf-8');
     const { data, content } = matter(markdown);
-    return {
+    categoryPosts.push({
       meta: mapMatterToMeta(data),
       content,
-    };
+    });
   });
-  return sortPostsDesc(allPosts);
+  return sortPostsDesc(categoryPosts);
 };
 
 export const getAllPosts = (): Markdown[] => {
