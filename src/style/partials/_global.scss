@@ -13,6 +13,7 @@ body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: var(--grid-gutter);
+  row-gap: var(--space-40-60);
 
   @media only screen and (width <= 768px) {
     grid-template-columns: repeat(6, 1fr);

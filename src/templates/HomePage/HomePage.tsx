@@ -3,6 +3,7 @@ import React from 'react';
 
 /* Components */
 import CategoriesNavigation from '@/components/CategoriesNavigation/CategoriesNavigation';
+import DynamicPostsGrid from '@/components/DynamicPostsGrid/DynamicPostsGrid';
 import DynamicTitle from '@/components/DynamicTitle/DynamicTitle';
 import FeaturedPost from '@/components/FeaturedPost/FeaturedPost';
 
@@ -15,6 +16,7 @@ const HomePage: React.FunctionComponent<{}> = () => {
       <DynamicTitle layout="page-left" title={TITLE.HOMEPAGE} />
       <CategoriesNavigation showBackLink={false} />
       <FeaturedPost />
+      <DynamicPostsGrid />
     </main>
   );
 };

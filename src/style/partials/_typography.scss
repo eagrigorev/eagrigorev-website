@@ -67,4 +67,10 @@
 
     font-size: var(--font-23-31);
   }
+
+  &--h3 {
+    @extend %spectral-heading;
+
+    font-size: var(--font-19-25);
+  }
 }
