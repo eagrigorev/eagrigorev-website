@@ -11,17 +11,17 @@ import styles from './PostCardMedium.module.scss';
 /* Utils */
 import { Meta } from '@/utils/types/markdown';
 
-// type Props = {
-//   postMeta: Meta;
-// };
+type Props = {
+  postMeta: Meta;
+};
 
-const PostCardMedium: React.FunctionComponent<{}> = () => {
+const PostCardMedium: React.FunctionComponent<Props> = ({ postMeta }) => {
   return (
     <article className={styles['wrapper']}>
-      <Link href="/" tabIndex={-1}>
+      <Link href={postMeta.slug} tabIndex={-1}>
         <Image
           className={`opacity--decrease ${styles['image']}`}
-          src={`/images/featured/pixel-arts-archive.jpg`}
+          src={`/images/posts/${postMeta.slug}/${postMeta.slug}-featured.jpg`}
           alt="Test"
           width={440}
           height={330}
@@ -29,23 +29,20 @@ const PostCardMedium: React.FunctionComponent<{}> = () => {
       </Link>
       <div className={styles['content__wrapper']}>
         <div className={`post-card-big__meta ${styles['content__meta']}`}>
-          <p className={styles['content__meta__date']}>September 25, 1999</p>
-          <Link className="color--grey-to-red" href="/">
-            Illustrations
+          <p className={styles['content__meta__date']}>{postMeta.dateEdited}</p>
+          <Link className="color--grey-to-red" href={postMeta.category}>
+            {postMeta.category}
           </Link>
         </div>
         <div className={styles['content__title']}>
-          <Link href="/">
-            <h2 className="heading--h3">Exploring the Northern Regions</h2>
+          <Link href={postMeta.slug}>
+            <h2 className="heading--h3">{postMeta.title}</h2>
           </Link>
-          <p className="post-card-big__description">
-            Lorem ipsum dolor sit amet consectetur. Posuere quisque pharetra
-            nibh donec ut morbi tellus fames tempor. Feugiat in et elit donec.
-          </p>
+          <p className="post-card-big__description">{postMeta.description}</p>
         </div>
         <Link
           className="post-card-big__description color--red-to-grey"
-          href="/"
+          href={postMeta.slug}
         >
           read more
         </Link>
