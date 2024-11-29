@@ -1,0 +1,10 @@
+.wrapper {
+  padding: var(--space-20-25) var(--space-100-150);
+  background: var(--font-primary);
+  border: none;
+  color: var(--background-primary);
+
+  &:hover {
+    cursor: pointer;
+  }
+}

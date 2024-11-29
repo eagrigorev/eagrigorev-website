@@ -13,6 +13,14 @@
   text-transform: uppercase;
 }
 
+%jost-button {
+  font-family: var(--font-jost);
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
 %spectral-heading {
   font-family: var(--font-spectral);
   font-weight: 300;
@@ -33,10 +41,24 @@
   }
 }
 
+.button-text {
+  @extend %jost-button;
+
+  font-size: var(--font-11-12);
+}
+
 .categories {
   @extend %jost-uppercase;
 
   font-size: var(--font-11-12);
+}
+
+.paragraph {
+  font-family: var(--font-jost);
+  font-size: var(--font-13-16);
+  font-weight: 300;
+  line-height: 100%;
+  letter-spacing: 0.015em;
 }
 
 .post-card-big {
