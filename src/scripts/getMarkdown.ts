@@ -7,14 +7,26 @@ import categories from '@/data/categories.json';
 
 /* Scripts */
 import generateRssFeed from './generateRssFeed';
-import { mapMatterToMeta } from './mapMatterToMeta';
 import { sortPostsDesc } from './sort';
 
 /* Utils */
-import { Markdown } from '@/utils/types/markdown';
+import { Markdown, Matter, Meta } from '@/utils/types/markdown';
 import { NavigationItem } from '@/utils/types/common';
 import { Slug } from '@/utils/types/common';
 import { URL } from '@/utils/const/url';
+
+const mapMatterToMeta = (data: Matter): Meta => {
+  return {
+    title: data.title,
+    slug: data.slug,
+    category: data.category,
+    tags: data.tags,
+    dateEdited: data.dateEdited,
+    datePublished: data.datePublished,
+    description: data.description,
+    externalLink: data.externalLink,
+  };
+};
 
 export const getPostsFromSingleCategory = (category: string): Markdown[] => {
   const path: string = `${URL.POSTS}/${category}`;
