@@ -4,6 +4,7 @@ import { Metadata } from 'next';
 
 /* Components */
 import HeaderNavigation from '@/components/HeaderNavigation/HeaderNavigation';
+import FooterWidgets from '@/components/FooterWidgets/FooterWidgets';
 
 /* Scripts */
 import { jost, spectral } from '@/scripts/getFonts';
@@ -24,6 +25,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <body>
         <HeaderNavigation />
         {children}
+        <FooterWidgets />
         <SpeedInsights />
         <Analytics />
       </body>

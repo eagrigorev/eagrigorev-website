@@ -95,4 +95,10 @@
 
     font-size: var(--font-19-25);
   }
+
+  &--h4 {
+    @extend %spectral-heading;
+
+    font-size: var(--font-16-20);
+  }
 }
