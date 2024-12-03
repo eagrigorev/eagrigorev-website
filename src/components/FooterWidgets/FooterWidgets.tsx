@@ -3,8 +3,10 @@ import React from 'react';
 
 /* Components */
 import AboutWidget from '@/components/AboutWidget/AboutWidget';
+import CopyrightNotice from '@/components/CopyrightNotice/CopyrightNotice';
 import PagesWidget from '@/components/PagesWidget/PagesWidget';
 import RecentPostsWidget from '@/components/RecentPostsWidget/RecentPostsWidget';
+import TagsWidget from '@/components/TagsWidget/TagsWidget';
 
 /* Style */
 import styles from './FooterWidgets.module.scss';
@@ -16,10 +18,11 @@ const FooterWidgets: React.FunctionComponent<{}> = () => {
         <div className="container grid">
           <AboutWidget />
           <RecentPostsWidget />
-          <AboutWidget />
+          <TagsWidget />
           <PagesWidget />
         </div>
       </div>
+      <CopyrightNotice />
     </footer>
   );
 };
