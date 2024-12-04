@@ -20,7 +20,7 @@ const RecentPostsWidget: React.FunctionComponent<{}> = () => {
   return (
     <div className={styles['wrapper']}>
       <h4 className={`heading--h4 ${styles['heading']}`}>Recent Posts</h4>
-      <ul className={`post-card-big__description ${styles['items']}`}>
+      <ul className={`paragraph--light-s ${styles['items']}`}>
         {allPosts.map(
           (post: Markdown, index: number): React.JSX.Element => (
             <li key={index}>

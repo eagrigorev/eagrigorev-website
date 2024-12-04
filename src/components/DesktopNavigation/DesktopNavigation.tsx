@@ -17,11 +17,11 @@ import { NavigationItem } from '@/utils/types/common';
 const DesktopNavigation: React.FunctionComponent<{}> = () => {
   return (
     <div className={styles['wrapper']}>
-      <Link className="header__logo" href={'/'}>
+      <Link className="paragraph--regular-m" href={'/'}>
         Evgenii Grigorev
       </Link>
       <div className={styles['items__wrapper']}>
-        <ul className={`header__links ${styles['items']}`}>
+        <ul className={`paragraph--regular-s ${styles['items']}`}>
           {headerNavigation.map(
             (item: NavigationItem, index: number): React.JSX.Element => (
               <li key={index}>

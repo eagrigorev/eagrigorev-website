@@ -11,7 +11,7 @@ const AboutWidget: React.FunctionComponent<{}> = () => {
   return (
     <div className={styles['wrapper']}>
       <h4 className={`heading--h4 ${styles['heading']}`}>About</h4>
-      <p className="post-card-big__description">
+      <p className="paragraph--light-s">
         Lorem ipsum dolor sit dolor and other amet things for several lines of
         text.
       </p>

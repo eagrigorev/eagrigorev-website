@@ -37,7 +37,7 @@ const MobileNavigation: React.FunctionComponent<{}> = () => {
   return (
     <>
       <div className={styles['wrapper']}>
-        <Link className="header__logo" href={'/'}>
+        <Link className="paragraph--regular-m" href={'/'}>
           Evgenii Grigorev
         </Link>
         <button
@@ -56,7 +56,7 @@ const MobileNavigation: React.FunctionComponent<{}> = () => {
       {showMobileMenu ? (
         <FocusTrap focusTrapOptions={{ clickOutsideDeactivates: true }}>
           <div className={styles['items__wrapper']}>
-            <ul className={`header__links ${styles['items']}`}>
+            <ul className={`paragraph--regular-s ${styles['items']}`}>
               {headerNavigation.map((item: NavigationItem, index: number) => (
                 <li key={index}>
                   <Link className="opacity--decrease" href={item.url}>

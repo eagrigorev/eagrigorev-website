@@ -16,7 +16,7 @@ const TagsWidget: React.FunctionComponent<{}> = () => {
   return (
     <div className={styles['wrapper']}>
       <h4 className={`heading--h4 ${styles['heading']}`}>Tags</h4>
-      <ul className={`tag ${styles['items']}`}>
+      <ul className={`paragraph--light-xs ${styles['items']}`}>
         {tags.map(
           (tag: string, index: number): React.JSX.Element => (
             <li key={index}>

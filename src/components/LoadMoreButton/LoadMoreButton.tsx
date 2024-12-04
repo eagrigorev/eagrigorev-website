@@ -11,7 +11,7 @@ type Props = {
 const LoadMoreButton: React.FunctionComponent<Props> = ({ clickHandler }) => {
   return (
     <button
-      className={`button-text opacity--decrease ${styles['wrapper']}`}
+      className={`uppercase--semi-bold-xs opacity--decrease ${styles['wrapper']}`}
       onClick={clickHandler}
     >
       load more

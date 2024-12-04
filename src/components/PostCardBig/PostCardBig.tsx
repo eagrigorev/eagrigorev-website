@@ -19,7 +19,7 @@ const PostCardBig: React.FunctionComponent<Props> = ({ postMeta }) => {
   return (
     <article className={`grid ${styles['wrapper']}`}>
       <div className={styles['content__wrapper']}>
-        <div className={`post-card-big__meta ${styles['content__meta']}`}>
+        <div className={`uppercase--regular-2xs ${styles['content__meta']}`}>
           <p className={styles['content__meta__date']}>{postMeta.dateEdited}</p>
           <Link className="color--grey-to-red" href={postMeta.category}>
             {postMeta.category}
@@ -29,10 +29,10 @@ const PostCardBig: React.FunctionComponent<Props> = ({ postMeta }) => {
           <Link href={postMeta.slug}>
             <h2 className="heading--h2">{postMeta.title}</h2>
           </Link>
-          <p className="post-card-big__description">{postMeta.description}</p>
+          <p className="paragraph--light-s">{postMeta.description}</p>
         </div>
         <Link
-          className="post-card-big__description color--red-to-grey"
+          className="paragraph--light-s color--red-to-grey"
           href={postMeta.slug}
         >
           read more

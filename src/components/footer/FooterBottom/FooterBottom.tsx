@@ -2,9 +2,9 @@
 import React from 'react';
 
 /* Style */
-import styles from './CopyrightNotice.module.scss';
+import styles from './FooterBottom.module.scss';
 
-const CopyrightNotice: React.FunctionComponent<{}> = () => {
+const FooterBottom: React.FunctionComponent<{}> = () => {
   return (
     <div className={styles['wrapper']}>
       <p className="paragraph--light-xs">© 2024 Evgenii Grigorev</p>
@@ -12,4 +12,4 @@ const CopyrightNotice: React.FunctionComponent<{}> = () => {
   );
 };
 
-export default CopyrightNotice;
+export default FooterBottom;
