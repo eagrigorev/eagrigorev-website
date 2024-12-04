@@ -7,3 +7,9 @@
   padding-bottom: var(--space-30-40);
   background-color: var(--background-secondary);
 }
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-15-20) 0;
+}
