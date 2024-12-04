@@ -3,7 +3,7 @@ import React from 'react';
 import { Metadata } from 'next';
 
 /* Components */
-import HeaderNavigation from '@/components/HeaderNavigation/HeaderNavigation';
+import GlobalHeader from '@/components/header/GlobalHeader/GlobalHeader';
 import GlobalFooter from '@/components/footer/GlobalFooter/GlobalFooter';
 
 /* Scripts */
@@ -23,7 +23,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en" className={`${jost.variable} ${spectral.variable}`}>
       <body>
-        <HeaderNavigation />
+        <GlobalHeader />
         {children}
         <GlobalFooter />
         <SpeedInsights />

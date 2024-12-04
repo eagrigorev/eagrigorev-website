@@ -8,7 +8,12 @@
   }
 }
 
-.items {
+.navigation {
+  display: flex;
+  gap: var(--space-30-40);
+}
+
+.links {
   display: flex;
   align-items: center;
   gap: var(--space-30-40);
@@ -20,10 +25,5 @@
     width: var(--space-40-60);
     height: 1px;
     background: var(--accent-secondary);
-  }
-
-  &__wrapper {
-    display: flex;
-    gap: var(--space-30-40);
   }
 }

@@ -20,8 +20,8 @@ const DesktopNavigation: React.FunctionComponent<{}> = () => {
       <Link className="paragraph--regular-m" href={'/'}>
         Evgenii Grigorev
       </Link>
-      <div className={styles['items__wrapper']}>
-        <ul className={`paragraph--regular-s ${styles['items']}`}>
+      <div className={styles['navigation']}>
+        <ul className={`paragraph--regular-s ${styles['links']}`}>
           {headerNavigation.map(
             (item: NavigationItem, index: number): React.JSX.Element => (
               <li key={index}>
