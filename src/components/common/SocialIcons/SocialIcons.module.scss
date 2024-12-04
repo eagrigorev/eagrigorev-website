@@ -4,8 +4,13 @@
   gap: 20px;
 }
 
-.items {
+.icons {
   display: flex;
   gap: 20px;
   list-style: none;
+}
+
+.icon {
+  width: var(--space-20-25);
+  height: var(--space-20-25);
 }
