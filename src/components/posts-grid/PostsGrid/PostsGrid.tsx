@@ -2,7 +2,7 @@
 import React from 'react';
 
 /* Components */
-import DynamicPostsGrid from '@/components/DynamicPostsGrid/DynamicPostsGrid';
+import DynamicPostsGrid from '@/components/posts-grid/DynamicPostsGrid/DynamicPostsGrid';
 
 /* Scripts */
 import { getAllPosts } from '@/scripts/getMarkdown';

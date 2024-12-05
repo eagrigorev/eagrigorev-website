@@ -4,8 +4,7 @@
 import React, { useState } from 'react';
 
 /* Components */
-import LoadMoreButton from '../LoadMoreButton/LoadMoreButton';
-import PostCardMedium from '@/components/PostCardMedium/PostCardMedium';
+import PostCardMedium from '@/components/post-cards/PostCardMedium/PostCardMedium';
 
 /* Style */
 import styles from './DynamicPostsGrid.module.scss';
@@ -35,11 +34,16 @@ const DynamicPostsGrid: React.FunctionComponent<Props> = ({ posts }) => {
           )
         )}
       </div>
-      <div className={styles['button']}>
+      <div className={styles['button__wrapper']}>
         {isButtonVisible ? (
-          <LoadMoreButton clickHandler={loadMorePostsHandler} />
+          <button
+            className={`uppercase--semi-bold-xs opacity--decrease ${styles['button']}`}
+            onClick={loadMorePostsHandler}
+          >
+            load more
+          </button>
         ) : isClickedOnce ? (
-          <p className="paragraph">All posts were loaded.</p>
+          <p className="paragraph--light-s">All posts were loaded.</p>
         ) : null}
       </div>
     </>

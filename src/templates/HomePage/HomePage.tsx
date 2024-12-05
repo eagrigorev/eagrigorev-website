@@ -2,10 +2,10 @@
 import React from 'react';
 
 /* Components */
-import CategoriesNavigation from '@/components/CategoriesNavigation/CategoriesNavigation';
-import DynamicTitle from '@/components/DynamicTitle/DynamicTitle';
-import FeaturedPost from '@/components/FeaturedPost/FeaturedPost';
-import PostsGrid from '@/components/PostsGrid/PostsGrid';
+import CategoriesNavigation from '@/components/common/CategoriesNavigation/CategoriesNavigation';
+import DynamicTitle from '@/components/title/DynamicTitle/DynamicTitle';
+import FeaturedPost from '@/components/common/FeaturedPost/FeaturedPost';
+import PostsGrid from '@/components/posts-grid/PostsGrid/PostsGrid';
 
 /* Utils */
 import { TITLE } from '@/utils/const/title';

@@ -2,7 +2,7 @@
 import React from 'react';
 
 /* Components */
-import PageTitleLeft from '@/components/PageTitleLeft/PageTitleLeft';
+import PageTitleLeft from '@/components/title/PageTitleLeft/PageTitleLeft';
 
 /* Style */
 import styles from './DynamicTitle.module.scss';

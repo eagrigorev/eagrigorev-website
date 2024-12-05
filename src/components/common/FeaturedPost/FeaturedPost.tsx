@@ -2,7 +2,7 @@
 import React from 'react';
 
 /* Components */
-import PostCardBig from '@/components/PostCardBig/PostCardBig';
+import PostCardBig from '@/components/post-cards/PostCardBig/PostCardBig';
 
 /* Scripts */
 import { getAllPosts } from '@/scripts/getMarkdown';
