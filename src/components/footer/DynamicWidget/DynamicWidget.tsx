@@ -58,7 +58,10 @@ const DynamicWidget: React.FunctionComponent<Props> = ({ layout, title }) => {
           {tags.map(
             (tag: string, index: number): React.JSX.Element => (
               <li key={index}>
-                <Link className={styles['tag']} href={`/${tag}`}>
+                <Link
+                  className={`color--grey-to-black ${styles['tag']}`}
+                  href={`/${tag}`}
+                >
                   {tag}
                 </Link>
               </li>

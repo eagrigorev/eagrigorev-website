@@ -41,4 +41,13 @@
       color: var(--font-primary);
     }
   }
+
+  &--grey-to-black {
+    transition: border-color 0.3s;
+
+    &:hover,
+    &:focus {
+      border-color: var(--font-secondary);
+    }
+  }
 }
