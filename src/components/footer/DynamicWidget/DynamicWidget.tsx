@@ -26,9 +26,7 @@ type Props = {
 };
 
 const DynamicWidget: React.FunctionComponent<Props> = ({ layout, title }) => {
-  const allPosts = getAllPosts()
-    .filter((post: Markdown) => post.meta.category !== 'Library')
-    .slice(0, 3);
+  const allPosts = getAllPosts().slice(0, 3);
   const tags = generateTagsCloud().slice(0, 10);
   return (
     <div className={styles['wrapper']}>

@@ -4,19 +4,15 @@ import React from 'react';
 /* Components */
 import DynamicPostsGrid from '@/components/posts-grid/DynamicPostsGrid/DynamicPostsGrid';
 
-/* Scripts */
-import { getAllPosts } from '@/scripts/getMarkdown';
-
 /* Style */
 import styles from './PostsGrid.module.scss';
-
-/* Utils */
 import { Markdown } from '@/utils/types/markdown';
 
-const PostsGrid: React.FunctionComponent<{}> = () => {
-  const posts = getAllPosts()
-    .filter((post: Markdown) => post.meta.category !== 'Library')
-    .slice(1);
+type Props = {
+  posts?: Markdown[];
+};
+
+const PostsGrid: React.FunctionComponent<Props> = ({ posts }) => {
   return (
     <section className={styles['wrapper']}>
       <DynamicPostsGrid posts={posts} />
