@@ -9,6 +9,7 @@ import SocialIcons from '@/components/common/SocialIcons/SocialIcons';
 import footerPages from '@/data/footerPages.json';
 
 /* Scripts */
+import { generateSlug } from '@/scripts/generateSlug';
 import { generateTagsCloud } from '@/scripts/generateTagsCloud';
 import { getAllPosts } from '@/scripts/getMarkdown';
 
@@ -48,7 +49,9 @@ const DynamicWidget: React.FunctionComponent<Props> = ({ layout, title }) => {
                 <span>{post.meta.dateEdited} </span>
                 <a href={post.meta.slug}>{post.meta.title} </a>
                 <span>in </span>
-                <a href={post.meta.category}>{post.meta.category}</a>
+                <a href={generateSlug(post.meta.category)}>
+                  {post.meta.category}
+                </a>
               </li>
             )
           )}
@@ -60,7 +63,7 @@ const DynamicWidget: React.FunctionComponent<Props> = ({ layout, title }) => {
               <li key={index}>
                 <Link
                   className={`color--grey-to-black ${styles['tag']}`}
-                  href={`/${tag}`}
+                  href={`/${generateSlug(tag)}`}
                 >
                   {tag}
                 </Link>

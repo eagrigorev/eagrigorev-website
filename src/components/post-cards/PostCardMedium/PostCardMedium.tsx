@@ -5,6 +5,9 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+/* Scripts */
+import { generateSlug } from '@/scripts/generateSlug';
+
 /* Style */
 import styles from './PostCardMedium.module.scss';
 
@@ -30,7 +33,10 @@ const PostCardMedium: React.FunctionComponent<Props> = ({ postMeta }) => {
       <div className={styles['content__wrapper']}>
         <div className={`uppercase--regular-2xs ${styles['content__meta']}`}>
           <p className={styles['content__meta__date']}>{postMeta.dateEdited}</p>
-          <Link className="color--grey-to-red" href={postMeta.category}>
+          <Link
+            className="color--grey-to-red"
+            href={generateSlug(postMeta.category)}
+          >
             {postMeta.category}
           </Link>
         </div>
