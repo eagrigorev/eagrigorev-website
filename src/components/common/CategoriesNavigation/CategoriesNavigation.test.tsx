@@ -4,7 +4,7 @@ import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
 
 /* Data */
-import categories from '@/data/categories.json';
+import categories from '@/data/navigation-items/categories.json';
 
 /* Components */
 import CategoriesNavigation from './CategoriesNavigation';

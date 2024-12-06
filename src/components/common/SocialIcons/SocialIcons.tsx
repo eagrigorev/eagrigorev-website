@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 /* Data */
-import socialIcons from '@/data/socialIcons.json';
+import socialIcons from '@/data/navigation-items/socialIcons.json';
 
 /* Style */
 import styles from './SocialIcons.module.scss';

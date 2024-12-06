@@ -6,7 +6,7 @@ import Link from 'next/link';
 import SocialIcons from '@/components/common/SocialIcons/SocialIcons';
 
 /* Data */
-import headerNavigation from '@/data/headerNavigation.json';
+import headerNavigation from '@/data/navigation-items/headerNavigation.json';
 
 /* Style */
 import styles from './DesktopNavigation.module.scss';

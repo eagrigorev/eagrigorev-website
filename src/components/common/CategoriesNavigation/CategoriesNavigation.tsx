@@ -5,7 +5,7 @@ import React from 'react';
 import Link from 'next/link';
 
 /* Data */
-import categories from '@/data/categories.json';
+import categories from '@/data/navigation-items/categories.json';
 
 /* Style */
 import styles from './CategoriesNavigation.module.scss';

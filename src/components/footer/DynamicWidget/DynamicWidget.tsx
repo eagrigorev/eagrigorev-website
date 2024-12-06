@@ -6,7 +6,7 @@ import Link from 'next/link';
 import SocialIcons from '@/components/common/SocialIcons/SocialIcons';
 
 /* Data */
-import footerPages from '@/data/footerPages.json';
+import footerPages from '@/data/navigation-items/footerPages.json';
 
 /* Scripts */
 import { generateSlug } from '@/scripts/generateSlug';
