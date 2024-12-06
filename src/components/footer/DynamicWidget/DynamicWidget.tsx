@@ -47,9 +47,14 @@ const DynamicWidget: React.FunctionComponent<Props> = ({ layout, title }) => {
             (post: Markdown, index: number): React.JSX.Element => (
               <li key={index}>
                 <span>{post.meta.dateEdited} </span>
-                <a href={post.meta.slug}>{post.meta.title} </a>
+                <a className="underline" href={post.meta.slug}>
+                  {post.meta.title}{' '}
+                </a>
                 <span>in </span>
-                <a href={generateSlug(post.meta.category)}>
+                <a
+                  className="underline"
+                  href={generateSlug(post.meta.category)}
+                >
                   {post.meta.category}
                 </a>
               </li>
@@ -76,7 +81,9 @@ const DynamicWidget: React.FunctionComponent<Props> = ({ layout, title }) => {
           {footerPages.map(
             (item: NavigationItem, index: number): React.JSX.Element => (
               <li key={index}>
-                <Link href={item.url}>{item.title}</Link>
+                <Link className="underline" href={item.url}>
+                  {item.title}
+                </Link>
               </li>
             )
           )}

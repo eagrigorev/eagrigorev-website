@@ -51,3 +51,14 @@
     }
   }
 }
+
+.underline {
+  margin-bottom: 1px;
+  border-bottom: 1px solid var(--accent-secondary);
+  transition: border-color 0.3s;
+
+  &:hover,
+  &:focus {
+    border-color: var(--font-primary);
+  }
+}
