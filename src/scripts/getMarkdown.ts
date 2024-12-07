@@ -71,6 +71,7 @@ export const getPostsSlugs = (): Slug[] => {
   const categorySlugs: Slug[] = categories.map((category: NavigationItem) => ({
     slug: category.url.slice(1),
   }));
+  // ADD TAGS SLUGS
   const slugs: Slug[] = [...postSlugs, ...categorySlugs];
   return slugs;
 };
