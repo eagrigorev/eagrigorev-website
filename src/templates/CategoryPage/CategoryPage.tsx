@@ -18,9 +18,17 @@ type Props = {
 
 const CategoryPage: React.FunctionComponent<Props> = ({ category }) => {
   const posts = getPostsFromSingleCategory(category);
+  const title: string =
+    category === 'illustrations'
+      ? TITLE.ILLUSTRATIONS
+      : category === 'music'
+        ? TITLE.MUSIC
+        : category === 'tabs'
+          ? TITLE.TABS
+          : TITLE.NOTES;
   return (
     <main className="container">
-      <DynamicTitle layout="page-left" title={TITLE.HOMEPAGE} />
+      <DynamicTitle layout="page-left" title={title} />
       <CategoriesNavigation showBackLink={true} />
       <PostsGrid posts={posts} />
     </main>
