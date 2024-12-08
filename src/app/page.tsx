@@ -2,10 +2,10 @@
 import React from 'react';
 
 /* Components */
-import HomePage from '@/templates/HomePage/HomePage';
+import HomeTemplate from '@/templates/HomeTemplate/HomeTemplate';
 
 const Home: React.FunctionComponent<{}> = () => {
-  return <HomePage />;
+  return <HomeTemplate />;
 };
 
 export default Home;

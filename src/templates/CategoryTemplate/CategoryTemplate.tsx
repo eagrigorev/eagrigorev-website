@@ -16,7 +16,7 @@ type Props = {
   category: string;
 };
 
-const CategoryPage: React.FunctionComponent<Props> = ({ category }) => {
+const CategoryTemplate: React.FunctionComponent<Props> = ({ category }) => {
   const posts = getPostsFromSingleCategory(category);
   const title: string =
     category === 'illustrations'
@@ -35,4 +35,4 @@ const CategoryPage: React.FunctionComponent<Props> = ({ category }) => {
   );
 };
 
-export default CategoryPage;
+export default CategoryTemplate;

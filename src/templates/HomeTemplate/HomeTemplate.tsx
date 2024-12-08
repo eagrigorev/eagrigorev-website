@@ -13,7 +13,7 @@ import { getAllPosts } from '@/scripts/getMarkdown';
 /* Utils */
 import { TITLE } from '@/utils/const/title';
 
-const HomePage: React.FunctionComponent<{}> = () => {
+const HomeTemplate: React.FunctionComponent<{}> = () => {
   const posts = getAllPosts();
   return (
     <main className="container">
@@ -25,4 +25,4 @@ const HomePage: React.FunctionComponent<{}> = () => {
   );
 };
 
-export default HomePage;
+export default HomeTemplate;

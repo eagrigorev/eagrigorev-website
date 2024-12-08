@@ -3,6 +3,7 @@ import React from 'react';
 
 /* Components */
 import PageTitleLeft from '@/components/title/PageTitleLeft/PageTitleLeft';
+import PostTitle from '@/components/title/PostTitle/PostTitle';
 
 /* Style */
 import styles from './DynamicTitle.module.scss';
@@ -23,7 +24,11 @@ const DynamicTitle: React.FunctionComponent<Props> = ({
 }) => {
   return (
     <header className={`grid ${styles['wrapper']}`}>
-      {layout === 'page-left' ? <PageTitleLeft title={title} /> : null}
+      {layout === 'page-left' ? (
+        <PageTitleLeft title={title} />
+      ) : layout === 'post' ? (
+        <PostTitle postMeta={postMeta} />
+      ) : null}
     </header>
   );
 };

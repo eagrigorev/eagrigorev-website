@@ -47,6 +47,23 @@
     font-size: var(--font-13-16);
   }
 
+  &--light-m {
+    @extend .paragraph;
+
+    font-weight: 300;
+    line-height: 150%;
+    font-size: var(--font-16-20);
+  }
+
+  &--light-italic-m {
+    @extend .paragraph;
+
+    font-weight: 300;
+    line-height: 150%;
+    font-size: var(--font-16-20);
+    font-style: italic;
+  }
+
   &--light-s {
     @extend .paragraph;
 
