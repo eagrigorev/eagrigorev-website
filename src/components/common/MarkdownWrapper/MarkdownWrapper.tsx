@@ -4,6 +4,7 @@ import React from 'react';
 
 /* Components */
 import ImageWithCaption from '@/components/common/ImageWithCaption/ImageWithCaption';
+import SpotifyEmbed from '@/components/embeds/SpotifyEmbed/SpotifyEmbed';
 
 /* Style */
 import styles from './MarkdownWrapper.module.scss';
@@ -47,9 +48,9 @@ const MarkdownWrapper: React.FunctionComponent<Props> = ({ content }) => {
             ImageWithCaption: {
               component: ImageWithCaption,
             },
-            // SpotifyEmbed: {
-            //   component: SpotifyEmbed,
-            // },
+            SpotifyEmbed: {
+              component: SpotifyEmbed,
+            },
           },
         }}
       >
