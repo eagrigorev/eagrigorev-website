@@ -1,0 +1,51 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.layout {
+  &--wide {
+    grid-column: 3 / 11;
+
+    @media only screen and (width <= 768px) {
+      grid-column: span 6;
+    }
+
+    @media only screen and (width <= 480px) {
+      grid-column: span 2;
+    }
+  }
+
+  &--left {
+    grid-column: 3 / 7;
+
+    @media only screen and (width <= 768px) {
+      grid-column: 1 / 4;
+    }
+
+    @media only screen and (width <= 480px) {
+      grid-column: span 2;
+    }
+  }
+
+  &--right {
+    grid-column: 7 / 11;
+
+    @media only screen and (width <= 768px) {
+      grid-column: 4 / 7;
+    }
+
+    @media only screen and (width <= 480px) {
+      grid-column: span 2;
+    }
+  }
+}
+
+.image {
+  height: auto;
+}
+
+.caption {
+  padding-top: 5px;
+}
