@@ -5,6 +5,10 @@
   },
   {
     "title": "RSS Feed",
-    "url": "/about"
+    "url": "/rss.xml"
+  },
+  {
+    "title": "Sitemap",
+    "url": "/sitemap.xml"
   }
 ]
