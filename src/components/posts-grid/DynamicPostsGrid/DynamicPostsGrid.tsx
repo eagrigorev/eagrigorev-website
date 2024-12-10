@@ -34,18 +34,20 @@ const DynamicPostsGrid: React.FunctionComponent<Props> = ({ posts }) => {
           )
         )}
       </div>
-      <div className={styles['button__wrapper']}>
-        {isButtonVisible ? (
+      {isButtonVisible ? (
+        <div className={styles['button__wrapper']}>
           <button
             className={`uppercase--semi-bold-xs opacity--decrease ${styles['button']}`}
             onClick={loadMorePostsHandler}
           >
             load more
           </button>
-        ) : isClickedOnce ? (
+        </div>
+      ) : isClickedOnce ? (
+        <div className={styles['button__wrapper']}>
           <p className="paragraph--light-s">All posts were loaded.</p>
-        ) : null}
-      </div>
+        </div>
+      ) : null}
     </>
   );
 };
