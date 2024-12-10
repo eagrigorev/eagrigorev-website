@@ -7,6 +7,8 @@ import categories from '@/data/navigation-items/categories.json';
 
 /* Scripts */
 import generateRssFeed from './generateRssFeed';
+import { generateSlug } from './generateSlug';
+import { generateTagsCloud } from './generateTagsCloud';
 import { sortPostsDesc } from './sort';
 
 /* Utils */
@@ -71,7 +73,9 @@ export const getPostsSlugs = (): Slug[] => {
   const categorySlugs: Slug[] = categories.map((category: NavigationItem) => ({
     slug: category.url.slice(1),
   }));
-  // ADD TAGS SLUGS
-  const slugs: Slug[] = [...postSlugs, ...categorySlugs];
+  const tagsSlugs: Slug[] = generateTagsCloud().map((tag: string) => {
+    return { slug: generateSlug(tag) };
+  });
+  const slugs: Slug[] = [...postSlugs, ...categorySlugs, ...tagsSlugs];
   return slugs;
 };
