@@ -1,54 +1,58 @@
-.heading {
+%heading {
   font-family: var(--font-spectral);
   font-weight: 300;
   line-height: 150%;
+}
 
+.heading {
   &--h1 {
-    @extend .heading;
+    @extend %heading;
 
     font-size: var(--font-27-39);
   }
 
   &--h2 {
-    @extend .heading;
+    @extend %heading;
 
     font-size: var(--font-23-31);
   }
 
   &--h3 {
-    @extend .heading;
+    @extend %heading;
 
     font-size: var(--font-19-25);
   }
 
   &--h4 {
-    @extend .heading;
+    @extend %heading;
 
     font-size: var(--font-16-20);
   }
 }
 
-.paragraph {
+%paragraph {
   font-family: var(--font-jost);
   line-height: 100%;
   letter-spacing: 0.015em;
+}
 
+.paragraph {
   &--regular-m {
-    @extend .paragraph;
+    @extend %paragraph;
 
     font-weight: 400;
     font-size: var(--font-16-20);
   }
 
   &--regular-s {
-    @extend .paragraph;
+    @extend %paragraph;
 
     font-weight: 400;
     font-size: var(--font-13-16);
   }
 
   &--light-m {
-    @extend .paragraph;
+    @extend %paragraph;
 
     font-weight: 300;
     line-height: 150%;
@@ -56,7 +60,7 @@
   }
 
   &--light-italic-m {
-    @extend .paragraph;
+    @extend %paragraph;
 
     font-weight: 300;
     line-height: 150%;
@@ -65,7 +69,7 @@
   }
 
   &--light-s {
-    @extend .paragraph;
+    @extend %paragraph;
 
     font-weight: 300;
     line-height: 150%;
@@ -73,35 +77,37 @@
   }
 
   &--light-xs {
-    @extend .paragraph;
+    @extend %paragraph;
 
     font-weight: 300;
     font-size: var(--font-11-12);
   }
 }
 
-.uppercase {
+%uppercase {
   font-family: var(--font-jost);
   line-height: 100%;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+}
 
+.uppercase {
   &--semi-bold-xs {
-    @extend .uppercase;
+    @extend %uppercase;
 
     font-weight: 600;
     font-size: var(--font-11-12);
   }
 
   &--regular-xs {
-    @extend .uppercase;
+    @extend %uppercase;
 
     font-weight: 400;
     font-size: var(--font-11-12);
   }
 
   &--regular-2xs {
-    @extend .uppercase;
+    @extend %uppercase;
 
     font-weight: 400;
     font-size: var(--font-9-10);

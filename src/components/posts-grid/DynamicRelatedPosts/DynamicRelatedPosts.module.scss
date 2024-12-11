@@ -49,4 +49,16 @@
       grid-column: span 2;
     }
   }
+
+  &:only-child {
+    grid-column: 3 / span 4;
+
+    @media only screen and (width <= 768px) {
+      grid-column: span 3;
+    }
+
+    @media only screen and (width <= 480px) {
+      grid-column: span 2;
+    }
+  }
 }
