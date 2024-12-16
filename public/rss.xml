@@ -4,7 +4,7 @@
         <title>Evgenii Grigorev</title>
         <link>https://eagrigorev.com</link>
         <description>Software developer and artist based in Thessaloniki, Greece.</description>
-        <lastBuildDate>Wed, 11 Dec 2024 14:03:59 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 11 Dec 2024 21:21:06 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -62,6 +62,12 @@
             <link>https://eagrigorev.com/pixel-arts-archive</link>
             <guid>https://eagrigorev.com/pixel-arts-archive</guid>
             <pubDate>Tue, 19 Jul 2022 21:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Crystal Maze (2013)]]></title>
+            <link>https://eagrigorev.com/crystal-maze-2013</link>
+            <guid>https://eagrigorev.com/crystal-maze-2013</guid>
+            <pubDate>Sat, 09 Nov 2013 22:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>
