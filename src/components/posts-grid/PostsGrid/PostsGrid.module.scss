@@ -1,3 +1,32 @@
 .wrapper {
   padding-top: var(--space-40-60);
 }
+
+.post {
+  grid-column: span 4;
+
+  @media only screen and (width <= 1024px) {
+    grid-column: span 3;
+  }
+
+  @media only screen and (width <= 640px) {
+    grid-column: span 2;
+  }
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: var(--space-80-120);
+}
+
+.button {
+  padding: 25px var(--space-80-120);
+  background: var(--font-primary);
+  border: none;
+  color: var(--background-primary);
+
+  &:hover {
+    cursor: pointer;
+  }
+}

@@ -1,115 +1,195 @@
-%heading {
-  font-family: var(--font-spectral);
-  font-weight: 300;
-  line-height: 150%;
-}
-
-.heading {
-  &--h1 {
-    @extend %heading;
-
-    font-size: var(--font-27-39);
-  }
-
-  &--h2 {
-    @extend %heading;
-
-    font-size: var(--font-23-31);
-  }
-
-  &--h3 {
-    @extend %heading;
-
-    font-size: var(--font-19-25);
-  }
-
-  &--h4 {
-    @extend %heading;
-
-    font-size: var(--font-16-20);
-  }
-}
-
-%paragraph {
+%jost-light {
   font-family: var(--font-jost);
+  font-weight: 300;
   line-height: 100%;
   letter-spacing: 0.015em;
 }
 
-.paragraph {
-  &--regular-m {
-    @extend %paragraph;
-
-    font-weight: 400;
-    font-size: var(--font-16-20);
-  }
-
-  &--regular-s {
-    @extend %paragraph;
-
-    font-weight: 400;
-    font-size: var(--font-13-16);
-  }
-
-  &--light-m {
-    @extend %paragraph;
-
-    font-weight: 300;
-    line-height: 150%;
-    font-size: var(--font-16-20);
-  }
-
-  &--light-italic-m {
-    @extend %paragraph;
-
-    font-weight: 300;
-    line-height: 150%;
-    font-size: var(--font-16-20);
-    font-style: italic;
-  }
-
-  &--light-s {
-    @extend %paragraph;
-
-    font-weight: 300;
-    line-height: 150%;
-    font-size: var(--font-13-16);
-  }
-
-  &--light-xs {
-    @extend %paragraph;
-
-    font-weight: 300;
-    font-size: var(--font-11-12);
-  }
+%jost-bold {
+  font-family: var(--font-jost);
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0.015em;
 }
 
-%uppercase {
+%jost-uppercase {
   font-family: var(--font-jost);
+  font-weight: 400;
   line-height: 100%;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
 }
 
-.uppercase {
-  &--semi-bold-xs {
-    @extend %uppercase;
+%spectral-heading {
+  font-family: var(--font-spectral);
+  font-weight: 300;
+  line-height: 130%;
+}
 
-    font-weight: 600;
-    font-size: var(--font-11-12);
+.list-simple {
+  list-style: none;
+}
+
+.link-simple {
+  text-decoration: none;
+  color: var(--font-primary);
+}
+
+.link-grey {
+  text-decoration: none;
+  color: var(--font-secondary);
+}
+
+.jost-light {
+  &--s {
+    @extend %jost-light;
+
+    line-height: 150%;
+    font-size: var(--font-13-16);
+  }
+}
+
+.jost-bold {
+  &--m {
+    @extend %jost-bold;
+
+    font-size: var(--font-16-20);
   }
 
-  &--regular-xs {
-    @extend %uppercase;
+  &--s {
+    @extend %jost-bold;
 
-    font-weight: 400;
-    font-size: var(--font-11-12);
+    font-size: var(--font-13-16);
   }
 
-  &--regular-2xs {
-    @extend %uppercase;
+  &--xs {
+    @extend %jost-bold;
 
-    font-weight: 400;
+    font-size: var(--font-11-12);
+
+    &-grey {
+      @extend %jost-bold;
+
+      font-size: var(--font-11-12);
+      color: var(--font-secondary);
+    }
+  }
+}
+
+.jost-uppercase {
+  &--xs {
+    @extend %jost-uppercase;
+
+    font-size: var(--font-11-12);
+
+    &-btn {
+      @extend %jost-uppercase;
+
+      font-size: var(--font-11-12);
+      font-weight: 600;
+    }
+  }
+
+  &--2xs {
+    @extend %jost-uppercase;
+
     font-size: var(--font-9-10);
   }
 }
+
+.spectral-heading {
+  &--h1 {
+    @extend %spectral-heading;
+
+    font-size: var(--font-27-39);
+  }
+
+  &--h3 {
+    @extend %spectral-heading;
+
+    font-size: var(--font-19-25);
+  }
+}
+
+// .paragraph {
+//   &--light-m {
+//     @extend %paragraph;
+
+//     font-weight: 300;
+//     line-height: 150%;
+//     font-size: var(--font-16-20);
+//   }
+
+//   &--light-italic-m {
+//     @extend %paragraph;
+
+//     font-weight: 300;
+//     line-height: 150%;
+//     font-size: var(--font-16-20);
+//     font-style: italic;
+//   }
+
+//   &--light-s {
+//     @extend %paragraph;
+
+//     font-weight: 300;
+//     line-height: 150%;
+//     font-size: var(--font-13-16);
+//   }
+
+//   &--light-xs {
+//     @extend %paragraph;
+
+//     font-weight: 300;
+//     font-size: var(--font-11-12);
+//   }
+// }
+
+// .heading {
+//   &--h1 {
+//     @extend %heading;
+
+//     font-size: var(--font-27-39);
+//   }
+
+//   &--h2 {
+//     @extend %heading;
+
+//     font-size: var(--font-23-31);
+//   }
+
+//   &--h3 {
+//     @extend %heading;
+
+//     font-size: var(--font-19-25);
+//   }
+
+//   &--h4 {
+//     @extend %heading;
+
+//     font-size: var(--font-16-20);
+//   }
+// }
+
+// .uppercase {
+//   &--semi-bold-xs {
+//     @extend %uppercase;
+
+//     font-weight: 600;
+//     font-size: var(--font-11-12);
+//   }
+
+//   &--regular-xs {
+//     @extend %uppercase;
+
+//     font-weight: 400;
+//     font-size: var(--font-11-12);
+//   }
+
+//   &--regular-2xs {
+//     @extend %uppercase;
+
+//     font-weight: 400;
+//     font-size: var(--font-9-10);
+//   }
+// }

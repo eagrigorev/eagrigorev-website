@@ -10,7 +10,7 @@ import styles from './GlobalHeader.module.scss';
 
 const GlobalHeader: React.FunctionComponent<{}> = () => {
   return (
-    <nav className={`container ${styles['wrapper']}`}>
+    <nav className={`${styles['wrapper']}`}>
       <DesktopNavigation />
       <MobileNavigation />
     </nav>

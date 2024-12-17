@@ -14,11 +14,11 @@
     background: var(--accent-secondary);
   }
 
-  @media only screen and (width <= 768px) {
+  @media only screen and (width <= 1024px) {
     grid-column: span 6;
   }
 
-  @media only screen and (width <= 480px) {
+  @media only screen and (width <= 640px) {
     grid-column: span 2;
   }
 }
@@ -30,22 +30,22 @@
 .post {
   grid-column: 3 / span 4;
 
-  @media only screen and (width <= 768px) {
+  @media only screen and (width <= 1024px) {
     grid-column: span 3;
   }
 
-  @media only screen and (width <= 480px) {
+  @media only screen and (width <= 640px) {
     grid-column: span 2;
   }
 
   &:last-child {
     grid-column: 7 / span 4;
 
-    @media only screen and (width <= 768px) {
+    @media only screen and (width <= 1024px) {
       grid-column: span 3;
     }
 
-    @media only screen and (width <= 480px) {
+    @media only screen and (width <= 640px) {
       grid-column: span 2;
     }
   }
@@ -53,11 +53,11 @@
   &:only-child {
     grid-column: 3 / span 4;
 
-    @media only screen and (width <= 768px) {
+    @media only screen and (width <= 1024px) {
       grid-column: span 3;
     }
 
-    @media only screen and (width <= 480px) {
+    @media only screen and (width <= 640px) {
       grid-column: span 2;
     }
   }

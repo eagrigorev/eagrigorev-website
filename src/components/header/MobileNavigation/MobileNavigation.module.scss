@@ -1,7 +1,7 @@
 .wrapper {
   display: none;
 
-  @media only screen and (width <= 768px) {
+  @media only screen and (width <= 1024px) {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,10 +24,10 @@
   }
 }
 
-.navigation {
+.nav-items-wrapper {
   display: none;
 
-  @media only screen and (width <= 768px) {
+  @media only screen and (width <= 1024px) {
     display: flex;
     flex-direction: column;
     gap: var(--space-30-40);
@@ -38,6 +38,5 @@
 .links {
   display: flex;
   flex-direction: column;
-  gap: var(--space-20-25);
-  list-style: none;
+  gap: var(--space-30-40);
 }

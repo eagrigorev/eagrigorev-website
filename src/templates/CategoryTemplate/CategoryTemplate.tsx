@@ -2,7 +2,6 @@
 import React from 'react';
 
 /* Components */
-import CategoriesNavigation from '@/components/common/CategoriesNavigation/CategoriesNavigation';
 import DynamicTitle from '@/components/title/DynamicTitle/DynamicTitle';
 import PostsGrid from '@/components/posts-grid/PostsGrid/PostsGrid';
 
@@ -29,7 +28,6 @@ const CategoryTemplate: React.FunctionComponent<Props> = ({ category }) => {
   return (
     <main className="container">
       <DynamicTitle layout="page-left" title={title} />
-      <CategoriesNavigation showBackLink={true} />
       <PostsGrid posts={posts} />
     </main>
   );

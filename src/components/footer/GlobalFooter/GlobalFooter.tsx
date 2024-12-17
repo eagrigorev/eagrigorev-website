@@ -2,24 +2,27 @@
 import React from 'react';
 
 /* Components */
-import DynamicWidget from '@/components/footer/DynamicWidget/DynamicWidget';
+import Link from 'next/link';
 
 /* Style */
 import styles from './GlobalFooter.module.scss';
 
 const GlobalFooter: React.FunctionComponent<{}> = () => {
   return (
-    <footer className={styles['wrapper']}>
-      <div className={styles['widgets']}>
-        <div className="container grid">
-          <DynamicWidget layout="about" title="About" />
-          <DynamicWidget layout="recent-posts" title="Recent Posts" />
-          <DynamicWidget layout="tags" title="Tags" />
-          <DynamicWidget layout="pages" title="Pages" />
-        </div>
-      </div>
-      <div className={styles['copyright']}>
-        <p className="paragraph--light-xs">© 2024 Evgenii Grigorev</p>
+    <footer className={`jost-bold--xs-grey ${styles['wrapper']}`}>
+      <p>© 2024 Evgenii Grigorev</p>
+      <div>
+        <Link className="link-grey" href={'/privacy-and-security'}>
+          Privacy & Security
+        </Link>
+        <span> | </span>
+        <Link className="link-grey" href={'/rss.xml'}>
+          RSS Feed
+        </Link>
+        <span> | </span>
+        <Link className="link-grey" href={'/sitemap.xml'}>
+          Sitemap
+        </Link>
       </div>
     </footer>
   );

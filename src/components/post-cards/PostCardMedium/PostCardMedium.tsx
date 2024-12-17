@@ -23,36 +23,26 @@ const PostCardMedium: React.FunctionComponent<Props> = ({ postMeta }) => {
     <article className={styles['wrapper']}>
       <Link href={postMeta.slug} tabIndex={-1}>
         <Image
-          className={`opacity--decrease ${styles['image']}`}
+          className={styles['image']}
           src={`/images/posts/${postMeta.slug}/${postMeta.slug}-featured.jpg`}
-          alt="Test"
+          alt={postMeta.title}
           width={440}
           height={330}
         />
       </Link>
-      <div className={styles['content__wrapper']}>
-        <div className={`uppercase--regular-2xs ${styles['content__meta']}`}>
-          <p className={styles['content__meta__date']}>{postMeta.dateEdited}</p>
-          <Link
-            className="color--grey-to-red"
-            href={generateSlug(postMeta.category)}
-          >
-            {postMeta.category}
-          </Link>
-        </div>
-        <div className={styles['content__title']}>
-          <Link href={postMeta.slug}>
-            <h2 className="heading--h3">{postMeta.title}</h2>
-          </Link>
-          <p className="paragraph--light-s">{postMeta.description}</p>
-        </div>
-        <Link
-          className="paragraph--light-s color--red-to-grey"
-          href={postMeta.slug}
-        >
-          read more
+      <Link className="link-simple" href={postMeta.slug}>
+        <h2 className="spectral-heading--h3">{postMeta.title}</h2>
+      </Link>
+      <div className={`jost-uppercase--2xs ${styles['meta']}`}>
+        <p className={styles['meta__date']}>{postMeta.dateEdited}</p>
+        <Link className="link-grey" href={generateSlug(postMeta.category)}>
+          {postMeta.category}
         </Link>
       </div>
+      <p className="jost-light--s">{postMeta.description}</p>
+      <Link className="jost-light--s link-grey" href={postMeta.slug}>
+        read more
+      </Link>
     </article>
   );
 };

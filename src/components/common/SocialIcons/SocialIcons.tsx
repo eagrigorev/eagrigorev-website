@@ -21,14 +21,14 @@ type Props = {
 const SocialIcons: React.FunctionComponent<Props> = ({ showFollowText }) => {
   return (
     <div className={styles['wrapper']}>
-      {showFollowText ? <p className="paragraph--regular-s">follow:</p> : null}
-      <ul className={styles['icons']}>
+      {showFollowText ? <p className="jost-bold--s">follow:</p> : null}
+      <ul className={`list-simple ${styles['icons']}`}>
         {socialIcons.map(
           (icon: NavigationItem, index: number): React.JSX.Element => (
             <li key={index}>
               <Link href={icon.url}>
                 <Image
-                  className="opacity--decrease"
+                  className={styles['icon']}
                   src={`/images/icons/icons8-${icon.title.toLowerCase()}.svg`}
                   alt={`${icon.title} icon`}
                   width={25}

@@ -4,7 +4,6 @@ import React from 'react';
 /* Components */
 import PageTitleCentered from '@/components/title/PageTitleCentered/PageTitleCentered';
 import PageTitleLeft from '@/components/title/PageTitleLeft/PageTitleLeft';
-import PostTitle from '@/components/title/PostTitle/PostTitle';
 
 /* Style */
 import styles from './DynamicTitle.module.scss';
@@ -16,6 +15,7 @@ type Props = {
   layout: 'page-left' | 'page-centered' | 'post';
   postMeta?: Meta;
   title?: string;
+  showBackLink?: boolean;
 };
 
 const DynamicTitle: React.FunctionComponent<Props> = ({
@@ -26,11 +26,9 @@ const DynamicTitle: React.FunctionComponent<Props> = ({
   return (
     <header className={`grid ${styles['wrapper']}`}>
       {layout === 'page-left' ? (
-        <PageTitleLeft title={title} />
+        <PageTitleLeft title={title} showBackLink={false} />
       ) : layout === 'page-centered' ? (
         <PageTitleCentered title={title} />
-      ) : layout === 'post' ? (
-        <PostTitle postMeta={postMeta} />
       ) : null}
     </header>
   );

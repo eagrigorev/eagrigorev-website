@@ -3,12 +3,12 @@
   justify-content: space-between;
   align-items: center;
 
-  @media only screen and (width <= 768px) {
+  @media only screen and (width <= 1024px) {
     display: none;
   }
 }
 
-.navigation {
+.nav-items-wrapper {
   display: flex;
   gap: var(--space-30-40);
 }
@@ -17,13 +17,12 @@
   display: flex;
   align-items: center;
   gap: var(--space-30-40);
-  list-style: none;
 
   &::after {
     display: block;
     content: '';
     width: var(--space-40-60);
     height: 1px;
-    background: var(--accent-secondary);
+    background: var(--accent-primary);
   }
 }

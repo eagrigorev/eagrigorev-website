@@ -4,15 +4,15 @@
     "url": "/illustrations"
   },
   {
-    "title": "Music",
-    "url": "/music"
+    "title": "Music & Tabs",
+    "url": "/music-and-tabs"
   },
   {
-    "title": "Tabs",
-    "url": "/tabs"
+    "title": "Programming",
+    "url": "/programming"
   },
   {
-    "title": "Notes",
-    "url": "/notes"
+    "title": "UI/UX",
+    "url": "/ui-ux"
   }
 ]

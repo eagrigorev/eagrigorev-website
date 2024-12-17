@@ -8,11 +8,11 @@
   &--wide {
     grid-column: 3 / 11;
 
-    @media only screen and (width <= 768px) {
+    @media only screen and (width <= 1024px) {
       grid-column: span 6;
     }
 
-    @media only screen and (width <= 480px) {
+    @media only screen and (width <= 640px) {
       grid-column: span 2;
     }
   }
@@ -20,11 +20,11 @@
   &--left {
     grid-column: 3 / 7;
 
-    @media only screen and (width <= 768px) {
+    @media only screen and (width <= 1024px) {
       grid-column: 1 / 4;
     }
 
-    @media only screen and (width <= 480px) {
+    @media only screen and (width <= 640px) {
       grid-column: span 2;
     }
   }
@@ -32,11 +32,11 @@
   &--right {
     grid-column: 7 / 11;
 
-    @media only screen and (width <= 768px) {
+    @media only screen and (width <= 1024px) {
       grid-column: 4 / 7;
     }
 
-    @media only screen and (width <= 480px) {
+    @media only screen and (width <= 640px) {
       grid-column: span 2;
     }
   }

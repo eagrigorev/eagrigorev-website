@@ -2,7 +2,6 @@
 import React from 'react';
 
 /* Components */
-import CategoriesNavigation from '@/components/common/CategoriesNavigation/CategoriesNavigation';
 import DynamicTitle from '@/components/title/DynamicTitle/DynamicTitle';
 import PostsGrid from '@/components/posts-grid/PostsGrid/PostsGrid';
 
@@ -26,7 +25,6 @@ const TagTemplate: React.FunctionComponent<Props> = ({ tag }) => {
         layout="page-left"
         title={`Browsing by tag: ${tag.replace('-', ' ')}`}
       />
-      <CategoriesNavigation showBackLink={false} />
       <PostsGrid posts={posts} />
     </main>
   );
