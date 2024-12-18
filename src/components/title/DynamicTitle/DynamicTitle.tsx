@@ -22,11 +22,12 @@ const DynamicTitle: React.FunctionComponent<Props> = ({
   layout,
   postMeta,
   title,
+  showBackLink,
 }) => {
   return (
     <header className={`grid ${styles['wrapper']}`}>
       {layout === 'page-left' ? (
-        <PageTitleLeft title={title} showBackLink={false} />
+        <PageTitleLeft title={title} showBackLink={showBackLink} />
       ) : layout === 'page-centered' ? (
         <PageTitleCentered title={title} />
       ) : null}

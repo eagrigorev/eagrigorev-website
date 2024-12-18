@@ -9,14 +9,21 @@ import PostsGrid from '@/components/posts-grid/PostsGrid/PostsGrid';
 import { getAllPosts } from '@/scripts/getMarkdown';
 
 /* Utils */
+import { Markdown } from '@/utils/types/markdown';
 import { TITLE } from '@/utils/const/title';
 
 const HomeTemplate: React.FunctionComponent<{}> = () => {
-  const posts = getAllPosts();
+  const posts = getAllPosts().filter(
+    (post: Markdown) => post.meta.type === 'portfolio'
+  );
   return (
     <main className="container">
-      <DynamicTitle layout="page-left" title={TITLE.HOMEPAGE} />
-      <PostsGrid posts={posts.slice(1)} />
+      <DynamicTitle
+        layout="page-left"
+        title={TITLE.HOMEPAGE}
+        showBackLink={false}
+      />
+      <PostsGrid posts={posts} />
     </main>
   );
 };

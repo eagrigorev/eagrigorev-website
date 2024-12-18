@@ -20,14 +20,12 @@ const CategoryTemplate: React.FunctionComponent<Props> = ({ category }) => {
   const title: string =
     category === 'illustrations'
       ? TITLE.ILLUSTRATIONS
-      : category === 'music'
+      : category === 'music-and-tabs'
         ? TITLE.MUSIC
-        : category === 'tabs'
-          ? TITLE.TABS
-          : TITLE.NOTES;
+        : TITLE.NOTES;
   return (
     <main className="container">
-      <DynamicTitle layout="page-left" title={title} />
+      <DynamicTitle layout="page-left" title={title} showBackLink={true} />
       <PostsGrid posts={posts} />
     </main>
   );

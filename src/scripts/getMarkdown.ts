@@ -7,8 +7,6 @@ import categories from '@/data/navigation-items/categories.json';
 
 /* Scripts */
 import generateRssFeed from './generateRssFeed';
-import { generateSlug } from './generateSlug';
-import { generateTagsCloud } from './generateTagsCloud';
 import { sortPostsDesc } from './sort';
 
 /* Utils */
@@ -21,11 +19,12 @@ const mapMatterToMeta = (data: Matter): Meta => {
   return {
     title: data.title,
     slug: data.slug,
+    type: data.type,
     category: data.category,
-    tags: data.tags,
     dateEdited: data.dateEdited,
     datePublished: data.datePublished,
     description: data.description,
+    author: data.author,
     externalLink: data.externalLink,
   };
 };
@@ -73,9 +72,6 @@ export const getPostsSlugs = (): Slug[] => {
   const categorySlugs: Slug[] = categories.map((category: NavigationItem) => ({
     slug: category.url.slice(1),
   }));
-  const tagsSlugs: Slug[] = generateTagsCloud().map((tag: string) => {
-    return { slug: generateSlug(tag) };
-  });
-  const slugs: Slug[] = [...postSlugs, ...categorySlugs, ...tagsSlugs];
+  const slugs: Slug[] = [...postSlugs, ...categorySlugs];
   return slugs;
 };
