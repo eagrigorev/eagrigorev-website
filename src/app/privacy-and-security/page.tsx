@@ -3,7 +3,7 @@ import React from 'react';
 import { Metadata } from 'next';
 
 /* Components */
-import PageTemplate from '@/templates/PageTemplate/PageTemplate';
+import PageTemplate from '@/templates/PageTemplate';
 
 /* Utils */
 import { getPage } from '@/scripts/getMarkdown';

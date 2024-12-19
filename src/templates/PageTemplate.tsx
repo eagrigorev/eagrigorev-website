@@ -1,8 +1,8 @@
 import React from 'react';
 
 /* Components */
-import DynamicTitle from '@/components/title/DynamicTitle/DynamicTitle';
 import MarkdownWrapper from '@/components/MarkdownWrapper/MarkdownWrapper';
+import PageTitle from '@/components/PageTitle/PageTitle';
 
 /* Utils */
 import { Markdown } from '@/utils/types/markdown';
@@ -14,7 +14,7 @@ type Props = {
 const PageTemplate: React.FunctionComponent<Props> = ({ page }) => {
   return (
     <main className="container">
-      <DynamicTitle layout="page-centered" title={page.meta.title} />
+      <PageTitle layout="centered" title={page.meta.title} />
       <MarkdownWrapper content={page.content} />
     </main>
   );

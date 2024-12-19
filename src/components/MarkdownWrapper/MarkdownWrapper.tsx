@@ -22,27 +22,27 @@ const MarkdownWrapper: React.FunctionComponent<Props> = ({ content }) => {
           overrides: {
             p: {
               props: {
-                className: `paragraph--light-m ${styles['content']}`,
+                className: `jost-light--m ${styles['content']}`,
               },
             },
             a: {
               props: {
-                className: 'underline',
+                className: 'link-simple',
               },
             },
             h2: {
               props: {
-                className: `heading--h2 ${styles['content']}`,
+                className: `spectral-heading--h2 ${styles['content']}`,
               },
             },
             h3: {
               props: {
-                className: `heading--h3 ${styles['content']}`,
+                className: `spectral-heading--h3 ${styles['content']}`,
               },
             },
             h4: {
               props: {
-                className: `heading--h4 ${styles['content']}`,
+                className: `spectral-heading--h4 ${styles['content']}`,
               },
             },
             EmbedImage: {

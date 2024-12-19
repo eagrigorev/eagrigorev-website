@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 
 /* Components */
 import CategoryTemplate from '@/templates/CategoryTemplate';
-import PostTemplate from '@/templates/PostTemplate/PostTemplate';
+import PostTemplate from '@/templates/PostTemplate';
 
 /* Data */
 import categories from '@/data/navigation-items/categories.json';

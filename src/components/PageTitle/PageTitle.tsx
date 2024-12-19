@@ -51,6 +51,10 @@ const PageTitle: React.FunctionComponent<Props> = ({
             </ul>
           </div>
         </div>
+      ) : layout === 'centered' ? (
+        <div className={styles['centered__wrapper']}>
+          <h1 className="spectral-heading--h1">{title}</h1>
+        </div>
       ) : null}
     </header>
   );

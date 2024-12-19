@@ -2,8 +2,8 @@ import React from 'react';
 
 /* Components */
 import DynamicRelatedPosts from '@/components/posts-grid/DynamicRelatedPosts/DynamicRelatedPosts';
-import DynamicTitle from '@/components/title/DynamicTitle/DynamicTitle';
 import MarkdownWrapper from '@/components/MarkdownWrapper/MarkdownWrapper';
+import PageTitle from '@/components/PageTitle/PageTitle';
 
 /* Scripts */
 import { getAllPosts } from '@/scripts/getMarkdown';
@@ -23,7 +23,7 @@ const PostTemplate: React.FunctionComponent<Props> = ({ post }) => {
   );
   return (
     <main className="container">
-      <DynamicTitle layout="post" postMeta={post.meta} />
+      <PageTitle layout="centered" meta={post.meta} />
       <MarkdownWrapper content={post.content} />
       {relatedPosts.length ? (
         <DynamicRelatedPosts relatedPosts={relatedPosts.slice(0, 2)} />
