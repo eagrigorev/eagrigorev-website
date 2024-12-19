@@ -2,8 +2,8 @@
 import React from 'react';
 
 /* Components */
-import DynamicTitle from '@/components/title/DynamicTitle/DynamicTitle';
-import PostsGrid from '@/components/posts-grid/PostsGrid/PostsGrid';
+import PageTitle from '@/components/PageTitle/PageTitle';
+import PostsGrid from '@/components/PostsGrid/PostsGrid';
 
 /* Scripts */
 import { getPostsFromSingleCategory } from '@/scripts/getMarkdown';
@@ -25,7 +25,7 @@ const CategoryTemplate: React.FunctionComponent<Props> = ({ category }) => {
         : TITLE.NOTES;
   return (
     <main className="container">
-      <DynamicTitle layout="page-left" title={title} showBackLink={true} />
+      <PageTitle layout="left" title={title} showBackLink={true} />
       <PostsGrid posts={posts} />
     </main>
   );

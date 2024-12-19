@@ -3,7 +3,7 @@ import React from 'react';
 
 /* Components */
 import PageTitleCentered from '@/components/title/PageTitleCentered/PageTitleCentered';
-import PageTitleLeft from '@/components/title/PageTitleLeft/PageTitleLeft';
+// import PageTitleLeft from '@/components/title/PageTitleLeft/PageTitleLeft';
 
 /* Style */
 import styles from './DynamicTitle.module.scss';
@@ -26,9 +26,7 @@ const DynamicTitle: React.FunctionComponent<Props> = ({
 }) => {
   return (
     <header className={`grid ${styles['wrapper']}`}>
-      {layout === 'page-left' ? (
-        <PageTitleLeft title={title} showBackLink={showBackLink} />
-      ) : layout === 'page-centered' ? (
+      {layout === 'page-left' ? null : layout === 'page-centered' ? ( // <PageTitleLeft title={title} showBackLink={showBackLink} />
         <PageTitleCentered title={title} />
       ) : null}
     </header>

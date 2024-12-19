@@ -2,8 +2,8 @@
 import React from 'react';
 
 /* Components */
-import DynamicTitle from '@/components/title/DynamicTitle/DynamicTitle';
-import PostsGrid from '@/components/posts-grid/PostsGrid/PostsGrid';
+import PageTitle from '@/components/PageTitle/PageTitle';
+import PostsGrid from '@/components/PostsGrid/PostsGrid';
 
 /* Scripts */
 import { getAllPosts } from '@/scripts/getMarkdown';
@@ -18,11 +18,7 @@ const HomeTemplate: React.FunctionComponent<{}> = () => {
   );
   return (
     <main className="container">
-      <DynamicTitle
-        layout="page-left"
-        title={TITLE.HOMEPAGE}
-        showBackLink={false}
-      />
+      <PageTitle layout="left" title={TITLE.HOMEPAGE} showBackLink={false} />
       <PostsGrid posts={posts} />
     </main>
   );

@@ -1,0 +1,27 @@
+.wrapper {
+  padding-top: var(--space-80-120);
+}
+
+.left {
+  &__wrapper {
+    grid-column: span 8;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-30-40);
+
+    @media only screen and (width <= 1024px) {
+      grid-column: span 6;
+    }
+
+    @media only screen and (width <= 640px) {
+      grid-column: span 2;
+    }
+  }
+
+  &__categories {
+    display: flex;
+    gap: var(--space-30-40);
+    row-gap: var(--space-20-25);
+    flex-wrap: wrap;
+  }
+}

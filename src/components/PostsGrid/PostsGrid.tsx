@@ -4,7 +4,7 @@
 import React, { useState } from 'react';
 
 /* Components */
-import PostCardMedium from '@/components/post-cards/PostCardMedium/PostCardMedium';
+import PostCard from '@/components/PostCard/PostCard';
 
 /* Style */
 import styles from './PostsGrid.module.scss';
@@ -29,7 +29,7 @@ const PostsGrid: React.FunctionComponent<Props> = ({ posts }) => {
         {displayedPosts.map(
           (post: Markdown, index: number): React.JSX.Element => (
             <div className={styles['post']} key={index}>
-              <PostCardMedium postMeta={post.meta} />
+              <PostCard layout="medium" postMeta={post.meta} />
             </div>
           )
         )}

@@ -3,8 +3,8 @@ import Markdown from 'markdown-to-jsx';
 import React from 'react';
 
 /* Components */
-import ImageWithCaption from '@/components/common/ImageWithCaption/ImageWithCaption';
-import SpotifyEmbed from '@/components/embeds/SpotifyEmbed/SpotifyEmbed';
+import EmbedImage from '@/components/EmbedImage/EmbedImage';
+import EmbedSpotify from '@/components/EmbedSpotify/EmbedSpotify';
 
 /* Style */
 import styles from './MarkdownWrapper.module.scss';
@@ -45,11 +45,11 @@ const MarkdownWrapper: React.FunctionComponent<Props> = ({ content }) => {
                 className: `heading--h4 ${styles['content']}`,
               },
             },
-            ImageWithCaption: {
-              component: ImageWithCaption,
+            EmbedImage: {
+              component: EmbedImage,
             },
-            SpotifyEmbed: {
-              component: SpotifyEmbed,
+            EmbedSpotify: {
+              component: EmbedSpotify,
             },
           },
         }}

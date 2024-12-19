@@ -5,9 +5,9 @@ import React from 'react';
 import Link from 'next/link';
 
 /* Style */
-import styles from './GlobalFooter.module.scss';
+import styles from './RootLayoutFooter.module.scss';
 
-const GlobalFooter: React.FunctionComponent<{}> = () => {
+const RootLayoutFooter: React.FunctionComponent<{}> = () => {
   return (
     <footer className={`jost-bold--xs-grey ${styles['wrapper']}`}>
       <p>© 2024 Evgenii Grigorev</p>
@@ -28,4 +28,4 @@ const GlobalFooter: React.FunctionComponent<{}> = () => {
   );
 };
 
-export default GlobalFooter;
+export default RootLayoutFooter;

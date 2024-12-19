@@ -2,7 +2,7 @@ import React from 'react';
 
 /* Components */
 import DynamicTitle from '@/components/title/DynamicTitle/DynamicTitle';
-import MarkdownWrapper from '@/components/common/MarkdownWrapper/MarkdownWrapper';
+import MarkdownWrapper from '@/components/MarkdownWrapper/MarkdownWrapper';
 
 /* Utils */
 import { Markdown } from '@/utils/types/markdown';

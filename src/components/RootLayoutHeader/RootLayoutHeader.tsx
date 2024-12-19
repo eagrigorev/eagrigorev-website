@@ -7,18 +7,18 @@ import React, { useState, useEffect } from 'react';
 import FocusTrap from 'focus-trap-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import SocialIcons from '@/components/common/SocialIcons/SocialIcons';
+import SocialIcons from '@/components/SocialIcons/SocialIcons';
 
 /* Data */
 import headerNavigation from '@/data/navigation-items/headerNavigation.json';
 
 /* Style */
-import styles from './MobileNavigation.module.scss';
+import styles from './RootLayoutHeader.module.scss';
 
 /* Utils */
 import { NavigationItem } from '@/utils/types/common';
 
-const MobileNavigation: React.FunctionComponent<{}> = () => {
+const RootLayoutHeader: React.FunctionComponent<{}> = () => {
   const [showMobileMenu, setShowMobileMenu] = useState<boolean>(false);
   const handleShowMobileMenu = (): void => {
     setShowMobileMenu(!showMobileMenu);
@@ -35,17 +35,38 @@ const MobileNavigation: React.FunctionComponent<{}> = () => {
     };
   }, [showMobileMenu]);
   return (
-    <>
-      <div className={styles['wrapper']}>
+    <nav className={`${styles['wrapper']}`}>
+      <div className={styles['desktop']}>
+        <Link className="jost-bold--m link-simple" href={'/'}>
+          Evgenii Grigorev
+        </Link>
+        <div className={styles['desktop__nav-items']}>
+          <ul
+            className={`jost-bold--s list-simple ${styles['desktop__links']}`}
+          >
+            {headerNavigation.map(
+              (item: NavigationItem, index: number): React.JSX.Element => (
+                <li key={index}>
+                  <Link className="link-simple" href={item.url}>
+                    {item.title}
+                  </Link>
+                </li>
+              )
+            )}
+          </ul>
+          <SocialIcons showFollowText={true} />
+        </div>
+      </div>
+      <div className={styles['mobile']}>
         <Link className="jost-bold--m link-simple" href={'/'}>
           Evgenii Grigorev
         </Link>
         <button
-          className={styles['menu__button']}
+          className={styles['mobile__menu-button']}
           onClick={handleShowMobileMenu}
         >
           <Image
-            className={`opacity--decrease ${styles['menu__icon']}`}
+            className={`opacity--decrease ${styles['mobile__menu-icon']}`}
             src="images/icons/icons8-menu.svg"
             alt="Menu icon"
             width={25}
@@ -55,8 +76,10 @@ const MobileNavigation: React.FunctionComponent<{}> = () => {
       </div>
       {showMobileMenu ? (
         <FocusTrap focusTrapOptions={{ clickOutsideDeactivates: true }}>
-          <div className={styles['nav-items-wrapper']}>
-            <ul className={`jost-bold--s list-simple ${styles['links']}`}>
+          <div className={styles['mobile__nav-items']}>
+            <ul
+              className={`jost-bold--s list-simple ${styles['mobile__links']}`}
+            >
               {headerNavigation.map((item: NavigationItem, index: number) => (
                 <li key={index}>
                   <Link className="link-simple" href={item.url}>
@@ -69,8 +92,8 @@ const MobileNavigation: React.FunctionComponent<{}> = () => {
           </div>
         </FocusTrap>
       ) : null}
-    </>
+    </nav>
   );
 };
 
-export default MobileNavigation;
+export default RootLayoutHeader;

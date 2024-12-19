@@ -3,7 +3,7 @@ import React from 'react';
 /* Components */
 import DynamicRelatedPosts from '@/components/posts-grid/DynamicRelatedPosts/DynamicRelatedPosts';
 import DynamicTitle from '@/components/title/DynamicTitle/DynamicTitle';
-import MarkdownWrapper from '@/components/common/MarkdownWrapper/MarkdownWrapper';
+import MarkdownWrapper from '@/components/MarkdownWrapper/MarkdownWrapper';
 
 /* Scripts */
 import { getAllPosts } from '@/scripts/getMarkdown';

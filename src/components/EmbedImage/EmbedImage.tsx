@@ -5,7 +5,7 @@ import React from 'react';
 import Image from 'next/image';
 
 /* Style */
-import styles from './ImageWithCaption.module.scss';
+import styles from './EmbedImage.module.scss';
 
 type Props = {
   layout: 'wide' | 'left' | 'right';
@@ -14,7 +14,7 @@ type Props = {
   caption: string;
 };
 
-const ImageWithCaption: React.FunctionComponent<Props> = ({
+const EmbedImage: React.FunctionComponent<Props> = ({
   layout,
   src,
   alt,
@@ -34,4 +34,4 @@ const ImageWithCaption: React.FunctionComponent<Props> = ({
   );
 };
 
-export default ImageWithCaption;
+export default EmbedImage;

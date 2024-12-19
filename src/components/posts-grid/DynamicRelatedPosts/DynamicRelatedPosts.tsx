@@ -2,7 +2,7 @@
 import React from 'react';
 
 /* Components */
-import PostCardMedium from '@/components/post-cards/PostCardMedium/PostCardMedium';
+import PostCard from '@/components/PostCard/PostCard';
 
 /* Style */
 import styles from './DynamicRelatedPosts.module.scss';
@@ -26,7 +26,7 @@ const DynamicRelatedPosts: React.FunctionComponent<Props> = ({
         {relatedPosts.map(
           (post: Markdown, index: number): React.JSX.Element => (
             <div className={styles['post']} key={index}>
-              <PostCardMedium postMeta={post.meta} />
+              <PostCard layout="medium" postMeta={post.meta} />
             </div>
           )
         )}

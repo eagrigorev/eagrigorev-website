@@ -2,14 +2,14 @@
 import React from 'react';
 
 /* Style */
-import styles from './SpotifyEmbed.module.scss';
+import styles from './EmbedSpotify.module.scss';
 
 type Props = {
   src: string;
   layout: 'big' | 'small';
 };
 
-const SpotifyEmbed: React.FunctionComponent<Props> = ({ src, layout }) => {
+const EmbedSpotify: React.FunctionComponent<Props> = ({ src, layout }) => {
   const height = layout === 'big' ? '352' : '152';
   return (
     <iframe
@@ -26,4 +26,4 @@ const SpotifyEmbed: React.FunctionComponent<Props> = ({ src, layout }) => {
   );
 };
 
-export default SpotifyEmbed;
+export default EmbedSpotify;

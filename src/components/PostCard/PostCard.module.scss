@@ -1,0 +1,24 @@
+.medium {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-10-20);
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  &__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-30-40);
+    row-gap: var(--space-20-25);
+
+    &__date {
+      color: var(--font-secondary);
+    }
+  }
+}
