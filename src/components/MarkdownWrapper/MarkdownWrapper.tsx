@@ -27,7 +27,7 @@ const MarkdownWrapper: React.FunctionComponent<Props> = ({ content }) => {
             },
             a: {
               props: {
-                className: 'link-simple',
+                className: 'link-underline',
               },
             },
             h2: {

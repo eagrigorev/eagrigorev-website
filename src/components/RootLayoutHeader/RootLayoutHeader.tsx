@@ -37,7 +37,7 @@ const RootLayoutHeader: React.FunctionComponent<{}> = () => {
   return (
     <nav className={`${styles['wrapper']}`}>
       <div className={styles['desktop']}>
-        <Link className="jost-bold--m link-black" href={'/'}>
+        <Link className="jost-bold--m link-simple" href={'/'}>
           Evgenii Grigorev
         </Link>
         <div className={styles['desktop__nav-items']}>
@@ -58,7 +58,7 @@ const RootLayoutHeader: React.FunctionComponent<{}> = () => {
         </div>
       </div>
       <div className={styles['mobile']}>
-        <Link className="jost-bold--m link-black" href={'/'}>
+        <Link className="jost-bold--m link-simple" href={'/'}>
           Evgenii Grigorev
         </Link>
         <button

@@ -67,6 +67,20 @@
   }
 }
 
+.link-underline {
+  text-decoration: none;
+  color: var(--font-primary);
+  transition: all 0.3s;
+  padding-bottom: 1px;
+  border-bottom: 1px solid var(--font-secondary);
+
+  &:hover,
+  &:focus {
+    color: var(--font-secondary);
+    border-bottom: 1px solid var(--font-primary);
+  }
+}
+
 .jost-light {
   &--s {
     @extend %jost-light;
