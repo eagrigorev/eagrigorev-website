@@ -26,7 +26,7 @@ const SocialIcons: React.FunctionComponent<Props> = ({ showFollowText }) => {
         {socialIcons.map(
           (icon: NavigationItem, index: number): React.JSX.Element => (
             <li key={index}>
-              <Link href={icon.url}>
+              <Link className="link-image" href={icon.url}>
                 <Image
                   className={styles['icon']}
                   src={`/images/icons/icons8-${icon.title.toLowerCase()}.svg`}

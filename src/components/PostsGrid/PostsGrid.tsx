@@ -37,7 +37,7 @@ const PostsGrid: React.FunctionComponent<Props> = ({ posts }) => {
       {isButtonVisible ? (
         <div className={styles['button-wrapper']}>
           <button
-            className={`jost-uppercase--xs-btn ${styles['button']}`}
+            className={`jost-uppercase--xs-btn link-image ${styles['button']}`}
             onClick={loadMorePostsHandler}
           >
             load more

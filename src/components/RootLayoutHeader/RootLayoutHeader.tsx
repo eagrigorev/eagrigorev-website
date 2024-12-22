@@ -37,7 +37,7 @@ const RootLayoutHeader: React.FunctionComponent<{}> = () => {
   return (
     <nav className={`${styles['wrapper']}`}>
       <div className={styles['desktop']}>
-        <Link className="jost-bold--m link-simple" href={'/'}>
+        <Link className="jost-bold--m link-black" href={'/'}>
           Evgenii Grigorev
         </Link>
         <div className={styles['desktop__nav-items']}>
@@ -47,7 +47,7 @@ const RootLayoutHeader: React.FunctionComponent<{}> = () => {
             {headerNavigation.map(
               (item: NavigationItem, index: number): React.JSX.Element => (
                 <li key={index}>
-                  <Link className="link-simple" href={item.url}>
+                  <Link className="link-black" href={item.url}>
                     {item.title}
                   </Link>
                 </li>
@@ -58,7 +58,7 @@ const RootLayoutHeader: React.FunctionComponent<{}> = () => {
         </div>
       </div>
       <div className={styles['mobile']}>
-        <Link className="jost-bold--m link-simple" href={'/'}>
+        <Link className="jost-bold--m link-black" href={'/'}>
           Evgenii Grigorev
         </Link>
         <button
@@ -82,7 +82,7 @@ const RootLayoutHeader: React.FunctionComponent<{}> = () => {
             >
               {headerNavigation.map((item: NavigationItem, index: number) => (
                 <li key={index}>
-                  <Link className="link-simple" href={item.url}>
+                  <Link className="link-black" href={item.url}>
                     {item.title}
                   </Link>
                 </li>

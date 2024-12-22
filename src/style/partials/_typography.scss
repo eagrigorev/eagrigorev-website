@@ -35,9 +35,36 @@
   color: var(--font-primary);
 }
 
+.link-black {
+  text-decoration: none;
+  color: var(--font-primary);
+  transition: color 0.3s;
+
+  &:hover,
+  &:focus {
+    color: var(--font-secondary);
+  }
+}
+
 .link-grey {
   text-decoration: none;
   color: var(--font-secondary);
+
+  transition: color 0.3s;
+
+  &:hover,
+  &:focus {
+    color: var(--font-primary);
+  }
+}
+
+.link-image {
+  transition: opacity 0.3s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
 }
 
 .jost-light {
