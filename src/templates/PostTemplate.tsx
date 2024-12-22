@@ -1,7 +1,7 @@
 import React from 'react';
 
 /* Components */
-import DynamicRelatedPosts from '@/components/posts-grid/DynamicRelatedPosts/DynamicRelatedPosts';
+import RelatedPosts from '@/components/RelatedPosts/RelatedPosts';
 import MarkdownWrapper from '@/components/MarkdownWrapper/MarkdownWrapper';
 import PageTitle from '@/components/PageTitle/PageTitle';
 
@@ -26,7 +26,7 @@ const PostTemplate: React.FunctionComponent<Props> = ({ post }) => {
       <PageTitle layout="centered-meta" meta={post.meta} />
       <MarkdownWrapper content={post.content} />
       {relatedPosts.length ? (
-        <DynamicRelatedPosts relatedPosts={relatedPosts.slice(0, 2)} />
+        <RelatedPosts relatedPosts={relatedPosts.slice(0, 2)} />
       ) : null}
     </main>
   );

@@ -3,15 +3,15 @@
 }
 
 .title {
-  grid-column: 3 / 11;
+  grid-column: 4 / 10;
 
   &::after {
-    margin-top: var(--space-10-15);
+    margin-top: var(--space-15-20);
     display: block;
     content: '';
     width: var(--space-30-40);
     height: 1px;
-    background: var(--accent-secondary);
+    background: var(--font-primary);
   }
 
   @media only screen and (width <= 1024px) {
@@ -28,7 +28,7 @@
 }
 
 .post {
-  grid-column: 3 / span 4;
+  grid-column: 4 / span 3;
 
   @media only screen and (width <= 1024px) {
     grid-column: span 3;
@@ -39,7 +39,7 @@
   }
 
   &:last-child {
-    grid-column: 7 / span 4;
+    grid-column: 7 / span 3;
 
     @media only screen and (width <= 1024px) {
       grid-column: span 3;
@@ -51,7 +51,7 @@
   }
 
   &:only-child {
-    grid-column: 3 / span 4;
+    grid-column: 4 / span 3;
 
     @media only screen and (width <= 1024px) {
       grid-column: span 3;

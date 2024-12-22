@@ -5,7 +5,7 @@ import React from 'react';
 import PostCard from '@/components/PostCard/PostCard';
 
 /* Style */
-import styles from './DynamicRelatedPosts.module.scss';
+import styles from './RelatedPosts.module.scss';
 
 /* Utils */
 import { Markdown } from '@/utils/types/markdown';
@@ -14,13 +14,13 @@ type Props = {
   relatedPosts: Markdown[];
 };
 
-const DynamicRelatedPosts: React.FunctionComponent<Props> = ({
-  relatedPosts,
-}) => {
+const RelatedPosts: React.FunctionComponent<Props> = ({ relatedPosts }) => {
   return (
     <div className={styles['wrapper']}>
       <div className="grid">
-        <h4 className={`heading--h4 ${styles['title']}`}>Related Posts:</h4>
+        <h4 className={`spectral-heading--h4-related ${styles['title']}`}>
+          Related Posts
+        </h4>
       </div>
       <div className={`grid ${styles['posts']}`}>
         {relatedPosts.map(
@@ -35,4 +35,4 @@ const DynamicRelatedPosts: React.FunctionComponent<Props> = ({
   );
 };
 
-export default DynamicRelatedPosts;
+export default RelatedPosts;
