@@ -29,7 +29,7 @@ const EmbedImage: React.FunctionComponent<Props> = ({
         width={920}
         height={920}
       />
-      <p className={`paragraph--light-s ${styles['caption']}`}>{caption}</p>
+      <p className={`jost-light--s ${styles['caption']}`}>{caption}</p>
     </div>
   );
 };
