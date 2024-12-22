@@ -7,6 +7,9 @@ import Link from 'next/link';
 /* Data */
 import categories from '@/data/navigation-items/categories.json';
 
+/* Scripts */
+import { generateSlug } from '@/scripts/generateSlug';
+
 /* Style */
 import styles from './PageTitle.module.scss';
 
@@ -54,6 +57,24 @@ const PageTitle: React.FunctionComponent<Props> = ({
       ) : layout === 'centered' ? (
         <div className={styles['centered__wrapper']}>
           <h1 className="spectral-heading--h1">{title}</h1>
+        </div>
+      ) : layout === 'centered-meta' ? (
+        <div className={styles['centered-meta__wrapper']}>
+          <h1
+            className={`spectral-heading--h1 ${styles['centered-meta__title']}`}
+          >
+            {meta.title}
+          </h1>
+          <div
+            className={`jost-uppercase--xs ${styles['centered-meta__info']}`}
+          >
+            <p className={styles['centered-meta__info__date']}>
+              {meta.dateEdited}
+            </p>
+            <Link className="link-grey" href={generateSlug(meta.category)}>
+              {meta.category}
+            </Link>
+          </div>
         </div>
       ) : null}
     </header>

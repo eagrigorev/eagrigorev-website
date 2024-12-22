@@ -33,6 +33,7 @@
     flex-direction: column;
     align-items: center;
     gap: var(--space-30-40);
+    text-align: center;
 
     &::after {
       display: block;
@@ -48,6 +49,53 @@
 
     @media only screen and (width <= 640px) {
       grid-column: span 2;
+    }
+  }
+}
+
+.centered-meta {
+  &__wrapper {
+    grid-column: 4 / 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-30-40);
+
+    @media only screen and (width <= 1024px) {
+      grid-column: span 6;
+    }
+
+    @media only screen and (width <= 640px) {
+      grid-column: span 2;
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-30-40);
+    text-align: center;
+
+    &::after {
+      display: block;
+      content: '';
+      width: var(--space-40-60);
+      height: 1px;
+      background-color: var(--font-primary);
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-30-40);
+    row-gap: var(--space-20-25);
+
+    &__date {
+      color: var(--font-secondary);
+      text-align: center;
     }
   }
 }

@@ -23,7 +23,7 @@ const PostTemplate: React.FunctionComponent<Props> = ({ post }) => {
   );
   return (
     <main className="container">
-      <PageTitle layout="centered" meta={post.meta} />
+      <PageTitle layout="centered-meta" meta={post.meta} />
       <MarkdownWrapper content={post.content} />
       {relatedPosts.length ? (
         <DynamicRelatedPosts relatedPosts={relatedPosts.slice(0, 2)} />
