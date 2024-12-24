@@ -29,8 +29,8 @@ const PostCard: React.FunctionComponent<Props> = ({ postMeta, layout }) => {
               className={styles['medium__image']}
               src={`/images/posts/${postMeta.slug}/${postMeta.slug}-featured.jpg`}
               alt={postMeta.title}
-              width={440}
-              height={330}
+              width={920}
+              height={690}
             />
           </Link>
           <Link className="link-simple" href={postMeta.slug}>

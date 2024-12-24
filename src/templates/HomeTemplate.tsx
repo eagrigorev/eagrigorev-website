@@ -13,9 +13,7 @@ import { Markdown } from '@/utils/types/markdown';
 import { TITLE } from '@/utils/const/title';
 
 const HomeTemplate: React.FunctionComponent<{}> = () => {
-  const posts = getAllPosts().filter(
-    (post: Markdown) => post.meta.type === 'portfolio'
-  );
+  const posts = getAllPosts();
   return (
     <main className="container">
       <PageTitle layout="left" title={TITLE.HOMEPAGE} showBackLink={false} />

@@ -4,7 +4,7 @@
         <title>Evgenii Grigorev</title>
         <link>https://eagrigorev.com</link>
         <description>Software developer and artist based in Thessaloniki, Greece.</description>
-        <lastBuildDate>Sun, 22 Dec 2024 17:36:33 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 24 Dec 2024 21:01:25 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -14,12 +14,6 @@
             <link>https://eagrigorev.com/on-drawing-again</link>
             <guid>https://eagrigorev.com/on-drawing-again</guid>
             <pubDate>Mon, 09 Sep 2024 21:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Boreal Heights Music]]></title>
-            <link>https://eagrigorev.com/boreal-heights-music</link>
-            <guid>https://eagrigorev.com/boreal-heights-music</guid>
-            <pubDate>Tue, 27 Aug 2024 21:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Hello, World!]]></title>
@@ -62,6 +56,48 @@
             <link>https://eagrigorev.com/pixel-arts-archive</link>
             <guid>https://eagrigorev.com/pixel-arts-archive</guid>
             <pubDate>Tue, 19 Jul 2022 21:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Winds & Windows (2020)]]></title>
+            <link>https://eagrigorev.com/winds-and-windows</link>
+            <guid>https://eagrigorev.com/winds-and-windows</guid>
+            <pubDate>Wed, 01 Jul 2020 21:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Early Rains (2019)]]></title>
+            <link>https://eagrigorev.com/early-rains</link>
+            <guid>https://eagrigorev.com/early-rains</guid>
+            <pubDate>Mon, 12 Aug 2019 21:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Far Lands (2019)]]></title>
+            <link>https://eagrigorev.com/far-lands</link>
+            <guid>https://eagrigorev.com/far-lands</guid>
+            <pubDate>Wed, 08 May 2019 21:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Beyond the Sea of Ghosts (2018)]]></title>
+            <link>https://eagrigorev.com/beyond-the-sea-of-ghosts</link>
+            <guid>https://eagrigorev.com/beyond-the-sea-of-ghosts</guid>
+            <pubDate>Fri, 29 Jun 2018 21:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Under Åpen Himmel (2016)]]></title>
+            <link>https://eagrigorev.com/under-apen-himmel</link>
+            <guid>https://eagrigorev.com/under-apen-himmel</guid>
+            <pubDate>Sat, 03 Sep 2016 21:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Morning Star (2015)]]></title>
+            <link>https://eagrigorev.com/morning-star</link>
+            <guid>https://eagrigorev.com/morning-star</guid>
+            <pubDate>Fri, 14 Aug 2015 21:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Crystal Maze (2013)]]></title>
+            <link>https://eagrigorev.com/crystal-maze</link>
+            <guid>https://eagrigorev.com/crystal-maze</guid>
+            <pubDate>Sat, 09 Nov 2013 22:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>

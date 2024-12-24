@@ -20,7 +20,7 @@ const CategoryTemplate: React.FunctionComponent<Props> = ({ category }) => {
   const title: string =
     category === 'illustrations'
       ? TITLE.ILLUSTRATIONS
-      : category === 'music-and-tabs'
+      : category === 'music'
         ? TITLE.MUSIC
         : TITLE.NOTES;
   return (
