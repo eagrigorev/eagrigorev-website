@@ -5,12 +5,10 @@ export interface Matter {
 export interface Meta {
   title: string;
   slug?: string;
-  type?: 'portfolio' | 'journal';
   category?: string;
   dateEdited?: string;
   datePublished?: string;
   description?: string;
-  author?: string;
   externalLink?: string;
 }
 

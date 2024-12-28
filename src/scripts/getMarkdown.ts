@@ -19,12 +19,10 @@ const mapMatterToMeta = (data: Matter): Meta => {
   return {
     title: data.title,
     slug: data.slug,
-    type: data.type,
     category: data.category,
     dateEdited: data.dateEdited,
     datePublished: data.datePublished,
     description: data.description,
-    author: data.author,
     externalLink: data.externalLink,
   };
 };

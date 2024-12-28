@@ -22,7 +22,9 @@ const CategoryTemplate: React.FunctionComponent<Props> = ({ category }) => {
       ? TITLE.ILLUSTRATIONS
       : category === 'music'
         ? TITLE.MUSIC
-        : TITLE.NOTES;
+        : category === 'tabs'
+          ? TITLE.TABS
+          : TITLE.WRITINGS;
   return (
     <main className="container">
       <PageTitle layout="left" title={title} showBackLink={true} />
