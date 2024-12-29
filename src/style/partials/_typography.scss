@@ -49,7 +49,6 @@
 .link-grey {
   text-decoration: none;
   color: var(--font-secondary);
-
   transition: color 0.3s;
 
   &:hover,
@@ -167,13 +166,13 @@
   &--h4 {
     @extend %spectral-heading;
 
-    font-size: var(---font-16-20);
+    font-size: var(--font-16-20);
 
     &-related {
       @extend %spectral-heading;
 
       line-height: 100%;
-      font-size: var(---font-16-20);
+      font-size: var(--font-16-20);
     }
   }
 }

@@ -21,6 +21,7 @@ type Props = {
   layout: 'left' | 'centered' | 'centered-meta';
   meta?: Meta;
   title?: string;
+  navigationItems?: NavigationItem[];
   showBackLink?: boolean;
 };
 
@@ -28,6 +29,7 @@ const PageTitle: React.FunctionComponent<Props> = ({
   layout,
   meta,
   title,
+  navigationItems,
   showBackLink,
 }) => {
   return (
@@ -44,7 +46,7 @@ const PageTitle: React.FunctionComponent<Props> = ({
                   </Link>
                 </li>
               ) : null}
-              {categories.map((item: NavigationItem, index: number) => (
+              {navigationItems.map((item: NavigationItem, index: number) => (
                 <li key={index}>
                   <Link className="link-grey" href={item.url}>
                     {item.title}

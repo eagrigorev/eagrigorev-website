@@ -10,12 +10,17 @@ import PostTemplate from '@/templates/PostTemplate';
 import categories from '@/data/navigation-items/categories.json';
 
 /* Scripts */
-import { getAllPosts, getPostsSlugs } from '@/scripts/getMarkdown';
+import {
+  getAllPosts,
+  getPostsFromSingleCategory,
+  getPostsSlugs,
+} from '@/scripts/getMarkdown';
 import { notFound } from 'next/navigation';
 
 /* Utils */
-import { Markdown } from '@/utils/types/markdown';
+import { Markdown, Meta } from '@/utils/types/markdown';
 import { NavigationItem, Slug } from '@/utils/types/common';
+import { TITLE } from '@/utils/const/title';
 
 type Props = {
   params: Slug;
@@ -53,7 +58,27 @@ const Page: React.FunctionComponent<Props> = (props) => {
     (category: NavigationItem) => category.url.slice(1) === slug
   );
   if (categoryPage !== undefined) {
-    return <CategoryTemplate category={categoryPage.url.slice(1)} />;
+    const posts = getPostsFromSingleCategory(slug);
+    const postsMeta: Meta[] = posts.map((post: Markdown) => post.meta);
+    const title: string =
+      slug === 'illustrations'
+        ? TITLE.ILLUSTRATIONS
+        : slug === 'music'
+          ? TITLE.MUSIC
+          : slug === 'tabs'
+            ? TITLE.TABS
+            : slug === 'writings'
+              ? TITLE.WRITINGS
+              : 'Default';
+    const showBackLink = slug === 'reading-archives';
+    return (
+      <CategoryTemplate
+        layout="medium"
+        postsMeta={postsMeta}
+        title={title}
+        showBackLink={!showBackLink}
+      />
+    );
   } else if (post !== undefined) {
     return <PostTemplate post={post} />;
   } else {

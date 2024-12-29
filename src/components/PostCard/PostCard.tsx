@@ -49,6 +49,28 @@ const PostCard: React.FunctionComponent<Props> = ({ postMeta, layout }) => {
             read more
           </Link>
         </article>
+      ) : layout === 'small' ? (
+        <article className={styles['small__wrapper']}>
+          <Link
+            className="link-image"
+            href={postMeta.externalLink}
+            tabIndex={-1}
+          >
+            <Image
+              className={styles['small__image']}
+              src={`/images/books/${postMeta.slug}.jpg`}
+              alt={postMeta.title}
+              width={300}
+              height={450}
+            />
+          </Link>
+          <p className={`jost-uppercase--2xs ${styles['small__author']}`}>
+            {postMeta.description}
+          </p>
+          <Link className="link-simple" href={postMeta.externalLink}>
+            <h2 className="spectral-heading--h3">{postMeta.title}</h2>
+          </Link>
+        </article>
       ) : null}
     </>
   );

@@ -8,28 +8,29 @@ import PostCard from '@/components/PostCard/PostCard';
 
 /* Style */
 import styles from './PostsGrid.module.scss';
-import { Markdown } from '@/utils/types/markdown';
+import { Markdown, Meta } from '@/utils/types/markdown';
 
 type Props = {
-  posts?: Markdown[];
+  postsMeta?: Meta[];
+  layout: 'small' | 'medium';
 };
 
-const PostsGrid: React.FunctionComponent<Props> = ({ posts }) => {
-  const [postsAmountToShow, setPostsAmmountToShow] = useState<number>(6);
+const PostsGrid: React.FunctionComponent<Props> = ({ postsMeta, layout }) => {
+  const [postsAmountToShow, setPostsAmmountToShow] = useState<number>(12);
   const [isClickedOnce, setIsClickedOnce] = useState<boolean>(false);
-  let displayedPosts = posts.slice(0, postsAmountToShow);
+  let displayedPosts = postsMeta.slice(0, postsAmountToShow);
   const loadMorePostsHandler = (): void => {
-    setPostsAmmountToShow(postsAmountToShow + 3);
+    setPostsAmmountToShow(postsAmountToShow + 6);
     setIsClickedOnce(true);
   };
-  const isButtonVisible = postsAmountToShow < posts.length;
+  const isButtonVisible = postsAmountToShow < postsMeta.length;
   return (
     <div className={styles['wrapper']}>
       <div className="grid">
         {displayedPosts.map(
-          (post: Markdown, index: number): React.JSX.Element => (
-            <div className={styles['post']} key={index}>
-              <PostCard layout="medium" postMeta={post.meta} />
+          (post: Meta, index: number): React.JSX.Element => (
+            <div className={styles[`post-${layout}`]} key={index}>
+              <PostCard layout={layout} postMeta={post} />
             </div>
           )
         )}

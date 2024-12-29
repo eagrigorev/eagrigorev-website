@@ -2,7 +2,15 @@
   padding-top: var(--space-40-60);
 }
 
-.post {
+.post-small {
+  grid-column: span 2;
+
+  @media only screen and (width <= 640px) {
+    grid-column: span 1;
+  }
+}
+
+.post-medium {
   grid-column: span 4;
 
   @media only screen and (width <= 1024px) {
