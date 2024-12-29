@@ -4,7 +4,7 @@ export interface Matter {
 
 export interface Meta {
   title: string;
-  slug?: string;
+  slug: string;
   category?: string;
   dateEdited?: string;
   datePublished?: string;

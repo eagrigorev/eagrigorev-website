@@ -7,7 +7,7 @@ import PostsGridTemplate from '@/templates/PostsGridTemplate';
 
 /* Data */
 import pageTitle from '@/data/pageTitle.json';
-import readingThisYear from '@/data/books/readingThisYear.json';
+import readingThisYear from '@/data/readingThisYear.json';
 
 /* Scripts */
 import { sortBooksDesc } from '@/scripts/sort';
