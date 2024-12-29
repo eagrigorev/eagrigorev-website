@@ -3,26 +3,27 @@ import React from 'react';
 import { Metadata } from 'next';
 
 /* Components */
-import CategoryTemplate from '@/templates/CategoryTemplate';
+import PostsGridTemplate from '@/templates/PostsGridTemplate';
 
 /* Data */
+import pageTitle from '@/data/pageTitle.json';
 import readingThisYear from '@/data/books/readingThisYear.json';
 
-/* Utils */
-import { Markdown } from '@/utils/types/markdown';
-import { TITLE } from '@/utils/const/title';
+/* Scripts */
+import { sortBooksDesc } from '@/scripts/sort';
 
 export const metadata: Metadata = {
   title: 'Library',
 };
 
 const Library: React.FunctionComponent<{}> = () => {
+  const title = pageTitle.find((item) => item.pageSlug === 'library').title;
   return (
-    <CategoryTemplate
+    <PostsGridTemplate
       layout="small"
-      postsMeta={readingThisYear}
-      title={TITLE.LIBRARY}
+      title={title}
       showBackLink={false}
+      postsMeta={sortBooksDesc(readingThisYear)}
     />
   );
 };

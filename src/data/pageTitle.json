@@ -1,0 +1,30 @@
+[
+  {
+    "pageSlug": "home",
+    "title": "Software developer and artist based in Thessaloniki, Greece."
+  },
+  {
+    "pageSlug": "illustrations",
+    "title": "Illustrations."
+  },
+  {
+    "pageSlug": "music",
+    "title": "Boreal Heights is a musical project I started in 2013. I experiment with different styles, drawing inspiration from nature. The project is currently on hold."
+  },
+  {
+    "pageSlug": "tabs",
+    "title": "Fingerstyle guitar and ukulele arrangements."
+  },
+  {
+    "pageSlug": "writings",
+    "title": "My Blog."
+  },
+  {
+    "pageSlug": "library",
+    "title": "What I Read."
+  },
+  {
+    "pageSlug": "reading-archives",
+    "title": "Years of Reading."
+  }
+]

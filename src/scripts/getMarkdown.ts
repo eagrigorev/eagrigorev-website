@@ -3,7 +3,7 @@ import fs from 'fs';
 import matter from 'gray-matter';
 
 /* Data */
-import categories from '@/data/navigation-items/categories.json';
+import categories from '@/data/categories.json';
 
 /* Scripts */
 import generateRssFeed from './generateRssFeed';

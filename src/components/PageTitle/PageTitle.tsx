@@ -4,9 +4,6 @@ import React from 'react';
 /* Components */
 import Link from 'next/link';
 
-/* Data */
-import categories from '@/data/navigation-items/categories.json';
-
 /* Scripts */
 import { generateSlug } from '@/scripts/generateSlug';
 

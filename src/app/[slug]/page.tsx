@@ -3,11 +3,12 @@ import React from 'react';
 import { Metadata } from 'next';
 
 /* Components */
-import CategoryTemplate from '@/templates/CategoryTemplate';
 import PostTemplate from '@/templates/PostTemplate';
+import PostsGridTemplate from '@/templates/PostsGridTemplate';
 
 /* Data */
-import categories from '@/data/navigation-items/categories.json';
+import categories from '@/data/categories.json';
+import pageTitle from '@/data/pageTitle.json';
 
 /* Scripts */
 import {
@@ -20,7 +21,6 @@ import { notFound } from 'next/navigation';
 /* Utils */
 import { Markdown, Meta } from '@/utils/types/markdown';
 import { NavigationItem, Slug } from '@/utils/types/common';
-import { TITLE } from '@/utils/const/title';
 
 type Props = {
   params: Slug;
@@ -60,23 +60,16 @@ const Page: React.FunctionComponent<Props> = (props) => {
   if (categoryPage !== undefined) {
     const posts = getPostsFromSingleCategory(slug);
     const postsMeta: Meta[] = posts.map((post: Markdown) => post.meta);
-    const title: string =
-      slug === 'illustrations'
-        ? TITLE.ILLUSTRATIONS
-        : slug === 'music'
-          ? TITLE.MUSIC
-          : slug === 'tabs'
-            ? TITLE.TABS
-            : slug === 'writings'
-              ? TITLE.WRITINGS
-              : 'Default';
-    const showBackLink = slug === 'reading-archives';
+    const title: string = pageTitle.find(
+      (item) => item.pageSlug === slug
+    ).title;
+    const showBackLink = slug !== 'reading-archives';
     return (
-      <CategoryTemplate
+      <PostsGridTemplate
         layout="medium"
-        postsMeta={postsMeta}
         title={title}
-        showBackLink={!showBackLink}
+        showBackLink={showBackLink}
+        postsMeta={postsMeta}
       />
     );
   } else if (post !== undefined) {

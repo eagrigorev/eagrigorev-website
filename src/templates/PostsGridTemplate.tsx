@@ -9,32 +9,29 @@ import PostsGrid from '@/components/PostsGrid/PostsGrid';
 import libraryNavigation from '@/data/navigation-items/libraryNavigation.json';
 import recentWorkNavigation from '@/data/navigation-items/recentWorkNavigation.json';
 
-/* Scripts */
-import { getPostsFromSingleCategory } from '@/scripts/getMarkdown';
-
 /* Utils */
-import { TITLE } from '@/utils/const/title';
-import { Markdown, Meta } from '@/utils/types/markdown';
+import { Meta } from '@/utils/types/markdown';
 import { NavigationItem } from '@/utils/types/common';
 
 type Props = {
   layout: 'small' | 'medium';
-  postsMeta: Meta[];
   title: string;
   showBackLink: boolean;
+  postsMeta: Meta[];
 };
 
-const CategoryTemplate: React.FunctionComponent<Props> = ({
+const PostsGridTemplate: React.FunctionComponent<Props> = ({
   layout,
-  postsMeta,
   title,
   showBackLink,
+  postsMeta,
 }) => {
-  const navigationItems: NavigationItem[] =
-    layout === 'small' ||
+  const isReadingArchivesPosts: boolean =
     postsMeta.find(
       (postMeta: Meta) => postMeta.category === 'Reading Archives'
-    ) !== undefined
+    ) !== undefined;
+  const navigationItems: NavigationItem[] =
+    layout === 'small' || isReadingArchivesPosts
       ? libraryNavigation
       : recentWorkNavigation;
   return (
@@ -50,4 +47,4 @@ const CategoryTemplate: React.FunctionComponent<Props> = ({
   );
 };
 
-export default CategoryTemplate;
+export default PostsGridTemplate;

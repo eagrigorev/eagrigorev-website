@@ -8,7 +8,7 @@ import PostCard from '@/components/PostCard/PostCard';
 
 /* Style */
 import styles from './PostsGrid.module.scss';
-import { Markdown, Meta } from '@/utils/types/markdown';
+import { Meta } from '@/utils/types/markdown';
 
 type Props = {
   postsMeta?: Meta[];

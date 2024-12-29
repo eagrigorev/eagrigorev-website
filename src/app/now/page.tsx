@@ -13,9 +13,9 @@ export const metadata: Metadata = {
   title: 'Now',
 };
 
-const About: React.FunctionComponent<{}> = () => {
+const Now: React.FunctionComponent<{}> = () => {
   const page: Markdown = getPage('now.mdx');
   return <PageTemplate page={page} />;
 };
 
-export default About;
+export default Now;

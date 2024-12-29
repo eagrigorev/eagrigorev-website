@@ -13,9 +13,9 @@ export const metadata: Metadata = {
   title: 'Privacy and Security',
 };
 
-const About: React.FunctionComponent<{}> = () => {
+const PrivacyAndSecurity: React.FunctionComponent<{}> = () => {
   const page: Markdown = getPage('privacy-and-security.mdx');
   return <PageTemplate page={page} />;
 };
 
-export default About;
+export default PrivacyAndSecurity;
