@@ -1,65 +1,62 @@
-/* Namespaces */
+/* Global */
+import Markdown from 'markdown-to-jsx';
 import React from 'react';
 
 /* Components */
-import ImageWithCaption from '../ImageWithCaption/ImageWithCaption';
-import Markdown from 'markdown-to-jsx';
-import SpotifyEmbed from '../SpotifyEmbed/SpotifyEmbed';
+import EmbedImage from '@/components/EmbedImage/EmbedImage';
+import EmbedSpotify from '@/components/EmbedSpotify/EmbedSpotify';
 
-/* Utils */
+/* Style */
 import styles from './MarkdownWrapper.module.scss';
-import { PostLayout } from '@/types/layout';
 
 type Props = {
-  layout?: PostLayout;
   content: string;
 };
 
-const MarkdownWrapper: React.FunctionComponent<Props> = ({
-  layout,
-  content,
-}) => {
+const MarkdownWrapper: React.FunctionComponent<Props> = ({ content }) => {
   return (
-    <Markdown
-      options={{
-        wrapper: React.Fragment,
-        overrides: {
-          p: {
-            props: {
-              className: `${layout === 'narrow' ? styles[`content--${layout}`] : ''} paragraph--regular`,
+    <div className={`grid ${styles['wrapper']}`}>
+      <Markdown
+        options={{
+          wrapper: React.Fragment,
+          overrides: {
+            p: {
+              props: {
+                className: `jost-light--m ${styles['content']}`,
+              },
+            },
+            a: {
+              props: {
+                className: 'link-underline',
+              },
+            },
+            h2: {
+              props: {
+                className: `spectral-heading--h2 ${styles['content']}`,
+              },
+            },
+            h3: {
+              props: {
+                className: `spectral-heading--h3 ${styles['content']}`,
+              },
+            },
+            h4: {
+              props: {
+                className: `spectral-heading--h4 ${styles['content']}`,
+              },
+            },
+            EmbedImage: {
+              component: EmbedImage,
+            },
+            EmbedSpotify: {
+              component: EmbedSpotify,
             },
           },
-          a: {
-            props: {
-              className: 'link--underline transition--border',
-            },
-          },
-          h2: {
-            props: {
-              className: `${layout ? styles[`content--${layout}`] : ''} heading--h2`,
-            },
-          },
-          h3: {
-            props: {
-              className: `${layout ? styles[`content--${layout}`] : ''} heading--h3`,
-            },
-          },
-          h4: {
-            props: {
-              className: `${layout ? styles[`content--${layout}`] : ''} heading--h4`,
-            },
-          },
-          ImageWithCaption: {
-            component: ImageWithCaption,
-          },
-          SpotifyEmbed: {
-            component: SpotifyEmbed,
-          },
-        },
-      }}
-    >
-      {content}
-    </Markdown>
+        }}
+      >
+        {content}
+      </Markdown>
+    </div>
   );
 };
 

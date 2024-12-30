@@ -1,22 +1,30 @@
-/* Namespaces */
+/* Global */
 import React from 'react';
 
 /* Components */
-import PageTitle from '@/components/PageTitle/PageTitle';
-import PostsGrid from '@/components/PostsGrid/PostsGrid';
-import SubNavigation from '@/components/SubNavigation/SubNavigation';
+import PostsGridTemplate from '@/templates/PostsGridTemplate';
+
+/* Data */
+import pageTitle from '@/data/pageTitle.json';
+
+/* Scripts */
+import { getAllPosts } from '@/scripts/getMarkdown';
 
 /* Utils */
-import { navigationItems } from '@/scripts/getNavigationItems';
-import { TITLE } from '@/const/title';
+import { Markdown, Meta } from '@/utils/types/markdown';
 
 const Home: React.FunctionComponent<{}> = () => {
+  const title = pageTitle.find((item) => item.pageSlug === 'home').title;
+  const postsMeta: Meta[] = getAllPosts()
+    .filter((post: Markdown) => post.meta.category !== 'Reading Archives')
+    .map((post: Markdown) => post.meta);
   return (
-    <main className="container">
-      <PageTitle title={TITLE.HOMEPAGE} />
-      <SubNavigation navigationItems={navigationItems.works} showAll={false} />
-      <PostsGrid category="Works" />
-    </main>
+    <PostsGridTemplate
+      layout="medium"
+      title={title}
+      showBackLink={false}
+      postsMeta={postsMeta}
+    />
   );
 };
 

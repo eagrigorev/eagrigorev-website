@@ -1,20 +1,20 @@
 'use client';
 
-/* Namespaces */
+/* Global */
 import React, { useEffect } from 'react';
+import { Metadata } from 'next';
 
 /* Components */
-import CopyrightNotice from '@/components/CopyrightNotice/CopyrightNotice';
-import LoadMoreButton from '@/components/LoadMoreButton/LoadMoreButton';
 import PageTitle from '@/components/PageTitle/PageTitle';
-import SubNavigation from '@/components/SubNavigation/SubNavigation';
-import TopNavigation from '@/components/TopNavigation/TopNavigation';
+import RootLayoutFooter from '@/components/RootLayoutFooter/RootLayoutFooter';
+import RootLayoutHeader from '@/components/RootLayoutHeader/RootLayoutHeader';
 
-/* Utils */
-import { Metadata } from 'next';
+/* Data */
+import errorNavigation from '@/data/navigation-items/errorNavigation.json';
+import pageTitle from '@/data/pageTitle.json';
+
+/* Scripts */
 import { spectral, jost } from '@/scripts/getFonts';
-import { navigationItems } from '@/scripts/getNavigationItems';
-import { TITLE } from '@/const/title';
 
 export const metadata: Metadata = {
   title: '500: Internal Server Error',
@@ -30,21 +30,28 @@ const GlobalError = ({
   useEffect(() => {
     console.error(error);
   }, [error]);
+  const title = pageTitle.find((item) => item.pageSlug === '500').title;
   return (
     <html lang="en" className={`${spectral.variable} ${jost.variable}`}>
       <body>
-        <TopNavigation />
+        <RootLayoutHeader />
         <main className="container">
-          <PageTitle title={TITLE.PAGE_500} />
-          <SubNavigation
-            navigationItems={navigationItems.error}
-            showAll={false}
+          <PageTitle
+            layout="left"
+            title={title}
+            navigationItems={errorNavigation}
+            showBackLink={false}
           />
-          <div className="error-button">
-            <LoadMoreButton clickHandler={() => reset()} buttonText="Reload" />
+          <div className="error-button-wrapper">
+            <button
+              className="jost-uppercase--xs-btn link-image error-button"
+              onClick={() => reset()}
+            >
+              reload
+            </button>
           </div>
         </main>
-        <CopyrightNotice />
+        <RootLayoutFooter />
       </body>
     </html>
   );

@@ -1,28 +1,21 @@
-/* Namespaces */
+/* Global */
 import React from 'react';
+import { Metadata } from 'next';
 
 /* Components */
-import SinglePageNarrowTemplate from '@/templates/SinglePageNarrowTemplate/SinglePageNarrowTemplate';
+import PageTemplate from '@/templates/PageTemplate';
 
 /* Utils */
 import { getPage } from '@/scripts/getMarkdown';
-import { Metadata } from 'next';
-import { Page } from '@/types/page';
+import { Markdown } from '@/utils/types/markdown';
 
 export const metadata: Metadata = {
   title: 'Privacy and Security',
 };
 
 const PrivacyAndSecurity: React.FunctionComponent<{}> = () => {
-  const page: Page = getPage('privacy-and-security.mdx');
-  return (
-    <SinglePageNarrowTemplate
-      showSeparator={true}
-      showMeta={false}
-      page={page}
-      showRelatedEntries={false}
-    />
-  );
+  const page: Markdown = getPage('privacy-and-security.mdx');
+  return <PageTemplate page={page} />;
 };
 
 export default PrivacyAndSecurity;

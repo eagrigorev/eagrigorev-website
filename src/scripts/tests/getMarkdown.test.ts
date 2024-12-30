@@ -1,18 +1,19 @@
-/* Utils */
+/* Scripts */
 import {
-  getJournalPostsFromSingleCategory,
+  getPostsFromSingleCategory,
   getAllPosts,
   getPage,
   getPostsSlugs,
 } from '../getMarkdown';
-import { Post } from '@/types/post';
-import { POSTS_AMOUNT, SLUGS_AMOUNT } from '@/const/global';
 
-describe('GetJournalPostsFromSingleCategory', () => {
+/* Utils */
+import { Markdown } from '@/utils/types/markdown';
+
+describe('GetPostsFromSingleCategory', () => {
   it('should get the correct posts category', () => {
     expect(
-      getJournalPostsFromSingleCategory('Notes').find(
-        (post: Post) => post.meta.category === 'Notes'
+      getPostsFromSingleCategory('music').find(
+        (post: Markdown) => post.meta.category === 'Music'
       )
     ).toBeTruthy();
   });
@@ -20,7 +21,7 @@ describe('GetJournalPostsFromSingleCategory', () => {
 
 describe('GetAllPosts', () => {
   it('should get all posts', () => {
-    expect(getAllPosts().length).toBe(POSTS_AMOUNT);
+    expect(getAllPosts().length).toBe(29);
   });
 });
 
@@ -32,6 +33,6 @@ describe('GetPage', () => {
 
 describe('GetPostsSlugs', () => {
   it('should generate the correct slugs amount', () => {
-    expect(getPostsSlugs().length).toBe(SLUGS_AMOUNT);
+    expect(getPostsSlugs().length).toBe(34);
   });
 });

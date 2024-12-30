@@ -1,17 +1,15 @@
 'use client';
 
-/* Namespaces */
+/* Global */
 import React, { useEffect } from 'react';
+import { Metadata } from 'next';
 
 /* Components */
-import LoadMoreButton from '@/components/LoadMoreButton/LoadMoreButton';
 import PageTitle from '@/components/PageTitle/PageTitle';
-import SubNavigation from '@/components/SubNavigation/SubNavigation';
 
-/* Utils */
-import { Metadata } from 'next';
-import { navigationItems } from '@/scripts/getNavigationItems';
-import { TITLE } from '@/const/title';
+/* Data */
+import errorNavigation from '@/data/navigation-items/errorNavigation.json';
+import pageTitle from '@/data/pageTitle.json';
 
 export const metadata: Metadata = {
   title: '500: Internal Server Error',
@@ -27,12 +25,22 @@ const Error = ({
   useEffect(() => {
     console.error(error);
   }, [error]);
+  const title = pageTitle.find((item) => item.pageSlug === '500').title;
   return (
     <main className="container">
-      <PageTitle title={TITLE.PAGE_500} />
-      <SubNavigation navigationItems={navigationItems.error} showAll={false} />
-      <div className="error-button">
-        <LoadMoreButton clickHandler={() => reset()} buttonText="Reload" />
+      <PageTitle
+        layout="left"
+        title={title}
+        navigationItems={errorNavigation}
+        showBackLink={false}
+      />
+      <div className="error-button-wrapper">
+        <button
+          className="jost-uppercase--xs-btn link-image error-button"
+          onClick={() => reset()}
+        >
+          reload
+        </button>
       </div>
     </main>
   );

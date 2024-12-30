@@ -1,46 +1,79 @@
-/* Namespaces */
+/* Global */
 import React from 'react';
 
 /* Components */
 import Link from 'next/link';
 
-/* Utils */
+/* Scripts */
+import { generateSlug } from '@/scripts/generateSlug';
+
+/* Style */
 import styles from './PageTitle.module.scss';
-import { PostCategory } from '@/types/post';
-import { normalize } from '@/scripts/utils';
+
+/* Utils */
+import { Meta } from '@/utils/types/markdown';
+import { NavigationItem } from '@/utils/types/common';
 
 type Props = {
-  title: string;
-  showSeparator?: boolean;
-  showMeta?: boolean;
-  dateEdited?: string;
-  category?: PostCategory;
+  layout: 'left' | 'centered' | 'centered-meta';
+  meta?: Meta;
+  title?: string;
+  navigationItems?: NavigationItem[];
+  showBackLink?: boolean;
 };
 
 const PageTitle: React.FunctionComponent<Props> = ({
+  layout,
+  meta,
   title,
-  showSeparator,
-  showMeta,
-  dateEdited,
-  category,
+  navigationItems,
+  showBackLink,
 }) => {
-  const classList = showSeparator
-    ? `${styles['heading--centered']} ${styles['separator']} heading--h1`
-    : `${styles['heading--left']} heading--h1`;
   return (
-    <header className={styles['wrapper']}>
-      <div className="grid">
-        <h1 className={classList}>{title}</h1>
-      </div>
-      {showMeta ? (
-        <div className={`${styles['meta']} small-uppercase`}>
-          <p>{dateEdited}</p>
-          <Link
-            className="link--darker transition--color"
-            href={`/${normalize(category)}`}
+    <header className={`grid ${styles['wrapper']}`}>
+      {layout === 'left' ? (
+        <div className={styles['left__wrapper']}>
+          <h1 className="spectral-heading--h1">{title}</h1>
+          <div className="jost-uppercase--xs">
+            <ul className={`list-simple ${styles['left__categories']}`}>
+              {showBackLink ? (
+                <li>
+                  <Link className="link-grey" href="/">
+                    All
+                  </Link>
+                </li>
+              ) : null}
+              {navigationItems.map((item: NavigationItem, index: number) => (
+                <li key={index}>
+                  <Link className="link-grey" href={item.url}>
+                    {item.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ) : layout === 'centered' ? (
+        <div className={styles['centered__wrapper']}>
+          <h1 className="spectral-heading--h1">{title}</h1>
+        </div>
+      ) : layout === 'centered-meta' ? (
+        <div className={styles['centered-meta__wrapper']}>
+          <h1
+            className={`spectral-heading--h1 ${styles['centered-meta__title']}`}
           >
-            {category}
-          </Link>
+            {meta.title}
+          </h1>
+          <div
+            className={`jost-uppercase--xs ${styles['centered-meta__info']}`}
+          >
+            <p className={styles['centered-meta__info__date']}>
+              {meta.dateEdited}
+            </p>
+            <Link className="link-grey" href={generateSlug(meta.category)}>
+              {meta.category}
+            </Link>
+          </div>
         </div>
       ) : null}
     </header>

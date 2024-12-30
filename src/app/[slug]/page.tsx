@@ -1,95 +1,79 @@
-/* Namespaces */
+/* Global */
 import React from 'react';
+import { Metadata } from 'next';
 
 /* Components */
-import CategoryPageTemplate from '@/templates/CategoryPageTemplate/CategoryPageTemplate';
-import SinglePageNarrowTemplate from '@/templates/SinglePageNarrowTemplate/SinglePageNarrowTemplate';
+import PostTemplate from '@/templates/PostTemplate';
+import PostsGridTemplate from '@/templates/PostsGridTemplate';
+
+/* Data */
+import categories from '@/data/categories.json';
+import pageTitle from '@/data/pageTitle.json';
+
+/* Scripts */
+import {
+  getAllPosts,
+  getPostsFromSingleCategory,
+  getPostsSlugs,
+} from '@/scripts/getMarkdown';
+import { notFound } from 'next/navigation';
 
 /* Utils */
-import { notFound } from 'next/navigation';
-import { POST_CATEGORIES } from '@/const/categories';
-import { getAllPosts, getPostsSlugs } from '@/scripts/getMarkdown';
-import { normalize } from '@/scripts/utils';
-import { mapCategoriesToSlugs } from '@/scripts/mappers';
-import { categoriesList } from '@/scripts/getCategoriesList';
-import { Metadata } from 'next';
-import { Post } from '@/types/post';
-import { Slug } from '@/types/slug';
-import { navigationItems } from '@/scripts/getNavigationItems';
-import { TITLE } from '@/const/title';
+import { Markdown, Meta } from '@/utils/types/markdown';
+import { NavigationItem, Slug } from '@/utils/types/common';
 
 type Props = {
   params: Slug;
 };
 
-export function generateMetadata({ params }: Props): Metadata {
+export const generateMetadata = ({ params }: Props): Metadata => {
   const slug: string = params.slug;
-  const allPosts: Post[] = getAllPosts();
-  const isCategoryPage: boolean = categoriesList.includes(slug);
-  const isPostPage: Post | undefined = allPosts.find(
-    (post: Post) => post.meta.slug === slug
+  const posts: Markdown[] = getAllPosts();
+  const categoryPage: NavigationItem | undefined = categories.find(
+    (category: NavigationItem) => category.url.slice(1) === slug
   );
-  if (isCategoryPage) {
+  const post: Markdown | undefined = posts.find(
+    (post: Markdown) => post.meta.slug === slug
+  );
+  if (categoryPage !== undefined) {
     return {
-      title: allPosts.find((post) => normalize(post.meta.category) === slug)
-        .meta.category,
+      title: categoryPage.title,
     };
-  } else if (isPostPage) {
+  } else if (post !== undefined) {
     return {
-      title: isPostPage.meta.title,
+      title: post.meta.title,
     };
   } else {
     notFound();
   }
-}
+};
 
 const Page: React.FunctionComponent<Props> = (props) => {
   const slug: string = props.params.slug;
-  const allPosts: Post[] = getAllPosts();
-  const post: Post | undefined = allPosts.find(
+  const allPosts: Markdown[] = getAllPosts();
+  const post: Markdown | undefined = allPosts.find(
     (post) => post.meta.slug === slug
   );
-  if (categoriesList.includes(slug)) {
-    const postByCategory: Post | undefined = allPosts.find((post) => {
-      return normalize(post.meta.category) === slug;
-    });
-    if (mapCategoriesToSlugs(POST_CATEGORIES.LIBRARY).includes(slug)) {
-      return (
-        <CategoryPageTemplate
-          pageTitle={`${TITLE.LIBRARY_CATEGORY} ${postByCategory.meta.category}.`}
-          navigationItems={navigationItems.library}
-          showAll={true}
-          category={postByCategory.meta.category}
-        />
-      );
-    } else if (mapCategoriesToSlugs(POST_CATEGORIES.WORKS).includes(slug)) {
-      return (
-        <CategoryPageTemplate
-          pageTitle={`${TITLE.WORKS_CATEGORY} ${postByCategory.meta.category}.`}
-          navigationItems={navigationItems.works}
-          showAll={true}
-          category={postByCategory.meta.category}
-        />
-      );
-    } else if (mapCategoriesToSlugs(POST_CATEGORIES.JOURNAL).includes(slug)) {
-      return (
-        <CategoryPageTemplate
-          pageTitle={`${TITLE.JOURNAL_CATEGORY} ${postByCategory.meta.category}.`}
-          navigationItems={navigationItems.journal}
-          showAll={true}
-          category={postByCategory.meta.category}
-        />
-      );
-    }
-  } else if (post) {
+  const categoryPage: NavigationItem | undefined = categories.find(
+    (category: NavigationItem) => category.url.slice(1) === slug
+  );
+  if (categoryPage !== undefined) {
+    const posts = getPostsFromSingleCategory(slug);
+    const postsMeta: Meta[] = posts.map((post: Markdown) => post.meta);
+    const title: string = pageTitle.find(
+      (item) => item.pageSlug === slug
+    ).title;
+    const showBackLink = slug !== 'reading-archives';
     return (
-      <SinglePageNarrowTemplate
-        showSeparator={true}
-        showMeta={true}
-        post={post}
-        showRelatedEntries={true}
+      <PostsGridTemplate
+        layout="medium"
+        title={title}
+        showBackLink={showBackLink}
+        postsMeta={postsMeta}
       />
     );
+  } else if (post !== undefined) {
+    return <PostTemplate post={post} />;
   } else {
     notFound();
   }
@@ -97,7 +81,7 @@ const Page: React.FunctionComponent<Props> = (props) => {
 
 export default Page;
 
-export const generateStaticParams = async (): Promise<{ slug: string }[]> => {
+export const generateStaticParams = async (): Promise<Slug[]> => {
   return getPostsSlugs();
 };
 

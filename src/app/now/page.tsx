@@ -1,28 +1,21 @@
-/* Namespaces */
+/* Global */
 import React from 'react';
+import { Metadata } from 'next';
 
 /* Components */
-import SinglePageNarrowTemplate from '@/templates/SinglePageNarrowTemplate/SinglePageNarrowTemplate';
+import PageTemplate from '@/templates/PageTemplate';
 
 /* Utils */
 import { getPage } from '@/scripts/getMarkdown';
-import { Metadata } from 'next';
-import { Page } from '@/types/page';
+import { Markdown } from '@/utils/types/markdown';
 
 export const metadata: Metadata = {
   title: 'Now',
 };
 
 const Now: React.FunctionComponent<{}> = () => {
-  const page: Page = getPage('now.mdx');
-  return (
-    <SinglePageNarrowTemplate
-      showSeparator={true}
-      showMeta={false}
-      page={page}
-      showRelatedEntries={false}
-    />
-  );
+  const page: Markdown = getPage('now.mdx');
+  return <PageTemplate page={page} />;
 };
 
 export default Now;
