@@ -26,5 +26,13 @@
   {
     "pageSlug": "reading-archives",
     "title": "Years of Reading."
+  },
+  {
+    "pageSlug": "404",
+    "title": "Page 404: Not Found. There is nothing here. Maybe try something else?"
+  },
+  {
+    "pageSlug": "500",
+    "title": "Page 500: Internal Server Error. The server has encountered a situation it does not know how to handle. Try again?"
   }
 ]
