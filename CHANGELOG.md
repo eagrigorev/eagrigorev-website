@@ -1,3 +1,5 @@
+**v3.1.0** January 2, 2025 — Major refactoring
+
 **v3.0.7** October 14, 2024 — Small fixes
 
 **v3.0.6** October 4, 2024 — Added social icons
