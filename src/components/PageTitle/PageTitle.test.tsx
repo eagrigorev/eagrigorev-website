@@ -1,48 +1,42 @@
-/* Namespaces */
+/* Global */
 import React from 'react';
+import '@testing-library/jest-dom';
+import { render, screen } from '@testing-library/react';
 
 /* Components */
 import PageTitle from './PageTitle';
 
-/* Utils */
-import '@testing-library/jest-dom';
-import { render, screen } from '@testing-library/react';
+/* Data */
+import meta from '@/data/mocks/meta.json';
+import navigation from '@/data/mocks/navigation.json';
 
 describe('PageTitle', () => {
   render(
     <PageTitle
+      layout="left"
       title="Test Title"
-      showSeparator={true}
-      showMeta={true}
-      dateEdited="May 14, 2024"
-      category="Illustrations"
+      showBackLink={false}
+      navigationItems={navigation}
     />
   );
-  it('shows the correct title', () => {
+  it('renders the correct title', () => {
     const title = screen.getByText('Test Title');
     expect(title).toBeInTheDocument();
   });
   it('renders the metadata', () => {
     const { container } = render(
-      <PageTitle
-        title="Test Title"
-        showSeparator={true}
-        showMeta={true}
-        dateEdited="May 14, 2024"
-        category="Illustrations"
-      />
+      <PageTitle layout="centered-meta" title="Test Title" meta={meta} />
     );
-    const meta = container.querySelector('.small-uppercase');
-    expect(meta).toBeInTheDocument();
+    const metaInfo = container.querySelector('.jost-uppercase--xs');
+    expect(metaInfo).toBeInTheDocument();
   });
   it('renders page title unchanged', () => {
     const { container } = render(
       <PageTitle
+        layout="left"
         title="Test Title"
-        showSeparator={true}
-        showMeta={true}
-        dateEdited="May 14, 2024"
-        category="Illustrations"
+        showBackLink={false}
+        navigationItems={navigation}
       />
     );
     expect(container).toMatchSnapshot();

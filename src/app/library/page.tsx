@@ -1,27 +1,31 @@
-/* Namespaces */
+/* Global */
 import React from 'react';
+import { Metadata } from 'next';
 
 /* Components */
-import CategoryPageTemplate from '@/templates/CategoryPageTemplate/CategoryPageTemplate';
+import PostsGridTemplate from '@/templates/PostsGridTemplate';
 
-/* Utils */
-import { Metadata } from 'next';
-import { navigationItems } from '@/scripts/getNavigationItems';
-import { TITLE } from '@/const/title';
+/* Data */
+import pageTitle from '@/data/pageTitle.json';
+import readingThisYear from '@/data/readingThisYear.json';
+
+/* Scripts */
+import { sortBooksDesc } from '@/scripts/sort';
 
 export const metadata: Metadata = {
   title: 'Library',
 };
 
-const Journal: React.FunctionComponent<{}> = () => {
+const Library: React.FunctionComponent<{}> = () => {
+  const title = pageTitle.find((item) => item.pageSlug === 'library').title;
   return (
-    <CategoryPageTemplate
-      pageTitle={TITLE.LIBRARY}
-      navigationItems={navigationItems.library}
-      showAll={false}
-      category="Library"
+    <PostsGridTemplate
+      layout="small"
+      title={title}
+      showBackLink={false}
+      postsMeta={sortBooksDesc(readingThisYear)}
     />
   );
 };
 
-export default Journal;
+export default Library;

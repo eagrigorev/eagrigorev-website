@@ -1,17 +1,14 @@
-/* Namespaces */
+/* Global */
 import React from 'react';
+import '@testing-library/jest-dom';
+import { render } from '@testing-library/react';
 
 /* Components */
 import SocialIcons from './SocialIcons';
 
-/* Utils */
-import '@testing-library/jest-dom';
-import { render, screen } from '@testing-library/react';
-
 describe('SocialIcons', () => {
-  render(<SocialIcons />);
   it('renders social icons block unchanged', () => {
-    const { container } = render(<SocialIcons />);
+    const { container } = render(<SocialIcons showFollowText={false} />);
     expect(container).toMatchSnapshot();
   });
 });

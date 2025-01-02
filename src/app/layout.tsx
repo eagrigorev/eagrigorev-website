@@ -1,44 +1,31 @@
-/* Namespaces */
+/* Global */
 import React from 'react';
+import { Metadata } from 'next';
 
 /* Components */
-import TopNavigation from '@/components/TopNavigation/TopNavigation';
-import CopyrightNotice from '@/components/CopyrightNotice/CopyrightNotice';
+import RootLayoutFooter from '@/components/RootLayoutFooter/RootLayoutFooter';
+import RootLayoutHeader from '@/components/RootLayoutHeader/RootLayoutHeader';
+
+/* Scripts */
+import { jost, spectral } from '@/scripts/getFonts';
+
+/* Style */
+import '@/style/main.scss';
 
 /* Utils */
-import '@/style/main.scss';
 import { Analytics } from '@vercel/analytics/react';
-import { Metadata } from 'next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import { spectral, jost } from '@/scripts/getFonts';
+import { websiteMetadata } from '@/utils/const/websiteMetadata';
 
-export const metadata: Metadata = {
-  title: {
-    default: 'Evgenii Grigorev',
-    template: '%s • Evgenii Grigorev',
-  },
-  description: 'Artist & Software Developer',
-  generator: 'Next.js',
-  applicationName: 'eagrigorev-website',
-  keywords: [
-    'Pixel Art',
-    'Fingerstyle Tabs',
-    'Boreal Heights',
-    'Illustrations',
-  ],
-  authors: [{ name: 'Evgenii Grigorev', url: 'https://eagrigorev.com' }],
-  creator: 'Evgenii Grigorev',
-  publisher: 'Vercel',
-  metadataBase: new URL('https://eagrigorev.com'),
-};
+export const metadata: Metadata = websiteMetadata;
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html lang="en" className={`${spectral.variable} ${jost.variable}`}>
+    <html lang="en" className={`${jost.variable} ${spectral.variable}`}>
       <body>
-        <TopNavigation />
+        <RootLayoutHeader />
         {children}
-        <CopyrightNotice />
+        <RootLayoutFooter />
         <SpeedInsights />
         <Analytics />
       </body>

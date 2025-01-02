@@ -1,47 +1,101 @@
 .wrapper {
-  padding-top: var(--space-90-120);
+  padding-top: var(--space-80-120);
 }
 
-.heading {
-  &--left {
-    grid-column: span 5;
+.left {
+  &__wrapper {
+    grid-column: span 8;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-30-40);
 
-    @media only screen and (width <= 768px) {
+    @media only screen and (width <= 1024px) {
       grid-column: span 6;
     }
 
-    @media only screen and (width <= 480px) {
+    @media only screen and (width <= 640px) {
       grid-column: span 2;
     }
   }
 
-  &--centered {
+  &__categories {
+    display: flex;
+    gap: var(--space-30-40);
+    row-gap: var(--space-20-25);
+    flex-wrap: wrap;
+  }
+}
+
+.centered {
+  &__wrapper {
     grid-column: 4 / 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-30-40);
     text-align: center;
 
-    @media only screen and (width <= 768px) {
+    &::after {
+      display: block;
+      content: '';
+      width: var(--space-40-60);
+      height: 1px;
+      background-color: var(--font-primary);
+    }
+
+    @media only screen and (width <= 1024px) {
       grid-column: span 6;
     }
 
-    @media only screen and (width <= 480px) {
+    @media only screen and (width <= 640px) {
       grid-column: span 2;
     }
   }
 }
 
-.separator {
-  &::after {
-    display: block;
-    content: '';
-    width: var(--space-80-120);
-    height: 1px;
-    background: var(--black);
-    margin: var(--space-20-30) auto;
-  }
-}
+.centered-meta {
+  &__wrapper {
+    grid-column: 4 / 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-30-40);
 
-.meta {
-  display: flex;
-  justify-content: center;
-  gap: var(--space-30-40);
+    @media only screen and (width <= 1024px) {
+      grid-column: span 6;
+    }
+
+    @media only screen and (width <= 640px) {
+      grid-column: span 2;
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-30-40);
+    text-align: center;
+
+    &::after {
+      display: block;
+      content: '';
+      width: var(--space-40-60);
+      height: 1px;
+      background-color: var(--font-primary);
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-30-40);
+    row-gap: var(--space-20-25);
+
+    &__date {
+      color: var(--font-secondary);
+      text-align: center;
+    }
+  }
 }

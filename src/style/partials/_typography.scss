@@ -1,135 +1,178 @@
-%spectral {
-  font-family: var(--font-spectral);
-  font-weight: 300;
-  line-height: 135%;
-}
-
-%jost {
+%jost-light {
   font-family: var(--font-jost);
   font-weight: 300;
-  line-height: 150%;
-  letter-spacing: 0.012em;
+  line-height: 100%;
+  letter-spacing: 0.015em;
 }
 
-%link {
+%jost-bold {
+  font-family: var(--font-jost);
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0.015em;
+}
+
+%jost-uppercase {
+  font-family: var(--font-jost);
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+%spectral-heading {
+  font-family: var(--font-spectral);
+  font-weight: 300;
+  line-height: 130%;
+}
+
+.list-simple {
   list-style: none;
-  color: var(--black);
-  text-decoration: none;
 }
 
-.heading {
+.link-simple {
+  text-decoration: none;
+  color: var(--font-primary);
+}
+
+.link-black {
+  text-decoration: none;
+  color: var(--font-primary);
+  transition: color 0.3s;
+
+  &:hover,
+  &:focus {
+    color: var(--font-secondary);
+  }
+}
+
+.link-grey {
+  text-decoration: none;
+  color: var(--font-secondary);
+  transition: color 0.3s;
+
+  &:hover,
+  &:focus {
+    color: var(--font-primary);
+  }
+}
+
+.link-image {
+  transition: opacity 0.3s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+}
+
+.link-underline {
+  text-decoration: none;
+  color: var(--font-primary);
+  transition: all 0.3s;
+  padding-bottom: 1px;
+  border-bottom: 1px solid var(--font-secondary);
+
+  &:hover,
+  &:focus {
+    color: var(--font-secondary);
+    border-bottom: 1px solid var(--font-primary);
+  }
+}
+
+.jost-light {
+  &--s {
+    @extend %jost-light;
+
+    line-height: 150%;
+    font-size: var(--font-13-16);
+  }
+
+  &--m {
+    @extend %jost-light;
+
+    line-height: 150%;
+    font-size: var(--font-16-20);
+  }
+}
+
+.jost-bold {
+  &--m {
+    @extend %jost-bold;
+
+    font-size: var(--font-16-20);
+  }
+
+  &--s {
+    @extend %jost-bold;
+
+    font-size: var(--font-13-16);
+  }
+
+  &--xs {
+    @extend %jost-bold;
+
+    font-size: var(--font-11-12);
+
+    &-grey {
+      @extend %jost-bold;
+
+      font-size: var(--font-11-12);
+      color: var(--font-secondary);
+    }
+  }
+}
+
+.jost-uppercase {
+  &--xs {
+    @extend %jost-uppercase;
+
+    font-size: var(--font-11-12);
+
+    &-btn {
+      @extend %jost-uppercase;
+
+      font-size: var(--font-11-12);
+      font-weight: 600;
+    }
+  }
+
+  &--2xs {
+    @extend %jost-uppercase;
+
+    font-size: var(--font-9-10);
+  }
+}
+
+.spectral-heading {
   &--h1 {
-    @extend %spectral;
+    @extend %spectral-heading;
 
     font-size: var(--font-27-39);
   }
 
   &--h2 {
-    @extend %spectral;
+    @extend %spectral-heading;
 
     font-size: var(--font-23-31);
   }
 
   &--h3 {
-    @extend %spectral;
+    @extend %spectral-heading;
 
     font-size: var(--font-19-25);
   }
 
   &--h4 {
-    @extend %spectral;
+    @extend %spectral-heading;
 
     font-size: var(--font-16-20);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-  }
-}
 
-.paragraph {
-  &--regular {
-    @extend %jost;
+    &-related {
+      @extend %spectral-heading;
 
-    font-size: var(--font-16-20);
-  }
-
-  &--bolder {
-    @extend %jost;
-
-    font-size: var(--font-16-20);
-    font-weight: 400;
-  }
-
-  &--caption {
-    @extend %jost;
-
-    font-size: var(--font-13-16);
-    color: var(--grey);
-  }
-
-  &--copyright {
-    @extend %jost;
-
-    font-size: var(--font-13-16);
-    font-weight: 400;
-    color: var(--grey);
-  }
-}
-
-.button-text {
-  @extend %jost;
-
-  font-size: var(--font-13-16);
-  text-transform: uppercase;
-  font-weight: 500;
-  letter-spacing: 0.25em;
-}
-
-.small-uppercase {
-  @extend %jost;
-
-  font-size: var(--font-11-12);
-  text-transform: uppercase;
-  font-weight: 400;
-  letter-spacing: 0.1em;
-  color: var(--grey);
-}
-
-.link {
-  &--neutral {
-    @extend %link;
-
-    &:hover {
-      color: var(--black);
-    }
-  }
-
-  &--lighter {
-    @extend %link;
-
-    &:hover {
-      color: var(--grey);
-    }
-  }
-
-  &--darker {
-    @extend %link;
-
-    color: var(--grey);
-
-    &:hover {
-      color: var(--black);
-    }
-  }
-
-  &--underline {
-    @extend %link;
-
-    margin-bottom: 1px;
-    border-bottom: 1px solid var(--grey);
-
-    &:hover {
-      color: var(--black);
-      border-bottom: 1px solid var(--black);
+      line-height: 100%;
+      font-size: var(--font-16-20);
     }
   }
 }

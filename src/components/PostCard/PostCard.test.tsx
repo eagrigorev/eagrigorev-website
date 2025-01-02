@@ -1,19 +1,19 @@
-/* Namespaces */
+/* Global */
 import React from 'react';
+import '@testing-library/jest-dom';
+import { render } from '@testing-library/react';
 
 /* Components */
 import PostCard from './PostCard';
 
-/* Utils */
-import '@testing-library/jest-dom';
-import { render } from '@testing-library/react';
-import { postMeta } from '@/mocks/postMeta';
+/* Data */
+import meta from '@/data/mocks/meta.json';
 
 describe('PostCard', () => {
-  const { container } = render(<PostCard postMeta={postMeta} />);
+  const { container } = render(<PostCard layout="medium" postMeta={meta} />);
   it('renders the correct card width', () => {
     const image = container.querySelector('img');
-    expect(image.width).toBe(440);
+    expect(image.width).toBe(920);
   });
   it('renders the post card unchanged', () => {
     expect(container).toMatchSnapshot();

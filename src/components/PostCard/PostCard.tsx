@@ -1,88 +1,78 @@
-/* Namespaces */
+/* Global */
 import React from 'react';
 
 /* Components */
 import Image from 'next/image';
 import Link from 'next/link';
 
-/* Utils */
+/* Scripts */
+import { generateSlug } from '@/scripts/generateSlug';
+
+/* Style */
 import styles from './PostCard.module.scss';
-import { generateCardOptions } from '@/scripts/generateCardOptions';
-import { normalize } from '@/scripts/utils';
-import {
-  PostMeta,
-  JournalCategories,
-  LibraryCategories,
-  WorksCategories,
-} from '@/types/post';
-import { POST_CATEGORIES } from '@/const/categories';
+
+/* Utils */
+import { Meta } from '@/utils/types/markdown';
 
 type Props = {
-  postMeta: PostMeta;
+  postMeta: Meta;
+  layout: 'small' | 'medium';
 };
 
-const PostCard: React.FunctionComponent<Props> = ({ postMeta }) => {
-  const cardOptions = generateCardOptions(postMeta);
+const PostCard: React.FunctionComponent<Props> = ({ postMeta, layout }) => {
   return (
-    <article className={styles[`wrapper--${cardOptions.style}`]}>
-      <Link className="link--neutral" href={cardOptions.href} tabIndex={-1}>
-        <Image
-          className={`${styles[`image--${cardOptions.style}`]} transition--opacity`}
-          src={cardOptions.image.src}
-          alt={cardOptions.image.alt}
-          width={cardOptions.image.width}
-          height={cardOptions.image.height}
-        />
-      </Link>
-      <div className={styles['description']}>
-        {POST_CATEGORIES.JOURNAL.find(
-          (category: JournalCategories) => category === postMeta.category
-        ) ? (
-          <>
-            <Link className="link--neutral" href={cardOptions.href}>
-              <h3 className="heading--h3">{cardOptions.content.title}</h3>
-            </Link>
-            <div
-              className={`${styles[`meta--${cardOptions.style}`]} small-uppercase`}
-            >
-              <p>{cardOptions.content.dateEdited}</p>
-              <Link
-                className="link--darker transition--color"
-                href={`/${normalize(cardOptions.content.category)}`}
-              >
-                {cardOptions.content.category}
-              </Link>
-            </div>
-            <p
-              className={`${styles[`excerpt--${cardOptions.style}`]} paragraph--caption`}
-            >
-              {cardOptions.content.excerpt}
-            </p>
-          </>
-        ) : POST_CATEGORIES.LIBRARY.find(
-            (category: LibraryCategories) => category === postMeta.category
-          ) ? (
-          <>
-            <p className="small-uppercase">{cardOptions.content.bookAuthor}</p>
-            <Link className="link--neutral" href={cardOptions.href}>
-              <h3 className="paragraph--regular">
-                {cardOptions.content.title}
-              </h3>
-            </Link>
-          </>
-        ) : POST_CATEGORIES.WORKS.find(
-            (category: WorksCategories) => category === postMeta.category
-          ) ? (
-          <Link className="link--neutral" href={cardOptions.href}>
-            <h3
-              className={`${styles[`title--${cardOptions.style}`]} paragraph--regular`}
-            >
-              {cardOptions.content.title}
-            </h3>
+    <>
+      {layout === 'medium' ? (
+        <article className={styles['medium__wrapper']}>
+          <Link className="link-image" href={postMeta.slug} tabIndex={-1}>
+            <Image
+              className={styles['medium__image']}
+              src={`/images/posts/${postMeta.slug}/${postMeta.slug}-featured.jpg`}
+              alt={postMeta.title}
+              width={920}
+              height={690}
+            />
           </Link>
-        ) : null}
-      </div>
-    </article>
+          <Link className="link-simple" href={postMeta.slug}>
+            <h2 className="spectral-heading--h3">{postMeta.title}</h2>
+          </Link>
+          <div className={`jost-uppercase--2xs ${styles['medium__meta']}`}>
+            <p className={styles['medium__meta__date']}>
+              {postMeta.dateEdited}
+            </p>
+            <Link className="link-grey" href={generateSlug(postMeta.category)}>
+              {postMeta.category}
+            </Link>
+          </div>
+          <p className="jost-light--s">{postMeta.description}</p>
+          <Link className="jost-light--s link-grey" href={postMeta.slug}>
+            read more
+          </Link>
+        </article>
+      ) : layout === 'small' ? (
+        <article className={styles['small__wrapper']}>
+          <Link
+            className="link-image"
+            href={postMeta.externalLink}
+            tabIndex={-1}
+          >
+            <Image
+              className={styles['small__image']}
+              src={`/images/books/${postMeta.slug}.jpg`}
+              alt={postMeta.title}
+              width={300}
+              height={450}
+            />
+          </Link>
+          <p className={`jost-uppercase--2xs ${styles['small__author']}`}>
+            {postMeta.description}
+          </p>
+          <Link className="link-simple" href={postMeta.externalLink}>
+            <h2 className="spectral-heading--h3">{postMeta.title}</h2>
+          </Link>
+        </article>
+      ) : null}
+    </>
   );
 };
 

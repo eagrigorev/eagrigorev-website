@@ -1,105 +1,75 @@
-/* Namespaces */
+/* Global */
 import fs from 'fs';
 import matter from 'gray-matter';
 
-/* Utils */
+/* Data */
+import categories from '@/data/categories.json';
+
+/* Scripts */
 import generateRssFeed from './generateRssFeed';
-import { categoriesList } from '@/scripts/getCategoriesList';
-import {
-  mapCategoriesToSlugs,
-  mapMatterDataToPageMeta,
-  mapMatterDataToPostMeta,
-} from './mappers';
-import { Post, PostCategory } from '@/types/post';
-import { Page } from '@/types/page';
-import { Slug } from '@/types/slug';
-import { URL } from '@/const/url';
-import { POST_CATEGORIES } from '@/const/categories';
+import { sortPostsDesc } from './sort';
 
-export const getWorksPostsFromSingleCategory = (
-  category: PostCategory
-): Post[] => {
-  const path: string = `${URL.WORKS}/${category}`;
-  return fs.readdirSync(path).map((file: string) => {
-    const markdown: string = fs.readFileSync(`${path}/${file}`, 'utf-8');
-    const { data, content } = matter(markdown);
-    return {
-      meta: mapMatterDataToPostMeta(data),
-      content,
-    };
-  });
+/* Utils */
+import { Markdown, Matter, Meta } from '@/utils/types/markdown';
+import { NavigationItem } from '@/utils/types/common';
+import { Slug } from '@/utils/types/common';
+import { URL } from '@/utils/const/url';
+
+const mapMatterToMeta = (data: Matter): Meta => {
+  return {
+    title: data.title,
+    slug: data.slug,
+    category: data.category,
+    dateEdited: data.dateEdited,
+    datePublished: data.datePublished,
+    description: data.description,
+    externalLink: data.externalLink,
+  };
 };
 
-export const getJournalPostsFromSingleCategory = (
-  category: PostCategory
-): Post[] => {
-  const path: string = `${URL.JOURNAL}/${category}`;
-  return fs.readdirSync(path).map((file: string) => {
+export const getPostsFromSingleCategory = (category: string): Markdown[] => {
+  const path: string = `${URL.POSTS}/${category}`;
+  let categoryPosts: Markdown[] = [];
+  fs.readdirSync(path).forEach((file: string) => {
     const markdown: string = fs.readFileSync(`${path}/${file}`, 'utf-8');
     const { data, content } = matter(markdown);
-    return {
-      meta: mapMatterDataToPostMeta(data),
+    categoryPosts.push({
+      meta: mapMatterToMeta(data),
       content,
-    };
+    });
   });
+  return sortPostsDesc(categoryPosts);
 };
 
-export const getLibraryPostsFromSingleCategory = (
-  category: PostCategory
-): Post[] => {
-  const path: string = `${URL.LIBRARY}/${category}`;
-  return fs.readdirSync(path).map((file: string) => {
-    const markdown: string = fs.readFileSync(`${path}/${file}`, 'utf-8');
-    const { data, content } = matter(markdown);
-    return {
-      meta: mapMatterDataToPostMeta(data),
-      content,
-    };
-  });
-};
-
-export const getAllPosts = (): Post[] => {
-  let allPosts: Post[] = [];
-  mapCategoriesToSlugs(POST_CATEGORIES.JOURNAL).forEach(
-    (category: PostCategory) => {
-      allPosts.push(...getJournalPostsFromSingleCategory(category));
-    }
+export const getAllPosts = (): Markdown[] => {
+  let allPosts: Markdown[] = [];
+  fs.readdirSync(URL.POSTS).forEach((category: string) =>
+    allPosts.push(...getPostsFromSingleCategory(category))
   );
-  mapCategoriesToSlugs(POST_CATEGORIES.LIBRARY).forEach(
-    (category: PostCategory) => {
-      allPosts.push(...getLibraryPostsFromSingleCategory(category));
-    }
-  );
-  mapCategoriesToSlugs(POST_CATEGORIES.WORKS).forEach(
-    (category: PostCategory) => {
-      allPosts.push(...getWorksPostsFromSingleCategory(category));
-    }
-  );
+  sortPostsDesc(allPosts);
   return allPosts;
 };
 
-export const getPage = (file: string): Page => {
+export const getPage = (file: string): Markdown => {
   const page: string = fs.readFileSync(`${URL.PAGES}/${file}`, 'utf-8');
   const { data, content } = matter(page);
   return {
-    meta: mapMatterDataToPageMeta(data),
+    meta: mapMatterToMeta(data),
     content,
   };
 };
 
 export const getPostsSlugs = (): Slug[] => {
-  const allPosts: Post[] = getAllPosts().filter(
-    (post: Post) => !post.meta.slug.includes('http')
+  const allPosts: Markdown[] = getAllPosts().filter(
+    (post: Markdown) => post.meta.slug !== undefined
   );
   generateRssFeed(allPosts);
-  const postSlugs: Slug[] = allPosts.map((post: Post) => ({
+  const postSlugs: Slug[] = allPosts.map((post: Markdown) => ({
     slug: post.meta.slug,
   }));
-  const categorySlugs: Slug[] = categoriesList.map(
-    (category: PostCategory) => ({
-      slug: category,
-    })
-  );
+  const categorySlugs: Slug[] = categories.map((category: NavigationItem) => ({
+    slug: category.url.slice(1),
+  }));
   const slugs: Slug[] = [...postSlugs, ...categorySlugs];
   return slugs;
 };
