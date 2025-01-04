@@ -12,6 +12,10 @@
     "url": "/tabs"
   },
   {
+    "title": "Programming",
+    "url": "/programming"
+  },
+  {
     "title": "Reading Archives",
     "url": "/reading-archives"
   }
