@@ -4,11 +4,17 @@
         <title>Evgenii Grigorev</title>
         <link>https://eagrigorev.com</link>
         <description>Software developer and artist based in Thessaloniki, Greece.</description>
-        <lastBuildDate>Thu, 02 Jan 2025 19:12:11 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 04 Jan 2025 10:53:40 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>Evgenii Grigorev</copyright>
+        <item>
+            <title><![CDATA[Colophon]]></title>
+            <link>https://eagrigorev.com/colophon</link>
+            <guid>https://eagrigorev.com/colophon</guid>
+            <pubDate>Fri, 03 Jan 2025 22:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Books of 2024]]></title>
             <link>https://eagrigorev.com/books-of-2024</link>
@@ -58,9 +64,9 @@
             <pubDate>Sat, 13 Aug 2022 21:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Pixel Arts Archive]]></title>
-            <link>https://eagrigorev.com/pixel-arts-archive</link>
-            <guid>https://eagrigorev.com/pixel-arts-archive</guid>
+            <title><![CDATA[Pixel Arts of 2022]]></title>
+            <link>https://eagrigorev.com/pixel-arts-of-2022</link>
+            <guid>https://eagrigorev.com/pixel-arts-of-2022</guid>
             <pubDate>Tue, 19 Jul 2022 21:00:00 GMT</pubDate>
         </item>
         <item>
@@ -68,6 +74,12 @@
             <link>https://eagrigorev.com/books-of-2021</link>
             <guid>https://eagrigorev.com/books-of-2021</guid>
             <pubDate>Thu, 30 Dec 2021 22:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Pixel Arts of 2021]]></title>
+            <link>https://eagrigorev.com/pixel-arts-of-2021</link>
+            <guid>https://eagrigorev.com/pixel-arts-of-2021</guid>
+            <pubDate>Sat, 13 Mar 2021 22:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Books of 2020]]></title>
