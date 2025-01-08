@@ -1,3 +1,5 @@
+**v3.1.2** January 8, 2025 — Updated "Pale Views"
+
 **v3.1.1** January 4, 2025 — Updated posts
 
 **v3.1.0** January 2, 2025 — Major refactoring
