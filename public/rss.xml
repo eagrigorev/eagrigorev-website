@@ -4,11 +4,17 @@
         <title>Evgenii Grigorev</title>
         <link>https://eagrigorev.com</link>
         <description>Software developer and artist based in Thessaloniki, Greece.</description>
-        <lastBuildDate>Wed, 08 Jan 2025 20:48:43 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 17 Jan 2025 19:24:46 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>Evgenii Grigorev</copyright>
+        <item>
+            <title><![CDATA[American Gothic]]></title>
+            <link>https://eagrigorev.com/american-gothic</link>
+            <guid>https://eagrigorev.com/american-gothic</guid>
+            <pubDate>Thu, 16 Jan 2025 22:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Pale Views]]></title>
             <link>https://eagrigorev.com/pale-views</link>
