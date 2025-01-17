@@ -1,3 +1,5 @@
+**v3.1.3** January 17, 2025 — Posted "American Gothic"
+
 **v3.1.2** January 8, 2025 — Updated "Pale Views"
 
 **v3.1.1** January 4, 2025 — Updated posts
