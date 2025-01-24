@@ -1,11 +1,39 @@
-# Colophon
+I built this website myself. It is open-source and available on my
+[GitHub](https://github.com/eagrigorev/eagrigorev-website) page. Feel free to
+fork it and explore!
 
-Some stuff will go here.
+## Technologies
 
-## Branches
+I used TypeScript and the [Next.js](https://nextjs.org/) framework as the core,
+with React for the front end. I really like Next.js because it allows me to
+organize the website structure without much effort spent on routing and
+redirects. It's also very fast, serving pre-rendered pages with almost zero load
+on the user side. The website is deployed on [Vercel](https://vercel.com/), with
+automatic deployments pulled directly from the master branch on GitHub. This is
+likely the only pipeline I use; everything else is fairly manual, but I enjoy
+having control over every step of the publishing process.
 
-1. master - for preview deployments and work
-2. production - for vercel delpoyments
+## Design
 
-Every new feature should be done in a separate branch and merged into master.
-Enough features worth deploying are getting merged into production branch later.
+I also did the design and prototyping myself. The current design is a tribute to
+my two favorite WordPress themes: Stills and Narrator by
+[Paul Povoroznuk](https://www.instagram.com/ppovoroznuk/). Responsiveness is
+handled by [Utopia](https://utopia.fyi/) scripts, which use clamp technology to
+continuously recalculate font sizes and spacing relative to the user's screen
+size. This keeps the proportions consistent and ensures the website looks good
+on all devices.
+
+## Fonts and Animations
+
+The website uses Spectral by [Production Type](https://productiontype.com/) and
+Jost\* by Owen Earl and
+[Indestructible Type](https://indestructibletype.com/Home.html). I prefer clean
+and uncluttered interfaces, so I only use the bare minimum of vanilla JavaScript
+animations. Icons by [Icons8](https://icons8.com/icons).
+
+## Writing
+
+My CMS consists of a collection of [MDX](https://mdxjs.com/) files. MDX is an
+extended markdown format that allows the use of custom components and features.
+Each MDX file has a meta section containing information about the post or page,
+which is then read and converted into props for different components and pages.
