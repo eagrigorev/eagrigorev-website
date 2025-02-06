@@ -4,11 +4,17 @@
         <title>Evgenii Grigorev</title>
         <link>https://eagrigorev.com</link>
         <description>Software developer and artist based in Thessaloniki, Greece.</description>
-        <lastBuildDate>Wed, 29 Jan 2025 20:39:12 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 06 Feb 2025 08:20:56 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>Evgenii Grigorev</copyright>
+        <item>
+            <title><![CDATA[Moon Frog]]></title>
+            <link>https://eagrigorev.com/moon-frog</link>
+            <guid>https://eagrigorev.com/moon-frog</guid>
+            <pubDate>Tue, 04 Feb 2025 22:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Studying Harry Frost Illustrations ]]></title>
             <link>https://eagrigorev.com/harry-frost-study</link>
